@@ -31,6 +31,9 @@ const RATING_COLOR: Record<number, string> = {
   1600: "text-blue-400",
 };
 
+// Default profile: solved problems for this handle are hidden out of the box.
+const DEFAULT_HANDLE = "FarhanSadeek21";
+
 // Simple in-memory cache so re-visiting a tab doesn't refetch.
 const cache = new Map<number, Problem[]>();
 
@@ -41,6 +44,64 @@ export default function ProblemBrowser({ index }: { index: Index }) {
   const [query, setQuery] = useState("");
   const [tag, setTag] = useState<string>("");
   const [sort, setSort] = useState<SortKey>("rating");
+
+  // Codeforces handle -> set of solved "contestId-index" keys.
+  const [handleInput, setHandleInput] = useState(DEFAULT_HANDLE);
+  const [handle, setHandle] = useState(DEFAULT_HANDLE);
+  const [solved, setSolved] = useState<Set<string>>(new Set());
+  const [hideSolved, setHideSolved] = useState(true);
+  const [solvedStatus, setSolvedStatus] = useState("");
+
+  // Restore saved handle once, on mount.
+  useEffect(() => {
+    const saved = localStorage.getItem("cf-handle");
+    if (saved) {
+      setHandleInput(saved);
+      setHandle(saved);
+    }
+  }, []);
+
+  // Fetch the user's accepted submissions whenever the handle changes.
+  useEffect(() => {
+    if (!handle) {
+      setSolved(new Set());
+      setSolvedStatus("");
+      return;
+    }
+    let active = true;
+    setSolvedStatus("Loading solved…");
+    fetch(
+      `https://codeforces.com/api/user.status?handle=${encodeURIComponent(handle)}`
+    )
+      .then((r) => r.json())
+      .then((d) => {
+        if (!active) return;
+        if (d.status !== "OK") {
+          setSolved(new Set());
+          setSolvedStatus(`Error: ${d.comment ?? "could not load handle"}`);
+          return;
+        }
+        const s = new Set<string>();
+        for (const sub of d.result) {
+          if (sub.verdict === "OK" && sub.problem?.contestId != null) {
+            s.add(`${sub.problem.contestId}-${sub.problem.index}`);
+          }
+        }
+        setSolved(s);
+        setSolvedStatus(`${s.size} solved on Codeforces`);
+      })
+      .catch(() => active && setSolvedStatus("Failed to load submissions"));
+    return () => {
+      active = false;
+    };
+  }, [handle]);
+
+  function applyHandle() {
+    const h = handleInput.trim();
+    setHandle(h);
+    if (h) localStorage.setItem("cf-handle", h);
+    else localStorage.removeItem("cf-handle");
+  }
 
   useEffect(() => {
     let active = true;
@@ -77,6 +138,7 @@ export default function ProblemBrowser({ index }: { index: Index }) {
       if (q && !p.name.toLowerCase().includes(q) &&
           !`${p.contestId}${p.index}`.toLowerCase().includes(q)) return false;
       if (tag && !p.tags.includes(tag)) return false;
+      if (hideSolved && solved.has(`${p.contestId}-${p.index}`)) return false;
       return true;
     });
     const byRecent = (a: Problem, b: Problem) =>
@@ -88,7 +150,7 @@ export default function ProblemBrowser({ index }: { index: Index }) {
       return byRecent(a, b);
     });
     return out;
-  }, [problems, query, tag, sort]);
+  }, [problems, query, tag, sort, solved, hideSolved]);
 
   return (
     <div>
@@ -119,8 +181,49 @@ export default function ProblemBrowser({ index }: { index: Index }) {
         ))}
       </div>
 
+      {/* Codeforces profile: hide solved */}
+      <div className="mt-4 flex flex-wrap items-center gap-2 rounded-lg border border-neutral-800 bg-neutral-950 p-2">
+        <input
+          value={handleInput}
+          onChange={(e) => setHandleInput(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && applyHandle()}
+          placeholder="Codeforces handle…"
+          className="w-48 rounded-md border border-neutral-800 bg-neutral-900 px-3 py-1.5 text-sm text-neutral-100 outline-none placeholder:text-neutral-600 focus:border-neutral-600"
+        />
+        <button
+          onClick={applyHandle}
+          className="rounded-md bg-white px-3 py-1.5 text-sm font-medium text-black hover:bg-neutral-200"
+        >
+          Load
+        </button>
+        <button
+          onClick={() => setHideSolved((v) => !v)}
+          disabled={!handle}
+          aria-pressed={hideSolved}
+          className={`rounded-md px-3 py-1.5 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-40 ${
+            hideSolved
+              ? "bg-green-600 text-white hover:bg-green-500"
+              : "border border-neutral-700 text-neutral-300 hover:bg-neutral-800"
+          }`}
+        >
+          {hideSolved ? "✓ Hiding solved" : "Hide solved"}
+        </button>
+        {solvedStatus && (
+          <span
+            className={`text-sm ${
+              solvedStatus.startsWith("Error") ||
+              solvedStatus.startsWith("Failed")
+                ? "text-red-400"
+                : "text-neutral-500"
+            }`}
+          >
+            {solvedStatus}
+          </span>
+        )}
+      </div>
+
       {/* Controls */}
-      <div className="mt-4 flex flex-wrap items-center gap-2">
+      <div className="mt-3 flex flex-wrap items-center gap-2">
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -190,6 +293,14 @@ export default function ProblemBrowser({ index }: { index: Index }) {
                     {p.index}
                   </td>
                   <td className="px-3 py-2">
+                    {solved.has(`${p.contestId}-${p.index}`) && (
+                      <span
+                        title="Solved"
+                        className="mr-1.5 text-green-500"
+                      >
+                        ✓
+                      </span>
+                    )}
                     <a
                       href={p.url}
                       target="_blank"
