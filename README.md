@@ -9,7 +9,7 @@ Problem data comes from the official Codeforces API (`problemset.problems`) — 
 Regenerate the dataset any time:
 
 ```bash
-npm run data     # writes public/data/{rating}.json + index.json
+pnpm data        # writes public/data/{rating}.json + index.json
 ```
 
 Edit `RATINGS` / `PER_BUCKET` in `scripts/build-data.mjs` to change the ranges.
@@ -17,15 +17,15 @@ Edit `RATINGS` / `PER_BUCKET` in `scripts/build-data.mjs` to change the ranges.
 ## Develop
 
 ```bash
-npm install
-npm run dev      # http://localhost:3000
+pnpm install
+pnpm dev         # http://localhost:3000
 ```
 
 ## Build / deploy
 
 ```bash
-npm run build
-npm start
+pnpm build
+pnpm start
 ```
 
 Fully static — deploys to Vercel (or any static host) with zero config.

@@ -2,6 +2,7 @@
   "name": "cp-problem-browser",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@10.14.0",
   "scripts": {
     "data": "node scripts/build-data.mjs",
     "dev": "next dev",
