@@ -25,6 +25,7 @@ type HeatmapData = {
   days: Record<string, DayCounts>;
   stats: Record<string, PlatformStats>;
   errors: string[];
+  warnings?: string[];
 };
 
 const DAY_MS = 86_400_000;
@@ -341,6 +342,13 @@ export default function Heatmap() {
         <p className="mt-3 text-xs text-amber-500">
           Some platforms failed: {data.errors.join("; ")}
         </p>
+      )}
+      {(data.warnings?.length ?? 0) > 0 && (
+        <div className="mt-3 rounded-md border border-amber-900/50 bg-amber-950/30 px-3 py-2 text-xs text-amber-400">
+          {data.warnings!.map((w) => (
+            <p key={w}>⚠ {w}</p>
+          ))}
+        </div>
       )}
     </div>
   );

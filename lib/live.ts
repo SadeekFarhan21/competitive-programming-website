@@ -50,9 +50,12 @@ async function recentAtCoder(): Promise<StoredSub[]> {
   }));
 }
 
-async function recentLeetCode(): Promise<StoredSub[]> {
+async function recentLeetCode(warnings: string[]): Promise<StoredSub[]> {
   const session = process.env.LEETCODE_SESSION;
-  if (!session) return [];
+  if (!session) {
+    warnings.push("LeetCode session not configured — new submissions won't appear");
+    return [];
+  }
   const res = await fetch("https://leetcode.com/api/submissions/?offset=0&limit=20", {
     headers: {
       "User-Agent": "Mozilla/5.0",
@@ -61,6 +64,11 @@ async function recentLeetCode(): Promise<StoredSub[]> {
     },
     cache: "no-store",
   });
+  // 401/redirect-to-login means the cookie died; 403 is just rate limiting
+  if (res.status === 401 || res.redirected) {
+    warnings.push("LeetCode session expired — refresh LEETCODE_SESSION to keep data current");
+    return [];
+  }
   if (!res.ok) return [];
   const data = await res.json();
   return ((data.submissions_dump ?? []) as any[]).map((s) => ({
@@ -108,13 +116,36 @@ async function recentCodeChef(): Promise<StoredSub[]> {
   return subs;
 }
 
-export async function getLiveRecent(): Promise<{ subs: StoredSub[]; errors: string[] }> {
-  const names = ["Codeforces", "AtCoder", "LeetCode", "CodeChef"];
+async function checkCsesSession(warnings: string[]): Promise<StoredSub[]> {
+  const session = process.env.CSES_SESSION;
+  if (!session) {
+    warnings.push("CSES session not configured — new submissions won't appear");
+    return [];
+  }
+  const res = await fetch("https://cses.fi/problemset/", {
+    headers: { "User-Agent": "Mozilla/5.0", Cookie: `PHPSESSID=${session}` },
+    cache: "no-store",
+  });
+  const html = await res.text();
+  if (!html.includes('href="/logout"')) {
+    warnings.push("CSES session expired — refresh CSES_SESSION to keep data current");
+  }
+  return [];
+}
+
+export async function getLiveRecent(): Promise<{
+  subs: StoredSub[];
+  errors: string[];
+  warnings: string[];
+}> {
+  const warnings: string[] = [];
+  const names = ["Codeforces", "AtCoder", "LeetCode", "CodeChef", "CSES"];
   const results = await Promise.allSettled([
     recentCodeforces(),
     recentAtCoder(),
-    recentLeetCode(),
+    recentLeetCode(warnings),
     recentCodeChef(),
+    checkCsesSession(warnings),
   ]);
   const errors: string[] = [];
   const subs = results.flatMap((r, i) => {
@@ -122,7 +153,7 @@ export async function getLiveRecent(): Promise<{ subs: StoredSub[]; errors: stri
     errors.push(`${names[i]}: ${r.reason}`);
     return [];
   });
-  return { subs, errors };
+  return { subs, errors, warnings };
 }
 
 export function mergeSubs(base: StoredSub[], fresh: StoredSub[]): StoredSub[] {

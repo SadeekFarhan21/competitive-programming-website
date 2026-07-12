@@ -29,6 +29,10 @@ const HANDLES = {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+// --full: ignore the incremental early-stop and paginate entire histories
+// (slower pacing to stay under rate limits). Use for one-time backfills.
+const FULL = process.argv.includes("--full");
+
 // ---------- fetchers (return {platform, epoch, problem, verdict, ac, language, runtimeMs, memoryBytes}) ----------
 
 async function fetchCodeforces() {
@@ -80,11 +84,20 @@ async function fetchLeetCode(knownEpochs) {
   };
   const subs = [];
   for (let page = 0; page < 200; page++) {
-    if (page > 0) await sleep(1200);
-    const res = await fetch(
+    if (page > 0) await sleep(FULL ? 3000 : 1200);
+    let res = await fetch(
       `https://leetcode.com/api/submissions/?offset=${page * 20}&limit=20`,
       { headers }
     );
+    if (res.status === 403 && FULL) {
+      // rate-limited: back off once and retry
+      console.warn(`LeetCode page ${page}: 403 — backing off 30s`);
+      await sleep(30000);
+      res = await fetch(
+        `https://leetcode.com/api/submissions/?offset=${page * 20}&limit=20`,
+        { headers }
+      );
+    }
     if (!res.ok) {
       console.warn(`LeetCode page ${page}: HTTP ${res.status} — stopping`);
       break;
@@ -109,7 +122,7 @@ async function fetchLeetCode(knownEpochs) {
       });
     }
     // incremental: once we reach already-stored submissions, stop paginating
-    if (sawKnown || !data.has_next) break;
+    if ((sawKnown && !FULL) || !data.has_next) break;
   }
   return subs;
 }
@@ -156,7 +169,7 @@ async function fetchCodeChef(knownEpochs) {
     ).json();
     const batch = parse(data.content ?? "");
     rows = rows.concat(batch);
-    if (batch.some((r) => knownEpochs.has(`CodeChef:${r.epoch}`))) break;
+    if (!FULL && batch.some((r) => knownEpochs.has(`CodeChef:${r.epoch}`))) break;
   }
   return rows;
 }

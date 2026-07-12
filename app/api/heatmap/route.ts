@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
   const days = Math.min(Number(request.nextUrl.searchParams.get("days")) || 365, 730);
   const sinceEpoch = Math.floor((Date.now() - days * DAY_MS) / 1000);
 
-  const { subs: live, errors } = await getLiveRecent();
+  const { subs: live, errors, warnings } = await getLiveRecent();
   const all = mergeSubs(getSubmissions(), live).sort((a, b) => a.epoch - b.epoch);
 
   // LeetCode: only the first AC of each problem counts as accepted (full-history
@@ -94,6 +94,7 @@ export async function GET(request: NextRequest) {
       days: calendar,
       stats,
       errors,
+      warnings,
     },
     {
       headers: {
