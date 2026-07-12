@@ -194,7 +194,7 @@ export default function Heatmap() {
         {visibleTotal.toLocaleString()}{" "}
         {mode === "accepted" ? "accepted submissions" : "submissions"} on {activeDays} active
         days in the last year
-        {mode === "accepted" && enabled.has("leetcode") && (
+        {mode === "accepted" && enabled.has("leetcode") && data.stats?.leetcode?.lifetime && (
           <span className="text-neutral-600">
             {" "}
             · LeetCode excluded (no public per-day verdicts)

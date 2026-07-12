@@ -59,7 +59,42 @@ async function fetchAtCoder(handle: string, limit = 10): Promise<Submission[]> {
   }));
 }
 
+function parseLeetCodeMemory(memory: string | null | undefined): number | null {
+  const m = memory?.match(/([\d.]+)\s*MB/);
+  return m ? Math.round(Number(m[1]) * 1024 * 1024) : null;
+}
+
 async function fetchLeetCode(handle: string, limit = 10): Promise<Submission[]> {
+  // With a session cookie, the private API is real-time and includes verdicts,
+  // language, and performance; the public endpoint only lists accepted submissions.
+  const session = process.env.LEETCODE_SESSION;
+  if (session) {
+    const res = await fetch(`https://leetcode.com/api/submissions/?offset=0&limit=${limit}`, {
+      headers: {
+        "User-Agent": "Mozilla/5.0",
+        Referer: "https://leetcode.com/",
+        Cookie: `LEETCODE_SESSION=${session}`,
+      },
+      cache: "no-store",
+    });
+    if (res.ok) {
+      const data = await res.json();
+      const dump: any[] = data.submissions_dump ?? [];
+      if (dump.length > 0) {
+        return dump.slice(0, limit).map((s) => ({
+          platform: "LeetCode",
+          epoch: s.timestamp,
+          time: new Date(s.timestamp * 1000).toISOString(),
+          problemName: s.title,
+          verdict: (s.status_display ?? "UNKNOWN").toUpperCase(),
+          language: s.lang ?? null,
+          runtimeMs: s.runtime?.match(/\d+/) ? Number(s.runtime.match(/\d+/)[0]) : null,
+          memoryBytes: parseLeetCodeMemory(s.memory),
+        }));
+      }
+    }
+    // fall through to the public endpoint on auth failure / empty response
+  }
   const query = `
     query recentAcSubmissions($username: String!, $limit: Int!) {
       recentAcSubmissionList(username: $username, limit: $limit) {

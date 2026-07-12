@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
+// LeetCode private-API pagination is rate-limited to ~1 page per 600ms
+export const maxDuration = 60;
 
 const DEFAULT_HANDLES = {
   codeforces: "FarhanSadeek21",
@@ -48,7 +50,58 @@ async function fetchAtCoderSubs(handle: string, sinceEpoch: number): Promise<Sub
   return data.map((s) => ({ day: dateKey(s.epoch_second), ac: s.result === "AC" }));
 }
 
+async function fetchLeetCodePrivateSubs(sinceEpoch: number): Promise<Sub[] | null> {
+  // The private API (session cookie) is real-time and has per-submission verdicts.
+  // Pages are capped at 20, sorted newest-first, and rate-limited (~600ms spacing
+  // avoids 403s), so stop once past the window.
+  const session = process.env.LEETCODE_SESSION;
+  if (!session) return null;
+  const headers = {
+    "User-Agent": "Mozilla/5.0",
+    Referer: "https://leetcode.com/",
+    Cookie: `LEETCODE_SESSION=${session}`,
+  };
+
+  const raw: { ts: number; qid: number; ac: boolean }[] = [];
+  const MAX_PAGES = 40;
+  let done = false;
+  for (let page = 0; page < MAX_PAGES && !done; page++) {
+    if (page > 0) await new Promise((r) => setTimeout(r, 600));
+    const res = await fetch(
+      `https://leetcode.com/api/submissions/?offset=${page * 20}&limit=20`,
+      { headers, cache: "no-store" }
+    );
+    if (!res.ok) {
+      if (page === 0) return null;
+      break;
+    }
+    const data = await res.json();
+    const dump: any[] = data.submissions_dump ?? [];
+    if (page === 0 && dump.length === 0) return null;
+    for (const s of dump) {
+      if (s.timestamp < sinceEpoch) {
+        done = true;
+        break;
+      }
+      raw.push({ ts: s.timestamp, qid: s.question_id, ac: s.status_display === "Accepted" });
+    }
+    if (!data.has_next) break;
+  }
+
+  // Only the first AC of each problem counts as accepted — re-solves are
+  // recorded as submissions but not as new accepted problems.
+  raw.sort((a, b) => a.ts - b.ts);
+  const solved = new Set<number>();
+  return raw.map((s) => {
+    const isNew = s.ac && !solved.has(s.qid);
+    if (s.ac) solved.add(s.qid);
+    return { day: dateKey(s.ts), ac: isNew };
+  });
+}
+
 async function fetchLeetCodeSubs(handle: string, sinceEpoch: number): Promise<Sub[]> {
+  const privateSubs = await fetchLeetCodePrivateSubs(sinceEpoch);
+  if (privateSubs) return privateSubs;
   // The public calendar counts all submissions but carries no per-day verdicts (ac: null)
   const res = await fetch("https://leetcode.com/graphql", {
     method: "POST",
@@ -276,8 +329,9 @@ export async function GET(request: NextRequest) {
     };
   });
 
-  // LeetCode's per-day verdicts aren't public; substitute lifetime accepted/total
-  if (lifetimeLC.status === "fulfilled" && stats.leetcode) {
+  // Public-calendar fallback has no verdicts; substitute lifetime accepted/total.
+  // With a session cookie the per-day data is real, so leave it untouched.
+  if (lifetimeLC.status === "fulfilled" && stats.leetcode?.accepted === null) {
     const { accepted, submissions } = lifetimeLC.value;
     if (submissions > 0) {
       stats.leetcode = {
