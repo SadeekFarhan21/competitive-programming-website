@@ -1,18 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSubmissions } from "../../../lib/store";
+import { getLiveRecent, mergeSubs } from "../../../lib/live";
 
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
   const limit = Math.min(Number(params.get("limit")) || 15, 200);
   const platform = params.get("platform");
 
-  let subs = getSubmissions();
+  const { subs: live, errors } = await getLiveRecent();
+  let subs = mergeSubs(getSubmissions(), live);
   if (platform) {
     subs = subs.filter((s) => s.platform.toLowerCase() === platform.toLowerCase());
   }
 
   const submissions = subs
-    .slice()
     .sort((a, b) => b.epoch - a.epoch)
     .slice(0, limit)
     .map((s) => ({
@@ -26,5 +27,13 @@ export async function GET(request: NextRequest) {
       memoryBytes: s.memoryBytes,
     }));
 
-  return NextResponse.json({ submissions, errors: [] });
+  return NextResponse.json(
+    { submissions, errors },
+    {
+      headers: {
+        // CDN caches for 5 minutes — upstream APIs are hit at most once per window
+        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=60",
+      },
+    }
+  );
 }
