@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "CF Problem Browser",
+  title: "Submission Activity",
   description:
-    "The most recent Codeforces problems by rating (1000–1600).",
+    "Daily submission heatmap and feed across Codeforces, AtCoder, LeetCode, CodeChef, UVA, and CSES.",
 };
 
 export default function RootLayout({

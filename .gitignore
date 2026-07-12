@@ -70,6 +70,12 @@ Testing/
 
 # Node / Next.js
 node_modules/
+.env
+.env.*
+
+# Local tooling artifacts
+.playwright-mcp/
+.cph/
 .next/
 next-env.d.ts
 *.tsbuildinfo
