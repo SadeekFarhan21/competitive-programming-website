@@ -1,37 +1,41 @@
-# Codeforces Problem Browser
+# Submission Activity
 
-A Next.js website listing the **1000 most recent Codeforces problems for each rating from 1000 to 1600** (in 100-point steps). Filter by tag, search by name/ID, and sort by recency or solve count.
+A fast Next.js dashboard for tracking submission activity across Codeforces, AtCoder, LeetCode, CodeChef, and CSES.
 
-## Data
+The heatmap and recent-submission feed read from the bundled `data/submissions.json` file, so page requests do not wait on external services. The refresh workflow updates that dataset before deployment.
 
-Problem data comes from the official Codeforces API (`problemset.problems`) — no HTML scraping. For each rating bucket it keeps the newest problems (highest contest ID first), capped at 1000.
-
-Regenerate the dataset any time:
+## Development
 
 ```bash
-pnpm data        # writes public/data/{rating}.json + index.json
+npm install
+npm run dev
 ```
 
-Edit `RATINGS` / `PER_BUCKET` in `scripts/build-data.mjs` to change the ranges.
+Open [http://localhost:3000](http://localhost:3000).
 
-## Develop
+## Refresh data
 
 ```bash
-pnpm install
-pnpm dev         # http://localhost:3000
+npm run refresh
 ```
 
-## Build / deploy
+The refresh script uses the configured platform credentials from `.env.local`. LeetCode uses authenticated GraphQL through `LEETCODE_SESSION`; CSES uses `CSES_SESSION`.
+
+## Build and deploy
 
 ```bash
-pnpm build
-pnpm start
+npm run build
+npm start
 ```
 
-Fully static — deploys to Vercel (or any static host) with zero config.
+The project deploys directly to Vercel. GitHub Actions refreshes and commits the submission dataset on schedule.
 
 ## Structure
 
-- `scripts/build-data.mjs` — fetches + buckets problems into `public/data/`
-- `app/page.tsx` — server page, loads the index
-- `app/ProblemBrowser.tsx` — client UI (tabs, search, tag filter, sort)
+- `app/Heatmap.tsx` — activity heatmap and platform/mode controls
+- `app/RecentFeed.tsx` — recent submissions with platform and verdict filters
+- `app/api/heatmap/route.ts` — local heatmap data endpoint
+- `app/api/submissions/route.ts` — local recent-submission endpoint
+- `lib/leetcode.ts` — authenticated/public LeetCode GraphQL client
+- `scripts/refresh-data.mjs` — platform data refresh script
+- `data/submissions.json` — bundled submission history
