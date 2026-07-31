@@ -72,59 +72,29 @@ async function fetchAtCoder() {
 }
 
 async function fetchLeetCode(knownEpochs) {
-  const session = process.env.LEETCODE_SESSION;
-  if (!session) {
-    console.warn("LEETCODE_SESSION not set — skipping LeetCode");
-    return [];
-  }
-  const headers = {
-    "User-Agent": "Mozilla/5.0",
-    Referer: "https://leetcode.com/",
-    Cookie: `LEETCODE_SESSION=${session}`,
-  };
-  const subs = [];
-  for (let page = 0; page < 200; page++) {
-    if (page > 0) await sleep(FULL ? 3000 : 1200);
-    let res = await fetch(
-      `https://leetcode.com/api/submissions/?offset=${page * 20}&limit=20`,
-      { headers }
-    );
-    if (res.status === 403 && FULL) {
-      // rate-limited: back off once and retry
-      console.warn(`LeetCode page ${page}: 403 — backing off 30s`);
-      await sleep(30000);
-      res = await fetch(
-        `https://leetcode.com/api/submissions/?offset=${page * 20}&limit=20`,
-        { headers }
-      );
-    }
-    if (!res.ok) {
-      console.warn(`LeetCode page ${page}: HTTP ${res.status} — stopping`);
-      break;
-    }
-    const data = await res.json();
-    const dump = data.submissions_dump ?? [];
-    let sawKnown = false;
-    for (const s of dump) {
-      if (knownEpochs.has(`LeetCode:${s.timestamp}`)) sawKnown = true;
-      subs.push({
-        platform: "LeetCode",
-        epoch: s.timestamp,
-        problem: s.title,
-        verdict: (s.status_display ?? "UNKNOWN").toUpperCase(),
-        ac: s.status_display === "Accepted",
-        language: s.lang,
-        runtimeMs: s.runtime?.match(/\d+/) ? Number(s.runtime.match(/\d+/)[0]) : null,
-        memoryBytes: (() => {
-          const m = s.memory?.match(/([\d.]+)\s*MB/);
-          return m ? Math.round(Number(m[1]) * 1024 * 1024) : null;
-        })(),
-      });
-    }
-    // incremental: once we reach already-stored submissions, stop paginating
-    if ((sawKnown && !FULL) || !data.has_next) break;
-  }
-  return subs;
+  const baseUrl = (process.env.LEETCODE_API_URL ?? "https://alfa-leetcode-api.onrender.com").replace(/\/$/, "");
+  const res = await fetch(`${baseUrl}/${HANDLES.leetcode}/submission?limit=20`);
+  if (!res.ok) throw new Error(`LeetCode API HTTP ${res.status}`);
+  const data = await res.json();
+  const rows = [data.submission, data.submissions, data.result, data.data?.submission, data.data?.submissions, data.data].find(Array.isArray) ?? [];
+  return rows.flatMap((s) => {
+    const rawEpoch = s.timestamp ?? s.timeStamp ?? s.createdAt;
+    const epoch = typeof rawEpoch === "number" ? rawEpoch : Number(rawEpoch) || Date.parse(rawEpoch) / 1000;
+    const title = s.title ?? s.problem ?? s.titleSlug;
+    if (!Number.isFinite(epoch) || !title) return [];
+    const verdict = String(s.statusDisplay ?? s.status_display ?? s.status ?? "UNKNOWN").toUpperCase();
+    const memory = typeof s.memory === "string" ? s.memory.match(/[\d.]+/) : null;
+    return [{
+      platform: "LeetCode",
+      epoch,
+      problem: String(title),
+      verdict,
+      ac: verdict === "ACCEPTED",
+      language: s.lang ?? s.language ?? null,
+      runtimeMs: typeof s.runtime === "number" ? s.runtime : Number(String(s.runtime ?? "").match(/[\d.]+/)?.[0]) || null,
+      memoryBytes: memory ? Math.round(Number(memory[0]) * 1024 * 1024) : null,
+    }];
+  });
 }
 
 async function fetchCodeChef(knownEpochs) {

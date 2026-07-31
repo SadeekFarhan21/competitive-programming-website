@@ -1,4 +1,5 @@
 import { StoredSub } from "./store";
+import { fetchLeetCodeSubmissions } from "./leetcode";
 
 // Lightweight "recent only" fetchers — one request per platform, no pagination.
 // Merged on top of the bundled history so the site stays fresh between
@@ -51,39 +52,12 @@ async function recentAtCoder(): Promise<StoredSub[]> {
 }
 
 async function recentLeetCode(warnings: string[]): Promise<StoredSub[]> {
-  const session = process.env.LEETCODE_SESSION;
-  if (!session) {
-    warnings.push("LeetCode session not configured — new submissions won't appear");
+  try {
+    return await fetchLeetCodeSubmissions();
+  } catch (error) {
+    warnings.push(`LeetCode API unavailable — ${error}`);
     return [];
   }
-  const res = await fetch("https://leetcode.com/api/submissions/?offset=0&limit=20", {
-    headers: {
-      "User-Agent": "Mozilla/5.0",
-      Referer: "https://leetcode.com/",
-      Cookie: `LEETCODE_SESSION=${session}`,
-    },
-    cache: "no-store",
-  });
-  // 401/redirect-to-login means the cookie died; 403 is just rate limiting
-  if (res.status === 401 || res.redirected) {
-    warnings.push("LeetCode session expired — refresh LEETCODE_SESSION to keep data current");
-    return [];
-  }
-  if (!res.ok) return [];
-  const data = await res.json();
-  return ((data.submissions_dump ?? []) as any[]).map((s) => ({
-    platform: "LeetCode" as const,
-    epoch: s.timestamp,
-    problem: s.title,
-    verdict: (s.status_display ?? "UNKNOWN").toUpperCase(),
-    ac: s.status_display === "Accepted",
-    language: s.lang ?? null,
-    runtimeMs: s.runtime?.match(/\d+/) ? Number(s.runtime.match(/\d+/)[0]) : null,
-    memoryBytes: (() => {
-      const m = s.memory?.match(/([\d.]+)\s*MB/);
-      return m ? Math.round(Number(m[1]) * 1024 * 1024) : null;
-    })(),
-  }));
 }
 
 async function recentCodeChef(): Promise<StoredSub[]> {

@@ -18,7 +18,6 @@ jobs:
           node-version: 22
       - name: Refresh data
         env:
-          LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
           CSES_SESSION: ${{ secrets.CSES_SESSION }}
         run: node scripts/refresh-data.mjs
       - name: Commit if changed
