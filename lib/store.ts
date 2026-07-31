@@ -13,8 +13,7 @@ export type StoredSub = {
 
 // Bundled at build time; refreshed by scripts/refresh-data.mjs + redeploy
 export function getSubmissions(): StoredSub[] {
-  return (submissions as Array<{ platform: string }>)
-    .filter((submission) => submission.platform !== "UVA") as StoredSub[];
+  return submissions as StoredSub[];
 }
 
 export function dateKey(epochSeconds: number): string {

@@ -1,14 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSubmissions } from "../../../lib/store";
-import { getLiveRecent, mergeSubs } from "../../../lib/live";
 
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
   const limit = Math.min(Number(params.get("limit")) || 15, 200);
   const platform = params.get("platform");
 
-  const { subs: live, errors } = await getLiveRecent();
-  let subs = mergeSubs(getSubmissions(), live);
+  const errors: string[] = [];
+  let subs = getSubmissions();
   if (platform) {
     subs = subs.filter((s) => s.platform.toLowerCase() === platform.toLowerCase());
   }

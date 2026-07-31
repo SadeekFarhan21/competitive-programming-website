@@ -24,7 +24,6 @@ const HANDLES = {
   atcoder: "Farhan2021",
   leetcode: "FarhanSadeek21",
   codechef: "farhansadeek21",
-  uva: "legacy101",
 };
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -159,42 +158,6 @@ async function fetchCodeChef(knownEpochs) {
     if (!FULL && batch.some((r) => knownEpochs.has(`CodeChef:${r.epoch}`))) break;
   }
   return rows;
-}
-
-const UVA_VERDICTS = {
-  10: "SUBMISSION_ERROR", 15: "CANT_BE_JUDGED", 20: "IN_QUEUE", 30: "COMPILE_ERROR",
-  35: "RESTRICTED_FUNCTION", 40: "RUNTIME_ERROR", 45: "OUTPUT_LIMIT", 50: "TIME_LIMIT",
-  60: "MEMORY_LIMIT", 70: "WRONG_ANSWER", 80: "PRESENTATION_ERROR", 90: "ACCEPTED",
-};
-const UVA_LANGUAGES = { 1: "ANSI C", 2: "Java", 3: "C++", 4: "Pascal", 5: "C++11", 6: "Python 3" };
-
-async function fetchUVA() {
-  const uid = await (
-    await fetch(`https://uhunt.onlinejudge.org/api/uname2uid/${HANDLES.uva}`)
-  ).json();
-  if (!uid) throw new Error("unknown UVA username");
-  const data = await (
-    await fetch(`https://uhunt.onlinejudge.org/api/subs-user/${uid}`)
-  ).json();
-  const subs = data.subs ?? [];
-  // resolve problem titles (cached across runs would be nicer; volume is small)
-  const pids = [...new Set(subs.map((s) => s[1]))];
-  const titles = {};
-  for (const pid of pids) {
-    const p = await (await fetch(`https://uhunt.onlinejudge.org/api/p/id/${pid}`)).json();
-    titles[pid] = p?.num && p?.title ? `${p.num} - ${p.title}` : `problem ${pid}`;
-    await sleep(150);
-  }
-  return subs.map((s) => ({
-    platform: "UVA",
-    epoch: s[4],
-    problem: titles[s[1]],
-    verdict: UVA_VERDICTS[s[2]] ?? `VERDICT_${s[2]}`,
-    ac: s[2] === 90,
-    language: UVA_LANGUAGES[s[5]] ?? `lang ${s[5]}`,
-    runtimeMs: s[3],
-    memoryBytes: null,
-  }));
 }
 
 async function fetchCSES() {
