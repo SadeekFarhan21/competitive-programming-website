@@ -1,8 +1,25 @@
 import { StoredSub } from "./store";
 
-const API_URL =
-  process.env.LEETCODE_API_URL ?? "https://alfa-leetcode-api.onrender.com";
+const GRAPHQL_URL = "https://leetcode.com/graphql";
 const USERNAME = "FarhanSadeek21";
+
+const RECENT_ACCEPTED_QUERY = `
+  query recentAcSubmissionList($username: String!, $limit: Int!, $skip: Int!) {
+    recentAcSubmissionList(username: $username, limit: $limit, skip: $skip) {
+      id title titleSlug timestamp statusDisplay lang
+    }
+  }
+`;
+
+const SUBMISSION_LIST_QUERY = `
+  query submissionList($limit: Int!, $offset: Int!) {
+    submissionList(limit: $limit, offset: $offset) {
+      lastKey
+      hasNext
+      submissions { id title titleSlug timestamp statusDisplay lang runtime memory }
+    }
+  }
+`;
 
 function asNumber(value: unknown): number | null {
   if (typeof value === "number" && Number.isFinite(value)) return value;
@@ -33,6 +50,8 @@ function runtimeMs(value: unknown): number | null {
 
 export function normalizeLeetCodeSubmissions(payload: any): StoredSub[] {
   const rows = [
+    payload?.submissionList?.submissions,
+    payload?.recentAcSubmissionList,
     payload?.submission,
     payload?.submissions,
     payload?.result,
@@ -64,8 +83,24 @@ export function normalizeLeetCodeSubmissions(payload: any): StoredSub[] {
 }
 
 export async function fetchLeetCodeSubmissions(limit = 20): Promise<StoredSub[]> {
-  const url = `${API_URL.replace(/\/$/, "")}/${USERNAME}/submission?limit=${limit}`;
-  const res = await fetch(url, { cache: "no-store" });
+  const session = process.env.LEETCODE_SESSION;
+  const query = session ? SUBMISSION_LIST_QUERY : RECENT_ACCEPTED_QUERY;
+  const variables = session
+    ? { limit, offset: 0 }
+    : { username: USERNAME, limit, skip: 0 };
+  const res = await fetch(GRAPHQL_URL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Referer: "https://leetcode.com/",
+      Origin: "https://leetcode.com",
+      ...(session ? { Cookie: `LEETCODE_SESSION=${session}` } : {}),
+    },
+    body: JSON.stringify({ query, variables }),
+    cache: "no-store",
+  });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  return normalizeLeetCodeSubmissions(await res.json());
+  const payload = await res.json();
+  if (payload.errors?.length) throw new Error(payload.errors[0].message ?? "GraphQL error");
+  return normalizeLeetCodeSubmissions(payload.data);
 }

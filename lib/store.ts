@@ -1,7 +1,7 @@
 import submissions from "../data/submissions.json";
 
 export type StoredSub = {
-  platform: "Codeforces" | "AtCoder" | "LeetCode" | "CodeChef" | "UVA" | "CSES";
+  platform: "Codeforces" | "AtCoder" | "LeetCode" | "CodeChef" | "CSES";
   epoch: number;
   problem: string;
   verdict: string;
@@ -13,7 +13,8 @@ export type StoredSub = {
 
 // Bundled at build time; refreshed by scripts/refresh-data.mjs + redeploy
 export function getSubmissions(): StoredSub[] {
-  return submissions as StoredSub[];
+  return (submissions as Array<{ platform: string }>)
+    .filter((submission) => submission.platform !== "UVA") as StoredSub[];
 }
 
 export function dateKey(epochSeconds: number): string {

@@ -12,37 +12,124 @@ type Submission = {
   memoryBytes: number | null;
 };
 
+function standardLanguage(language: string | null): string | null {
+  if (!language) return null;
+  const value = language.toLowerCase();
+  if (value.includes("c++") || value.includes("cpp") || value.includes("gnu c")) return "C++";
+  if (value === "c" || value.includes("ansi c")) return "C";
+  if (value.includes("python") || value.includes("pypy")) return "Python";
+  if (value.includes("java")) return "Java";
+  if (value.includes("kotlin")) return "Kotlin";
+  if (value.includes("javascript") || value === "js") return "JavaScript";
+  if (value.includes("typescript") || value === "ts") return "TypeScript";
+  if (value.includes("rust")) return "Rust";
+  if (value.includes("golang") || value === "go") return "Go";
+  if (value.includes("swift")) return "Swift";
+  return language;
+}
+
+function standardVerdict(verdict: string, platform: string): string {
+  const value = verdict.toLowerCase().replace(/[_-]+/g, " ");
+  if (value === "wa" || value === "wrong answer") return "Wrong Answer";
+  if (value === "re" && platform === "AtCoder") return "Runtime Error";
+  if (value === "ac" && platform === "AtCoder") return "Accepted";
+  if (platform === "CSES" && value.includes("reject")) return "Wrong Answer";
+  if (value === "ok" || value === "ac" || value.includes("accepted")) return "Accepted";
+  if (value.includes("wrong answer")) return "Wrong Answer";
+  if (value.includes("runtime")) return "Runtime Error";
+  if (value.includes("compile") || value.includes("compilation")) return "Compile Error";
+  if (value.includes("time limit")) return "Time Limit Exceeded";
+  if (value.includes("memory limit")) return "Memory Limit Exceeded";
+  if (value.includes("presentation")) return "Presentation Error";
+  if (value.includes("partial")) return "Partially Accepted";
+  if (value.includes("queue")) return "In Queue";
+  if (value.includes("reject")) return "Rejected";
+  return verdict
+    .toLowerCase()
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
 const PLATFORM_COLORS: Record<string, string> = {
   Codeforces: "text-red-400",
   AtCoder: "text-sky-400",
   LeetCode: "text-amber-400",
   CodeChef: "text-orange-300",
-  UVA: "text-violet-400",
 };
 
 function verdictColor(verdict: string) {
-  if (["OK", "AC", "ACCEPTED"].includes(verdict)) return "text-emerald-400";
-  if (verdict.includes("PARTIAL")) return "text-amber-400";
+  const value = verdict.toLowerCase();
+  if (["ok", "ac", "accepted"].includes(value)) return "text-emerald-400";
+  if (value.includes("partial")) return "text-amber-400";
   return "text-red-400";
 }
 
 export default function RecentFeed() {
   const [subs, setSubs] = useState<Submission[] | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [platform, setPlatform] = useState("all");
+  const [verdict, setVerdict] = useState("all");
 
   useEffect(() => {
-    fetch("/api/submissions?limit=20")
+    fetch("/api/submissions?limit=200")
       .then((r) => r.json())
-      .then((d) => setSubs(d.submissions))
+      .then((d) =>
+        setSubs(
+          d.submissions.map((submission: Submission) => ({
+            ...submission,
+            language: standardLanguage(submission.language),
+            verdict: standardVerdict(submission.verdict, submission.platform),
+          }))
+        )
+      )
       .catch((e) => setError(String(e)));
   }, []);
 
   if (error) return <p className="text-sm text-red-400">Failed to load: {error}</p>;
   if (!subs) return <p className="text-sm text-neutral-400">Loading submissions…</p>;
 
+  const platforms = ["all", ...new Set(subs.map((s) => s.platform))];
+  const verdicts = ["all", ...new Set(subs.map((s) => s.verdict))];
+  const visible = subs
+    .filter((s) => platform === "all" || s.platform === platform)
+    .filter((s) => verdict === "all" || s.verdict === verdict)
+    .slice(0, 20);
+
   return (
-    <ul className="divide-y divide-neutral-800">
-      {subs.map((s, i) => (
+    <>
+      <div className="mb-3 flex flex-wrap gap-2">
+        <label className="flex items-center gap-2 text-xs text-neutral-500">
+          Platform
+          <select
+            value={platform}
+            onChange={(e) => setPlatform(e.target.value)}
+            className="rounded-md border border-neutral-700 bg-neutral-900 px-2 py-1 text-neutral-200 outline-none"
+          >
+            {platforms.map((value) => (
+              <option key={value} value={value}>
+                {value === "all" ? "All platforms" : value}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="flex items-center gap-2 text-xs text-neutral-500">
+          Verdict
+          <select
+            value={verdict}
+            onChange={(e) => setVerdict(e.target.value)}
+            className="rounded-md border border-neutral-700 bg-neutral-900 px-2 py-1 text-neutral-200 outline-none"
+          >
+            {verdicts.map((value) => (
+              <option key={value} value={value}>
+                {value === "all" ? "All verdicts" : value}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+      <ul className="divide-y divide-neutral-800">
+      {visible.map((s, i) => (
         <li key={i} className="flex items-baseline gap-x-3 py-2 text-sm">
           <span className="w-36 shrink-0 tabular-nums text-neutral-500">
             {new Date(s.time).toLocaleString(undefined, {
@@ -67,6 +154,10 @@ export default function RecentFeed() {
           </span>
         </li>
       ))}
-    </ul>
+      </ul>
+      {visible.length === 0 && (
+        <p className="py-4 text-sm text-neutral-500">No submissions match these filters.</p>
+      )}
+    </>
   );
 }

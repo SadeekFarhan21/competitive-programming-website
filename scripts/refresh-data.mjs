@@ -72,18 +72,33 @@ async function fetchAtCoder() {
 }
 
 async function fetchLeetCode(knownEpochs) {
-  const baseUrl = (process.env.LEETCODE_API_URL ?? "https://alfa-leetcode-api.onrender.com").replace(/\/$/, "");
-  const res = await fetch(`${baseUrl}/${HANDLES.leetcode}/submission?limit=20`);
-  if (!res.ok) throw new Error(`LeetCode API HTTP ${res.status}`);
-  const data = await res.json();
-  const rows = [data.submission, data.submissions, data.result, data.data?.submission, data.data?.submissions, data.data].find(Array.isArray) ?? [];
-  return rows.flatMap((s) => {
+  const session = process.env.LEETCODE_SESSION;
+  const query = session
+    ? `query submissionList($limit: Int!, $offset: Int!) { submissionList(limit: $limit, offset: $offset) { hasNext submissions { id title titleSlug timestamp statusDisplay lang runtime memory } } }`
+    : `query recentAcSubmissionList($username: String!, $limit: Int!, $skip: Int!) { recentAcSubmissionList(username: $username, limit: $limit, skip: $skip) { id title titleSlug timestamp statusDisplay lang } }`;
+  const headers = { "Content-Type": "application/json", Referer: "https://leetcode.com/", Origin: "https://leetcode.com", ...(session ? { Cookie: `LEETCODE_SESSION=${session}` } : {}) };
+  const all = [];
+  for (let page = 0; page < (session ? 200 : 1); page++) {
+    if (page > 0) await sleep(FULL ? 3000 : 1200);
+    const variables = session ? { limit: 20, offset: page * 20 } : { username: HANDLES.leetcode, limit: 20, skip: 0 };
+    const res = await fetch("https://leetcode.com/graphql", { method: "POST", headers, body: JSON.stringify({ query, variables }) });
+    if (!res.ok) throw new Error(`LeetCode GraphQL HTTP ${res.status}`);
+    const payload = await res.json();
+    if (payload.errors?.length) throw new Error(payload.errors[0].message ?? "LeetCode GraphQL error");
+    const rows = session ? payload.data?.submissionList?.submissions ?? [] : payload.data?.recentAcSubmissionList ?? [];
+    all.push(...rows);
+    const sawKnown = rows.some((s) => knownEpochs.has(`LeetCode:${s.timestamp}`));
+    if (!session || (sawKnown && !FULL) || !payload.data?.submissionList?.hasNext) break;
+  }
+  return all.flatMap((s) => {
     const rawEpoch = s.timestamp ?? s.timeStamp ?? s.createdAt;
     const epoch = typeof rawEpoch === "number" ? rawEpoch : Number(rawEpoch) || Date.parse(rawEpoch) / 1000;
     const title = s.title ?? s.problem ?? s.titleSlug;
     if (!Number.isFinite(epoch) || !title) return [];
-    const verdict = String(s.statusDisplay ?? s.status_display ?? s.status ?? "UNKNOWN").toUpperCase();
-    const memory = typeof s.memory === "string" ? s.memory.match(/[\d.]+/) : null;
+    const verdict = String(s.statusDisplay ?? "ACCEPTED").toUpperCase();
+    const runtimeMatch = String(s.runtime ?? "").match(/[\d.]+/);
+    const memoryMatch = String(s.memory ?? "").match(/([\d.]+)\s*(KB|MB|GB)/i);
+    const memoryUnit = memoryMatch?.[2]?.toUpperCase();
     return [{
       platform: "LeetCode",
       epoch,
@@ -91,8 +106,10 @@ async function fetchLeetCode(knownEpochs) {
       verdict,
       ac: verdict === "ACCEPTED",
       language: s.lang ?? s.language ?? null,
-      runtimeMs: typeof s.runtime === "number" ? s.runtime : Number(String(s.runtime ?? "").match(/[\d.]+/)?.[0]) || null,
-      memoryBytes: memory ? Math.round(Number(memory[0]) * 1024 * 1024) : null,
+      runtimeMs: runtimeMatch ? Number(runtimeMatch[0]) : null,
+      memoryBytes: memoryMatch
+        ? Math.round(Number(memoryMatch[1]) * (memoryUnit === "GB" ? 1024 ** 3 : memoryUnit === "KB" ? 1024 : 1024 ** 2))
+        : null,
     }];
   });
 }
@@ -237,11 +254,10 @@ const results = await Promise.allSettled([
   fetchAtCoder(),
   fetchLeetCode(knownEpochs),
   fetchCodeChef(knownEpochs),
-  fetchUVA(),
   fetchCSES(),
 ]);
 
-const names = ["Codeforces", "AtCoder", "LeetCode", "CodeChef", "UVA", "CSES"];
+const names = ["Codeforces", "AtCoder", "LeetCode", "CodeChef", "CSES"];
 let fresh = [];
 results.forEach((r, i) => {
   if (r.status === "fulfilled") {
@@ -258,7 +274,11 @@ const seen = new Set(knownEpochs);
 let added = 0;
 for (const s of fresh) {
   const key = `${s.platform}:${s.epoch}`;
-  if (seen.has(key)) continue;
+  if (seen.has(key)) {
+    const existingIndex = merged.findIndex((row) => `${row.platform}:${row.epoch}` === key);
+    if (existingIndex >= 0 && s.platform === "LeetCode") merged[existingIndex] = s;
+    continue;
+  }
   seen.add(key);
   merged.push(s);
   added++;

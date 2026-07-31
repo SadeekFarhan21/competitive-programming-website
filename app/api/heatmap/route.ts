@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSubmissions, dateKey, StoredSub } from "../../../lib/store";
-import { getLiveRecent, mergeSubs } from "../../../lib/live";
 
-type Platform = "codeforces" | "atcoder" | "leetcode" | "codechef" | "uva" | "cses";
+type Platform = "codeforces" | "atcoder" | "leetcode" | "codechef" | "cses";
 
 type DayCounts = Record<Platform, number> & {
   total: number;
@@ -17,7 +16,6 @@ const PLATFORM_KEY: Record<StoredSub["platform"], Platform> = {
   AtCoder: "atcoder",
   LeetCode: "leetcode",
   CodeChef: "codechef",
-  UVA: "uva",
   CSES: "cses",
 };
 
@@ -25,8 +23,11 @@ export async function GET(request: NextRequest) {
   const days = Math.min(Number(request.nextUrl.searchParams.get("days")) || 365, 730);
   const sinceEpoch = Math.floor((Date.now() - days * DAY_MS) / 1000);
 
-  const { subs: live, errors, warnings } = await getLiveRecent();
-  const all = mergeSubs(getSubmissions(), live).sort((a, b) => a.epoch - b.epoch);
+  // The heatmap is backed by the bundled dataset so it renders immediately.
+  // scripts/refresh-data.mjs updates this file through the scheduled workflow.
+  const all = getSubmissions().slice().sort((a, b) => a.epoch - b.epoch);
+  const errors: string[] = [];
+  const warnings: string[] = [];
 
   // LeetCode: only the first AC of each problem counts as accepted (full-history
   // dedupe), so re-solves don't inflate the accepted heatmap.
@@ -45,7 +46,6 @@ export async function GET(request: NextRequest) {
     atcoder: { submissions: 0, accepted: 0 },
     leetcode: { submissions: 0, accepted: 0 },
     codechef: { submissions: 0, accepted: 0 },
-    uva: { submissions: 0, accepted: 0 },
     cses: { submissions: 0, accepted: 0 },
   };
 
@@ -61,9 +61,8 @@ export async function GET(request: NextRequest) {
       atcoder: 0,
       leetcode: 0,
       codechef: 0,
-      uva: 0,
       cses: 0,
-      acc: { codeforces: 0, atcoder: 0, leetcode: 0, codechef: 0, uva: 0, cses: 0 },
+      acc: { codeforces: 0, atcoder: 0, leetcode: 0, codechef: 0, cses: 0 },
     };
     calendar[day][platform]++;
     calendar[day].total++;

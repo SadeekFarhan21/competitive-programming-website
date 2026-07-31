@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-type Platform = "codeforces" | "atcoder" | "leetcode" | "codechef" | "uva" | "cses";
+type Platform = "codeforces" | "atcoder" | "leetcode" | "codechef" | "cses";
 
 type DayCounts = Record<Platform, number> & {
   total: number;
@@ -35,7 +35,6 @@ const PLATFORMS: { key: Platform; label: string; dot: string }[] = [
   { key: "atcoder", label: "AtCoder", dot: "bg-sky-400" },
   { key: "leetcode", label: "LeetCode", dot: "bg-amber-400" },
   { key: "codechef", label: "CodeChef", dot: "bg-orange-300" },
-  { key: "uva", label: "UVA", dot: "bg-violet-400" },
   { key: "cses", label: "CSES", dot: "bg-lime-400" },
 ];
 
@@ -104,7 +103,7 @@ export default function Heatmap() {
   const [data, setData] = useState<HeatmapData | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [enabled, setEnabled] = useState<Set<Platform>>(new Set(PLATFORMS.map((p) => p.key)));
-  const [mode, setMode] = useState<Mode>("all");
+  const [mode, setMode] = useState<Mode>("accepted");
   const [selected, setSelected] = useState<Cell | null>(null);
   const [hovered, setHovered] = useState<{ cell: Cell; x: number; y: number } | null>(null);
 
@@ -153,11 +152,11 @@ export default function Heatmap() {
   return (
     <div className="relative">
       <div className="mb-3 flex flex-wrap items-center gap-2">
-        <div className="mr-2 flex overflow-hidden rounded-full border border-neutral-700 text-xs">
+        <div className="mr-2 flex w-fit overflow-hidden rounded-full border border-neutral-700 text-xs">
           {(
             [
-              ["all", "All submissions"],
               ["accepted", "Accepted only"],
+              ["all", "All submissions"],
             ] as [Mode, string][]
           ).map(([m, label]) => (
             <button
