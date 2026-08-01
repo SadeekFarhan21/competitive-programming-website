@@ -1,5 +1,6 @@
 import Heatmap from "./Heatmap";
 import RecentFeed from "./RecentFeed";
+import RefreshButton from "./RefreshButton";
 
 export default function Home() {
   return (
@@ -14,14 +15,7 @@ export default function Home() {
               Daily submissions across Codeforces, AtCoder, LeetCode, CodeChef, and CSES
             </p>
           </div>
-          <a
-            href="https://github.com/SadeekFarhan21/competitive-programming-website/actions/workflows/refresh-data.yml"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-md border border-neutral-700 bg-neutral-900 px-3 py-2 text-xs font-medium text-neutral-200 transition-colors hover:border-emerald-600 hover:text-white"
-          >
-            Refresh now ↗
-          </a>
+          <RefreshButton />
         </div>
       </header>
       <Heatmap />

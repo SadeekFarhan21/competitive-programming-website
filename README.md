@@ -30,6 +30,8 @@ npm start
 
 The project deploys directly to Vercel. GitHub Actions refreshes and commits the submission dataset on schedule.
 
+To enable the **Refresh now** button, add a Vercel environment variable named `GITHUB_REFRESH_TOKEN` containing a fine-grained GitHub token with Actions: write permission for this repository. The token stays server-side.
+
 ## Structure
 
 - `app/Heatmap.tsx` — activity heatmap and platform/mode controls
