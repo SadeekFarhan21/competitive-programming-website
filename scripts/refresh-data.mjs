@@ -36,7 +36,7 @@ const FULL = process.argv.includes("--full");
 
 async function fetchCodeforces() {
   const res = await fetch(
-    `https://codeforces.com/api/user.status?handle=${HANDLES.codeforces}&from=1&count=10000`
+    `https://codeforces.com/api/user.status?handle=${HANDLES.codeforces}&from=1&count=1000`
   );
   const data = await res.json();
   if (data.status !== "OK") throw new Error(data.comment ?? "CF error");
@@ -52,9 +52,15 @@ async function fetchCodeforces() {
   }));
 }
 
-async function fetchAtCoder() {
+async function fetchAtCoder(knownEpochs) {
+  const latest = [...knownEpochs]
+    .filter((key) => key.startsWith("AtCoder:"))
+    .map((key) => Number(key.slice("AtCoder:".length)))
+    .filter(Number.isFinite)
+    .reduce((max, epoch) => Math.max(max, epoch), 0);
+  const fromSecond = Math.max(0, latest - 86400);
   const res = await fetch(
-    `https://kenkoooo.com/atcoder/atcoder-api/v3/user/submissions?user=${HANDLES.atcoder}&from_second=0`,
+    `https://kenkoooo.com/atcoder/atcoder-api/v3/user/submissions?user=${HANDLES.atcoder}&from_second=${fromSecond}`,
     { headers: { "User-Agent": "Mozilla/5.0" } }
   );
   const data = await res.json();
@@ -161,6 +167,11 @@ async function fetchCodeChef(knownEpochs) {
 }
 
 async function fetchCSES() {
+  const scheduledCsesWindow = new Date().getUTCHours() === 6;
+  if (process.env.REFRESH_CSES !== "true" && !scheduledCsesWindow) {
+    console.log("CSES refresh skipped — scheduled separately to protect quota");
+    return [];
+  }
   const session = process.env.CSES_SESSION;
   if (!session) {
     console.warn("CSES_SESSION not set — skipping CSES");
@@ -214,7 +225,7 @@ console.log(`existing rows: ${existing.length}`);
 
 const results = await Promise.allSettled([
   fetchCodeforces(),
-  fetchAtCoder(),
+  fetchAtCoder(knownEpochs),
   fetchLeetCode(knownEpochs),
   fetchCodeChef(knownEpochs),
   fetchCSES(),
