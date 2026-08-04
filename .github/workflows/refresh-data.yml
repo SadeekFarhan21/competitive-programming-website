@@ -21,11 +21,6 @@ jobs:
         with:
           node-version: 22
           package-manager-cache: false
-      - name: Install refresh dependencies
-        run: |
-          corepack enable
-          pnpm install --frozen-lockfile
-          pnpm exec playwright install --with-deps chromium
       - name: Refresh data
         env:
           LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}

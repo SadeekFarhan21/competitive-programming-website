@@ -19,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run refresh
 ```
 
-The refresh script uses the configured platform credentials from `.env.local`. LeetCode uses authenticated GraphQL through `LEETCODE_SESSION`; CSES uses `CSES_SESSION`; Kattis uses `KATTIS_USERNAME` and, when required for private submission history, `KATTIS_COOKIE`; SPOJ uses `SPOJ_USERNAME` (defaults to `farhan101`); and UVa uses `UVA_USERNAME` or `UVA_USER_ID`.
+The refresh script uses the configured platform credentials from `.env.local`. LeetCode uses authenticated GraphQL through `LEETCODE_SESSION`; CSES uses `CSES_SESSION`; Kattis uses `KATTIS_USERNAME` and, when required for private submission history, `KATTIS_COOKIE`; and UVa uses `UVA_USERNAME` or `UVA_USER_ID`. SPOJ entries are maintained manually in `data/spoj-manual.json` because its public submission page blocks automated refreshes.
 
 ## Build and deploy
 
