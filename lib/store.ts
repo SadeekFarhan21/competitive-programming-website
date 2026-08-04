@@ -34,13 +34,5 @@ export function getSubmissions(): StoredSub[] {
 
 export function dateKey(epochSeconds: number, platform?: StoredSub["platform"]): string {
   const date = new Date(epochSeconds * 1000);
-  if (platform === "CSES") {
-    return new Intl.DateTimeFormat("en-CA", {
-      timeZone: "America/Los_Angeles",
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit",
-    }).format(date);
-  }
   return date.toISOString().slice(0, 10);
 }

@@ -12,7 +12,6 @@ type Submission = {
   memoryBytes: number | null;
 };
 
-const CSES_TIME_ZONE = "America/Los_Angeles";
 const PLATFORM_OPTIONS = [
   "Codeforces",
   "AtCoder",
@@ -164,7 +163,6 @@ export default function RecentFeed() {
               day: "numeric",
               hour: "2-digit",
               minute: "2-digit",
-              ...(s.platform === "CSES" ? { timeZone: CSES_TIME_ZONE } : {}),
             })}
           </span>
           <span className={`w-24 shrink-0 font-medium ${PLATFORM_COLORS[s.platform] ?? "text-neutral-300"}`}>
