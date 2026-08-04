@@ -73,7 +73,7 @@ function buildWeeks(days: Record<string, DayCounts>, year?: number): Cell[][] {
   // 53 columns ending on today's week, Sunday-first like GitHub
   const today = new Date();
   const end = year
-    ? new Date(Date.UTC(year, year === today.getUTCFullYear() ? today.getUTCMonth() : 11, year === today.getUTCFullYear() ? today.getUTCDate() : 31))
+    ? new Date(Date.UTC(year, 11, 31))
     : new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()));
   const start = year ? new Date(Date.UTC(year, 0, 1)) : new Date(end.getTime() - 364 * DAY_MS);
   start.setUTCDate(start.getUTCDate() - start.getUTCDay());
@@ -244,7 +244,6 @@ export default function Heatmap() {
                 {s.accepted != null
                   ? `${s.accepted} / ${s.submissions} accepted`
                   : `${s.submissions} submissions`}
-                {s.lifetime && " · lifetime"}
               </p>
             </div>
           );

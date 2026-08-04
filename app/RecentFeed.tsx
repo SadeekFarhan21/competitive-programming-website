@@ -41,6 +41,17 @@ function standardLanguage(language: string | null): string | null {
 
 function standardVerdict(verdict: string, platform: string): string {
   const value = verdict.toLowerCase().replace(/[_-]+/g, " ");
+
+  // Some judges report scored results (for example, "16/19 TLE") instead
+  // of using the word "partial". Normalize those results consistently.
+  const score = value.match(/(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)/);
+  if (score) {
+    const earned = Number(score[1]);
+    const possible = Number(score[2]);
+    if (possible > 0 && earned === possible) return "Accepted";
+    if (possible > 0 && earned > 0 && earned < possible) return "Partially Accepted";
+  }
+
   if (value === "wa" || value === "wrong answer") return "Wrong Answer";
   if (value === "re" && platform === "AtCoder") return "Runtime Error";
   if (value === "ac" && platform === "AtCoder") return "Accepted";
@@ -48,8 +59,10 @@ function standardVerdict(verdict: string, platform: string): string {
   if (value === "ok" || value === "ac" || value.includes("accepted")) return "Accepted";
   if (value.includes("wrong answer")) return "Wrong Answer";
   if (value.includes("runtime")) return "Runtime Error";
-  if (value.includes("compile") || value.includes("compilation")) return "Compile Error";
-  if (value.includes("time limit")) return "Time Limit Exceeded";
+  if (value === "ce" || value.includes("compile") || value.includes("compilation")) {
+    return "Compilation Error";
+  }
+  if (value === "tle" || value.includes("time limit")) return "Time Limit Exceeded";
   if (value.includes("memory limit")) return "Memory Limit Exceeded";
   if (value.includes("presentation")) return "Presentation Error";
   if (value.includes("partial")) return "Partially Accepted";
