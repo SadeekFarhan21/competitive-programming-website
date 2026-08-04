@@ -28,6 +28,34 @@ const HANDLES = {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+function localDateTimeToEpoch(value, timeZone) {
+  const naiveEpoch = Date.parse(`${value}Z`);
+  if (!Number.isFinite(naiveEpoch)) return NaN;
+
+  // Judge pages show wall-clock time in their local timezone, not UTC.
+  // Calculate the offset at the submitted time so daylight saving is handled.
+  let epoch = naiveEpoch;
+  for (let i = 0; i < 2; i += 1) {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone,
+      hour12: false,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    }).formatToParts(new Date(epoch));
+    const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+    const displayedEpoch = Date.UTC(
+      Number(values.year), Number(values.month) - 1, Number(values.day),
+      Number(values.hour) % 24, Number(values.minute), Number(values.second)
+    );
+    epoch = naiveEpoch - (displayedEpoch - epoch);
+  }
+  return epoch / 1000;
+}
+
 // --full: ignore the incremental early-stop and paginate entire histories
 // (slower pacing to stay under rate limits). Use for one-time backfills.
 const FULL = process.argv.includes("--full");
@@ -199,7 +227,7 @@ async function fetchCSES() {
     )) {
       subs.push({
         platform: "CSES",
-        epoch: Date.parse(`${ts[1]}T${ts[2]}Z`) / 1000,
+        epoch: localDateTimeToEpoch(`${ts[1]}T${ts[2]}`, "Europe/Helsinki"),
         problem: name,
         verdict: ts[3] === "full" ? "ACCEPTED" : "REJECTED",
         ac: ts[3] === "full",
