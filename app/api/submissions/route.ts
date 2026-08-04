@@ -3,7 +3,7 @@ import { getSubmissions } from "../../../lib/store";
 
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
-  const limit = Math.min(Number(params.get("limit")) || 15, 200);
+  const limit = Math.min(Number(params.get("limit")) || 15, 5000);
   const platform = params.get("platform");
 
   const errors: string[] = [];

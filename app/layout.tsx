@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Submission Activity",
   description:
-    "Daily submission heatmap and feed across Codeforces, AtCoder, LeetCode, CodeChef, and CSES.",
+    "Daily submission heatmap and feed across Codeforces, AtCoder, LeetCode, CodeChef, CSES, Kattis, and UVa.",
 };
 
 export default function RootLayout({

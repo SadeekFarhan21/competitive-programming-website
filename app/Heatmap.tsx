@@ -2,7 +2,14 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-type Platform = "codeforces" | "atcoder" | "leetcode" | "codechef" | "cses";
+type Platform =
+  | "codeforces"
+  | "atcoder"
+  | "leetcode"
+  | "codechef"
+  | "cses"
+  | "kattis"
+  | "uva";
 
 type DayCounts = Record<Platform, number> & {
   total: number;
@@ -21,6 +28,8 @@ type PlatformStats = {
 
 type HeatmapData = {
   since: string;
+  year: number | null;
+  availableYears: number[];
   totalSubmissions: number;
   days: Record<string, DayCounts>;
   stats: Record<string, PlatformStats>;
@@ -36,6 +45,8 @@ const PLATFORMS: { key: Platform; label: string; dot: string }[] = [
   { key: "leetcode", label: "LeetCode", dot: "bg-amber-400" },
   { key: "codechef", label: "CodeChef", dot: "bg-orange-300" },
   { key: "cses", label: "CSES", dot: "bg-lime-400" },
+  { key: "kattis", label: "Kattis", dot: "bg-violet-400" },
+  { key: "uva", label: "UVA", dot: "bg-blue-400" },
 ];
 
 const LEVELS = [
@@ -58,13 +69,13 @@ function level(count: number): string {
 
 type Cell = { date: string; counts: DayCounts | null };
 
-function buildWeeks(days: Record<string, DayCounts>): Cell[][] {
+function buildWeeks(days: Record<string, DayCounts>, year?: number): Cell[][] {
   // 53 columns ending on today's week, Sunday-first like GitHub
   const today = new Date();
-  const end = new Date(
-    Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate())
-  );
-  const start = new Date(end.getTime() - 364 * DAY_MS);
+  const end = year
+    ? new Date(Date.UTC(year, year === today.getUTCFullYear() ? today.getUTCMonth() : 11, year === today.getUTCFullYear() ? today.getUTCDate() : 31))
+    : new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()));
+  const start = year ? new Date(Date.UTC(year, 0, 1)) : new Date(end.getTime() - 364 * DAY_MS);
   start.setUTCDate(start.getUTCDate() - start.getUTCDay());
 
   const weeks: Cell[][] = [];
@@ -106,15 +117,16 @@ export default function Heatmap() {
   const [mode, setMode] = useState<Mode>("accepted");
   const [selected, setSelected] = useState<Cell | null>(null);
   const [hovered, setHovered] = useState<{ cell: Cell; x: number; y: number } | null>(null);
+  const [period, setPeriod] = useState("rolling");
 
   useEffect(() => {
-    fetch("/api/heatmap")
+    fetch(period === "rolling" ? "/api/heatmap" : `/api/heatmap?year=${period}`)
       .then((r) => r.json())
       .then(setData)
       .catch((e) => setError(String(e)));
-  }, []);
+  }, [period]);
 
-  const weeks = useMemo(() => (data ? buildWeeks(data.days) : []), [data]);
+  const weeks = useMemo(() => (data ? buildWeeks(data.days, data.year ?? undefined) : []), [data]);
 
   const monthLabels = useMemo(() => {
     const labels: { index: number; label: string }[] = [];
@@ -172,6 +184,17 @@ export default function Heatmap() {
             </button>
           ))}
         </div>
+        <select
+          value={period}
+          onChange={(e) => setPeriod(e.target.value)}
+          className="rounded-full border border-neutral-700 bg-neutral-900 px-3 py-1 text-xs text-neutral-300 outline-none"
+          aria-label="Heatmap period"
+        >
+          <option value="rolling">Last 365 days</option>
+          {data.availableYears.map((year) => (
+            <option key={year} value={year}>{year}</option>
+          ))}
+        </select>
         {PLATFORMS.map((p) => (
           <button
             key={p.key}
@@ -193,7 +216,7 @@ export default function Heatmap() {
       <p className="mb-4 text-sm text-neutral-400">
         {visibleTotal.toLocaleString()}{" "}
         {mode === "accepted" ? "accepted submissions" : "submissions"} on {activeDays} active
-        days in the last year
+        days {data.year != null ? `in ${data.year}` : "in the last year"}
         {mode === "accepted" && enabled.has("leetcode") && data.stats?.leetcode?.lifetime && (
           <span className="text-neutral-600">
             {" "}

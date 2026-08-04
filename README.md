@@ -1,6 +1,6 @@
 # Submission Activity
 
-A fast Next.js dashboard for tracking submission activity across Codeforces, AtCoder, LeetCode, CodeChef, and CSES.
+A fast Next.js dashboard for tracking submission activity across Codeforces, AtCoder, LeetCode, CodeChef, CSES, Kattis, and UVa Online Judge.
 
 The heatmap and recent-submission feed read from the bundled `data/submissions.json` file, so page requests do not wait on external services. The refresh workflow updates that dataset before deployment.
 
@@ -19,7 +19,7 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run refresh
 ```
 
-The refresh script uses the configured platform credentials from `.env.local`. LeetCode uses authenticated GraphQL through `LEETCODE_SESSION`; CSES uses `CSES_SESSION`.
+The refresh script uses the configured platform credentials from `.env.local`. LeetCode uses authenticated GraphQL through `LEETCODE_SESSION`; CSES uses `CSES_SESSION`; Kattis uses `KATTIS_USERNAME` and, when required for private submission history, `KATTIS_COOKIE`; and UVa uses `UVA_USERNAME` or `UVA_USER_ID`.
 
 ## Build and deploy
 

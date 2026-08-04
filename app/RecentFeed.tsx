@@ -12,6 +12,17 @@ type Submission = {
   memoryBytes: number | null;
 };
 
+const CSES_TIME_ZONE = "America/Los_Angeles";
+const PLATFORM_OPTIONS = [
+  "Codeforces",
+  "AtCoder",
+  "LeetCode",
+  "CodeChef",
+  "CSES",
+  "Kattis",
+  "UVA",
+];
+
 function standardLanguage(language: string | null): string | null {
   if (!language) return null;
   const value = language.toLowerCase();
@@ -56,6 +67,7 @@ const PLATFORM_COLORS: Record<string, string> = {
   AtCoder: "text-sky-400",
   LeetCode: "text-amber-400",
   CodeChef: "text-orange-300",
+  UVA: "text-blue-400",
 };
 
 function verdictColor(verdict: string) {
@@ -72,7 +84,7 @@ export default function RecentFeed() {
   const [verdict, setVerdict] = useState("all");
 
   useEffect(() => {
-    fetch("/api/submissions?limit=200")
+    fetch("/api/submissions?limit=5000")
       .then((r) => r.json())
       .then((d) =>
         setSubs(
@@ -89,7 +101,7 @@ export default function RecentFeed() {
   if (error) return <p className="text-sm text-red-400">Failed to load: {error}</p>;
   if (!subs) return <p className="text-sm text-neutral-400">Loading submissions…</p>;
 
-  const platforms = ["all", ...new Set(subs.map((s) => s.platform))];
+  const platforms = ["all", ...PLATFORM_OPTIONS];
   const verdicts = ["all", ...new Set(subs.map((s) => s.verdict))];
   const visible = subs
     .filter((s) => platform === "all" || s.platform === platform)
@@ -137,6 +149,7 @@ export default function RecentFeed() {
               day: "numeric",
               hour: "2-digit",
               minute: "2-digit",
+              ...(s.platform === "CSES" ? { timeZone: CSES_TIME_ZONE } : {}),
             })}
           </span>
           <span className={`w-24 shrink-0 font-medium ${PLATFORM_COLORS[s.platform] ?? "text-neutral-300"}`}>

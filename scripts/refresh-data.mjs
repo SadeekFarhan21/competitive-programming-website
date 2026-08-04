@@ -36,7 +36,7 @@ const FULL = process.argv.includes("--full");
 
 async function fetchCodeforces() {
   const res = await fetch(
-    `https://codeforces.com/api/user.status?handle=${HANDLES.codeforces}&from=1&count=1000`
+    `https://codeforces.com/api/user.status?handle=${HANDLES.codeforces}&from=1&count=${FULL ? 10000 : 1000}`
   );
   const data = await res.json();
   if (data.status !== "OK") throw new Error(data.comment ?? "CF error");
@@ -58,7 +58,7 @@ async function fetchAtCoder(knownEpochs) {
     .map((key) => Number(key.slice("AtCoder:".length)))
     .filter(Number.isFinite)
     .reduce((max, epoch) => Math.max(max, epoch), 0);
-  const fromSecond = Math.max(0, latest - 86400);
+  const fromSecond = FULL ? 0 : Math.max(0, latest - 86400);
   const res = await fetch(
     `https://kenkoooo.com/atcoder/atcoder-api/v3/user/submissions?user=${HANDLES.atcoder}&from_second=${fromSecond}`,
     { headers: { "User-Agent": "Mozilla/5.0" } }
@@ -212,11 +212,100 @@ async function fetchCSES() {
   return subs;
 }
 
+async function fetchKattis() {
+  const username = process.env.KATTIS_USERNAME;
+  if (!username) {
+    console.log("Kattis username not set — skipping Kattis");
+    return [];
+  }
+  const url = `https://open.kattis.com/users/${encodeURIComponent(username)}?tab=submissions`;
+  const kattisCookie = process.env.KATTIS_COOKIE
+    ? process.env.KATTIS_COOKIE.startsWith("KattisSiteCookie=")
+      ? process.env.KATTIS_COOKIE
+      : `KattisSiteCookie=${process.env.KATTIS_COOKIE}`
+    : null;
+  const html = await (await fetch(url, {
+    headers: {
+      "User-Agent": "submission-activity/1.0 (local dashboard)",
+      ...(kattisCookie ? { Cookie: kattisCookie } : {}),
+    },
+  })).text();
+  const rows = [];
+  const cell = (row, type) => row.match(new RegExp(`<td[^>]*data-type="${type}"[^>]*>([\\s\\S]*?)</td>`, "i"))?.[1] ?? "";
+  const text = (value) => value.replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
+  for (const rowMatch of html.matchAll(/<tr[^>]*data-submission-id="\d+"[^>]*>[\s\S]*?<\/tr>/gi)) {
+    const row = rowMatch[0];
+    const problemMatches = [...cell(row, "problem").matchAll(/<a[^>]*href="[^"]*\/problems\/[^"#?]*"[^>]*>([\s\S]*?)<\/a>/gi)];
+    const problem = problemMatches.length ? text(problemMatches.at(-1)[1]) : text(cell(row, "problem"));
+    const time = text(cell(row, "time"));
+    const verdict = text(cell(row, "status")) || "UNKNOWN";
+    const epoch = Date.parse(time.replace(" ", "T") + "Z") / 1000;
+    if (!problem || !time) continue;
+    if (!Number.isFinite(epoch)) continue;
+    const runtimeMatch = text(cell(row, "cpu")).match(/[\d.]+/);
+    rows.push({
+      platform: "Kattis",
+      epoch,
+      problem,
+      verdict,
+      ac: verdict.toLowerCase().startsWith("accepted"),
+      language: text(cell(row, "lang")) || null,
+      runtimeMs: runtimeMatch ? Math.round(Number(runtimeMatch[0]) * 1000) : null,
+      memoryBytes: null,
+    });
+  }
+  return rows;
+}
+
+async function fetchUva() {
+  let userId = process.env.UVA_USER_ID;
+  const username = process.env.UVA_USERNAME;
+  if (!userId && username) {
+    const response = await fetch(`https://uhunt.onlinejudge.org/api/uname2uid/${encodeURIComponent(username)}`);
+    userId = (await response.text()).trim();
+  }
+  if (!userId || !/^\d+$/.test(userId)) {
+    console.log("UVA_USERNAME/UVA_USER_ID not set — skipping UVa");
+    return [];
+  }
+  const [problemResponse, submissionResponse] = await Promise.all([
+    fetch("https://uhunt.onlinejudge.org/api/p"),
+    fetch(`https://uhunt.onlinejudge.org/api/subs-user/${userId}`),
+  ]);
+  const problems = await problemResponse.json();
+  const payload = await submissionResponse.json();
+  const verdicts = {
+    10: "Submission Error", 15: "Can't be Judged", 20: "In Queue", 30: "Compile Error",
+    35: "Restricted Function", 40: "Runtime Error", 45: "Output Limit Exceeded",
+    50: "Time Limit Exceeded", 60: "Memory Limit Exceeded", 70: "Wrong Answer",
+    80: "Presentation Error", 90: "Accepted",
+  };
+  const languages = { 1: "C", 2: "Java", 3: "C++", 4: "Pascal", 5: "C++11" };
+  return (payload.subs ?? []).flatMap((submission) => {
+    const problem = problems[submission[1]];
+    const epoch = Number(submission[4]);
+    if (!problem || !Number.isFinite(epoch)) return [];
+    const verdict = verdicts[submission[2]] ?? `Verdict ${submission[2]}`;
+    return [{
+      platform: "UVA",
+      epoch,
+      problem: `${problem[1]} - ${problem[2]}`,
+      verdict,
+      ac: submission[2] === 90,
+      language: languages[submission[5]] ?? null,
+      runtimeMs: Number.isFinite(Number(submission[3])) ? Number(submission[3]) * 1000 : null,
+      memoryBytes: null,
+    }];
+  });
+}
+
 // ---------- merge ----------
 
 function loadExisting() {
   if (!fs.existsSync(DATA_PATH)) return [];
-  return JSON.parse(fs.readFileSync(DATA_PATH, "utf8"));
+  return JSON.parse(fs.readFileSync(DATA_PATH, "utf8")).map((row) =>
+    row.platform === "UVa Online Judge" ? { ...row, platform: "UVA" } : row
+  );
 }
 
 const existing = loadExisting();
@@ -229,9 +318,11 @@ const results = await Promise.allSettled([
   fetchLeetCode(knownEpochs),
   fetchCodeChef(knownEpochs),
   fetchCSES(),
+  fetchKattis(),
+  fetchUva(),
 ]);
 
-const names = ["Codeforces", "AtCoder", "LeetCode", "CodeChef", "CSES"];
+const names = ["Codeforces", "AtCoder", "LeetCode", "CodeChef", "CSES", "Kattis", "UVA"];
 let fresh = [];
 results.forEach((r, i) => {
   if (r.status === "fulfilled") {
