@@ -25,6 +25,8 @@ jobs:
         env:
           LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
           CSES_SESSION: ${{ secrets.CSES_SESSION }}
+          UVA_USERNAME: ${{ secrets.UVA_USERNAME }}
+          UVA_USER_ID: ${{ secrets.UVA_USER_ID }}
           REFRESH_CSES: ${{ github.event_name == 'workflow_dispatch' }}
         run: node scripts/refresh-data.mjs
       - name: Commit if changed
