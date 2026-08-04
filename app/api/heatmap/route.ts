@@ -6,6 +6,7 @@ type Platform =
   | "atcoder"
   | "leetcode"
   | "codechef"
+  | "spoj"
   | "cses"
   | "kattis"
   | "uva";
@@ -23,6 +24,7 @@ const PLATFORM_KEY: Record<StoredSub["platform"], Platform> = {
   AtCoder: "atcoder",
   LeetCode: "leetcode",
   CodeChef: "codechef",
+  SPOJ: "spoj",
   CSES: "cses",
   Kattis: "kattis",
   UVA: "uva",
@@ -61,6 +63,7 @@ export async function GET(request: NextRequest) {
     atcoder: { submissions: 0, accepted: 0 },
     leetcode: { submissions: 0, accepted: 0 },
     codechef: { submissions: 0, accepted: 0 },
+    spoj: { submissions: 0, accepted: 0 },
     cses: { submissions: 0, accepted: 0 },
     kattis: { submissions: 0, accepted: 0 },
     uva: { submissions: 0, accepted: 0 },
@@ -80,6 +83,7 @@ export async function GET(request: NextRequest) {
       atcoder: 0,
       leetcode: 0,
       codechef: 0,
+      spoj: 0,
       cses: 0,
       kattis: 0,
       uva: 0,
@@ -88,6 +92,7 @@ export async function GET(request: NextRequest) {
         atcoder: 0,
         leetcode: 0,
         codechef: 0,
+        spoj: 0,
         cses: 0,
         kattis: 0,
         uva: 0,

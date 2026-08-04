@@ -24,6 +24,7 @@ const HANDLES = {
   atcoder: "Farhan2021",
   leetcode: "FarhanSadeek21",
   codechef: "farhansadeek21",
+  spoj: "farhan101",
 };
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -31,6 +32,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 // --full: ignore the incremental early-stop and paginate entire histories
 // (slower pacing to stay under rate limits). Use for one-time backfills.
 const FULL = process.argv.includes("--full");
+const SPOJ_ONLY = process.argv.includes("--spoj-only");
 
 // ---------- fetchers (return {platform, epoch, problem, verdict, ac, language, runtimeMs, memoryBytes}) ----------
 
@@ -162,6 +164,50 @@ async function fetchCodeChef(knownEpochs) {
     const batch = parse(data.content ?? "");
     rows = rows.concat(batch);
     if (!FULL && batch.some((r) => knownEpochs.has(`CodeChef:${r.epoch}`))) break;
+  }
+  return rows;
+}
+
+async function fetchSPOJ() {
+  const username = process.env.SPOJ_USERNAME || HANDLES.spoj;
+  const { chromium } = await import("playwright");
+  const browser = await chromium.launch({ headless: true });
+  let html;
+  try {
+    const page = await browser.newPage({
+      userAgent: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/131 Safari/537.36",
+    });
+    await page.goto(`https://www.spoj.com/status/${encodeURIComponent(username)}/`, {
+      waitUntil: "domcontentloaded",
+      timeout: 45_000,
+    });
+    await page.waitForTimeout(2_000);
+    html = await page.content();
+  } finally {
+    await browser.close();
+  }
+  if (/Just a moment|cf-chl-|Cloudflare|challenge-platform/i.test(html)) {
+    throw new Error("SPOJ requires a browser challenge or blocked the page");
+  }
+
+  const rows = [];
+  for (const match of html.matchAll(/<tr[\s\S]*?<\/tr>/gi)) {
+    const row = match[0];
+    const date = row.match(/(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2}(?::\d{2})?)/);
+    const problem = row.match(/\/problems\/([A-Za-z0-9_+-]+)/i)?.[1];
+    if (!date || !problem) continue;
+    const verdictText = row.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+    const verdict = verdictText.match(/accepted|wrong answer|time limit|runtime error|compile error|pending/i)?.[0] ?? "UNKNOWN";
+    rows.push({
+      platform: "SPOJ",
+      epoch: Date.parse(`${date[1]}T${date[2]}Z`) / 1000,
+      problem,
+      verdict: verdict.toUpperCase(),
+      ac: verdict.toLowerCase() === "accepted",
+      language: null,
+      runtimeMs: null,
+      memoryBytes: null,
+    });
   }
   return rows;
 }
@@ -303,26 +349,34 @@ async function fetchUva() {
 
 function loadExisting() {
   if (!fs.existsSync(DATA_PATH)) return [];
-  return JSON.parse(fs.readFileSync(DATA_PATH, "utf8")).map((row) =>
+  const rows = JSON.parse(fs.readFileSync(DATA_PATH, "utf8")).map((row) =>
     row.platform === "UVa Online Judge" ? { ...row, platform: "UVA" } : row
   );
+  const manualPath = path.join(ROOT, "data", "spoj-manual.json");
+  if (fs.existsSync(manualPath)) rows.push(...JSON.parse(fs.readFileSync(manualPath, "utf8")));
+  return rows;
 }
 
 const existing = loadExisting();
 const knownEpochs = new Set(existing.map((s) => `${s.platform}:${s.epoch}`));
 console.log(`existing rows: ${existing.length}`);
 
-const results = await Promise.allSettled([
-  fetchCodeforces(),
-  fetchAtCoder(knownEpochs),
-  fetchLeetCode(knownEpochs),
-  fetchCodeChef(knownEpochs),
-  fetchCSES(),
-  fetchKattis(),
-  fetchUva(),
-]);
+const results = await Promise.allSettled(SPOJ_ONLY
+  ? [fetchSPOJ()]
+  : [
+      fetchCodeforces(),
+      fetchAtCoder(knownEpochs),
+      fetchLeetCode(knownEpochs),
+      fetchCodeChef(knownEpochs),
+      fetchSPOJ(),
+      fetchCSES(),
+      fetchKattis(),
+      fetchUva(),
+    ]);
 
-const names = ["Codeforces", "AtCoder", "LeetCode", "CodeChef", "CSES", "Kattis", "UVA"];
+const names = SPOJ_ONLY
+  ? ["SPOJ"]
+  : ["Codeforces", "AtCoder", "LeetCode", "CodeChef", "SPOJ", "CSES", "Kattis", "UVA"];
 let fresh = [];
 results.forEach((r, i) => {
   if (r.status === "fulfilled") {

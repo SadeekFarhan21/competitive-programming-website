@@ -1,4 +1,5 @@
 import submissions from "../data/submissions.json";
+import manualSPOJ from "../data/spoj-manual.json";
 
 export type StoredSub = {
   platform:
@@ -6,6 +7,7 @@ export type StoredSub = {
     | "AtCoder"
     | "LeetCode"
     | "CodeChef"
+    | "SPOJ"
     | "CSES"
     | "Kattis"
     | "UVA";
@@ -20,7 +22,14 @@ export type StoredSub = {
 
 // Bundled at build time; refreshed by scripts/refresh-data.mjs + redeploy
 export function getSubmissions(): StoredSub[] {
-  return submissions as StoredSub[];
+  const merged = [...(submissions as StoredSub[]), ...(manualSPOJ as StoredSub[])];
+  const seen = new Set<string>();
+  return merged.filter((submission) => {
+    const key = `${submission.platform}:${submission.epoch}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
 export function dateKey(epochSeconds: number, platform?: StoredSub["platform"]): string {

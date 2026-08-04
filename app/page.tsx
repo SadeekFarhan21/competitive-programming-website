@@ -12,7 +12,7 @@ export default function Home() {
               Submission Activity
             </h1>
             <p className="mt-1 text-sm text-neutral-400">
-              Daily submissions across Codeforces, AtCoder, LeetCode, CodeChef, CSES, Kattis, and UVa
+              Daily submissions across Codeforces, AtCoder, LeetCode, CodeChef, SPOJ, CSES, Kattis, and UVa
             </p>
           </div>
           <RefreshButton />

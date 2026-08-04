@@ -18,6 +18,7 @@ const PLATFORM_OPTIONS = [
   "AtCoder",
   "LeetCode",
   "CodeChef",
+  "SPOJ",
   "CSES",
   "Kattis",
   "UVA",
@@ -80,6 +81,7 @@ const PLATFORM_COLORS: Record<string, string> = {
   AtCoder: "text-sky-400",
   LeetCode: "text-amber-400",
   CodeChef: "text-orange-300",
+  SPOJ: "text-pink-400",
   UVA: "text-blue-400",
 };
 
