@@ -38,6 +38,14 @@ To enable the **Refresh now** button, add a Vercel environment variable named `G
 - `app/RecentFeed.tsx` — recent submissions with platform and verdict filters
 - `app/api/heatmap/route.ts` — local heatmap data endpoint
 - `app/api/submissions/route.ts` — local recent-submission endpoint
+- `app/submissions.json/route.ts` — full AI-friendly submission export at `/submissions.json`
 - `lib/leetcode.ts` — authenticated/public LeetCode GraphQL client
 - `scripts/refresh-data.mjs` — platform data refresh script
 - `data/submissions.json` — bundled submission history
+
+## Machine-readable export
+
+The full deduplicated submission history is available at `/submissions.json`. It contains
+schema metadata, account handles, summary counts, field definitions, and one normalized
+record per submission. The refresh workflow updates the underlying dataset before the
+export is served.
