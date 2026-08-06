@@ -31,6 +31,15 @@ const PLATFORM_KEY: Record<StoredSub["platform"], Platform> = {
 };
 
 export async function GET(request: NextRequest) {
+  const requestedTimeZone = request.nextUrl.searchParams.get("tz") || "UTC";
+  let timeZone = "UTC";
+  try {
+    // Validate the browser-provided IANA timezone before passing it to Intl.
+    new Intl.DateTimeFormat("en-US", { timeZone: requestedTimeZone }).format();
+    timeZone = requestedTimeZone;
+  } catch {
+    // Keep UTC as a safe fallback for invalid or missing timezone values.
+  }
   const yearParam = request.nextUrl.searchParams.get("year");
   const selectedYear = yearParam && /^\d{4}$/.test(yearParam) ? Number(yearParam) : null;
   const days = Math.min(Number(request.nextUrl.searchParams.get("days")) || 365, 730);
@@ -75,7 +84,7 @@ export async function GET(request: NextRequest) {
     totals[platform].submissions++;
     if (newAc) totals[platform].accepted++;
     if (s.epoch < sinceEpoch || (untilEpoch != null && s.epoch >= untilEpoch)) continue;
-    const day = dateKey(s.epoch, s.platform);
+    const day = dateKey(s.epoch, s.platform, timeZone);
     calendar[day] ??= {
       total: 0,
       accepted: 0,

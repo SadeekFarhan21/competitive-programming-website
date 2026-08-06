@@ -122,7 +122,10 @@ export default function Heatmap() {
   const [period, setPeriod] = useState("rolling");
 
   useEffect(() => {
-    fetch(period === "rolling" ? "/api/heatmap" : `/api/heatmap?year=${period}`)
+    const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    const query = new URLSearchParams({ tz: timeZone });
+    if (period !== "rolling") query.set("year", period);
+    fetch(`/api/heatmap?${query}`)
       .then((r) => r.json())
       .then(setData)
       .catch((e) => setError(String(e)));

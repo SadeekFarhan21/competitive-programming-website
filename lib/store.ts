@@ -32,7 +32,13 @@ export function getSubmissions(): StoredSub[] {
   });
 }
 
-export function dateKey(epochSeconds: number, platform?: StoredSub["platform"]): string {
+export function dateKey(epochSeconds: number, _platform?: StoredSub["platform"], timeZone = "UTC"): string {
   const date = new Date(epochSeconds * 1000);
-  return date.toISOString().slice(0, 10);
+  if (timeZone === "UTC") return date.toISOString().slice(0, 10);
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(date);
 }
