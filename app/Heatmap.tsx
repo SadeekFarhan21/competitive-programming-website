@@ -360,7 +360,7 @@ export default function Heatmap() {
                     {p.label}: {mode === "accepted" ? ac : count}
                     {count > 0 && (
                       <span className="text-emerald-400">
-                        ({mode === "accepted" ? `${count} sb` : `${ac} AC`})
+                        {" "}({mode === "accepted" ? `${count} SB` : `${ac} AC`})
                       </span>
                     )}
                   </span>
