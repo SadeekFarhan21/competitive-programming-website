@@ -1,5 +1,5 @@
 import { unstable_cache } from "next/cache";
-import { dateKey, getDataVersion, getSubmissions, StoredSub } from "./store";
+import { dateKey, getSubmissions, StoredSub } from "./store";
 
 export type Platform =
   | "codeforces"
@@ -149,16 +149,9 @@ function buildHeatmapData(timeZone: string, selectedYear: number | null, days: n
 }
 
 export function getHeatmapData(timeZone = "UTC", selectedYear: number | null = null, days = 365) {
-  const dataVersion = getDataVersion();
   return unstable_cache(
     async () => buildHeatmapData(timeZone, selectedYear, days),
-    [
-      "heatmap",
-      dataVersion,
-      timeZone,
-      selectedYear == null ? "rolling" : String(selectedYear),
-      String(days),
-    ],
+    ["heatmap", timeZone, selectedYear == null ? "rolling" : String(selectedYear), String(days)],
     { revalidate: 300 }
   )();
 }
