@@ -149,14 +149,17 @@ async function fetchLeetCode(knownEpochs) {
 
 async function fetchCodeChef(knownEpochs) {
   const ownApi = process.env.CODECHEF_API_URL;
+  let apiRows = [];
   if (ownApi) {
-    const response = await fetch(`${ownApi}?handle=${encodeURIComponent(HANDLES.codechef)}`);
-    if (!response.ok) throw new Error(`CodeChef API HTTP ${response.status}`);
-    const payload = await response.json();
-    return (payload.submissions ?? []).map((submission) => ({
-      ...submission,
-      platform: "CodeChef",
-    }));
+    try {
+      const response = await fetch(`${ownApi}?handle=${encodeURIComponent(HANDLES.codechef)}`, { cache: "no-store" });
+      if (response.ok) {
+        const payload = await response.json();
+        apiRows = (payload.submissions ?? []).map((submission) => ({ ...submission, platform: "CodeChef" }));
+      }
+    } catch {
+      console.warn("Owned CodeChef API unavailable — using direct feed");
+    }
   }
 
   function parseEpoch(value) {
@@ -210,12 +213,11 @@ async function fetchCodeChef(knownEpochs) {
   };
   const first = await (
     await fetch(
-      `https://www.codechef.com/recent/user?user_handle=${HANDLES.codechef}&page=0`,
-      { headers: { "User-Agent": "Mozilla/5.0" } }
+      `https://www.codechef.com/recent/user?user_handle=${HANDLES.codechef}&page=0&_=${Date.now()}`
     )
   ).json();
   const maxPage = Math.min(Number(first.max_page) || 1, 100);
-  let rows = parse(first.content ?? "");
+  let rows = apiRows.concat(parse(first.content ?? ""));
   for (let p = 1; p < maxPage; p++) {
     await sleep(400);
     const data = await (
