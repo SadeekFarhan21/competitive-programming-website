@@ -55,19 +55,19 @@ export async function GET(request: NextRequest) {
   const errors: string[] = [];
   const warnings: string[] = [];
 
-  // LeetCode: only the first AC of each problem counts as accepted (full-history
-  // dedupe), so re-solves don't inflate the accepted heatmap.
-  const lcSolved = new Set<string>();
+  // Count only the first accepted submission for each problem on each platform.
+  // Failed attempts still remain in the submission totals.
+  const acceptedProblems = new Set<string>();
   const isNewAc = (s: StoredSub): boolean => {
     if (s.ac !== true) return false;
-    if (s.platform !== "LeetCode") return true;
-    if (lcSolved.has(s.problem)) return false;
-    lcSolved.add(s.problem);
+    const key = `${s.platform}:${s.problem}`;
+    if (acceptedProblems.has(key)) return false;
+    acceptedProblems.add(key);
     return true;
   };
 
   const calendar: Record<string, DayCounts> = {};
-  const totals: Record<Platform, { submissions: number; accepted: number }> = {
+  const periodTotals: Record<Platform, { submissions: number; accepted: number }> = {
     codeforces: { submissions: 0, accepted: 0 },
     atcoder: { submissions: 0, accepted: 0 },
     leetcode: { submissions: 0, accepted: 0 },
@@ -81,9 +81,9 @@ export async function GET(request: NextRequest) {
   for (const s of all) {
     const newAc = isNewAc(s); // must run over full history for the dedupe
     const platform = PLATFORM_KEY[s.platform];
-    totals[platform].submissions++;
-    if (newAc) totals[platform].accepted++;
     if (s.epoch < sinceEpoch || (untilEpoch != null && s.epoch >= untilEpoch)) continue;
+    periodTotals[platform].submissions++;
+    if (newAc) periodTotals[platform].accepted++;
     const day = dateKey(s.epoch, s.platform, timeZone);
     calendar[day] ??= {
       total: 0,
@@ -116,7 +116,7 @@ export async function GET(request: NextRequest) {
   }
 
   const stats = Object.fromEntries(
-    Object.entries(totals).map(([platform, t]) => [
+    Object.entries(periodTotals).map(([platform, t]) => [
       platform,
       {
         submissions: t.submissions,
