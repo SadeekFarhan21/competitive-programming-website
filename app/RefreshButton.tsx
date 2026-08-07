@@ -66,13 +66,18 @@ export default function RefreshButton() {
   }
 
   const running = state === "running";
-  const label = running ? "Refreshing" : state === "failure" ? "Refresh failed" : "Refreshed";
+  const label = state === "failure" ? "Refresh failed" : "Refreshed";
 
   return (
     <div className="flex items-center gap-2">
       <span className={`text-xs ${state === "failure" ? "text-red-400" : "text-neutral-500"}`}>
-        {label}
-        {running && <span className="ml-0.5 inline-block w-4 animate-pulse">...</span>}
+        {running ? (
+          <span className="inline-flex items-center gap-1" aria-label="Refresh in progress">
+            <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-neutral-400" />
+            <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-neutral-400 [animation-delay:120ms]" />
+            <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-neutral-400 [animation-delay:240ms]" />
+          </span>
+        ) : label}
       </span>
       <button
         type="button"
