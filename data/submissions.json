@@ -22681,46 +22681,6 @@
     "memoryBytes": null
   },
   {
-    "platform": "CodeChef",
-    "epoch": 1786089181,
-    "problem": "DSAPROB20",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "platform": "CodeChef",
-    "epoch": 1786089184,
-    "problem": "DSAPROB20",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "platform": "CodeChef",
-    "epoch": 1786090427,
-    "problem": "DSAPROB20",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "platform": "CodeChef",
-    "epoch": 1786090430,
-    "problem": "DSAPROB20",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
     "platform": "UVA",
     "epoch": 1786115556,
     "problem": "10045 - Echo",

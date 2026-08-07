@@ -382,6 +382,9 @@ const existing = loadExisting();
 function submissionKeys(s) {
   const keys = [`${s.platform}:${s.epoch}`];
   if (s.id) keys.push(`${s.platform}:${s.id}`);
+  if (s.platform === "CodeChef" && !s.id) {
+    keys.push(`${s.platform}:anonymous:${s.problem}:${s.verdict}:${s.language ?? ""}`);
+  }
   return keys;
 }
 
