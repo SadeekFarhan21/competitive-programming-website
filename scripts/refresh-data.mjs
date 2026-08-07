@@ -423,6 +423,7 @@ for (const s of fresh) {
   added++;
 }
 merged.sort((a, b) => a.epoch - b.epoch);
+for (const submission of merged) submission.epoch = Math.floor(Number(submission.epoch));
 
 fs.mkdirSync(path.dirname(DATA_PATH), { recursive: true });
 fs.writeFileSync(DATA_PATH, JSON.stringify(merged, null, 2) + "\n");
