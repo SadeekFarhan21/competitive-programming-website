@@ -22762,5 +22762,27 @@
     "language": "CPP14",
     "runtimeMs": 50,
     "memoryBytes": 7654605
+  },
+  {
+    "id": "spoj:35889776",
+    "platform": "SPOJ",
+    "epoch": 1786124933,
+    "problem": "Eagle and Dogs",
+    "verdict": "PRESENTATION ERROR",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": 350,
+    "memoryBytes": 14680064
+  },
+  {
+    "id": "spoj:35889777",
+    "platform": "SPOJ",
+    "epoch": 1786124986,
+    "problem": "Eagle and Dogs",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 350,
+    "memoryBytes": 14680064
   }
 ]
