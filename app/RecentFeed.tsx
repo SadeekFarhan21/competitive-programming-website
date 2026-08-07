@@ -156,8 +156,11 @@ export default function RecentFeed() {
       </div>
       <ul className="divide-y divide-neutral-800">
       {visible.map((s, i) => (
-        <li key={i} className="flex items-baseline gap-x-3 py-2 text-sm">
-          <span className="w-36 shrink-0 tabular-nums text-neutral-500">
+        <li
+          key={i}
+          className="grid min-w-0 gap-1 py-3 text-sm sm:grid-cols-[9rem_6rem_minmax(8rem,12rem)_minmax(0,1fr)_auto_5rem] sm:items-baseline sm:gap-x-3 sm:py-2"
+        >
+          <span className="truncate tabular-nums text-xs text-neutral-500 sm:text-sm">
             {new Date(s.time).toLocaleString(undefined, {
               month: "short",
               day: "numeric",
@@ -165,17 +168,17 @@ export default function RecentFeed() {
               minute: "2-digit",
             })}
           </span>
-          <span className={`w-24 shrink-0 font-medium ${PLATFORM_COLORS[s.platform] ?? "text-neutral-300"}`}>
+          <span className={`font-medium ${PLATFORM_COLORS[s.platform] ?? "text-neutral-300"}`}>
             {s.platform}
           </span>
-          <span className="w-56 shrink-0 truncate text-xs text-neutral-500">
+          <span className="min-w-0 truncate text-xs text-neutral-500">
             {s.language ?? ""}
           </span>
           <span className="min-w-0 flex-1 truncate text-neutral-200">{s.problemName}</span>
-          <span className={`shrink-0 text-right font-medium ${verdictColor(s.verdict)}`}>
+          <span className={`font-medium sm:text-right ${verdictColor(s.verdict)}`}>
             {s.verdict}
           </span>
-          <span className="w-20 shrink-0 text-right text-xs tabular-nums text-neutral-500">
+          <span className="text-xs tabular-nums text-neutral-500 sm:text-right">
             {s.runtimeMs != null ? `${s.runtimeMs} ms` : ""}
           </span>
         </li>
