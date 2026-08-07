@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getSubmissions } from "../../../lib/store";
+import { getRecentSubmissions } from "../../../lib/store";
 
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
@@ -7,27 +7,15 @@ export async function GET(request: NextRequest) {
   const platform = params.get("platform");
 
   const errors: string[] = [];
-  let subs = getSubmissions();
+  let submissions = getRecentSubmissions(5000);
   if (platform) {
-    subs = subs.filter((s) => s.platform.toLowerCase() === platform.toLowerCase());
+    submissions = submissions.filter(
+      (s) => s.platform.toLowerCase() === platform.toLowerCase()
+    );
   }
 
-  const submissions = subs
-    .sort((a, b) => b.epoch - a.epoch)
-    .slice(0, limit)
-    .map((s) => ({
-      platform: s.platform,
-      epoch: s.epoch,
-      time: new Date(s.epoch * 1000).toISOString(),
-      problemName: s.problem,
-      verdict: s.verdict,
-      language: s.language,
-      runtimeMs: s.runtimeMs,
-      memoryBytes: s.memoryBytes,
-    }));
-
   return NextResponse.json(
-    { submissions, errors },
+    { submissions: submissions.slice(0, limit), errors },
     {
       headers: {
         // CDN caches for 5 minutes — upstream APIs are hit at most once per window

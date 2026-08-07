@@ -20,6 +20,17 @@ export type StoredSub = {
   memoryBytes: number | null;
 };
 
+export type FeedSubmission = {
+  platform: StoredSub["platform"];
+  epoch: number;
+  time: string;
+  problemName: string;
+  verdict: string;
+  language: string | null;
+  runtimeMs: number | null;
+  memoryBytes: number | null;
+};
+
 // Bundled at build time; refreshed by scripts/refresh-data.mjs + redeploy
 export function getSubmissions(): StoredSub[] {
   const merged = [...(submissions as StoredSub[]), ...(manualSPOJ as StoredSub[])];
@@ -30,6 +41,22 @@ export function getSubmissions(): StoredSub[] {
     seen.add(key);
     return true;
   });
+}
+
+export function getRecentSubmissions(limit = 5000): FeedSubmission[] {
+  return getSubmissions()
+    .sort((a, b) => b.epoch - a.epoch)
+    .slice(0, limit)
+    .map((submission) => ({
+      platform: submission.platform,
+      epoch: submission.epoch,
+      time: new Date(submission.epoch * 1000).toISOString(),
+      problemName: submission.problem,
+      verdict: submission.verdict,
+      language: submission.language,
+      runtimeMs: submission.runtimeMs,
+      memoryBytes: submission.memoryBytes,
+    }));
 }
 
 export function dateKey(epochSeconds: number, _platform?: StoredSub["platform"], timeZone = "UTC"): string {

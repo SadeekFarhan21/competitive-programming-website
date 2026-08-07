@@ -1,42 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-
-type Platform =
-  | "codeforces"
-  | "atcoder"
-  | "leetcode"
-  | "codechef"
-  | "spoj"
-  | "cses"
-  | "kattis"
-  | "uva";
-
-type DayCounts = Record<Platform, number> & {
-  total: number;
-  accepted: number;
-  acc: Record<Platform, number>;
-};
+import type { DayCounts, HeatmapData, Platform } from "../lib/heatmap";
 
 type Mode = "all" | "accepted";
-
-type PlatformStats = {
-  submissions: number;
-  accepted: number | null;
-  accuracy: number | null;
-  lifetime?: boolean;
-};
-
-type HeatmapData = {
-  since: string;
-  year: number | null;
-  availableYears: number[];
-  totalSubmissions: number;
-  days: Record<string, DayCounts>;
-  stats: Record<string, PlatformStats>;
-  errors: string[];
-  warnings?: string[];
-};
 
 const DAY_MS = 86_400_000;
 
@@ -112,8 +79,8 @@ function prettyDate(date: string): string {
   });
 }
 
-export default function Heatmap() {
-  const [data, setData] = useState<HeatmapData | null>(null);
+export default function Heatmap({ initialData }: { initialData: HeatmapData }) {
+  const [data, setData] = useState<HeatmapData>(initialData);
   const [error, setError] = useState<string | null>(null);
   const [enabled, setEnabled] = useState<Set<Platform>>(new Set(PLATFORMS.map((p) => p.key)));
   const [mode, setMode] = useState<Mode>("accepted");
@@ -125,10 +92,17 @@ export default function Heatmap() {
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     const query = new URLSearchParams({ tz: timeZone });
     if (period !== "rolling") query.set("year", period);
-    fetch(`/api/heatmap?${query}`)
-      .then((r) => r.json())
+    const controller = new AbortController();
+    fetch(`/api/heatmap?${query}`, { signal: controller.signal, cache: "force-cache" })
+      .then((r) => {
+        if (!r.ok) throw new Error(`Heatmap request failed (${r.status})`);
+        return r.json();
+      })
       .then(setData)
-      .catch((e) => setError(String(e)));
+      .catch((e) => {
+        if (e.name !== "AbortError") setError(String(e));
+      });
+    return () => controller.abort();
   }, [period]);
 
   const weeks = useMemo(() => (data ? buildWeeks(data.days, data.year ?? undefined) : []), [data]);
@@ -147,8 +121,6 @@ export default function Heatmap() {
   }, [weeks]);
 
   if (error) return <p className="text-sm text-red-400">Failed to load: {error}</p>;
-  if (!data) return <p className="text-sm text-neutral-400">Loading heatmap…</p>;
-
   const visibleTotal = Object.values(data.days).reduce(
     (sum, d) => sum + filteredTotal(d, enabled, mode),
     0

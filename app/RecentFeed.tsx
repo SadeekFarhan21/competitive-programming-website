@@ -1,16 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import type { FeedSubmission } from "../lib/store";
 
-type Submission = {
-  platform: string;
-  time: string;
-  problemName: string;
-  verdict: string;
-  language: string | null;
-  runtimeMs: number | null;
-  memoryBytes: number | null;
-};
+type Submission = FeedSubmission;
 
 const PLATFORM_OPTIONS = [
   "Codeforces",
@@ -91,29 +84,35 @@ function verdictColor(verdict: string) {
   return "text-red-400";
 }
 
-export default function RecentFeed() {
-  const [subs, setSubs] = useState<Submission[] | null>(null);
+export default function RecentFeed({ initialSubmissions }: { initialSubmissions: Submission[] }) {
+  const normalize = (submission: Submission): Submission => ({
+    ...submission,
+    language: standardLanguage(submission.language),
+    verdict: standardVerdict(submission.verdict, submission.platform),
+  });
+  const [subs, setSubs] = useState<Submission[]>(() =>
+    initialSubmissions.map(normalize)
+  );
   const [error, setError] = useState<string | null>(null);
   const [platform, setPlatform] = useState("all");
   const [verdict, setVerdict] = useState("all");
 
   useEffect(() => {
-    fetch("/api/submissions?limit=5000")
-      .then((r) => r.json())
-      .then((d) =>
-        setSubs(
-          d.submissions.map((submission: Submission) => ({
-            ...submission,
-            language: standardLanguage(submission.language),
-            verdict: standardVerdict(submission.verdict, submission.platform),
-          }))
-        )
-      )
-      .catch((e) => setError(String(e)));
+    const controller = new AbortController();
+    fetch("/api/submissions?limit=5000", {
+      signal: controller.signal,
+      cache: "force-cache",
+    })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Submission request failed (${response.status})`);
+        return response.json();
+      })
+      .then((data) => setSubs(data.submissions.map(normalize)))
+      .catch((reason) => {
+        if (reason.name !== "AbortError") setError(String(reason));
+      });
+    return () => controller.abort();
   }, []);
-
-  if (error) return <p className="text-sm text-red-400">Failed to load: {error}</p>;
-  if (!subs) return <p className="text-sm text-neutral-400">Loading submissions…</p>;
 
   const platforms = ["all", ...PLATFORM_OPTIONS];
   const verdicts = ["all", ...new Set(subs.map((s) => s.verdict))];
@@ -184,6 +183,7 @@ export default function RecentFeed() {
       {visible.length === 0 && (
         <p className="py-4 text-sm text-neutral-500">No submissions match these filters.</p>
       )}
+      {error && <p className="mt-2 text-xs text-neutral-600">Full history unavailable; showing recent submissions.</p>}
     </>
   );
 }
