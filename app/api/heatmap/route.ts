@@ -50,7 +50,7 @@ export async function GET(request: NextRequest) {
 
   // The heatmap is backed by the bundled dataset so it renders immediately.
   // scripts/refresh-data.mjs updates this file through the scheduled workflow.
-  const all = getSubmissions().slice().sort((a, b) => a.epoch - b.epoch);
+  const all = (await getSubmissions()).slice().sort((a, b) => a.epoch - b.epoch);
   const availableYears = [...new Set(all.map((s) => new Date(s.epoch * 1000).getUTCFullYear()))].sort((a, b) => b - a);
   const errors: string[] = [];
   const warnings: string[] = [];

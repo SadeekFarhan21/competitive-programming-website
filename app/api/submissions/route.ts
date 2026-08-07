@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
   const platform = params.get("platform");
 
   const errors: string[] = [];
-  let subs = getSubmissions();
+  let subs = await getSubmissions();
   if (platform) {
     subs = subs.filter((s) => s.platform.toLowerCase() === platform.toLowerCase());
   }

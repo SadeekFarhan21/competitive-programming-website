@@ -1,5 +1,6 @@
 import submissions from "../data/submissions.json";
 import manualSPOJ from "../data/spoj-manual.json";
+import { supabaseAdmin } from "./supabase/admin";
 
 export type StoredSub = {
   id?: string;
@@ -21,8 +22,7 @@ export type StoredSub = {
   memoryBytes: number | null;
 };
 
-// Bundled at build time; refreshed by scripts/refresh-data.mjs + redeploy
-export function getSubmissions(): StoredSub[] {
+function getBundledSubmissions(): StoredSub[] {
   const merged = [...(submissions as StoredSub[]), ...(manualSPOJ as StoredSub[])];
   const seen = new Set<string>();
   return merged.filter((submission) => {
@@ -31,6 +31,31 @@ export function getSubmissions(): StoredSub[] {
     seen.add(key);
     return true;
   });
+}
+
+// Supabase is the live source after the initial migration. The bundled JSON is
+// intentionally retained as a fallback for local builds and failed requests.
+export async function getSubmissions(): Promise<StoredSub[]> {
+  if (!supabaseAdmin) return getBundledSubmissions();
+
+  const { data, error } = await supabaseAdmin
+    .from("submissions")
+    .select("id, platform, epoch, problem, verdict, ac, language, runtime_ms, memory_bytes")
+    .order("epoch", { ascending: false });
+
+  if (error || !data?.length) return getBundledSubmissions();
+
+  return data.map((row) => ({
+    id: row.id,
+    platform: row.platform,
+    epoch: Number(row.epoch),
+    problem: row.problem,
+    verdict: row.verdict,
+    ac: row.ac,
+    language: row.language,
+    runtimeMs: row.runtime_ms,
+    memoryBytes: row.memory_bytes,
+  })) as StoredSub[];
 }
 
 export function dateKey(epochSeconds: number, _platform?: StoredSub["platform"], timeZone = "UTC"): string {

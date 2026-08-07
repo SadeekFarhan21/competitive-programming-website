@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { getSubmissions } from "../../lib/store";
 
+export const dynamic = "force-dynamic";
+
 const accounts = {
   Codeforces: "FarhanSadeek21",
   AtCoder: "Farhan2021",
@@ -13,7 +15,7 @@ const accounts = {
 };
 
 export async function GET() {
-  const submissions = getSubmissions()
+  const submissions = (await getSubmissions())
     .sort((a, b) => b.epoch - a.epoch)
     .map((submission) => ({
       id: `${submission.platform.toLowerCase()}:${submission.epoch}`,

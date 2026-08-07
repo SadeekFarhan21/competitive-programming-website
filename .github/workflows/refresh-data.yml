@@ -21,14 +21,18 @@ jobs:
         with:
           node-version: 22
           package-manager-cache: false
+      - name: Install dependencies
+        run: corepack pnpm install --frozen-lockfile
       - name: Refresh data
         env:
           LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
           CSES_SESSION: ${{ secrets.CSES_SESSION }}
           UVA_USERNAME: ${{ secrets.UVA_USERNAME }}
           UVA_USER_ID: ${{ secrets.UVA_USER_ID }}
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
           REFRESH_CSES: ${{ github.event_name == 'workflow_dispatch' }}
-        run: node scripts/refresh-data.mjs
+        run: corepack pnpm refresh
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
