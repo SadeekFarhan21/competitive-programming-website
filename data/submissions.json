@@ -22729,5 +22729,38 @@
     "language": "C++",
     "runtimeMs": 0,
     "memoryBytes": null
+  },
+  {
+    "id": "spoj:35889758",
+    "platform": "SPOJ",
+    "epoch": 1786123240,
+    "problem": "A Bug’s Life",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": 10,
+    "memoryBytes": 5452595
+  },
+  {
+    "id": "spoj:35889763",
+    "platform": "SPOJ",
+    "epoch": 1786123393,
+    "problem": "A Bug’s Life",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": 10,
+    "memoryBytes": 5452595
+  },
+  {
+    "id": "spoj:35889765",
+    "platform": "SPOJ",
+    "epoch": 1786123472,
+    "problem": "A Bug’s Life",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 50,
+    "memoryBytes": 7654605
   }
 ]
