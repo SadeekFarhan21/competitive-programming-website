@@ -156,6 +156,10 @@ export default function Heatmap() {
   const activeDays = Object.values(data.days).filter(
     (d) => filteredTotal(d, enabled, mode) > 0
   ).length;
+  const selectedSubmissionCount = selected ? filteredTotal(selected.counts, enabled) : 0;
+  const selectedAcceptedCount = selected
+    ? filteredTotal(selected.counts, enabled, "accepted")
+    : 0;
 
   const togglePlatform = (key: Platform) => {
     setEnabled((prev) => {
@@ -172,8 +176,8 @@ export default function Heatmap() {
         <div className="mr-2 flex w-fit overflow-hidden rounded-full border border-neutral-700 text-xs">
           {(
             [
-              ["accepted", "Accepted only"],
-              ["all", "All submissions"],
+              ["accepted", "Accepted"],
+              ["all", "Submission"],
             ] as [Mode, string][]
           ).map(([m, label]) => (
             <button
@@ -333,8 +337,9 @@ export default function Heatmap() {
             <div>
               <h3 className="text-sm font-semibold text-white">{prettyDate(selected.date)}</h3>
               <p className="mt-0.5 text-sm text-neutral-400">
-                {filteredTotal(selected.counts, enabled)} submissions
-                {selected.counts ? ` · ${selected.counts.accepted} accepted` : ""}
+                {mode === "accepted"
+                  ? `${selectedAcceptedCount} accepted (${selectedSubmissionCount} submissions)`
+                  : `${selectedSubmissionCount} submissions (${selectedAcceptedCount} AC)`}
               </p>
             </div>
             <button
@@ -352,9 +357,11 @@ export default function Heatmap() {
                 <div key={p.key} className="flex items-center gap-1.5 text-sm">
                   <span className={`h-2 w-2 rounded-full ${p.dot}`} />
                   <span className={count > 0 ? "text-neutral-200" : "text-neutral-600"}>
-                    {p.label}: {count}
+                    {p.label}: {mode === "accepted" ? ac : count}
                     {count > 0 && (
-                      <span className="text-emerald-400"> ({ac} AC)</span>
+                      <span className="text-emerald-400">
+                        ({mode === "accepted" ? `${count} sb` : `${ac} AC`})
+                      </span>
                     )}
                   </span>
                 </div>
