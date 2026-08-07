@@ -430,35 +430,3 @@ for (const submission of merged) submission.epoch = Math.floor(Number(submission
 fs.mkdirSync(path.dirname(DATA_PATH), { recursive: true });
 fs.writeFileSync(DATA_PATH, JSON.stringify(merged, null, 2) + "\n");
 console.log(`added ${added} new rows → total ${merged.length} in ${path.relative(ROOT, DATA_PATH)}`);
-
-const supabaseUrl = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-if (supabaseUrl && supabaseServiceRoleKey) {
-  const { createClient } = await import("@supabase/supabase-js");
-  const supabase = createClient(supabaseUrl, supabaseServiceRoleKey, {
-    auth: { autoRefreshToken: false, persistSession: false },
-  });
-  const rows = [...new Map(merged.map((submission) => {
-    const row = {
-      id: `${submission.platform}:${submission.id ?? submission.epoch}`,
-      platform: submission.platform,
-      epoch: submission.epoch,
-      problem: submission.problem,
-      verdict: submission.verdict,
-      ac: submission.ac,
-      language: submission.language,
-      runtime_ms: submission.runtimeMs,
-      memory_bytes: submission.memoryBytes,
-    };
-    return [row.id, row];
-  })).values()];
-  for (let offset = 0; offset < rows.length; offset += 500) {
-    const { error } = await supabase
-      .from("submissions")
-      .upsert(rows.slice(offset, offset + 500), { onConflict: "id" });
-    if (error) throw new Error(`Supabase sync failed: ${error.message}`);
-  }
-  console.log(`synced ${rows.length} rows to Supabase`);
-} else {
-  console.log("Supabase credentials not set — JSON refresh only");
-}
