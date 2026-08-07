@@ -87,6 +87,7 @@ const PLATFORM_COLORS: Record<string, string> = {
 function verdictColor(verdict: string) {
   const value = verdict.toLowerCase();
   if (["ok", "ac", "accepted"].includes(value)) return "text-emerald-400";
+  if (value.includes("presentation")) return "text-yellow-300";
   if (value.includes("partial")) return "text-amber-400";
   return "text-red-400";
 }
