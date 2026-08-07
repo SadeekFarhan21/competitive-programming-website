@@ -1,15 +1,8 @@
 import Heatmap from "./Heatmap";
-import LazyRecentFeed from "./LazyRecentFeed";
+import RecentFeed from "./RecentFeed";
 import RefreshButton from "./RefreshButton";
-import { getHeatmapData } from "../lib/heatmap";
-import { getRecentSubmissions } from "../lib/store";
 
-export const revalidate = 300;
-
-export default async function Home() {
-  const initialHeatmapData = await getHeatmapData();
-  const initialSubmissions = getRecentSubmissions(20);
-
+export default function Home() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
       <header className="mb-6">
@@ -25,10 +18,10 @@ export default async function Home() {
           <RefreshButton />
         </div>
       </header>
-      <Heatmap initialData={initialHeatmapData} />
+      <Heatmap />
       <section className="mt-8">
         <h2 className="mb-2 text-lg font-semibold text-white">Recent submissions</h2>
-        <LazyRecentFeed initialSubmissions={initialSubmissions} />
+        <RecentFeed />
       </section>
     </main>
   );
