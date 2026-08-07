@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import submissions from "../data/submissions.json";
 import manualSPOJ from "../data/spoj-manual.json";
 
@@ -57,6 +58,16 @@ export function getRecentSubmissions(limit = 5000): FeedSubmission[] {
       runtimeMs: submission.runtimeMs,
       memoryBytes: submission.memoryBytes,
     }));
+}
+
+// Changes whenever the bundled dataset changes, so persistent server caches do
+// not serve heatmap data generated from an older deployment.
+export function getDataVersion(): string {
+  const all = getSubmissions();
+  return createHash("sha256")
+    .update(JSON.stringify(all))
+    .digest("hex")
+    .slice(0, 16);
 }
 
 export function dateKey(epochSeconds: number, _platform?: StoredSub["platform"], timeZone = "UTC"): string {

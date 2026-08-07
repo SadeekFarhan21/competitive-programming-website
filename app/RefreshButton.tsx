@@ -13,7 +13,7 @@ export default function RefreshButton() {
       const response = await fetch("/api/refresh", { method: "POST" });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error ?? "Refresh failed.");
-      setMessage("Workflow started");
+      setMessage("Refresh started; updates appear after deployment");
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Refresh failed.");
     } finally {
