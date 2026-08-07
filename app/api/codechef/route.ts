@@ -10,8 +10,8 @@ export async function GET(request: NextRequest) {
   }
 
   const submissions = [];
-  const firstResponse = await fetch(`https://www.codechef.com/recent/user?user_handle=${encodeURIComponent(handle)}&page=0`, {
-    headers: { "User-Agent": "submission-activity/1.0" },
+  const firstResponse = await fetch(`https://www.codechef.com/recent/user?user_handle=${encodeURIComponent(handle)}&page=0&_=${Date.now()}`, {
+    headers: { "Cache-Control": "no-cache", "User-Agent": "submission-activity/1.0" },
     cache: "no-store",
   });
   if (!firstResponse.ok) {
