@@ -11,7 +11,11 @@ export async function GET(request: NextRequest) {
 
   const submissions = [];
   const firstResponse = await fetch(`https://www.codechef.com/recent/user?user_handle=${encodeURIComponent(handle)}&page=0&_=${Date.now()}`, {
-    headers: { "Cache-Control": "no-cache", "User-Agent": "submission-activity/1.0" },
+    headers: {
+      "Cache-Control": "no-cache",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/126 Safari/537.36",
+      Accept: "application/json,text/plain,*/*",
+    },
     cache: "no-store",
   });
   if (!firstResponse.ok) {
