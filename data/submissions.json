@@ -12065,6 +12065,26 @@
   },
   {
     "platform": "SPOJ",
+    "epoch": 1703178150,
+    "problem": "Euler Totient Function",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 40,
+    "memoryBytes": 7654605
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1703179475,
+    "problem": "Least prime divisor",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 16370,
+    "memoryBytes": 5452595
+  },
+  {
+    "platform": "SPOJ",
     "epoch": 1703179475,
     "problem": "Least prime divisor",
     "verdict": "ACCEPTED",
@@ -12275,6 +12295,26 @@
   },
   {
     "platform": "SPOJ",
+    "epoch": 1703561179,
+    "problem": "Prime Generator",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": null,
+    "memoryBytes": 127926272
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1703561187,
+    "problem": "Prime Generator",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": null,
+    "memoryBytes": 127926272
+  },
+  {
+    "platform": "SPOJ",
     "epoch": 1703561187,
     "problem": "Prime Generator",
     "verdict": "TIME LIMIT EXCEEDED",
@@ -12352,6 +12392,26 @@
     "language": "CPP14",
     "runtimeMs": 1380,
     "memoryBytes": 5452595
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1703561568,
+    "problem": "Prime Generator",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 1380,
+    "memoryBytes": 5452595
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1703562058,
+    "problem": "Printing some primes",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": null,
+    "memoryBytes": 403701760
   },
   {
     "platform": "SPOJ",
@@ -13262,6 +13322,16 @@
     "language": "C++ 20 (gcc 12.2)",
     "runtimeMs": 1,
     "memoryBytes": null
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1707703390,
+    "problem": "Cumulative Sum Query",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 50,
+    "memoryBytes": 5452595
   },
   {
     "platform": "SPOJ",
@@ -14502,13 +14572,13 @@
   },
   {
     "platform": "SPOJ",
-    "epoch": 1717944315,
+    "epoch": 1717944207,
     "problem": "Printing some primes",
-    "verdict": "ACCEPTED",
-    "ac": true,
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
     "language": "C++ 4.3.2",
-    "runtimeMs": 450,
-    "memoryBytes": 14680064
+    "runtimeMs": null,
+    "memoryBytes": 13631488
   },
   {
     "platform": "SPOJ",
@@ -14539,6 +14609,36 @@
     "language": "C++ 4.3.2",
     "runtimeMs": 450,
     "memoryBytes": 14680064
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1717944315,
+    "problem": "Printing some primes",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++ 4.3.2",
+    "runtimeMs": 450,
+    "memoryBytes": 14680064
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1717944315,
+    "problem": "Printing some primes",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++ 4.3.2",
+    "runtimeMs": 450,
+    "memoryBytes": 14680064
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1717945554,
+    "problem": "Finding the Kth Prime",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++ 4.3.2",
+    "runtimeMs": 1180,
+    "memoryBytes": 135266304
   },
   {
     "platform": "SPOJ",
@@ -14689,6 +14789,16 @@
     "language": "C++",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1718119585,
+    "problem": "Printing some primes",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 700,
+    "memoryBytes": 438304768
   },
   {
     "platform": "SPOJ",
@@ -15183,6 +15293,16 @@
     "memoryBytes": 5347738
   },
   {
+    "platform": "SPOJ",
+    "epoch": 1723566161,
+    "problem": "Cumulative Sum Query",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 60,
+    "memoryBytes": 5347738
+  },
+  {
     "platform": "Codeforces",
     "epoch": 1723566446,
     "problem": "1061A - Coins",
@@ -15481,6 +15601,16 @@
     "language": "C++20 (GCC 13-64)",
     "runtimeMs": 359,
     "memoryBytes": 8396800
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1730835233,
+    "problem": "Number of common divisors",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": null,
+    "memoryBytes": 5452595
   },
   {
     "platform": "SPOJ",
@@ -16914,6 +17044,26 @@
   },
   {
     "platform": "SPOJ",
+    "epoch": 1746366033,
+    "problem": "Number of common divisors",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": null,
+    "memoryBytes": 5452595
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1746366536,
+    "problem": "Number of common divisors",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": null,
+    "memoryBytes": 11534336
+  },
+  {
+    "platform": "SPOJ",
     "epoch": 1746366536,
     "problem": "Number of common divisors",
     "verdict": "TIME LIMIT EXCEEDED",
@@ -16991,6 +17141,26 @@
     "language": "CPP14",
     "runtimeMs": 370,
     "memoryBytes": 15728640
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1746366702,
+    "problem": "Number of common divisors",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 370,
+    "memoryBytes": 15728640
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1747168491,
+    "problem": "Primal Fear",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 290,
+    "memoryBytes": 11534336
   },
   {
     "platform": "SPOJ",
@@ -19301,6 +19471,16 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 92,
     "memoryBytes": 102400
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1765953072,
+    "problem": "2D-SORT",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 80,
+    "memoryBytes": 5452595
   },
   {
     "platform": "SPOJ",
@@ -22197,6 +22377,16 @@
     "memoryBytes": 10485760
   },
   {
+    "platform": "SPOJ",
+    "epoch": 1785823567,
+    "problem": "Range Minimum Query",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 70,
+    "memoryBytes": 10485760
+  },
+  {
     "platform": "CSES",
     "epoch": 1785823681,
     "problem": "Static Range Minimum Queries",
@@ -22205,6 +22395,16 @@
     "language": "C++",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1785853139,
+    "problem": "Catapult that ball",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 60,
+    "memoryBytes": 10485760
   },
   {
     "platform": "SPOJ",
@@ -22429,7 +22629,7 @@
   {
     "id": "codechef:1331847323",
     "platform": "CodeChef",
-    "epoch": 1786074784,
+    "epoch": 1786076030,
     "problem": "DIAMTREE",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -22440,7 +22640,7 @@
   {
     "id": "codechef:1331946333",
     "platform": "CodeChef",
-    "epoch": 1786081984,
+    "epoch": 1786079630,
     "problem": "REVERSE",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -22451,8 +22651,19 @@
   {
     "id": "codechef:1332032005",
     "platform": "CodeChef",
-    "epoch": 1786085584,
+    "epoch": 1786086830,
     "problem": "DIGJUMP",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1332090434",
+    "platform": "CodeChef",
+    "epoch": 1786086830,
+    "problem": "PREP17",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
@@ -22480,10 +22691,9 @@
     "memoryBytes": null
   },
   {
-    "id": "codechef:1332090434",
     "platform": "CodeChef",
     "epoch": 1786089184,
-    "problem": "PREP17",
+    "problem": "DSAPROB20",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
@@ -22492,12 +22702,32 @@
   },
   {
     "platform": "CodeChef",
-    "epoch": 1786089184,
+    "epoch": 1786090427,
     "problem": "DSAPROB20",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CodeChef",
+    "epoch": 1786090430,
+    "problem": "DSAPROB20",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "UVA",
+    "epoch": 1786115556,
+    "problem": "10045 - Echo",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 0,
     "memoryBytes": null
   }
 ]
