@@ -148,6 +148,17 @@ async function fetchLeetCode(knownEpochs) {
 }
 
 async function fetchCodeChef(knownEpochs) {
+  const ownApi = process.env.CODECHEF_API_URL;
+  if (ownApi) {
+    const response = await fetch(`${ownApi}?handle=${encodeURIComponent(HANDLES.codechef)}`);
+    if (!response.ok) throw new Error(`CodeChef API HTTP ${response.status}`);
+    const payload = await response.json();
+    return (payload.submissions ?? []).map((submission) => ({
+      ...submission,
+      platform: "CodeChef",
+    }));
+  }
+
   function parseEpoch(value) {
     const relative = value.trim().toLowerCase();
     if (relative === "just now") return Date.now() / 1000;
