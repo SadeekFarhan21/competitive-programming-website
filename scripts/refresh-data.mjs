@@ -148,23 +148,49 @@ async function fetchLeetCode(knownEpochs) {
 }
 
 async function fetchCodeChef(knownEpochs) {
+  function parseEpoch(value) {
+    const relative = value.trim().toLowerCase();
+    if (relative === "just now") return Date.now() / 1000;
+    const relativeMatch = relative.match(/^(\d+)\s+(minute|hour|day|week)s?\s+ago$/);
+    if (relativeMatch) {
+      const amounts = { minute: 60, hour: 3600, day: 86400, week: 604800 };
+      return Date.now() / 1000 - Number(relativeMatch[1]) * amounts[relativeMatch[2]];
+    }
+
+    const absolute = value.match(
+      /^(\d{1,2}):(\d{2})\s*([AP]M)\s+(\d{2})\/(\d{2})\/(\d{2})$/i
+    );
+    if (!absolute) return NaN;
+    let hour = Number(absolute[1]) % 12;
+    if (absolute[3].toUpperCase() === "PM") hour += 12;
+    return Date.UTC(
+      2000 + Number(absolute[6]),
+      Number(absolute[5]) - 1,
+      Number(absolute[4]),
+      hour,
+      Number(absolute[2])
+    ) / 1000;
+  }
+
   const parse = (html) => {
     const rows = [];
-    const re =
-      /<td\s+title='(\d{1,2}):(\d{2}) ([AP]M) (\d{2})\/(\d{2})\/(\d{2})'>[\s\S]*?<td\s+title='([^']*)'>[\s\S]*?<span title='([^']*)'[\s\S]*?<td\s+title='([^']*)'>/g;
-    let m;
-    while ((m = re.exec(html))) {
-      let hour = Number(m[1]) % 12;
-      if (m[3] === "PM") hour += 12;
+    for (const match of html.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
+      const row = match[1];
+      const titles = [...row.matchAll(/<td\b[^>]*\btitle\s*=\s*(['"])(.*?)\1/gi)]
+        .map((entry) => entry[2].trim());
+      const result = row.match(/<span\b[^>]*\btitle\s*=\s*(['"])(.*?)\1/i)?.[2] ?? "UNKNOWN";
+      const epoch = parseEpoch(titles[0] ?? "");
+      const problem = titles[1] || row.match(/\/problems\/([^'"?#]+)/i)?.[1];
+      const solutionId = row.match(/\/viewsolution\/(\d+)/i)?.[1];
+      if (!problem || !Number.isFinite(epoch)) continue;
       rows.push({
+        ...(solutionId ? { id: `codechef:${solutionId}` } : {}),
         platform: "CodeChef",
-        epoch:
-          Date.UTC(2000 + Number(m[6]), Number(m[5]) - 1, Number(m[4]), hour, Number(m[2])) /
-          1000,
-        problem: m[7],
-        verdict: (m[8] || "UNKNOWN").toUpperCase(),
-        ac: m[8]?.toLowerCase().startsWith("accepted") ?? false,
-        language: m[9],
+        epoch,
+        problem,
+        verdict: result.toUpperCase(),
+        ac: result.toLowerCase().startsWith("accepted"),
+        language: titles[3] ?? null,
         runtimeMs: null,
         memoryBytes: null,
       });
@@ -189,7 +215,7 @@ async function fetchCodeChef(knownEpochs) {
     ).json();
     const batch = parse(data.content ?? "");
     rows = rows.concat(batch);
-    if (!FULL && batch.some((r) => knownEpochs.has(`CodeChef:${r.epoch}`))) break;
+    if (!FULL && batch.some((r) => submissionKeys(r).some((key) => knownEpochs.has(key)))) break;
   }
   return rows;
 }
@@ -340,7 +366,13 @@ function loadExisting() {
 }
 
 const existing = loadExisting();
-const knownEpochs = new Set(existing.map((s) => `${s.platform}:${s.epoch}`));
+function submissionKeys(s) {
+  const keys = [`${s.platform}:${s.epoch}`];
+  if (s.id) keys.push(`${s.platform}:${s.id}`);
+  return keys;
+}
+
+const knownEpochs = new Set(existing.flatMap(submissionKeys));
 console.log(`existing rows: ${existing.length}`);
 
 const results = await Promise.allSettled([
@@ -369,18 +401,18 @@ const merged = [...existing];
 const seen = new Set(knownEpochs);
 let added = 0;
 for (const s of fresh) {
-  const key = `${s.platform}:${s.epoch}`;
-  if (seen.has(key)) {
-    const existingIndex = merged.findIndex((row) => `${row.platform}:${row.epoch}` === key);
-    if (existingIndex >= 0 && s.platform === "LeetCode") merged[existingIndex] = s;
+  const keys = submissionKeys(s);
+  if (keys.some((key) => seen.has(key))) {
+    const existingIndex = merged.findIndex((row) => submissionKeys(row).some((key) => keys.includes(key)));
+    if (existingIndex >= 0 && s.id) merged[existingIndex] = s;
     continue;
   }
-  seen.add(key);
+  keys.forEach((key) => seen.add(key));
   merged.push(s);
   added++;
 }
 merged.sort((a, b) => a.epoch - b.epoch);
 
 fs.mkdirSync(path.dirname(DATA_PATH), { recursive: true });
-fs.writeFileSync(DATA_PATH, JSON.stringify(merged) + "\n");
+fs.writeFileSync(DATA_PATH, JSON.stringify(merged, null, 2) + "\n");
 console.log(`added ${added} new rows → total ${merged.length} in ${path.relative(ROOT, DATA_PATH)}`);

@@ -40,5 +40,5 @@ export async function POST() {
   }
 
   lastTriggeredAt = Date.now();
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, startedAt: lastTriggeredAt });
 }

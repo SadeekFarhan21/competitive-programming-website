@@ -2,6 +2,7 @@ import submissions from "../data/submissions.json";
 import manualSPOJ from "../data/spoj-manual.json";
 
 export type StoredSub = {
+  id?: string;
   platform:
     | "Codeforces"
     | "AtCoder"
@@ -25,7 +26,7 @@ export function getSubmissions(): StoredSub[] {
   const merged = [...(submissions as StoredSub[]), ...(manualSPOJ as StoredSub[])];
   const seen = new Set<string>();
   return merged.filter((submission) => {
-    const key = `${submission.platform}:${submission.epoch}`;
+    const key = `${submission.platform}:${submission.id ?? submission.epoch}`;
     if (seen.has(key)) return false;
     seen.add(key);
     return true;
