@@ -22247,5 +22247,37 @@
     "language": "C++",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "id": "codechef:1332032005",
+    "platform": "CodeChef",
+    "epoch": 1786083977,
+    "problem": "DIGJUMP",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1332090434",
+    "platform": "CodeChef",
+    "epoch": 1786086377,
+    "problem": "PREP17",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CodeChef",
+    "epoch": 1786087217,
+    "problem": "DSAPROB20",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
