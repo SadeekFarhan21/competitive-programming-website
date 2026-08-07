@@ -161,11 +161,11 @@ async function fetchCodeChef(knownEpochs) {
 
   function parseEpoch(value) {
     const relative = value.trim().toLowerCase();
-    if (relative === "just now") return Date.now() / 1000;
+    if (relative === "just now") return Math.floor(Date.now() / 1000);
     const relativeMatch = relative.match(/^(\d+)\s+(minute|hour|day|week)s?\s+ago$/);
     if (relativeMatch) {
       const amounts = { minute: 60, hour: 3600, day: 86400, week: 604800 };
-      return Date.now() / 1000 - Number(relativeMatch[1]) * amounts[relativeMatch[2]];
+      return Math.floor(Date.now() / 1000 - Number(relativeMatch[1]) * amounts[relativeMatch[2]]);
     }
 
     const absolute = value.match(

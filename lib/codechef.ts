@@ -2,11 +2,11 @@ import type { StoredSub } from "./store";
 
 function parseEpoch(value: string): number {
   const normalized = value.trim().toLowerCase();
-  if (normalized === "just now") return Date.now() / 1000;
+  if (normalized === "just now") return Math.floor(Date.now() / 1000);
   const relative = normalized.match(/^(\d+)\s+(minute|hour|day|week)s?\s+ago$/);
   if (relative) {
     const seconds = { minute: 60, hour: 3600, day: 86400, week: 604800 }[relative[2] as "minute" | "hour" | "day" | "week"];
-    return Date.now() / 1000 - Number(relative[1]) * seconds;
+    return Math.floor(Date.now() / 1000 - Number(relative[1]) * seconds);
   }
 
   const absolute = value.match(/^(\d{1,2}):(\d{2})\s*([AP]M)\s+(\d{2})\/(\d{2})\/(\d{2})$/i);
