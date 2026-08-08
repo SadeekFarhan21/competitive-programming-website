@@ -23375,5 +23375,16 @@
     "language": "C++",
     "runtimeMs": 40000,
     "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20196374",
+    "epoch": 1786223328,
+    "problem": "Even Up Solitaire",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 10,
+    "memoryBytes": null
   }
 ]

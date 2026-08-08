@@ -291,12 +291,18 @@ async function fetchKattis() {
       ? process.env.KATTIS_COOKIE
       : `KattisSiteCookie=${process.env.KATTIS_COOKIE}`
     : null;
-  const html = await (await fetch(url, {
+  const response = await fetch(url, {
     headers: {
       "User-Agent": "submission-activity/1.0 (local dashboard)",
       ...(kattisCookie ? { Cookie: kattisCookie } : {}),
     },
-  })).text();
+  });
+  if (!response.ok) throw new Error(`Kattis HTTP ${response.status}`);
+  const html = await response.text();
+  // Kattis omits the date for submissions made on the current day. Its HTTP
+  // date is the reliable date anchor for those time-only values.
+  const responseDate = new Date(response.headers.get("date") ?? Date.now());
+  const responseDateKey = responseDate.toISOString().slice(0, 10);
   const rows = [];
   const cell = (row, type) => row.match(new RegExp(`<td[^>]*data-type="${type}"[^>]*>([\\s\\S]*?)</td>`, "i"))?.[1] ?? "";
   const text = (value) => value.replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
@@ -306,12 +312,16 @@ async function fetchKattis() {
     const problem = problemMatches.length ? text(problemMatches.at(-1)[1]) : text(cell(row, "problem"));
     const time = text(cell(row, "time"));
     const verdict = text(cell(row, "status")) || "UNKNOWN";
-    const epoch = Date.parse(time.replace(" ", "T") + "Z") / 1000;
+    const timestamp = /^\d{2}:\d{2}:\d{2}$/.test(time)
+      ? `${responseDateKey} ${time}`
+      : time;
+    const epoch = Date.parse(timestamp.replace(" ", "T") + "Z") / 1000;
     if (!problem || !time) continue;
     if (!Number.isFinite(epoch)) continue;
     const runtimeMatch = text(cell(row, "cpu")).match(/[\d.]+/);
     rows.push({
       platform: "Kattis",
+      id: row.match(/data-submission-id="(\d+)"/i)?.[1] ?? null,
       epoch,
       problem,
       verdict,

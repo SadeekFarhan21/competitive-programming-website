@@ -5,6 +5,7 @@
   "packageManager": "pnpm@10.14.0",
   "scripts": {
     "refresh": "node scripts/refresh-data.mjs",
+    "fetch:kattis": "node scripts/fetch-kattis.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

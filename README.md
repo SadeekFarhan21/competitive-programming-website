@@ -19,6 +19,16 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run refresh
 ```
 
+To export only Kattis submissions, use the standalone scraper. Add `--full` to
+follow pagination until no new submissions are found:
+
+```bash
+KATTIS_USERNAME=farhan-sadeek KATTIS_COOKIE='KattisSiteCookie=...' \
+  npm run fetch:kattis -- --full > /tmp/kattis-submissions.json
+```
+
+The cookie is optional for publicly visible histories and must never be committed.
+
 The refresh script uses the configured platform credentials from `.env.local`. LeetCode uses authenticated GraphQL through `LEETCODE_SESSION`; CSES uses `CSES_SESSION`; Kattis uses `KATTIS_USERNAME` and, when required for private submission history, `KATTIS_COOKIE`; and UVa uses `UVA_USERNAME` or `UVA_USER_ID`. SPOJ entries are maintained manually in `data/spoj-manual.json` because its public submission page blocks automated refreshes.
 
 ## Build and deploy
