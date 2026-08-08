@@ -2,17 +2,32 @@
 //
 // Usage:
 //   KATTIS_USERNAME=farhan-sadeek KATTIS_COOKIE='KattisSiteCookie=...' \
-//     node scripts/fetch-kattis.mjs --full > /tmp/kattis-submissions.json
+//     node scripts/fetch-kattis.mjs --full --merge
 //
 // KATTIS_COOKIE is only needed when the account's submission history is not
 // visible to anonymous visitors. Copy the cookie value from the browser's
 // KattisSiteCookie cookie; do not commit it.
 
+import fs from "node:fs";
+import path from "node:path";
+
+// Load local credentials when run directly with Node (Next.js does this
+// automatically, plain Node does not).
+for (const file of [".env.local", ".env"]) {
+  const envPath = path.join(import.meta.dirname, "..", file);
+  if (!fs.existsSync(envPath)) continue;
+  for (const line of fs.readFileSync(envPath, "utf8").split("\n")) {
+    const match = line.match(/^([A-Z_][A-Z0-9_]*)=(.*)$/);
+    if (match && !(match[1] in process.env)) process.env[match[1]] = match[2];
+  }
+}
+
 const username = process.env.KATTIS_USERNAME ?? process.argv[2];
 const full = process.argv.includes("--full");
+const merge = process.argv.includes("--merge");
 
 if (!username) {
-  console.error("Usage: KATTIS_USERNAME=... node scripts/fetch-kattis.mjs [--full]");
+  console.error("Usage: KATTIS_USERNAME=... node scripts/fetch-kattis.mjs [--full] [--merge]");
   process.exit(1);
 }
 
@@ -107,5 +122,40 @@ for (let page = 1; page <= (full ? 100 : 1); page += 1) {
   await new Promise((resolve) => setTimeout(resolve, 300));
 }
 
+if (all.length === 0) {
+  throw new Error(
+    "Kattis returned no submission rows. Check that KATTIS_COOKIE is set and that the session has not expired."
+  );
+}
+
 all.sort((a, b) => a.epoch - b.epoch);
-console.log(JSON.stringify(all, null, 2));
+
+if (merge) {
+  const dataPath = path.join(import.meta.dirname, "..", "data", "submissions.json");
+  const existing = JSON.parse(fs.readFileSync(dataPath, "utf8"));
+  const merged = [...existing];
+  const indexes = new Map();
+  for (let index = 0; index < merged.length; index += 1) {
+    const row = merged[index];
+    if (row.platform !== "Kattis") continue;
+    indexes.set(`epoch:${row.epoch}`, index);
+    if (row.id) indexes.set(`id:${row.id}`, index);
+  }
+
+  for (const row of all) {
+    const index = indexes.get(`id:${row.id}`) ?? indexes.get(`epoch:${row.epoch}`);
+    if (index === undefined) {
+      indexes.set(`id:${row.id}`, merged.length);
+      indexes.set(`epoch:${row.epoch}`, merged.length);
+      merged.push(row);
+    } else {
+      merged[index] = row;
+    }
+  }
+
+  merged.sort((a, b) => a.epoch - b.epoch);
+  fs.writeFileSync(dataPath, `${JSON.stringify(merged, null, 2)}\n`);
+  console.log(`Merged ${all.length} Kattis submissions into ${path.relative(process.cwd(), dataPath)}`);
+} else {
+  console.log(JSON.stringify(all, null, 2));
+}

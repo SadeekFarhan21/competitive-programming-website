@@ -27,7 +27,11 @@ KATTIS_USERNAME=farhan-sadeek KATTIS_COOKIE='KattisSiteCookie=...' \
   npm run fetch:kattis -- --full > /tmp/kattis-submissions.json
 ```
 
-The cookie is optional for publicly visible histories and must never be committed.
+The script also reads `KATTIS_USERNAME` and `KATTIS_COOKIE` from `.env.local`.
+The cookie is needed when Kattis only shows the submissions table to your logged-in
+browser session and must never be committed.
+To update the dashboard data directly instead of exporting a file, use
+`npm run fetch:kattis -- --full --merge`.
 
 The refresh script uses the configured platform credentials from `.env.local`. LeetCode uses authenticated GraphQL through `LEETCODE_SESSION`; CSES uses `CSES_SESSION`; Kattis uses `KATTIS_USERNAME` and, when required for private submission history, `KATTIS_COOKIE`; and UVa uses `UVA_USERNAME` or `UVA_USER_ID`. SPOJ entries are maintained manually in `data/spoj-manual.json` because its public submission page blocks automated refreshes.
 
