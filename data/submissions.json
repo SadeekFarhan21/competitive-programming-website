@@ -11192,28 +11192,6 @@
     "memoryBytes": null
   },
   {
-    "id": "codechef:1032111808",
-    "platform": "CodeChef",
-    "epoch": 1701126180,
-    "problem": "CHEFLCM",
-    "verdict": "PARTIALLY ACCEPTED",
-    "ac": false,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1032112282",
-    "platform": "CodeChef",
-    "epoch": 1701126360,
-    "problem": "EXAMCHTPRIME",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
     "platform": "UVA",
     "epoch": 1701138007,
     "problem": "11415 - Count the Factorials",
@@ -11261,6 +11239,28 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": 990000,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1032111808",
+    "platform": "CodeChef",
+    "epoch": 1701154980,
+    "problem": "CHEFLCM",
+    "verdict": "PARTIALLY ACCEPTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1032112282",
+    "platform": "CodeChef",
+    "epoch": 1701155160,
+    "problem": "EXAMCHTPRIME",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
     "memoryBytes": null
   },
   {
@@ -11696,7 +11696,18 @@
   {
     "id": "codechef:1034772512",
     "platform": "CodeChef",
-    "epoch": 1702533420,
+    "epoch": 1702562220,
+    "problem": "MAXDIFF",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1034772516",
+    "platform": "CodeChef",
+    "epoch": 1702562220,
     "problem": "MAXDIFF",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -11707,7 +11718,7 @@
   {
     "id": "codechef:1034772520",
     "platform": "CodeChef",
-    "epoch": 1702533480,
+    "epoch": 1702562280,
     "problem": "MAXDIFF",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -11718,7 +11729,7 @@
   {
     "id": "codechef:1034772586",
     "platform": "CodeChef",
-    "epoch": 1702534080,
+    "epoch": 1702562880,
     "problem": "MAXDIFF",
     "verdict": "PARTIALLY ACCEPTED",
     "ac": false,
@@ -11729,7 +11740,7 @@
   {
     "id": "codechef:1034772620",
     "platform": "CodeChef",
-    "epoch": 1702534320,
+    "epoch": 1702563120,
     "problem": "PERMEXIS",
     "verdict": "PARTIALLY ACCEPTED",
     "ac": false,
@@ -11740,7 +11751,7 @@
   {
     "id": "codechef:1034772632",
     "platform": "CodeChef",
-    "epoch": 1702534380,
+    "epoch": 1702563180,
     "problem": "XYSTR",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -12099,72 +12110,6 @@
     "memoryBytes": 2457600
   },
   {
-    "id": "codechef:1035644377",
-    "platform": "CodeChef",
-    "epoch": 1703022720,
-    "problem": "AVGPERM",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1035645799",
-    "platform": "CodeChef",
-    "epoch": 1703023080,
-    "problem": "HOTEL",
-    "verdict": "PARTIALLY ACCEPTED",
-    "ac": false,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1035651364",
-    "platform": "CodeChef",
-    "epoch": 1703024580,
-    "problem": "CHEFFED",
-    "verdict": "PARTIALLY ACCEPTED",
-    "ac": false,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1035665409",
-    "platform": "CodeChef",
-    "epoch": 1703029680,
-    "problem": "ANTIPALINDR",
-    "verdict": "WRONG ANSWER",
-    "ac": false,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1035668071",
-    "platform": "CodeChef",
-    "epoch": 1703031420,
-    "problem": "ANTIPALINDR",
-    "verdict": "WRONG ANSWER",
-    "ac": false,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1035668331",
-    "platform": "CodeChef",
-    "epoch": 1703031660,
-    "problem": "ANTIPALINDR",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
     "platform": "CodeChef",
     "epoch": 1703032200,
     "problem": "WATMELON",
@@ -12193,6 +12138,72 @@
     "language": "C++17 (GCC 7-32)",
     "runtimeMs": 624,
     "memoryBytes": 0
+  },
+  {
+    "id": "codechef:1035644377",
+    "platform": "CodeChef",
+    "epoch": 1703051520,
+    "problem": "AVGPERM",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1035645799",
+    "platform": "CodeChef",
+    "epoch": 1703051880,
+    "problem": "HOTEL",
+    "verdict": "PARTIALLY ACCEPTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1035651364",
+    "platform": "CodeChef",
+    "epoch": 1703053380,
+    "problem": "CHEFFED",
+    "verdict": "PARTIALLY ACCEPTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1035665409",
+    "platform": "CodeChef",
+    "epoch": 1703058480,
+    "problem": "ANTIPALINDR",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1035668071",
+    "platform": "CodeChef",
+    "epoch": 1703060220,
+    "problem": "ANTIPALINDR",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1035668331",
+    "platform": "CodeChef",
+    "epoch": 1703060460,
+    "problem": "ANTIPALINDR",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   },
   {
     "platform": "Kattis",
@@ -12497,6 +12508,26 @@
     "language": "CPP14",
     "runtimeMs": 40,
     "memoryBytes": 7654605
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1703178150,
+    "problem": "Euler Totient Function",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 40,
+    "memoryBytes": 7654605
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1703179475,
+    "problem": "Least prime divisor",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 16370,
+    "memoryBytes": 5452595
   },
   {
     "platform": "SPOJ",
@@ -13030,6 +13061,26 @@
   },
   {
     "platform": "SPOJ",
+    "epoch": 1703561179,
+    "problem": "Prime Generator",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": null,
+    "memoryBytes": 127926272
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1703561187,
+    "problem": "Prime Generator",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": null,
+    "memoryBytes": 127926272
+  },
+  {
+    "platform": "SPOJ",
     "epoch": 1703561187,
     "problem": "Prime Generator",
     "verdict": "TIME LIMIT EXCEEDED",
@@ -13427,6 +13478,26 @@
     "language": "CPP14",
     "runtimeMs": 1380,
     "memoryBytes": 5452595
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1703561568,
+    "problem": "Prime Generator",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 1380,
+    "memoryBytes": 5452595
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1703562058,
+    "problem": "Printing some primes",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": null,
+    "memoryBytes": 403701760
   },
   {
     "platform": "SPOJ",
@@ -14831,6 +14902,16 @@
     "memoryBytes": 5452595
   },
   {
+    "platform": "SPOJ",
+    "epoch": 1707703390,
+    "problem": "Cumulative Sum Query",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 50,
+    "memoryBytes": 5452595
+  },
+  {
     "platform": "Codeforces",
     "epoch": 1707704588,
     "problem": "327A - Flipping Game",
@@ -15023,7 +15104,7 @@
   {
     "id": "codechef:1047420148",
     "platform": "CodeChef",
-    "epoch": 1709074020,
+    "epoch": 1709102820,
     "problem": "DSCPP90",
     "verdict": "PARTIALLY ACCEPTED",
     "ac": false,
@@ -15034,7 +15115,7 @@
   {
     "id": "codechef:1047420451",
     "platform": "CodeChef",
-    "epoch": 1709074080,
+    "epoch": 1709102880,
     "problem": "BTPREORDER",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -15045,7 +15126,7 @@
   {
     "id": "codechef:1047420705",
     "platform": "CodeChef",
-    "epoch": 1709074140,
+    "epoch": 1709102940,
     "problem": "BTPREORDER",
     "verdict": "COMPILATION ERROR",
     "ac": false,
@@ -15056,7 +15137,7 @@
   {
     "id": "codechef:1047421016",
     "platform": "CodeChef",
-    "epoch": 1709074200,
+    "epoch": 1709103000,
     "problem": "BTPREORDER",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -15067,7 +15148,7 @@
   {
     "id": "codechef:1047421154",
     "platform": "CodeChef",
-    "epoch": 1709074260,
+    "epoch": 1709103060,
     "problem": "BTPOSTORDER",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -15078,7 +15159,7 @@
   {
     "id": "codechef:1047421281",
     "platform": "CodeChef",
-    "epoch": 1709074320,
+    "epoch": 1709103120,
     "problem": "BTINORDER",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -15089,7 +15170,7 @@
   {
     "id": "codechef:1047421649",
     "platform": "CodeChef",
-    "epoch": 1709074380,
+    "epoch": 1709103180,
     "problem": "BTHEIGHT",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -16200,13 +16281,13 @@
   },
   {
     "platform": "SPOJ",
-    "epoch": 1717944315,
+    "epoch": 1717944207,
     "problem": "Printing some primes",
-    "verdict": "ACCEPTED",
-    "ac": true,
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
     "language": "C++ 4.3.2",
-    "runtimeMs": 450,
-    "memoryBytes": 14680064
+    "runtimeMs": null,
+    "memoryBytes": 13631488
   },
   {
     "platform": "SPOJ",
@@ -16397,6 +16478,36 @@
     "language": "C++ 4.3.2",
     "runtimeMs": 450,
     "memoryBytes": 14680064
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1717944315,
+    "problem": "Printing some primes",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++ 4.3.2",
+    "runtimeMs": 450,
+    "memoryBytes": 14680064
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1717944315,
+    "problem": "Printing some primes",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++ 4.3.2",
+    "runtimeMs": 450,
+    "memoryBytes": 14680064
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1717945554,
+    "problem": "Finding the Kth Prime",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++ 4.3.2",
+    "runtimeMs": 1180,
+    "memoryBytes": 135266304
   },
   {
     "platform": "SPOJ",
@@ -16909,6 +17020,16 @@
     "memoryBytes": 438304768
   },
   {
+    "platform": "SPOJ",
+    "epoch": 1718119585,
+    "problem": "Printing some primes",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 700,
+    "memoryBytes": 438304768
+  },
+  {
     "platform": "LeetCode",
     "epoch": 1718121864,
     "problem": "N-th Tribonacci Number",
@@ -16931,7 +17052,7 @@
   {
     "id": "codechef:1064385397",
     "platform": "CodeChef",
-    "epoch": 1718142540,
+    "epoch": 1718167740,
     "problem": "MXSUBSUM",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -16942,7 +17063,7 @@
   {
     "id": "codechef:1064386231",
     "platform": "CodeChef",
-    "epoch": 1718142780,
+    "epoch": 1718167980,
     "problem": "TACHSTCK",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -17521,6 +17642,16 @@
     "memoryBytes": 5347738
   },
   {
+    "platform": "SPOJ",
+    "epoch": 1723566161,
+    "problem": "Cumulative Sum Query",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 60,
+    "memoryBytes": 5347738
+  },
+  {
     "platform": "Codeforces",
     "epoch": 1723566446,
     "problem": "1061A - Coins",
@@ -17819,6 +17950,16 @@
     "language": "C++20 (GCC 13-64)",
     "runtimeMs": 359,
     "memoryBytes": 8396800
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1730835233,
+    "problem": "Number of common divisors",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": null,
+    "memoryBytes": 5452595
   },
   {
     "platform": "SPOJ",
@@ -19572,6 +19713,26 @@
   },
   {
     "platform": "SPOJ",
+    "epoch": 1746366033,
+    "problem": "Number of common divisors",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": null,
+    "memoryBytes": 5452595
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1746366536,
+    "problem": "Number of common divisors",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "CPP14",
+    "runtimeMs": null,
+    "memoryBytes": 11534336
+  },
+  {
+    "platform": "SPOJ",
     "epoch": 1746366536,
     "problem": "Number of common divisors",
     "verdict": "TIME LIMIT EXCEEDED",
@@ -19969,6 +20130,26 @@
     "language": "CPP14",
     "runtimeMs": 370,
     "memoryBytes": 15728640
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1746366702,
+    "problem": "Number of common divisors",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 370,
+    "memoryBytes": 15728640
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1747168491,
+    "problem": "Primal Fear",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 290,
+    "memoryBytes": 11534336
   },
   {
     "platform": "SPOJ",
@@ -22641,6 +22822,16 @@
     "memoryBytes": 5452595
   },
   {
+    "platform": "SPOJ",
+    "epoch": 1765953072,
+    "problem": "2D-SORT",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 80,
+    "memoryBytes": 5452595
+  },
+  {
     "platform": "Codeforces",
     "epoch": 1765954177,
     "problem": "1325A - EhAb AnD gCd",
@@ -22663,7 +22854,7 @@
   {
     "id": "codechef:1218981698",
     "platform": "CodeChef",
-    "epoch": 1765966320,
+    "epoch": 1765995120,
     "problem": "INDIPERM",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -22674,7 +22865,7 @@
   {
     "id": "codechef:1219008025",
     "platform": "CodeChef",
-    "epoch": 1765970100,
+    "epoch": 1765998900,
     "problem": "MINPIZZAS",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -22685,7 +22876,7 @@
   {
     "id": "codechef:1219010965",
     "platform": "CodeChef",
-    "epoch": 1765970580,
+    "epoch": 1765999380,
     "problem": "MANYSUMS",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -22696,19 +22887,8 @@
   {
     "id": "codechef:1219016147",
     "platform": "CodeChef",
-    "epoch": 1765971120,
+    "epoch": 1765999920,
     "problem": "ALTER",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1219180048",
-    "platform": "CodeChef",
-    "epoch": 1766002200,
-    "problem": "TOYS",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
@@ -22726,28 +22906,6 @@
     "memoryBytes": 102400
   },
   {
-    "id": "codechef:1219195723",
-    "platform": "CodeChef",
-    "epoch": 1766002680,
-    "problem": "ADDPOS",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1219221234",
-    "platform": "CodeChef",
-    "epoch": 1766003460,
-    "problem": "TREECOUNT",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
     "platform": "LeetCode",
     "epoch": 1766004052,
     "problem": "Find Center of Star Graph",
@@ -22758,9 +22916,42 @@
     "memoryBytes": 129184563
   },
   {
+    "id": "codechef:1219180048",
+    "platform": "CodeChef",
+    "epoch": 1766031000,
+    "problem": "TOYS",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1219195723",
+    "platform": "CodeChef",
+    "epoch": 1766031480,
+    "problem": "ADDPOS",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1219221234",
+    "platform": "CodeChef",
+    "epoch": 1766032260,
+    "problem": "TREECOUNT",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
     "id": "codechef:1219239008",
     "platform": "CodeChef",
-    "epoch": 1766004060,
+    "epoch": 1766032860,
     "problem": "RANGEMEX7",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -22771,7 +22962,7 @@
   {
     "id": "codechef:1219256413",
     "platform": "CodeChef",
-    "epoch": 1766004720,
+    "epoch": 1766033520,
     "problem": "RANGEMEX7",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -22782,7 +22973,7 @@
   {
     "id": "codechef:1219266911",
     "platform": "CodeChef",
-    "epoch": 1766005200,
+    "epoch": 1766034000,
     "problem": "ADD13",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -22793,7 +22984,7 @@
   {
     "id": "codechef:1219270033",
     "platform": "CodeChef",
-    "epoch": 1766005320,
+    "epoch": 1766034120,
     "problem": "MAKEAP7",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -22804,7 +22995,7 @@
   {
     "id": "codechef:1219273948",
     "platform": "CodeChef",
-    "epoch": 1766005560,
+    "epoch": 1766034360,
     "problem": "MAXADD",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -22815,18 +23006,7 @@
   {
     "id": "codechef:1219282873",
     "platform": "CodeChef",
-    "epoch": 1766005980,
-    "problem": "RANGEMEX7",
-    "verdict": "WRONG ANSWER",
-    "ac": false,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1219296968",
-    "platform": "CodeChef",
-    "epoch": 1766006820,
+    "epoch": 1766034780,
     "problem": "RANGEMEX7",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -22843,6 +23023,17 @@
     "language": "cpp",
     "runtimeMs": 26,
     "memoryBytes": 344142643
+  },
+  {
+    "id": "codechef:1219296968",
+    "platform": "CodeChef",
+    "epoch": 1766035620,
+    "problem": "RANGEMEX7",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   },
   {
     "platform": "Codeforces",
@@ -23625,61 +23816,6 @@
     "memoryBytes": 93184000
   },
   {
-    "id": "codechef:1222137378",
-    "platform": "CodeChef",
-    "epoch": 1767044460,
-    "problem": "DSU05",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1222137775",
-    "platform": "CodeChef",
-    "epoch": 1767044520,
-    "problem": "DSU08",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1222139769",
-    "platform": "CodeChef",
-    "epoch": 1767045060,
-    "problem": "DSU11",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1222140826",
-    "platform": "CodeChef",
-    "epoch": 1767045300,
-    "problem": "DSU13",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1222141153",
-    "platform": "CodeChef",
-    "epoch": 1767045360,
-    "problem": "DSU14",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
     "platform": "Codeforces",
     "epoch": 1767062273,
     "problem": "1285C - Fadi and LCM",
@@ -23690,10 +23826,54 @@
     "memoryBytes": 102400
   },
   {
-    "id": "codechef:1222170472",
+    "id": "codechef:1222137378",
     "platform": "CodeChef",
-    "epoch": 1767064920,
-    "problem": "SUBINC",
+    "epoch": 1767073260,
+    "problem": "DSU05",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1222137775",
+    "platform": "CodeChef",
+    "epoch": 1767073320,
+    "problem": "DSU08",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1222139769",
+    "platform": "CodeChef",
+    "epoch": 1767073860,
+    "problem": "DSU11",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1222140826",
+    "platform": "CodeChef",
+    "epoch": 1767074100,
+    "problem": "DSU13",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1222141153",
+    "platform": "CodeChef",
+    "epoch": 1767074160,
+    "problem": "DSU14",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
@@ -23711,67 +23891,12 @@
     "memoryBytes": 11953766
   },
   {
-    "id": "codechef:1222199029",
+    "id": "codechef:1222170472",
     "platform": "CodeChef",
-    "epoch": 1767088860,
-    "problem": "MINPIZZAS",
+    "epoch": 1767093720,
+    "problem": "SUBINC",
     "verdict": "ACCEPTED",
     "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1222205052",
-    "platform": "CodeChef",
-    "epoch": 1767089460,
-    "problem": "ODDSUM",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1222214371",
-    "platform": "CodeChef",
-    "epoch": 1767090600,
-    "problem": "CHFGCD",
-    "verdict": "WRONG ANSWER",
-    "ac": false,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1222215002",
-    "platform": "CodeChef",
-    "epoch": 1767090720,
-    "problem": "CHFGCD",
-    "verdict": "WRONG ANSWER",
-    "ac": false,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1222215392",
-    "platform": "CodeChef",
-    "epoch": 1767090780,
-    "problem": "CHFGCD",
-    "verdict": "WRONG ANSWER",
-    "ac": false,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1222219280",
-    "platform": "CodeChef",
-    "epoch": 1767091440,
-    "problem": "CHFGCD",
-    "verdict": "WRONG ANSWER",
-    "ac": false,
     "language": "C++",
     "runtimeMs": null,
     "memoryBytes": null
@@ -23835,6 +23960,72 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 46,
     "memoryBytes": 102400
+  },
+  {
+    "id": "codechef:1222199029",
+    "platform": "CodeChef",
+    "epoch": 1767117660,
+    "problem": "MINPIZZAS",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1222205052",
+    "platform": "CodeChef",
+    "epoch": 1767118260,
+    "problem": "ODDSUM",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1222214371",
+    "platform": "CodeChef",
+    "epoch": 1767119400,
+    "problem": "CHFGCD",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1222215002",
+    "platform": "CodeChef",
+    "epoch": 1767119520,
+    "problem": "CHFGCD",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1222215392",
+    "platform": "CodeChef",
+    "epoch": 1767119580,
+    "problem": "CHFGCD",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1222219280",
+    "platform": "CodeChef",
+    "epoch": 1767120240,
+    "problem": "CHFGCD",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   },
   {
     "platform": "LeetCode",
@@ -24009,7 +24200,7 @@
   {
     "id": "codechef:1292975024",
     "platform": "CodeChef",
-    "epoch": 1782133620,
+    "epoch": 1782158820,
     "problem": "CANDY1P",
     "verdict": "PARTIALLY ACCEPTED",
     "ac": false,
@@ -24020,7 +24211,7 @@
   {
     "id": "codechef:1292978960",
     "platform": "CodeChef",
-    "epoch": 1782134280,
+    "epoch": 1782159480,
     "problem": "CANDY1P",
     "verdict": "PARTIALLY ACCEPTED",
     "ac": false,
@@ -24031,7 +24222,7 @@
   {
     "id": "codechef:1292979443",
     "platform": "CodeChef",
-    "epoch": 1782134340,
+    "epoch": 1782159540,
     "problem": "CANDY1P",
     "verdict": "PARTIALLY ACCEPTED",
     "ac": false,
@@ -24042,7 +24233,7 @@
   {
     "id": "codechef:1292980544",
     "platform": "CodeChef",
-    "epoch": 1782134520,
+    "epoch": 1782159720,
     "problem": "CANDY1P",
     "verdict": "PARTIALLY ACCEPTED",
     "ac": false,
@@ -24053,7 +24244,7 @@
   {
     "id": "codechef:1292981451",
     "platform": "CodeChef",
-    "epoch": 1782134700,
+    "epoch": 1782159900,
     "problem": "CHFGCD",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -24064,7 +24255,7 @@
   {
     "id": "codechef:1294657362",
     "platform": "CodeChef",
-    "epoch": 1782337020,
+    "epoch": 1782362220,
     "problem": "HEIGHTIQP",
     "verdict": "RUNTIME ERROR(OTHER)",
     "ac": false,
@@ -24075,7 +24266,7 @@
   {
     "id": "codechef:1294662633",
     "platform": "CodeChef",
-    "epoch": 1782337440,
+    "epoch": 1782362640,
     "problem": "HEIGHTIQP",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -24086,7 +24277,7 @@
   {
     "id": "codechef:1294663570",
     "platform": "CodeChef",
-    "epoch": 1782337500,
+    "epoch": 1782362700,
     "problem": "HEIGHTIQP",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24097,7 +24288,7 @@
   {
     "id": "codechef:1294669849",
     "platform": "CodeChef",
-    "epoch": 1782337980,
+    "epoch": 1782363180,
     "problem": "RESQ",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24108,7 +24299,7 @@
   {
     "id": "codechef:1295966377",
     "platform": "CodeChef",
-    "epoch": 1782557160,
+    "epoch": 1782582360,
     "problem": "SUMTRIANP",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24119,7 +24310,7 @@
   {
     "id": "codechef:1295972899",
     "platform": "CodeChef",
-    "epoch": 1782558180,
+    "epoch": 1782583380,
     "problem": "MGCRNKP",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -24130,7 +24321,7 @@
   {
     "id": "codechef:1295983133",
     "platform": "CodeChef",
-    "epoch": 1782559260,
+    "epoch": 1782584460,
     "problem": "MGCRNKP",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -24141,7 +24332,7 @@
   {
     "id": "codechef:1295983684",
     "platform": "CodeChef",
-    "epoch": 1782559320,
+    "epoch": 1782584520,
     "problem": "MGCRNKP",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -24152,7 +24343,7 @@
   {
     "id": "codechef:1295985066",
     "platform": "CodeChef",
-    "epoch": 1782559440,
+    "epoch": 1782584640,
     "problem": "MGCRNKP",
     "verdict": "COMPILATION ERROR",
     "ac": false,
@@ -24163,7 +24354,7 @@
   {
     "id": "codechef:1295985454",
     "platform": "CodeChef",
-    "epoch": 1782559500,
+    "epoch": 1782584700,
     "problem": "MGCRNKP",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -24174,7 +24365,7 @@
   {
     "id": "codechef:1295991031",
     "platform": "CodeChef",
-    "epoch": 1782560100,
+    "epoch": 1782585300,
     "problem": "PREFPRO1",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24185,7 +24376,7 @@
   {
     "id": "codechef:1296419876",
     "platform": "CodeChef",
-    "epoch": 1782640620,
+    "epoch": 1782665820,
     "problem": "RISK",
     "verdict": "RUNTIME ERROR(OTHER)",
     "ac": false,
@@ -24196,7 +24387,7 @@
   {
     "id": "codechef:1296420448",
     "platform": "CodeChef",
-    "epoch": 1782640680,
+    "epoch": 1782665880,
     "problem": "RISK",
     "verdict": "RUNTIME ERROR(OTHER)",
     "ac": false,
@@ -24207,7 +24398,7 @@
   {
     "id": "codechef:1296420518",
     "platform": "CodeChef",
-    "epoch": 1782640740,
+    "epoch": 1782665940,
     "problem": "RISK",
     "verdict": "TIME LIMIT EXCEEDED",
     "ac": false,
@@ -24216,9 +24407,20 @@
     "memoryBytes": null
   },
   {
+    "id": "codechef:1296420833",
+    "platform": "CodeChef",
+    "epoch": 1782665940,
+    "problem": "RISK",
+    "verdict": "RUNTIME ERROR(OTHER)",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
     "id": "codechef:1296420879",
     "platform": "CodeChef",
-    "epoch": 1782640800,
+    "epoch": 1782666000,
     "problem": "RISK",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24229,7 +24431,7 @@
   {
     "id": "codechef:1296425756",
     "platform": "CodeChef",
-    "epoch": 1782641760,
+    "epoch": 1782666960,
     "problem": "ADAKNG",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24240,7 +24442,7 @@
   {
     "id": "codechef:1296744723",
     "platform": "CodeChef",
-    "epoch": 1782695040,
+    "epoch": 1782720240,
     "problem": "MATADD",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24251,7 +24453,7 @@
   {
     "id": "codechef:1296745597",
     "platform": "CodeChef",
-    "epoch": 1782695280,
+    "epoch": 1782720480,
     "problem": "MATZIGZAG",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24262,7 +24464,7 @@
   {
     "id": "codechef:1296746143",
     "platform": "CodeChef",
-    "epoch": 1782695400,
+    "epoch": 1782720600,
     "problem": "MATTREVERSE",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24273,7 +24475,7 @@
   {
     "id": "codechef:1296747591",
     "platform": "CodeChef",
-    "epoch": 1782695820,
+    "epoch": 1782721020,
     "problem": "MATDIAGSUM",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24284,7 +24486,7 @@
   {
     "id": "codechef:1296757974",
     "platform": "CodeChef",
-    "epoch": 1782698400,
+    "epoch": 1782723600,
     "problem": "MATNEGCOUNT",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24295,7 +24497,7 @@
   {
     "id": "codechef:1296761458",
     "platform": "CodeChef",
-    "epoch": 1782699360,
+    "epoch": 1782724560,
     "problem": "MATMULTIPLIC",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24306,7 +24508,7 @@
   {
     "id": "codechef:1296762097",
     "platform": "CodeChef",
-    "epoch": 1782699480,
+    "epoch": 1782724680,
     "problem": "DSCPPAS263",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24317,7 +24519,7 @@
   {
     "id": "codechef:1296764332",
     "platform": "CodeChef",
-    "epoch": 1782700080,
+    "epoch": 1782725280,
     "problem": "MATSETZERO",
     "verdict": "PARTIALLY ACCEPTED",
     "ac": false,
@@ -24328,7 +24530,7 @@
   {
     "id": "codechef:1296766578",
     "platform": "CodeChef",
-    "epoch": 1782700680,
+    "epoch": 1782725880,
     "problem": "MATMINPATH",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24339,7 +24541,7 @@
   {
     "id": "codechef:1296770997",
     "platform": "CodeChef",
-    "epoch": 1782701880,
+    "epoch": 1782727080,
     "problem": "MATMAXISLAND",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24350,7 +24552,7 @@
   {
     "id": "codechef:1296784999",
     "platform": "CodeChef",
-    "epoch": 1782705840,
+    "epoch": 1782731040,
     "problem": "MATNEARESTO",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24361,7 +24563,7 @@
   {
     "id": "codechef:1296798404",
     "platform": "CodeChef",
-    "epoch": 1782709620,
+    "epoch": 1782734820,
     "problem": "SNSOCIAL",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24372,7 +24574,7 @@
   {
     "id": "codechef:1296808819",
     "platform": "CodeChef",
-    "epoch": 1782712440,
+    "epoch": 1782737640,
     "problem": "MTYFRI",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24383,7 +24585,7 @@
   {
     "id": "codechef:1297685063",
     "platform": "CodeChef",
-    "epoch": 1782855420,
+    "epoch": 1782880620,
     "problem": "MATROTAPPLE",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24394,7 +24596,7 @@
   {
     "id": "codechef:1297902252",
     "platform": "CodeChef",
-    "epoch": 1782901800,
+    "epoch": 1782927000,
     "problem": "MIXCOLOR",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24405,7 +24607,7 @@
   {
     "id": "codechef:1297909067",
     "platform": "CodeChef",
-    "epoch": 1782902640,
+    "epoch": 1782927840,
     "problem": "FILL01",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -24416,7 +24618,7 @@
   {
     "id": "codechef:1297924372",
     "platform": "CodeChef",
-    "epoch": 1782904620,
+    "epoch": 1782929820,
     "problem": "NODRUGS",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -25655,6 +25857,16 @@
     "memoryBytes": 10485760
   },
   {
+    "platform": "SPOJ",
+    "epoch": 1785823567,
+    "problem": "Range Minimum Query",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 70,
+    "memoryBytes": 10485760
+  },
+  {
     "platform": "CSES",
     "epoch": 1785823681,
     "problem": "Static Range Minimum Queries",
@@ -25663,6 +25875,16 @@
     "language": "C++",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "SPOJ",
+    "epoch": 1785853139,
+    "problem": "Catapult that ball",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "CPP14",
+    "runtimeMs": 60,
+    "memoryBytes": 10485760
   },
   {
     "platform": "SPOJ",
@@ -26055,50 +26277,6 @@
     "memoryBytes": null
   },
   {
-    "id": "codechef:1331847323",
-    "platform": "CodeChef",
-    "epoch": 1786093320,
-    "problem": "DIAMTREE",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1331946333",
-    "platform": "CodeChef",
-    "epoch": 1786098960,
-    "problem": "REVERSE",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1332032005",
-    "platform": "CodeChef",
-    "epoch": 1786103220,
-    "problem": "DIGJUMP",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
-    "id": "codechef:1332090434",
-    "platform": "CodeChef",
-    "epoch": 1786106100,
-    "problem": "PREP17",
-    "verdict": "ACCEPTED",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": null,
-    "memoryBytes": null
-  },
-  {
     "platform": "UVA",
     "epoch": 1786115556,
     "problem": "10045 - Echo",
@@ -26106,6 +26284,17 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": 0,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1331847323",
+    "platform": "CodeChef",
+    "epoch": 1786118520,
+    "problem": "DIAMTREE",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
     "memoryBytes": null
   },
   {
@@ -26152,6 +26341,17 @@
     "memoryBytes": 7654605
   },
   {
+    "id": "codechef:1331946333",
+    "platform": "CodeChef",
+    "epoch": 1786124160,
+    "problem": "REVERSE",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
     "id": "spoj:35889776",
     "platform": "SPOJ",
     "epoch": 1786124933,
@@ -26183,6 +26383,28 @@
     "language": "C++",
     "runtimeMs": 20,
     "memoryBytes": 4404019
+  },
+  {
+    "id": "codechef:1332032005",
+    "platform": "CodeChef",
+    "epoch": 1786128420,
+    "problem": "DIGJUMP",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1332090434",
+    "platform": "CodeChef",
+    "epoch": 1786131300,
+    "problem": "PREP17",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   },
   {
     "platform": "UVA",
