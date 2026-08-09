@@ -31363,15 +31363,5 @@
     "language": "C++",
     "runtimeMs": 0,
     "memoryBytes": null
-  },
-  {
-    "platform": "UVA",
-    "epoch": 1786301858,
-    "problem": "10573 - Geometry Paradox",
-    "verdict": "Accepted",
-    "ac": true,
-    "language": "C++",
-    "runtimeMs": 0,
-    "memoryBytes": null
   }
 ]

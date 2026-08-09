@@ -45,7 +45,7 @@ const PLATFORMS: { key: Platform; label: string; dot: string }[] = [
   { key: "atcoder", label: "AtCoder", dot: "bg-sky-400" },
   { key: "leetcode", label: "LeetCode", dot: "bg-amber-400" },
   { key: "codechef", label: "CodeChef", dot: "bg-orange-300" },
-  { key: "spoj", label: "SPOJ", dot: "bg-pink-400" },
+  { key: "spoj", label: "Sphere", dot: "bg-pink-400" },
   { key: "cses", label: "CSES", dot: "bg-lime-400" },
   { key: "kattis", label: "Kattis", dot: "bg-violet-400" },
   { key: "uva", label: "Online Judge", dot: "bg-blue-400" },

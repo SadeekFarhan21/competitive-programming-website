@@ -34,6 +34,7 @@ const PLATFORM_OPTIONS = [
 ];
 
 const PLATFORM_LABELS: Record<string, string> = {
+  SPOJ: "Sphere",
   UVA: "Online Judge",
 };
 
