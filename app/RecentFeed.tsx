@@ -174,7 +174,7 @@ export default function RecentFeed() {
       {visible.map((s, i) => (
         <li
           key={i}
-          className="grid min-w-0 gap-1 py-3 text-sm sm:grid-cols-[9rem_6rem_minmax(8rem,12rem)_minmax(0,1fr)_auto_5rem] sm:items-baseline sm:gap-x-3 sm:py-2"
+          className="grid min-w-0 gap-1 py-3 text-sm sm:grid-cols-[9rem_6rem_minmax(8rem,12rem)_minmax(0,1fr)_auto] sm:items-baseline sm:gap-x-3 sm:py-2"
         >
           <span className="truncate tabular-nums text-xs text-neutral-500 sm:text-sm">
             {formatSubmissionTime(s.epoch)}
@@ -188,9 +188,6 @@ export default function RecentFeed() {
           <span className="min-w-0 flex-1 truncate text-neutral-200">{s.problemName}</span>
           <span className={`font-medium sm:text-right ${verdictColor(s.verdict)}`}>
             {s.verdict}
-          </span>
-          <span className="text-xs tabular-nums text-neutral-500 sm:text-right">
-            {s.runtimeMs != null ? `${s.runtimeMs} ms` : ""}
           </span>
         </li>
       ))}
