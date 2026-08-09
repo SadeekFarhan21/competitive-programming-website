@@ -33,6 +33,10 @@ const PLATFORM_OPTIONS = [
   "UVA",
 ];
 
+const PLATFORM_LABELS: Record<string, string> = {
+  UVA: "Online Judge",
+};
+
 function standardLanguage(language: string | null): string | null {
   if (!language) return null;
   const value = language.toLowerCase();
@@ -145,7 +149,7 @@ export default function RecentFeed() {
           >
             {platforms.map((value) => (
               <option key={value} value={value}>
-                {value === "all" ? "All platforms" : value}
+                {value === "all" ? "All platforms" : PLATFORM_LABELS[value] ?? value}
               </option>
             ))}
           </select>
@@ -175,7 +179,7 @@ export default function RecentFeed() {
             {formatSubmissionTime(s.epoch)}
           </span>
           <span className={`font-medium ${PLATFORM_COLORS[s.platform] ?? "text-neutral-300"}`}>
-            {s.platform}
+            {PLATFORM_LABELS[s.platform] ?? s.platform}
           </span>
           <span className="min-w-0 truncate text-xs text-neutral-500">
             {s.language ?? ""}

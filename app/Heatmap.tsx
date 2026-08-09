@@ -48,7 +48,7 @@ const PLATFORMS: { key: Platform; label: string; dot: string }[] = [
   { key: "spoj", label: "SPOJ", dot: "bg-pink-400" },
   { key: "cses", label: "CSES", dot: "bg-lime-400" },
   { key: "kattis", label: "Kattis", dot: "bg-violet-400" },
-  { key: "uva", label: "UVA", dot: "bg-blue-400" },
+  { key: "uva", label: "Online Judge", dot: "bg-blue-400" },
 ];
 
 const LEVELS = [
