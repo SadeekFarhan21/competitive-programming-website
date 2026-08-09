@@ -27,6 +27,8 @@ jobs:
         env:
           LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
           CSES_SESSION: ${{ secrets.CSES_SESSION }}
+          KATTIS_USERNAME: farhan-sadeek
+          KATTIS_COOKIE: ${{ secrets.KATTIS_COOKIE }}
           UVA_USERNAME: ${{ secrets.UVA_USERNAME }}
           UVA_USER_ID: ${{ secrets.UVA_USER_ID }}
           CODECHEF_API_URL: https://algo.farhansadeek.com/api/codechef
