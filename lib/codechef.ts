@@ -5,9 +5,10 @@ const CODECHEF_TIME_ZONE = "America/Los_Angeles";
 function parseEpoch(value: string, timeZone = CODECHEF_TIME_ZONE): number {
   const normalized = value.trim().toLowerCase();
   if (normalized === "just now") return Math.floor(Date.now() / 1000);
-  const relative = normalized.match(/^(\d+)\s+(minute|hour|day|week)s?\s+ago$/);
+  const relative = normalized.match(/^(\d+)\s+(min(?:ute)?|h(?:ou)?r|day|week)s?\s+ago$/);
   if (relative) {
-    const seconds = { minute: 60, hour: 3600, day: 86400, week: 604800 }[relative[2] as "minute" | "hour" | "day" | "week"];
+    const unit = relative[2].startsWith("min") ? "minute" : relative[2].startsWith("h") ? "hour" : relative[2];
+    const seconds = { minute: 60, hour: 3600, day: 86400, week: 604800 }[unit as "minute" | "hour" | "day" | "week"];
     return Math.floor(Date.now() / 1000 - Number(relative[1]) * seconds);
   }
 

@@ -154,10 +154,11 @@ async function fetchCodeChef(knownEpochs) {
     const timeZone = "America/Los_Angeles";
     const relative = value.trim().toLowerCase();
     if (relative === "just now") return Math.floor(Date.now() / 1000);
-    const relativeMatch = relative.match(/^(\d+)\s+(minute|hour|day|week)s?\s+ago$/);
+    const relativeMatch = relative.match(/^(\d+)\s+(min(?:ute)?|h(?:ou)?r|day|week)s?\s+ago$/);
     if (relativeMatch) {
+      const unit = relativeMatch[2].startsWith("min") ? "minute" : relativeMatch[2].startsWith("h") ? "hour" : relativeMatch[2];
       const amounts = { minute: 60, hour: 3600, day: 86400, week: 604800 };
-      return Math.floor(Date.now() / 1000 - Number(relativeMatch[1]) * amounts[relativeMatch[2]]);
+      return Math.floor(Date.now() / 1000 - Number(relativeMatch[1]) * amounts[unit]);
     }
 
     const absolute = value.match(
