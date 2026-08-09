@@ -334,10 +334,14 @@ async function fetchKattis() {
     const problem = problemMatches.length ? text(problemMatches.at(-1)[1]) : text(cell(row, "problem"));
     const time = text(cell(row, "time"));
     const verdict = text(cell(row, "status")) || "UNKNOWN";
-    const timestamp = /^\d{2}:\d{2}:\d{2}$/.test(time)
-      ? `${responseDateKey} ${time}`
-      : time;
-    const epoch = Date.parse(timestamp.replace(" ", "T") + "Z") / 1000;
+      const timeOnly = /^\d{2}:\d{2}:\d{2}$/.test(time);
+      const timestamp = timeOnly
+        ? `${responseDateKey} ${time}`
+        : time;
+      let epoch = Date.parse(timestamp.replace(" ", "T") + "Z") / 1000;
+      // Around midnight in the viewer's timezone, Kattis can return a
+      // time-only value while its HTTP date is already on the next UTC day.
+      if (timeOnly && epoch > Date.now() / 1000 + 300) epoch -= 86_400;
     if (!problem || !time) continue;
     if (!Number.isFinite(epoch)) continue;
     const runtimeMatch = text(cell(row, "cpu")).match(/[\d.]+/);

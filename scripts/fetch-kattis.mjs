@@ -72,8 +72,10 @@ function parsePage(html, responseDate) {
       : text(problemCell);
     const time = text(cell(row, "time"));
     const verdict = text(cell(row, "status")) || "UNKNOWN";
-    const timestamp = /^\d{2}:\d{2}:\d{2}$/.test(time) ? `${dateKey} ${time}` : time;
-    const epoch = Date.parse(`${timestamp.replace(" ", "T")}Z`) / 1000;
+    const timeOnly = /^\d{2}:\d{2}:\d{2}$/.test(time);
+    const timestamp = timeOnly ? `${dateKey} ${time}` : time;
+    let epoch = Date.parse(`${timestamp.replace(" ", "T")}Z`) / 1000;
+    if (timeOnly && epoch > Date.now() / 1000 + 300) epoch -= 86_400;
     const runtime = text(cell(row, "cpu")).match(/[\d.]+/)?.[0];
     const id = row.match(/data-submission-id="(\d+)"/i)?.[1];
 
