@@ -55,14 +55,27 @@ export async function GET(request: NextRequest) {
   const errors: string[] = [];
   const warnings: string[] = [];
 
-  // Count only the first accepted submission for each problem on each platform.
-  // Failed attempts still remain in the submission totals.
+  // Once a problem is accepted, attempts made after that point do not represent
+  // another opportunity to solve it and must not affect accuracy. This has to
+  // be calculated from the complete history before applying the requested
+  // period, otherwise an acceptance in an earlier period would not suppress
+  // later attempts in the selected period.
   const acceptedProblems = new Set<string>();
+  const accuracySubmissions = all.filter((s) => {
+    const key = `${s.platform}:${s.problem}`;
+    if (acceptedProblems.has(key)) return false;
+    if (s.ac === true) acceptedProblems.add(key);
+    return true;
+  });
+
+  // Accepted counts shown in the calendar are still one per problem, while
+  // the platform accuracy stats use the deduplicated submission set above.
+  const acceptedProblemsForCalendar = new Set<string>();
   const isNewAc = (s: StoredSub): boolean => {
     if (s.ac !== true) return false;
     const key = `${s.platform}:${s.problem}`;
-    if (acceptedProblems.has(key)) return false;
-    acceptedProblems.add(key);
+    if (acceptedProblemsForCalendar.has(key)) return false;
+    acceptedProblemsForCalendar.add(key);
     return true;
   };
 
@@ -79,11 +92,9 @@ export async function GET(request: NextRequest) {
   };
 
   for (const s of all) {
-    const newAc = isNewAc(s); // must run over full history for the dedupe
+    const newAc = isNewAc(s); // must run over full history for the calendar
     const platform = PLATFORM_KEY[s.platform];
     if (s.epoch < sinceEpoch || (untilEpoch != null && s.epoch >= untilEpoch)) continue;
-    periodTotals[platform].submissions++;
-    if (newAc) periodTotals[platform].accepted++;
     const day = dateKey(s.epoch, s.platform, timeZone);
     calendar[day] ??= {
       total: 0,
@@ -113,6 +124,13 @@ export async function GET(request: NextRequest) {
       calendar[day].accepted++;
       calendar[day].acc[platform]++;
     }
+  }
+
+  for (const s of accuracySubmissions) {
+    if (s.epoch < sinceEpoch || (untilEpoch != null && s.epoch >= untilEpoch)) continue;
+    const platform = PLATFORM_KEY[s.platform];
+    periodTotals[platform].submissions++;
+    if (s.ac === true) periodTotals[platform].accepted++;
   }
 
   const stats = Object.fromEntries(

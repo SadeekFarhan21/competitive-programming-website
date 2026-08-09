@@ -163,6 +163,7 @@ async function fetchCodeChef(knownEpochs) {
   }
 
   function parseEpoch(value) {
+    const timeZone = "America/Los_Angeles";
     const relative = value.trim().toLowerCase();
     if (relative === "just now") return Math.floor(Date.now() / 1000);
     const relativeMatch = relative.match(/^(\d+)\s+(minute|hour|day|week)s?\s+ago$/);
@@ -177,24 +178,40 @@ async function fetchCodeChef(knownEpochs) {
     if (!absolute) return NaN;
     let hour = Number(absolute[1]) % 12;
     if (absolute[3].toUpperCase() === "PM") hour += 12;
-    return Date.UTC(
+    const localAsUtc = Date.UTC(
       2000 + Number(absolute[6]),
       Number(absolute[5]) - 1,
       Number(absolute[4]),
       hour,
       Number(absolute[2])
-    ) / 1000;
+    );
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone,
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "numeric",
+      hourCycle: "h23",
+    }).formatToParts(new Date(localAsUtc));
+    const values = Object.fromEntries(parts.map(({ type, value }) => [type, Number(value)]));
+    const displayedAsUtc = Date.UTC(values.year, values.month - 1, values.day, values.hour, values.minute);
+    return (localAsUtc + localAsUtc - displayedAsUtc) / 1000;
   }
 
   const parse = (html) => {
     const rows = [];
+    const cellText = (value) => value.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
     for (const match of html.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
       const row = match[1];
+      const cells = [...row.matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/gi)].map((entry) => cellText(entry[1]));
       const titles = [...row.matchAll(/<td\b[^>]*\btitle\s*=\s*(['"])(.*?)\1/gi)]
         .map((entry) => entry[2].trim());
-      const result = row.match(/<span\b[^>]*\btitle\s*=\s*(['"])(.*?)\1/i)?.[2] ?? "UNKNOWN";
-      const epoch = parseEpoch(titles[0] ?? "");
-      const problem = titles[1] || row.match(/\/problems\/([^'"?#]+)/i)?.[1];
+      const resultTitle = row.match(/<span\b[^>]*\btitle\s*=\s*(['"])(.*?)\1/i)?.[2];
+      const score = cells[2]?.match(/\(\s*\d+\s*\)/)?.[0];
+      const result = resultTitle ?? (score ? "ACCEPTED" : "UNKNOWN");
+      const epoch = parseEpoch(titles[0] ?? cells[0] ?? "");
+      const problem = titles[1] || cells[1] || row.match(/\/problems\/([^'"?#]+)/i)?.[1];
       const solutionId = row.match(/\/viewsolution\/(\d+)/i)?.[1];
       if (!problem || !Number.isFinite(epoch)) continue;
       rows.push({
@@ -204,7 +221,7 @@ async function fetchCodeChef(knownEpochs) {
         problem,
         verdict: result.toUpperCase(),
         ac: result.toLowerCase().startsWith("accepted"),
-        language: titles[3] ?? null,
+        language: titles[3] ?? cells[3] ?? null,
         runtimeMs: null,
         memoryBytes: null,
       });
