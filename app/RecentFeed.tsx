@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 type Submission = {
   platform: string;
+  epoch: number;
   time: string;
   problemName: string;
   verdict: string;
@@ -11,6 +12,15 @@ type Submission = {
   runtimeMs: number | null;
   memoryBytes: number | null;
 };
+
+function formatSubmissionTime(epoch: number): string {
+  return new Intl.DateTimeFormat(undefined, {
+    month: "short",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date(epoch * 1000));
+}
 
 const PLATFORM_OPTIONS = [
   "Codeforces",
@@ -162,12 +172,7 @@ export default function RecentFeed() {
           className="grid min-w-0 gap-1 py-3 text-sm sm:grid-cols-[9rem_6rem_minmax(8rem,12rem)_minmax(0,1fr)_auto_5rem] sm:items-baseline sm:gap-x-3 sm:py-2"
         >
           <span className="truncate tabular-nums text-xs text-neutral-500 sm:text-sm">
-            {new Date(s.time).toLocaleString(undefined, {
-              month: "short",
-              day: "numeric",
-              hour: "2-digit",
-              minute: "2-digit",
-            })}
+            {formatSubmissionTime(s.epoch)}
           </span>
           <span className={`font-medium ${PLATFORM_COLORS[s.platform] ?? "text-neutral-300"}`}>
             {s.platform}

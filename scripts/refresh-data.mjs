@@ -380,6 +380,11 @@ async function fetchUva() {
   ]);
   const problems = await problemResponse.json();
   const payload = await submissionResponse.json();
+  const problemById = new Map(
+    (Array.isArray(problems) ? problems : Object.values(problems))
+      .filter((problem) => Array.isArray(problem) && problem.length >= 3)
+      .map((problem) => [Number(problem[0]), problem])
+  );
   const verdicts = {
     10: "Submission Error", 15: "Can't be Judged", 20: "In Queue", 30: "Compile Error",
     35: "Restricted Function", 40: "Runtime Error", 45: "Output Limit Exceeded",
@@ -388,12 +393,13 @@ async function fetchUva() {
   };
   const languages = { 1: "C", 2: "Java", 3: "C++", 4: "Pascal", 5: "C++11" };
   return (payload.subs ?? []).flatMap((submission) => {
-    const problem = problems[submission[1]];
+    const problem = problemById.get(Number(submission[1])) ?? problems[submission[1]];
     const epoch = Number(submission[4]);
     if (!problem || !Number.isFinite(epoch)) return [];
     const verdict = verdicts[submission[2]] ?? `Verdict ${submission[2]}`;
     return [{
       platform: "UVA",
+      id: String(submission[0]),
       epoch,
       problem: `${problem[1]} - ${problem[2]}`,
       verdict,
