@@ -149,18 +149,6 @@ async function fetchLeetCode(knownEpochs) {
 
 async function fetchCodeChef(knownEpochs) {
   const ownApi = process.env.CODECHEF_API_URL;
-  let apiRows = [];
-  if (ownApi) {
-    try {
-      const response = await fetch(`${ownApi}?handle=${encodeURIComponent(HANDLES.codechef)}`, { cache: "no-store" });
-      if (response.ok) {
-        const payload = await response.json();
-        apiRows = (payload.submissions ?? []).map((submission) => ({ ...submission, platform: "CodeChef" }));
-      }
-    } catch {
-      console.warn("Owned CodeChef API unavailable — using direct feed");
-    }
-  }
 
   function parseEpoch(value) {
     const timeZone = "America/Los_Angeles";
@@ -228,26 +216,42 @@ async function fetchCodeChef(knownEpochs) {
     }
     return rows;
   };
-  const first = await (
-    await fetch(
-      `https://www.codechef.com/recent/user?user_handle=${HANDLES.codechef}&page=0&_=${Date.now()}`
-    )
-  ).json();
-  const maxPage = Math.min(Number(first.max_page) || 1, 100);
-  let rows = apiRows.concat(parse(first.content ?? ""));
-  for (let p = 1; p < maxPage; p++) {
-    await sleep(400);
-    const data = await (
+  try {
+    const first = await (
       await fetch(
-        `https://www.codechef.com/recent/user?user_handle=${HANDLES.codechef}&page=${p}`,
-        { headers: { "User-Agent": "Mozilla/5.0" } }
+        `https://www.codechef.com/recent/user?user_handle=${HANDLES.codechef}&page=0&_=${Date.now()}`
       )
     ).json();
-    const batch = parse(data.content ?? "");
-    rows = rows.concat(batch);
-    if (!FULL && batch.some((r) => submissionKeys(r).some((key) => knownEpochs.has(key)))) break;
+    const maxPage = Math.min(Number(first.max_page) || 1, 100);
+    let rows = parse(first.content ?? "");
+    for (let p = 1; p < maxPage; p++) {
+      await sleep(400);
+      const data = await (
+        await fetch(
+          `https://www.codechef.com/recent/user?user_handle=${HANDLES.codechef}&page=${p}`,
+          { headers: { "User-Agent": "Mozilla/5.0" } }
+        )
+      ).json();
+      const batch = parse(data.content ?? "");
+      rows = rows.concat(batch);
+      if (!FULL && batch.some((r) => submissionKeys(r).some((key) => knownEpochs.has(key)))) break;
+    }
+    if (rows.length > 0) return rows;
+    console.warn("Direct CodeChef feed returned no rows — using owned API fallback");
+  } catch (error) {
+    console.warn(`Direct CodeChef feed unavailable (${error.message}) — using owned API fallback`);
   }
-  return rows;
+
+  if (!ownApi) return [];
+  try {
+    const response = await fetch(`${ownApi}?handle=${encodeURIComponent(HANDLES.codechef)}`, { cache: "no-store" });
+    if (!response.ok) return [];
+    const payload = await response.json();
+    return (payload.submissions ?? []).map((submission) => ({ ...submission, platform: "CodeChef" }));
+  } catch {
+    console.warn("Owned CodeChef API fallback unavailable");
+    return [];
+  }
 }
 
 async function fetchCSES() {
