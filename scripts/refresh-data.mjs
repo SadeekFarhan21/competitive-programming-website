@@ -324,7 +324,13 @@ async function fetchKattis() {
   // Kattis omits the date for submissions made on the current day. Its HTTP
   // date is the reliable date anchor for those time-only values.
   const responseDate = new Date(response.headers.get("date") ?? Date.now());
-  const responseDateKey = responseDate.toISOString().slice(0, 10);
+  const kattisTimeZone = "America/Los_Angeles";
+  const responseDateKey = new Intl.DateTimeFormat("en-CA", {
+    timeZone: kattisTimeZone,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(responseDate);
   const rows = [];
   const cell = (row, type) => row.match(new RegExp(`<td[^>]*data-type="${type}"[^>]*>([\\s\\S]*?)</td>`, "i"))?.[1] ?? "";
   const text = (value) => value.replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/&amp;/g, "&").replace(/\s+/g, " ").trim();
@@ -338,10 +344,7 @@ async function fetchKattis() {
       const timestamp = timeOnly
         ? `${responseDateKey} ${time}`
         : time;
-      let epoch = Date.parse(timestamp.replace(" ", "T") + "Z") / 1000;
-      // Around midnight in the viewer's timezone, Kattis can return a
-      // time-only value while its HTTP date is already on the next UTC day.
-      if (timeOnly && epoch > Date.now() / 1000 + 300) epoch -= 86_400;
+      const epoch = localDateTimeToEpoch(timestamp.replace(" ", "T"), kattisTimeZone);
     if (!problem || !time) continue;
     if (!Number.isFinite(epoch)) continue;
     const runtimeMatch = text(cell(row, "cpu")).match(/[\d.]+/);

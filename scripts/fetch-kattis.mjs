@@ -25,6 +25,7 @@ for (const file of [".env.local", ".env"]) {
 const username = process.env.KATTIS_USERNAME ?? process.argv[2];
 const full = process.argv.includes("--full");
 const merge = process.argv.includes("--merge");
+const KATTIS_TIME_ZONE = "America/Los_Angeles";
 
 if (!username) {
   console.error("Usage: KATTIS_USERNAME=... node scripts/fetch-kattis.mjs [--full] [--merge]");
@@ -54,12 +55,42 @@ function text(value) {
   return decode(value.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim());
 }
 
+function localDateTimeToEpoch(value, timeZone) {
+  const naiveEpoch = Date.parse(`${value}Z`);
+  if (!Number.isFinite(naiveEpoch)) return NaN;
+  let epoch = naiveEpoch;
+  for (let i = 0; i < 2; i += 1) {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone,
+      hour12: false,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+    }).formatToParts(new Date(epoch));
+    const values = Object.fromEntries(parts.map(({ type, value }) => [type, value]));
+    const displayedEpoch = Date.UTC(
+      Number(values.year), Number(values.month) - 1, Number(values.day),
+      Number(values.hour) % 24, Number(values.minute), Number(values.second)
+    );
+    epoch = naiveEpoch - (displayedEpoch - epoch);
+  }
+  return epoch / 1000;
+}
+
 function parsePage(html, responseDate) {
   const rows = [];
   const cell = (row, type) => row.match(
     new RegExp(`<td[^>]*data-type=["']${type}["'][^>]*>([\\s\\S]*?)</td>`, "i")
   )?.[1] ?? "";
-  const dateKey = responseDate.toISOString().slice(0, 10);
+  const dateKey = new Intl.DateTimeFormat("en-CA", {
+    timeZone: KATTIS_TIME_ZONE,
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(responseDate);
 
   for (const match of html.matchAll(/<tr[^>]*data-submission-id="\d+"[^>]*>[\s\S]*?<\/tr>/gi)) {
     const row = match[0];
@@ -74,8 +105,7 @@ function parsePage(html, responseDate) {
     const verdict = text(cell(row, "status")) || "UNKNOWN";
     const timeOnly = /^\d{2}:\d{2}:\d{2}$/.test(time);
     const timestamp = timeOnly ? `${dateKey} ${time}` : time;
-    let epoch = Date.parse(`${timestamp.replace(" ", "T")}Z`) / 1000;
-    if (timeOnly && epoch > Date.now() / 1000 + 300) epoch -= 86_400;
+    const epoch = localDateTimeToEpoch(timestamp.replace(" ", "T"), KATTIS_TIME_ZONE);
     const runtime = text(cell(row, "cpu")).match(/[\d.]+/)?.[0];
     const id = row.match(/data-submission-id="(\d+)"/i)?.[1];
 
