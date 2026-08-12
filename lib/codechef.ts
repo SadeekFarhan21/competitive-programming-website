@@ -1,6 +1,7 @@
 import type { StoredSub } from "./store";
 
-const CODECHEF_TIME_ZONE = "America/Los_Angeles";
+// CodeChef's recent-submissions endpoint exposes timestamp titles in IST.
+const CODECHEF_TIME_ZONE = "Asia/Kolkata";
 
 function parseEpoch(value: string, timeZone = CODECHEF_TIME_ZONE): number {
   const normalized = value.trim().toLowerCase();

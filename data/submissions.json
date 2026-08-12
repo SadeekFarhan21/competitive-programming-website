@@ -41798,11 +41798,44 @@
   {
     "id": "codechef:1338245933",
     "platform": "CodeChef",
-    "epoch": 1786473780,
+    "epoch": 1786428780,
     "problem": "SUBINC",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2103760863",
+    "platform": "LeetCode",
+    "epoch": 1786514647,
+    "problem": "Jump Game II",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2103764070",
+    "platform": "LeetCode",
+    "epoch": 1786514788,
+    "problem": "Jump Game II",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": 94,
+    "memoryBytes": 23488102
+  },
+  {
+    "id": "2103777307",
+    "platform": "LeetCode",
+    "epoch": 1786515370,
+    "problem": "Permutation Sequence",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
   }

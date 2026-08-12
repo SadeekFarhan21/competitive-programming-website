@@ -151,7 +151,9 @@ async function fetchCodeChef(knownEpochs) {
   const ownApi = process.env.CODECHEF_API_URL;
 
   function parseEpoch(value) {
-    const timeZone = "America/Los_Angeles";
+    // CodeChef's recent-submissions endpoint renders its timestamp titles in
+    // India Standard Time, regardless of the viewer's local timezone.
+    const timeZone = "Asia/Kolkata";
     const relative = value.trim().toLowerCase();
     if (relative === "just now") return Math.floor(Date.now() / 1000);
     const relativeMatch = relative.match(/^(\d+)\s+(min(?:ute)?|h(?:ou)?r|day|week)s?\s+ago$/);
@@ -415,15 +417,11 @@ async function fetchUva() {
 
 function loadExisting() {
   if (!fs.existsSync(DATA_PATH)) return [];
-  const rows = JSON.parse(fs.readFileSync(DATA_PATH, "utf8")).map((row) =>
+  return JSON.parse(fs.readFileSync(DATA_PATH, "utf8")).map((row) =>
     row.platform === "UVa Online Judge" ? { ...row, platform: "UVA" } : row
   );
-  const manualPath = path.join(ROOT, "data", "spoj-manual.json");
-  if (fs.existsSync(manualPath)) rows.push(...JSON.parse(fs.readFileSync(manualPath, "utf8")));
-  return rows;
 }
 
-const existing = loadExisting();
 function submissionKeys(s) {
   const keys = [`${s.platform}:${s.epoch}`];
   if (s.id) keys.push(`${s.platform}:${s.id}`);
@@ -433,6 +431,7 @@ function submissionKeys(s) {
   return keys;
 }
 
+const existing = loadExisting();
 const knownEpochs = new Set(existing.flatMap(submissionKeys));
 console.log(`existing rows: ${existing.length}`);
 
