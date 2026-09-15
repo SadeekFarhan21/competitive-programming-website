@@ -1,0 +1,1430 @@
+All OJ,Problem Title,CP4+5,Hint,DACU,Point
+13025,Fetching from uHunt,"1.4a, One-Liner I/O","giveaway, just print the one-line answer",,0.0
+carrots,carrots,"1.4a, One-Liner I/O",just print P,15155,1.3
+hello,hello,"1.4a, One-Liner I/O","just print ""Hello World!""",39217,1.2
+lc2469,to replace with LeetCode link soon...,"1.4a, One-Liner I/O",simple C to K/F conversion,0,2.0
+thelastproblem,thelastproblem,"1.4a, One-Liner I/O",S can have space(s),76,1.8
+10071,Fetching from uHunt,"1.4b, I/O + Sequences Only",super simple: output 2*v*t,,0.0
+11614,Fetching from uHunt,"1.4b, I/O + Sequences Only",root of a quadratic equation,,0.0
+r2,r2,"1.4b, I/O + Sequences Only",just print 2*S-R1,14929,1.2
+conteststruggles,conteststruggles,"1.4c, Selection Only, 2 Cases",simple formula; check if answer in [0..100],729,2.2
+isithalloween,isithalloween,"1.4c, Selection Only, 2 Cases",if-else; 2 cases,3761,1.3
+laptopsticker,laptopsticker,"1.4c, Selection Only, 2 Cases",if-else; 2 cases; note: one centimeter for both sides,3329,1.5
+lc3560,to replace with LeetCode link soon...,"1.4c, Selection Only, 2 Cases",if-else; 2 cases,0,2.0
+moscowdream,moscowdream,"1.4c, Selection Only, 2 Cases",if-else; 2 cases; check n ≥ 3,3902,1.8
+vajningsplikt,vajningsplikt,"1.4c, Selection Only, 2 Cases",selection; multiple cases; be careful,788,2.1
+grading,grading,"1.4d, Selection Only, 3+ Cases",6 cases,2744,1.5
+lc2119,to replace with LeetCode link soon...,"1.4d, Selection Only, 3+ Cases",True if num is 0; otherwise True only if num is not divisible by 10,0,2.0
+onechicken,onechicken,"1.4d, Selection Only, 3+ Cases",4 cases; piece vs pieces,6464,1.6
+provincesandgold,provincesandgold,"1.4d, Selection Only, 3+ Cases",6 cases,4756,1.4
+sith,sith,"1.4d, Selection Only, 3+ Cases",3 cases,1137,1.6
+temperature,temperature,"1.4d, Selection Only, 3+ Cases",3 cases; derive formula,1776,2.2
+testdrive,testdrive,"1.4d, Selection Only, 3+ Cases",4 cases,848,2.1
+01124,Fetching from uHunt,"1.4e, Repetition Only",LA 2681 - SouthEasternEurope06; just echo/re-print the input again,,0.0
+11547,Fetching from uHunt,"1.4e, Repetition Only",a one liner O(1) solution exists,,0.0
+different,different,"1.4e, Repetition Only",use abs function per test case,8964,2.3
+lc1281,to replace with LeetCode link soon...,"1.4e, Repetition Only",break n into digits; do as asked,0,2.0
+qaly,qaly,"1.4e, Repetition Only",trivial loop,5955,1.2
+tarifa,tarifa,"1.4e, Repetition Only",one pass; array not needed,9768,1.3
+timeloop,timeloop,"1.4e, Repetition Only",just print 'num Abracadabra' N times,17170,1.3
+11172,Fetching from uHunt,"1.4f, Multiple TC + Selection",very easy; one liner,,0.0
+12250,Fetching from uHunt,"1.4f, Multiple TC + Selection",LA 4995 - KualaLumpur10; if-else,,0.0
+12372,Fetching from uHunt,"1.4f, Multiple TC + Selection","just check if all L, W, H ≤ 20",,0.0
+eligibility,eligibility,"1.4f, Multiple TC + Selection",3 cases,1741,1.6
+helpaphd,helpaphd,"1.4f, Multiple TC + Selection",2 cases,2044,1.6
+leftbeehind,leftbeehind,"1.4f, Multiple TC + Selection",4 cases,2014,1.6
+oddities,oddities,"1.4f, Multiple TC + Selection",2 cases,11523,1.3
+12279,Fetching from uHunt,"1.4g, Control Flow, Level 1",simple linear scan,,0.0
+lc1431,to replace with LeetCode link soon...,"1.4g, Control Flow, Level 1",simple one pass check; leetcode-75,0,2.0
+licensetolaunch,licensetolaunch,"1.4g, Control Flow, Level 1",easy linear pass,1969,1.4
+11799,Fetching from uHunt,"1.4h, Control Flow, Level 2",one linear scan; find max value,,0.0
+13130,Fetching from uHunt,"1.4h, Control Flow, Level 2",simple,,0.0
+lc2169,to replace with LeetCode link soon...,"1.4h, Control Flow, Level 2",simulate as asked,0,2.0
+11364,Fetching from uHunt,"1.4i, Control Flow, Level 3",linear scan to get l and r; answer = 2*(r-l),,0.0
+11764,Fetching from uHunt,"1.4i, Control Flow, Level 3",one linear scan to count high low jumps,,0.0
+lc2455,to replace with LeetCode link soon...,"1.4i, Control Flow, Level 3",even+divisible by 3 = divisible by 6,0,2.0
+oddgnome,oddgnome,"1.4i, Control Flow, Level 3",linear pass,2388,1.6
+statistics,statistics,"1.4i, Control Flow, Level 3",one pass; array not needed,2942,1.7
+11078,Fetching from uHunt,"1.4j, Function",one linear scan; max function,,0.0
+11332,Fetching from uHunt,"1.4j, Function",simple recursion,,0.0
+artichoke,artichoke,"1.4j, Function",LA 7150 - WorldFinals Marrakech15; linear scan; probably one of the easiest WorldFinals problem; also available at UVa 0...,1390,2.8
+digits,digits,"1.4j, Function",direct simulation; also available at UVa 11687 - Digits,214,3.5
+filip,filip,"1.4j, Function",create a 'reverse string' function; then if-else check,6345,1.3
+lc2180,to replace with LeetCode link soon...,"1.4j, Function",use sum-of-digits function,0,2.0
+mia,mia,"1.4j, Function",just if-else check,1136,2.1
+01585,Fetching from uHunt,"1.4k, 1D Array, Easier",LA 3354 - Seoul05; very easy one pass algorithm,,0.0
+12015,Fetching from uHunt,"1.4k, 1D Array, Easier",traverse the list twice,,0.0
+acm,acm,"1.4k, 1D Array, Easier",simple simulation; one pass,3526,1.5
+cetiri,cetiri,"1.4k, 1D Array, Easier",sort 3 number helps; 3 cases,1165,1.9
+lc1491,to replace with LeetCode link soon...,"1.4k, 1D Array, Easier",(sum-max-min)/len; programming-skills,0,2.0
+lineup,lineup,"1.4k, 1D Array, Easier",sort ascending/descending and compare; or linear pass,3703,1.6
+lostlineup,lostlineup,"1.4k, 1D Array, Easier",simple 1D array manipulation,550,1.5
+11349,Fetching from uHunt,"1.4l, 2D Array, Easier",use long long to avoid issues,,0.0
+hakkari,hakkari,"1.4l, 2D Array, Easier",find indices of the '*',659,1.3
+lc1572,to replace with LeetCode link soon...,"1.4l, 2D Array, Easier",sum the diagonals; do not overcount the center cell for odd n; programming-skills,0,2.0
+12658,Fetching from uHunt,"1.4m, Easy",character recognition check,,0.0
+12696,Fetching from uHunt,"1.4m, Easy",LA 6608 - Phuket 2013; easy problem,,0.0
+batterup,batterup,"1.4m, Easy",easy one loop,4542,1.3
+hangingout,hangingout,"1.4m, Easy",simple loop,2218,1.3
+hissingmicrophone,hissingmicrophone,"1.4m, Easy",simple loop,7690,1.3
+lc2739,to replace with LeetCode link soon...,"1.4m, Easy",simulate the process,0,2.0
+stopwatch,stopwatch,"1.4m, Easy",linear pass; simulation,390,1.3
+11683,Fetching from uHunt,"1.4n, Still Easy",one linear pass is enough,,0.0
+11786,Fetching from uHunt,"1.4n, Still Easy",need to observe the pattern,,0.0
+bossbattle,bossbattle,"1.4n, Still Easy",trick question,1391,1.8
+lc1342,to replace with LeetCode link soon...,"1.4n, Still Easy",logarithmic steps simulation,0,2.0
+peasoup,peasoup,"1.4n, Still Easy",one linear pass,771,2.4
+thanos,thanos,"1.4n, Still Easy",simple simulation; R is at least 2,2503,2.5
+vote,vote,"1.4n, Still Easy",follow the requirements,1584,2.2
+12157,Fetching from uHunt,"1.4o, Medium",LA 4405 - KualaLumpur08; compute and compare the two plans,,0.0
+12643,Fetching from uHunt,"1.4o, Medium",it has tricky test cases,,0.0
+basicprogramming1,basicprogramming1,"1.4o, Medium",a nice summative problem for programming examination of a basic programming methodology course,201,4.0
+battlesimulation,battlesimulation,"1.4o, Medium",one pass; special check on 3! = 6 possible combinations of 3 combo moves,900,2.8
+bitsequalizer,bitsequalizer,"1.4o, Medium",analyzing patterns; also available at UVa 12545 - Bits Equalizer,174,4.5
+lc3522,to replace with LeetCode link soon...,"1.4o, Medium",also see Kattis - basicprogramming1,0,4.0
+lc0058,to replace with LeetCode link soon...,"1.5a, 1D Character Array",split and report as asked; programming-skills; top-interview-150,0,2.0
+11278,Fetching from uHunt,"1.5b, Cipher, Easier",map QWERTY keys to DVORAK,,0.0
+12896,Fetching from uHunt,"1.5b, Cipher, Easier",simple cipher; use mapper,,0.0
+13145,Fetching from uHunt,"1.5b, Cipher, Easier",shift alphabet values by +6 characters to read the problem statement; simple Caesar Cipher problem,,0.0
+conundrum,conundrum,"1.5b, Cipher, Easier",simple cipher,5240,1.4
+encodedmessage,encodedmessage,"1.5b, Cipher, Easier",simple 2D grid cipher,2316,1.4
+lc0006,to replace with LeetCode link soon...,"1.5b, Cipher, Easier",index manipulation; top-interview-150,0,4.0
+t9spelling,t9spelling,"1.5b, Cipher, Easier",similar to (the reverse of) UVa 12896,2425,1.7
+00245,Fetching from uHunt,"1.5c, Cipher, Medium",LA 5184 - WorldFinals Nashville95,,0.0
+11787,Fetching from uHunt,"1.5c, Cipher, Medium",follow the description,,0.0
+anewalphabet,anewalphabet,"1.5c, Cipher, Medium",simple cipher; 26 characters,4154,1.8
+lc0443,to replace with LeetCode link soon...,"1.5c, Cipher, Medium",Run-Length Encoding; leetcode-75,0,4.0
+piglatin,piglatin,"1.5c, Cipher, Medium",simple; check the vowels that include 'y' and process it,916,2.1
+secretmessage,secretmessage,"1.5c, Cipher, Medium",just do as asked; use 2D grid,2866,1.7
+tajna,tajna,"1.5c, Cipher, Medium",simple 2D grid cipher,471,2.1
+01200,Fetching from uHunt,"1.5d, Input Parsing (Iter)",LA 2972 - Tehran03; tokenize input,,0.0
+10906,Fetching from uHunt,"1.5d, Input Parsing (Iter)",BNF parsing; iterative solution,,0.0
+11878,Fetching from uHunt,"1.5d, Input Parsing (Iter)",expression parsing,,0.0
+autori,autori,"1.5d, Input Parsing (Iter)",simple string tokenizer problem,11602,1.2
+lc1678,to replace with LeetCode link soon...,"1.5d, Input Parsing (Iter)",simple iterative parser,0,2.0
+pervasiveheartmonitor,pervasiveheartmonitor,"1.5d, Input Parsing (Iter)",simple parsing; then finding average,950,1.7
+timebomb,timebomb,"1.5d, Input Parsing (Iter)",just a tedious input parsing problem; divisibility by 6,1174,1.8
+00488,Fetching from uHunt,"1.5e, Output Formatting, E",use several loops,,0.0
+01605,Fetching from uHunt,"1.5e, Output Formatting, E",LA 4044 - NortheasternEurope07; we can answer this problem with just h=2 levels,,0.0
+12364,Fetching from uHunt,"1.5e, Output Formatting, E",2D array check; check all possible digits [0..9],,0.0
+display,display,"1.5e, Output Formatting, E",unordered_map; map a digit -> enlarged 7x5 version,635,2.5
+lc1324,to replace with LeetCode link soon...,"1.5e, Output Formatting, E",use 2D grid buffer,0,4.0
+musicalnotation,musicalnotation,"1.5e, Output Formatting, E",simple but tedious,421,2.0
+skener,skener,"1.5e, Output Formatting, E",enlarging 2D character array,2067,1.5
+lc1455,to replace with LeetCode link soon...,"1.5f, Easy, Involving String",tokenize and check,0,2.0
+lc1880,to replace with LeetCode link soon...,"1.5f, Easy, Involving String",create function toInt(s); compare,0,2.0
+lc1945,to replace with LeetCode link soon...,"1.5f, Easy, Involving String",use sum-of-digits function,0,2.0
+ptice,ptice,"1.5f, Easy, Involving String",just a simple simulation,2100,1.5
+sevenwonders,sevenwonders,"1.5f, Easy, Involving String",one pass,4776,1.4
+yinyangstones,yinyangstones,"1.5f, Easy, Involving String",trick question; just check if number of whites equals to number of blacks,1365,1.8
+attemptedalphabet,attemptedalphabet,"1.5g, Basic String Matching",just search for all 26 lowercase alphabets,326,1.5
+blackthorn,blackthorn,"1.5g, Basic String Matching",simple string search,702,1.3
+eclips,eclips,"1.5g, Basic String Matching",tokenize and check existence of 'e',287,1.4
+gettingwood,gettingwood,"1.5g, Basic String Matching",search for 'tree',625,1.3
+searchwizard,searchwizard,"1.5g, Basic String Matching",multiple basic string matchings,263,1.6
+10388,Fetching from uHunt,"1.6a, Game (Card)",card simulation; uses random number to determine moves; need data structure to maintain the face-up and face-down cards,,0.0
+12247,Fetching from uHunt,"1.6a, Game (Card)",This is a starred problem; refer to CP3/4 book,,0.0
+bela,bela,"1.6a, Game (Card)",simple card scoring problem,3731,1.3
+lc2347,to replace with LeetCode link soon...,"1.6a, Game (Card)",apply the poker hand rules as described,0,2.0
+memorymatch,memorymatch,"1.6a, Game (Card)",interesting simulation game; many corner cases,161,4.0
+pokerhand,pokerhand,"1.6a, Game (Card)",frequency count; report max,2173,1.4
+shuffling,shuffling,"1.6a, Game (Card)",simulate card shuffling operation,218,2.8
+00255,Fetching from uHunt,"1.6b, Game (Chess)",check the validity of chess moves,,0.0
+00278,Fetching from uHunt,"1.6b, Game (Chess)",basic chess knowledge is needed; derive the closed form formulas,,0.0
+00696,Fetching from uHunt,"1.6b, Game (Chess)",ad hoc; chess,,0.0
+10284,Fetching from uHunt,"1.6b, Game (Chess)",FEN = Forsyth-Edwards Notation is a standard notation for describing board positions in a chess game,,0.0
+chess,chess,"1.6b, Game (Chess)","bishop movements; either impossible, 0, 1, or 2 ways - one of this can be invalid; just use brute force",856,2.9
+empleh,empleh,"1.6b, Game (Chess)",the reverse problem of Kattis - helpme,245,1.8
+helpme,helpme,"1.6b, Game (Chess)",convert the given chess board into chess notation,302,2.4
+lc0999,to replace with LeetCode link soon...,"1.6b, Game (Chess)","find the (r, c) of rook 'R'; simulate 4 directions of rook attacks",0,2.0
+00947,Fetching from uHunt,"1.6c, Game (Others), Easier",similar to UVa 340,,0.0
+10189,Fetching from uHunt,"1.6c, Game (Others), Easier",simulate the classic Minesweeper game; similar to UVa 10279,,0.0
+11459,Fetching from uHunt,"1.6c, Game (Others), Easier",simulate it; similar to UVa 647,,0.0
+connectthedots,connectthedots,"1.6c, Game (Others), Easier",classic children game; output formatting,213,3.6
+gamerank,gamerank,"1.6c, Game (Others), Easier",simulate the ranking update process,732,3.9
+guessinggame,guessinggame,"1.6c, Game (Others), Easier",use a 1D flag array; also available at UVa 10530 - Guessing Game,684,2.7
+lc3248,to replace with LeetCode link soon...,"1.6c, Game (Others), Easier",simulating the movement of snake grid game,0,2.0
+00584,Fetching from uHunt,"1.6d, Game (Others), Harder",simulation; games; reading comprehension,,0.0
+10813,Fetching from uHunt,"1.6d, Game (Others), Harder",follow the problem description,,0.0
+battleship,battleship,"1.6d, Game (Others), Harder",simulation; reading comprehension; many corner cases,120,5.4
+lc1275,to replace with LeetCode link soon...,"1.6d, Game (Others), Harder",just simulate; programming-skills,0,2.0
+rockpaperscissors,rockpaperscissors,"1.6d, Game (Others), Harder",count wins and losses; output win average; also available at UVa 10903 - Rock-Paper-Scissors ...,820,3.7
+tictactoe2,tictactoe2,"1.6d, Game (Others), Harder",check validity of Tic Tac Toe game; tricky; also available at UVa 10363 - Tic Tac Toe,167,5.3
+turtlemaster,turtlemaster,"1.6d, Game (Others), Harder",interesting board game to teach programming for children; simulation,323,2.9
+00637,Fetching from uHunt,"1.6e, Real Life, Easier",application in printer driver software,,0.0
+13151,Fetching from uHunt,"1.6e, Real Life, Easier",marking programming exam; ad hoc; straightforward,,0.0
+chopin,chopin,"1.6e, Real Life, Easier",you can learn a bit of music with this problem,823,1.8
+compass,compass,"1.6e, Real Life, Easier",your typical smartphone's compass function usually has this small feature,1529,2.0
+fizzbuzz,fizzbuzz,"1.6e, Real Life, Easier",actually just about easy divisibility properties,10274,1.3
+lc0657,to replace with LeetCode link soon...,"1.6e, Real Life, Easier",simple robot movement simulation on a virtual 2D grid; programming-skills,0,2.0
+trainpassengers,trainpassengers,"1.6e, Real Life, Easier",create a verifier; be careful of corner cases,1807,2.1
+wertyu,wertyu,"1.6e, Real Life, Easier",use 2D mapper array to simplify the problem; also available at UVa 10082 - WERTYU,768,2.9
+10528,Fetching from uHunt,"1.6f, Real Life, Medium",music knowledge in problem description,,0.0
+11736,Fetching from uHunt,"1.6f, Real Life, Medium",this is a (simplified) introduction to Computer Organization on how computer stores data in memory,,0.0
+beatspread,beatspread,"1.6f, Real Life, Medium",be careful with boundary cases!; also available at UVa 10812 - Beat the Spread,980,2.4
+lc1041,to replace with LeetCode link soon...,"1.6f, Real Life, Medium",virtual 2D grid traversal; simple observations; programming-skills,0,4.0
+luhnchecksum,luhnchecksum,"1.6f, Real Life, Medium",very similar (~95%) to UVa 11743,836,1.6
+toilet,toilet,"1.6f, Real Life, Medium",simulation; be careful of corner cases,1756,2.4
+wordcloud,wordcloud,"1.6f, Real Life, Medium",just a simulation; but be careful of corner cases,322,2.4
+00706,Fetching from uHunt,"1.6g, Real Life, Harder",like in old digital display,,0.0
+01061,Fetching from uHunt,"1.6g, Real Life, Harder",LA 3736 - WorldFinals Tokyo07; try all eight possible blood + Rh types with the information given,,0.0
+01091,Fetching from uHunt,"1.6g, Real Life, Harder",LA 4786 - WorldFinals Harbin10; tedious simulation and reading comprehension,,0.0
+creditcard,creditcard,"1.6g, Real Life, Harder",real life issue; precision error issue if we do not convert double (with just 2 digits after decimal point) into long lo...,123,6.3
+lc2299,to replace with LeetCode link soon...,"1.6g, Real Life, Harder",we frequently do this in real-life,0,2.0
+tenis,tenis,"1.6g, Real Life, Harder",Tennis scoring rules; tricky test cases; be careful,78,5.0
+00579,Fetching from uHunt,"1.6h, Time, Easier",be careful with corner cases,,0.0
+12148,Fetching from uHunt,"1.6h, Time, Easier",easy with Gregorian Calendar; use method 'add' to add one day to previous date and see if it is the same as the current ...,,0.0
+friday,friday,"1.6h, Time, Easier",the answer depends on the start day of the month,1059,1.9
+justaminute,justaminute,"1.6h, Time, Easier",linear pass; total seconds/(total minutes*60),1512,1.7
+lc1154,to replace with LeetCode link soon...,"1.6h, Time, Easier",use Python datetime library,0,2.0
+marswindow,marswindow,"1.6h, Time, Easier",simple advancing of year and month by 26 months or 2 years+2 months each; direct formula exists,830,2.0
+savingdaylight,savingdaylight,"1.6h, Time, Easier",convert hh:mm to minute; compute difference of ending and starting; then convert minute to hh:mm again,986,2.1
+11947,Fetching from uHunt,"1.6i, Time, Harder",easier with Java GregorianCalendar,,0.0
+12822,Fetching from uHunt,"1.6i, Time, Harder",convert hh:mm:ss to second to simplify the problem; then this is just a tedious simulation problem,,0.0
+bestbefore,bestbefore,"1.6i, Time, Harder",tedious; 3! = 6 possibilities to check,148,4.0
+birthdayboy,birthdayboy,"1.6i, Time, Harder",convert mm-dd into [0..364]; use DAT; find largest gap via brute force,108,4.6
+natrij,natrij,"1.6i, Time, Harder",convert hh:mm:ss to seconds; make sure the second time is larger than the first time; corner case: 24:00:00,1136,2.6
+timezones,timezones,"1.6i, Time, Harder","follow the description, tedious; also available at UVa 10371 - Time Zones",67,5.3
+00185,Fetching from uHunt,"1.6j, Roman Numerals",also involving backtracking,,0.0
+00344,Fetching from uHunt,"1.6j, Roman Numerals",count Roman chars used in [1..N],,0.0
+00759,Fetching from uHunt,"1.6j, Roman Numerals",validation problem,,0.0
+12397,Fetching from uHunt,"1.6j, Roman Numerals",each Roman digit has a value,,0.0
+lc0013,to replace with LeetCode link soon...,"1.6j, Roman Numerals",classic; programming-skills; top-interview-150,0,2.0
+rimski,rimski,"1.6j, Roman Numerals",to Roman/to Decimal conversion problem; use next permutation to be sure,118,4.5
+romanholidays,romanholidays,"1.6j, Roman Numerals",generate and sort the first 1K Roman strings; ''M'' is at index 945; append prefix 'M' for numbers larger than 1K,92,3.6
+11638,Fetching from uHunt,"1.6k, Time Waster, Easier",simulation; needs to use bitmask for parameter C,,0.0
+12085,Fetching from uHunt,"1.6k, Time Waster, Easier",LA 2189 - Dhaka06; watch out for PE,,0.0
+12608,Fetching from uHunt,"1.6k, Time Waster, Easier",simulation with several corner cases,,0.0
+asciiaddition,asciiaddition,"1.6k, Time Waster, Easier",a+b problem in text format,509,1.9
+glitchbot,glitchbot,"1.6k, Time Waster, Easier",O(n^2) simulation; only output one answer,1036,2.0
+pachydermpeanutpacking,pachydermpeanutpacking,"1.6k, Time Waster, Easier",time waster; simple one loop simulation,322,1.9
+printingcosts,printingcosts,"1.6k, Time Waster, Easier",clear time waster; the hard part is in parsing the costs of each character in the problem description,705,2.2
+00405,Fetching from uHunt,"1.6l, Time Waster, Harder",simulation,,0.0
+10188,Fetching from uHunt,"1.6l, Time Waster, Harder",simulation,,0.0
+11717,Fetching from uHunt,"1.6l, Time Waster, Harder",tricky simulation,,0.0
+12280,Fetching from uHunt,"1.6l, Time Waster, Harder",a tedious problem,,0.0
+froggie,froggie,"1.6l, Time Waster, Harder",just a simulation; but many corner cases; S can be 0,296,6.8
+functionalfun,functionalfun,"1.6l, Time Waster, Harder",just follow the description; 5 cases; tedious parsing problem; requires a kind of mapper,487,1.9
+windows,windows,"1.6l, Time Waster, Harder",LA 7162 - WorldFinals Marrakech15; tedious simulation problem; also available at UVa 01721 - Window Manager,92,7.6
+12150,Fetching from uHunt,"2.2a, 1D Array, Medium",simple manipulation,,0.0
+12356,Fetching from uHunt,"2.2a, 1D Array, Medium",similar to deletion in doubly linked lists but we can still use a 1D array for the underlying data structure,,0.0
+downtime,downtime,"2.2a, 1D Array, Medium",1D array; use Fenwick Tree-like operation for Range Update Point Query,1068,3.2
+fluortanten,fluortanten,"2.2a, 1D Array, Medium",remove Bjorn first; then do O(n) pass to check where is Bjorn's optimal position,181,3.1
+greedilyincreasing,greedilyincreasing,"2.2a, 1D Array, Medium",just 1D array manipulation; this is not the DP-LIS problem,1151,1.9
+jollyjumpers,jollyjumpers,"2.2a, 1D Array, Medium",1D Boolean flags to check [1..n-1]; also available at UVa 10038 - Jolly Jumpers,413,3.4
+lc0088,to replace with LeetCode link soon...,"2.2a, 1D Array, Medium",do merge of Merge sort; top-interview-150,0,2.0
+lc0605,to replace with LeetCode link soon...,"2.2a, 1D Array, Medium",tricky 1D array processing; leetcode-75,0,2.0
+10978,Fetching from uHunt,"2.2c, 1D Array, Harder",1D string array,,0.0
+12662,Fetching from uHunt,"2.2c, 1D Array, Harder",1D array manipulation; brute force,,0.0
+13048,Fetching from uHunt,"2.2c, 1D Array, Harder",use 1D Boolean array; simulate,,0.0
+divideby100,divideby100,"2.2c, 1D Array, Harder",big 1D character array processing; be careful,557,4.2
+lc0238,to replace with LeetCode link soon...,"2.2c, 1D Array, Harder",use prefix and suffix products; leetcode-75; top-100-liked; top-interview-150,0,4.0
+lc1869,to replace with LeetCode link soon...,"2.2c, 1D Array, Harder",split s using 0 as delimiter; take token with the max length; do the same but using 1 as delimiter; compare,0,2.0
+mastermind,mastermind,"2.2c, 1D Array, Harder",1D array manipulation to count r and s,446,2.4
+pivot,pivot,"2.2c, 1D Array, Harder",static range min/max query problem; special condition allows this problem to be solvable in O(n) using help of 1D arrays,1723,3.2
+11581,Fetching from uHunt,"2.2d, 2D Array, Medium",simulate the process,,0.0
+12667,Fetching from uHunt,"2.2d, 2D Array, Medium",use both 1D and 2D arrays to store submission status,,0.0
+epigdanceoff,epigdanceoff,"2.2d, 2D Array, Medium",count number of CCs on 2D grid; simpler solution exists: count the number of blank columns plus one,505,1.9
+flowshop,flowshop,"2.2d, 2D Array, Medium",interesting 2D array manipulation,392,2.5
+imageprocessing,imageprocessing,"2.2d, 2D Array, Medium",interesting 2D array manipulation,344,2.1
+lc0027,to replace with LeetCode link soon...,"2.2d, 2D Array, Medium",use Partition algorithm (two pointers) for in-place solution; top-interview-150,0,2.0
+lc1351,to replace with LeetCode link soon...,"2.2d, 2D Array, Medium","go row by row; right to left, O(m+n)",0,2.0
+nineknights,nineknights,"2.2d, 2D Array, Medium",2D array checks; 8 directions,881,1.9
+00466,Fetching from uHunt,"2.2e, 2D Array, Harder",core functions: rotate and reflect,,0.0
+12291,Fetching from uHunt,"2.2e, 2D Array, Harder",do as asked; a bit tedious,,0.0
+2048,2048,"2.2e, 2D Array, Harder",just a 2D array manipulation problem; utilize symmetry using 90 degrees rotation(s) to reduce 4 cases into 1,3150,2.1
+flagquiz,flagquiz,"2.2e, 2D Array, Harder",array of array of strings; be careful; duplicates may exists,167,3.7
+funhouse,funhouse,"2.2e, 2D Array, Harder",2D array manipulation; note the direction update,700,2.0
+lc0054,to replace with LeetCode link soon...,"2.2e, 2D Array, Harder",heavy 2D matrix indexing; use dr/dc technique; programming-skills; top-100-liked; top-interview-150,0,4.0
+rings2,rings2,"2.2e, 2D Array, Harder",more challenging 2D array manipulation; special output formatting style,385,3.8
+10107,Fetching from uHunt,"2.2f, Sorting, Easier",find median of a growing/dynamic list of integers; we can use multiple calls of nth_element in algorithm,,0.0
+12709,Fetching from uHunt,"2.2f, Sorting, Easier",LA 6650 - Dhaka13; although the problem has a complicated story; it has a very easy solution with sort routine,,0.0
+basicprogramming2,basicprogramming2,"2.2f, Sorting, Easier",a nice problem about basic sorting applications,189,3.4
+height,height,"2.2f, Sorting, Easier",insertion sort simulation,899,2.0
+lc0217,to replace with LeetCode link soon...,"2.2f, Sorting, Easier",sort; check adjacent integers,0,2.0
+lc1657,to replace with LeetCode link soon...,"2.2f, Sorting, Easier",check if set of chars and its sorted frequency signatures are the same; leetcode-75,0,4.0
+mjehuric,mjehuric,"2.2f, Sorting, Easier",a direct simulation of a bubble sort algorithm,1349,1.6
+sidewayssorting,sidewayssorting,"2.2f, Sorting, Easier",stable_sort or sort multi-fields of columns of a 2D array; ignore case,857,2.0
+lc0219,to replace with LeetCode link soon...,"2.2g, Sorting, Simple Greedy","sort (keep the original indices as pair (v, i)); check successive elements; top-interview-150",0,2.0
+lc1502,to replace with LeetCode link soon...,"2.2g, Sorting, Simple Greedy",sort; check gap of successive elements; programming-skills,0,2.0
+lc1637,to replace with LeetCode link soon...,"2.2g, Sorting, Simple Greedy",sort; remove duplicate x-s; check successive elements,0,2.0
+lc1984,to replace with LeetCode link soon...,"2.2g, Sorting, Simple Greedy",sort; check elements that are k indices apart,0,2.0
+lc2342,to replace with LeetCode link soon...,"2.2g, Sorting, Simple Greedy","sum-of-digits function; sort by (sod(n), n); check successive elements",0,4.0
+lc2465,to replace with LeetCode link soon...,"2.2g, Sorting, Simple Greedy",sort; two pointers: smallest and largest,0,2.0
+lc2500,to replace with LeetCode link soon...,"2.2g, Sorting, Simple Greedy",sort each row; process per column,0,2.0
+01610,Fetching from uHunt,"2.2h, Sorting, Harder",LA 6196 - MidAtlanticUSA12; median,,0.0
+11321,Fetching from uHunt,"2.2h, Sorting, Harder",be careful with negative mod!,,0.0
+classy,classy,"2.2h, Sorting, Harder",sort using modified comparison function; a bit of string parsing/tokenization,1633,4.5
+dyslectionary,dyslectionary,"2.2h, Sorting, Harder",sort the reverse of original string; output formatting,775,3.4
+lc0001,to replace with LeetCode link soon...,"2.2h, Sorting, Harder",classic; O(n log n) solution: sort + two pointers; or hashing; top-100-liked; top-interview-150,0,2.0
+musicyourway,musicyourway,"2.2h, Sorting, Harder",stable_sort; custom comparison function,404,2.4
+sortofsorting,sortofsorting,"2.2h, Sorting, Harder",stable_sort or sort multi-fields,2667,2.2
+11462,Fetching from uHunt,"2.2i, Special Sorting",standard Counting Sort problem,,0.0
+11495,Fetching from uHunt,"2.2i, Special Sorting",requires O(n log n) merge sort,,0.0
+13212,Fetching from uHunt,"2.2i, Special Sorting",requires O(n log n) merge sort,,0.0
+bread,bread,"2.2i, Special Sorting",inversion count; hard to derive,249,5.0
+lc1122,to replace with LeetCode link soon...,"2.2i, Special Sorting",counting sort variant using arr2 order,0,2.0
+mali,mali,"2.2i, Special Sorting",Counting Sort two arrays; greedy matching largest+smallest at that point,97,5.1
+12571,Fetching from uHunt,"2.2j, Bit Manipulation",precalculate AND operations,,0.0
+12720,Fetching from uHunt,"2.2j, Bit Manipulation",observe the pattern in this binary to decimal conversion variant; involves modulo arithmetic,,0.0
+bitbybit,bitbybit,"2.2j, Bit Manipulation",be very careful with and + or corner cases,955,2.9
+deathstar,deathstar,"2.2j, Bit Manipulation",can be solved with bit manipulation,415,2.0
+lc0338,to replace with LeetCode link soon...,"2.2j, Bit Manipulation",bit_count; trivial; leetcode-75,0,2.0
+lc1318,to replace with LeetCode link soon...,"2.2j, Bit Manipulation",check all 31 bits; a few sub-cases per bit; leetcode-75,0,4.0
+snapperhard,snapperhard,"2.2j, Bit Manipulation",bit manipulation; find the pattern; the easier version is also available at Kattis - snappereasy,501,2.3
+10523,Fetching from uHunt,"2.2k, Big Integer, Easier",BigInteger addition; multiplication; and power,,0.0
+10925,Fetching from uHunt,"2.2k, Big Integer, Easier",BigInteger addition and division,,0.0
+11879,Fetching from uHunt,"2.2k, Big Integer, Easier",BigInteger: mod; divide; subtract; equals,,0.0
+lc0043,to replace with LeetCode link soon...,"2.2k, Big Integer, Easier",basic Big Integer multiplication; programming-skills,0,4.0
+primaryarithmetic,primaryarithmetic,"2.2k, Big Integer, Easier",not a Big Integer problem but a simulation of basic addition,399,2.7
+simpleaddition,simpleaddition,"2.2k, Big Integer, Easier",that A+B on BigInteger question,1913,1.9
+wizardofodds,wizardofodds,"2.2k, Big Integer, Easier","if K is bigger than 350, the answer is clear; else just check if 2^K ≥ N",488,2.6
+lc2259,to replace with LeetCode link soon...,"2.2l, Big Integer, Harder",we can use Big Integer technique to solve this,0,2.0
+01062,Fetching from uHunt,"2.2m, Stack",LA 3752 - WorldFinals Tokyo07; simulation with stack; maximum answer is 26 stacks; O(n) solution exists,,0.0
+13055,Fetching from uHunt,"2.2m, Stack",nice problem about stack,,0.0
+evenup,evenup,"2.2m, Stack",use stack to solve this problem,1273,2.7
+lc0394,to replace with LeetCode link soon...,"2.2m, Stack",stack simulation; leetcode-75; top-100-liked,0,4.0
+pairingsocks,pairingsocks,"2.2m, Stack",simulation using two stacks; just do as asked,556,3.0
+restaurant,restaurant,"2.2m, Stack",simulation with stack-based concept; drop plates at stack 2 (LIFO); use move 2-$gt;1 to reverse order; take from stack 1...,364,4.5
+throwns,throwns,"2.2m, Stack",use stack of egg positions to help with the undo operation; be careful of corner cases involving modulo operation,1091,2.6
+00551,Fetching from uHunt,"2.2n, Stack-based Problems",bracket matching; use stack,,0.0
+00727,Fetching from uHunt,"2.2n, Stack-based Problems",Infix to Postfix conversion problem,,0.0
+11111,Fetching from uHunt,"2.2n, Stack-based Problems",bracket matching with twists,,0.0
+bungeebuilder,bungeebuilder,"2.2n, Stack-based Problems",clever usage of stack; linear pass; bracket (mountain) matching variant,83,3.3
+circuitmath,circuitmath,"2.2n, Stack-based Problems",postfix calculator problem,918,2.4
+delimitersoup,delimitersoup,"2.2n, Stack-based Problems",bracket matching; stack,382,1.9
+lc0901,to replace with LeetCode link soon...,"2.2n, Stack-based Problems","process left-to-right (each day); monotonic non-increasing stack (price, days_increasing); leetcode-75",0,4.0
+11988,Fetching from uHunt,"2.2o, List/Queue/Deque",rare linked list problem,,0.0
+12108,Fetching from uHunt,"2.2o, List/Queue/Deque",simulation with N queues,,0.0
+integerlists,integerlists,"2.2o, List/Queue/Deque",use deque for fast deletion from front (normal) & back (reversed list); use stack to reverse the final list if it is...,882,4.8
+joinstrings,joinstrings,"2.2o, List/Queue/Deque",all '+' operations must be O(1),959,4.1
+lc0232,to replace with LeetCode link soon...,"2.2o, List/Queue/Deque",the interesting implementation of queue with two stacks: in-stack and out-stack,0,2.0
+sim,sim,"2.2o, List/Queue/Deque",use list and its iterator,99,2.0
+teque,teque,"2.2o, List/Queue/Deque",all operations must be O(1),766,3.3
+lc0011,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers","two pointers, l=0, r=n-1; we can always move the shorter pointer inside; leetcode-75; top-100-liked; top-interview-150",0,4.0
+lc0167,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers",two pointers: leftmost and rightmost; top-interview-150,0,4.0
+lc0283,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers",two pointers: leftmost zero and cur; programming-skills; leetcode-75; top-100-liked,0,2.0
+lc0392,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers",variant of merge of Merge sort; leetcode-75; top-interview-150,0,2.0
+lc1768,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers",variant of merge of Merge sort; programming-skills; leetcode-75,0,2.0
+00261,Fetching from uHunt,"2.2q, Sliding Window",sliding window variant,,0.0
+01121,Fetching from uHunt,"2.2q, Sliding Window",LA 2678 - SouthEasternEurope06; sliding window variant,,0.0
+11536,Fetching from uHunt,"2.2q, Sliding Window",sliding window variant,,0.0
+lc0003,to replace with LeetCode link soon...,"2.2q, Sliding Window",increase char freq when extending; reduce window size if duplicate is seen; top-100-liked; top-interview-150,0,4.0
+lc0643,to replace with LeetCode link soon...,"2.2q, Sliding Window",slide the window of size k; keep the max; divide by k; leetcode-75,0,2.0
+sound,sound,"2.2q, Sliding Window",sliding window variant 4; max and min; similar to Kattis - treeshopping,104,5.3
+subseqhard,subseqhard,"2.2q, Sliding Window",interesting sliding window variant,1119,3.9
+lc0002,to replace with LeetCode link soon...,"2.2r, Linked List Exercises",simple problem but in reverse SLL mode; programming-skills; top-100-liked; top-interview-150,0,4.0
+lc0021,to replace with LeetCode link soon...,"2.2r, Linked List Exercises",merge of merge sort in linked list way; programming-skills; top-100-liked; top-interview-150,0,2.0
+lc0206,to replace with LeetCode link soon...,"2.2r, Linked List Exercises",classic SLL reversal task; programming-skills; leetcode-75; top-100-liked,0,2.0
+lc0445,to replace with LeetCode link soon...,"2.2r, Linked List Exercises",like LC0002; but need to use two stacks; programming-skills,0,4.0
+lc2095,to replace with LeetCode link soon...,"2.2r, Linked List Exercises",first pass to count n; second pass to go to the middle vertex and to skip it; leetcode-75,0,4.0
+lc2130,to replace with LeetCode link soon...,"2.2r, Linked List Exercises","use recursion; as it unwinds, sum the values of leftmost and rightmost pointers; leetcode-75",0,4.0
+01203,Fetching from uHunt,"2.3a, Priority Queue",LA 3135 - Beijing04; use priority_queue,,0.0
+11997,Fetching from uHunt,"2.3a, Priority Queue",sort the lists; merge two sorted lists using priority_queue to keep the K-th smallest sum every time,,0.0
+jugglingpatterns,jugglingpatterns,"2.3a, Priority Queue",PQ simulation; reading comprehension,48,6.3
+knigsoftheforest,knigsoftheforest,"2.3a, Priority Queue",PQ simulation after sorting the entries by year,184,3.6
+lc2462,to replace with LeetCode link soon...,"2.3a, Priority Queue",min PQ simulation; two pointers: i=0 and j=n-1; move inwards; leetcode-75,0,4.0
+numbertree,numbertree,"2.3a, Priority Queue","not a direct priority queue problem, but the indexing strategy is similar to binary heap indexing",1760,2.1
+stockprices,stockprices,"2.3a, Priority Queue",PQ simulation; both max and min PQ,109,3.7
+00499,Fetching from uHunt,"2.3b, DAT, ASCII",ASCII keys,,0.0
+11340,Fetching from uHunt,"2.3b, DAT, ASCII",ASCII keys,,0.0
+11577,Fetching from uHunt,"2.3b, DAT, ASCII",A-Z keys,,0.0
+alphabetspam,alphabetspam,"2.3b, DAT, ASCII","count the frequencies of lowercase, uppercase, and whitespace characters",3902,1.4
+lc0389,to replace with LeetCode link soon...,"2.3b, DAT, ASCII",DAT ('a'..'z'); programming-skills,0,2.0
+quickbrownfox,quickbrownfox,"2.3b, DAT, ASCII",pangram; frequency counting of 26 alphabets,4433,1.6
+soundex,soundex,"2.3b, DAT, ASCII",DAT for soundex A-Z code mapping; also available at UVa 10260 - Soundex,106,2.9
+01368,Fetching from uHunt,"2.3c, DAT, Others","for each column j, find the highest frequency character among all j-th column of all m DNA strings",,0.0
+11203,Fetching from uHunt,"2.3c, DAT, Others",count frequency of x/y/z,,0.0
+bookingaroom,bookingaroom,"2.3c, DAT, Others",only 100 rooms; use 1D Boolean array,2849,1.7
+busnumbers,busnumbers,"2.3c, DAT, Others",only 1000 bus numbers; use 1D Boolean array,2776,2.4
+freefood,freefood,"2.3c, DAT, Others",only 365 days in a year,1965,1.5
+lc0645,to replace with LeetCode link soon...,"2.3c, DAT, Others",DAT [1..10000]; find key with freq 2 (repeated) and 0 (missing),0,2.0
+princesspeach,princesspeach,"2.3c, DAT, Others",DAT; linear pass,839,2.1
+12049,Fetching from uHunt,"2.3d, Hash Table (set), E",unordered_multiset manipulation,,0.0
+13148,Fetching from uHunt,"2.3d, Hash Table (set), E",we can store all precomputed answers - which are given - into unordered_set,,0.0
+cd,cd,"2.3d, Hash Table (set), E",unordered_set is faster than set here; or use modified merge as the input is sorted; also available at UVa 11849 - CD,3176,5.3
+esej,esej,"2.3d, Hash Table (set), E",use unordered_set to prevent duplicate,509,3.3
+lc2215,to replace with LeetCode link soon...,"2.3d, Hash Table (set), E",use set for fast tests; leetcode-75,0,2.0
+shiritori,shiritori,"2.3d, Hash Table (set), E",linear pass; use unordered_set to keep track of words that have been called,295,2.9
+greetingcard,greetingcard,"2.3e, Hash Table (set), H",use unordered_set; only 12 neighbors,607,4.9
+11348,Fetching from uHunt,"2.3f, Hash Table (map), E",use map and set to check uniqueness,,0.0
+11629,Fetching from uHunt,"2.3f, Hash Table (map), E",use map,,0.0
+competitivearcadebasketball,competitivearcadebasketball,"2.3f, Hash Table (map), E",use unordered_map,209,2.8
+conformity,conformity,"2.3f, Hash Table (map), E",use unordered_map to count frequencies of the sorted permutations of 5 ids; also available at UVa 11286 - Conformity,1100,1.9
+grandpabernie,grandpabernie,"2.3f, Hash Table (map), E",use unordered_map plus (sorted) vector,1065,3.2
+lc1679,to replace with LeetCode link soon...,"2.3f, Hash Table (map), E",frequency Counter; pairings; leetcode-75,0,4.0
+recount,recount,"2.3f, Hash Table (map), E",use map; frequency counting,1163,2.0
+lc0347,to replace with LeetCode link soon...,"2.3g, Hash Table (Counter)",use Counter to count frequency; sort by frequencies; top k; top-100-liked,0,4.0
+10145,Fetching from uHunt,"2.3h, Hash Table (map), H",use map and set,,0.0
+11860,Fetching from uHunt,"2.3h, Hash Table (map), H",use set and map; linear scan,,0.0
+addingwords,addingwords,"2.3h, Hash Table (map), H",use unordered_map,1880,3.9
+awkwardparty,awkwardparty,"2.3h, Hash Table (map), H",use unordered_map to running max and running min; report the largest difference,611,3.0
+basicinterpreter,basicinterpreter,"2.3h, Hash Table (map), H",the harder version of Kattis - variablearithmetic; tedious; be careful; print string inside double quotes verbatim,152,6.7
+10815,Fetching from uHunt,"2.3i, Balanced BST (set)",use set and string,,0.0
+11136,Fetching from uHunt,"2.3i, Balanced BST (set)",use multiset,,0.0
+13037,Fetching from uHunt,"2.3i, Balanced BST (set)",we can use set or a sorted array,,0.0
+bst,bst,"2.3i, Balanced BST (set)",simulate special BST [1..N] insertions using set,449,7.3
+candydivision,candydivision,"2.3i, Balanced BST (set)",complete search from 1 to sqrt(N); insert all divisors into set for automatic sorting and elimination of duplicates,702,3.4
+compoundwords,compoundwords,"2.3i, Balanced BST (set)",use set extensively; iterator,1807,1.7
+lc0056,to replace with LeetCode link soon...,"2.3i, Balanced BST (set)",maintain set of intervals using bBST (set); do quick merging of intervals; top-100-liked; top-interview-150,0,4.0
+10138,Fetching from uHunt,"2.3j, Balanced BST (map)",map plates to bills; entrance time; and position,,0.0
+11308,Fetching from uHunt,"2.3j, Balanced BST (map)",use map and set,,0.0
+12504,Fetching from uHunt,"2.3j, Balanced BST (map)",use map; string to string,,0.0
+administrativeproblems,administrativeproblems,"2.3j, Balanced BST (map)",use several maps as the output (of spy names) has to be sorted; be careful of corner cases,194,6.3
+doctorkattis,doctorkattis,"2.3j, Balanced BST (map)",Max Priority Queue with frequent (increaseKey) updates; use map,114,4.7
+kattissquest,kattissquest,"2.3j, Balanced BST (map)",use map of priority queues; other solutions exist,834,3.1
+srednji,srednji,"2.3j, Balanced BST (map)",go left and right of B; use fast data structure like map to help determine the result fast,164,4.1
+10909,Fetching from uHunt,"2.3k, Order Statistics Tree","involves dynamic selection; use pb\_ds, Fenwick Tree, or augment balanced BST",,0.0
+babynames,babynames,"2.3k, Order Statistics Tree",dynamic rank problem; use two pb_ds,87,5.5
+continuousmedian,continuousmedian,"2.3k, Order Statistics Tree",dynamic selection problem; specifically the median values; pb_ds helps,140,3.9
+cookieselection,cookieselection,"2.3k, Order Statistics Tree",map large integers to up to 600K integers; use pb_ds or Fenwick Tree and the select(median) operation of Fenwick Tree,923,4.3
+gcpc,gcpc,"2.3k, Order Statistics Tree",dynamic rank problem; pb_ds helps,876,5.3
+lc0100,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",recursive check; top-interview-150,0,2.0
+lc0104,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",recursive height check; leetcode-75; top-100-liked; top-interview-150,0,2.0
+lc0236,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",find the first vertex using postorder where both p and q are seen; leetcode-75; top-100-liked; top-interview-150,0,4.0
+lc0437,to replace with LeetCode link soon...,"2.3l, BT Exercises, E","for each vertex, run preorder traversal; check if the path sum equals to target; leetcode-75; top-100-liked",0,4.0
+lc0872,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",run inorder traversals on both trees; picking only the leaves; compare them; leetcode-75,0,2.0
+lc1372,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",modified preorder traversal; reset counter if same direction; add counter if zig-zag-ing; leetcode-75,0,4.0
+lc1448,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",modified preorder traversal; keep the largest along the way; leetcode-75,0,4.0
+lc0098,to replace with LeetCode link soon...,"2.3n, BST Exercises",recursive BST property validator; top-100-liked; top-interview-150,0,4.0
+lc0230,to replace with LeetCode link soon...,"2.3n, BST Exercises",inorder traversal; report the k-th element; top-100-liked; top-interview-150,0,4.0
+lc0450,to replace with LeetCode link soon...,"2.3n, BST Exercises",code BST deletion sub-cases; leetcode-75,0,4.0
+lc0530,to replace with LeetCode link soon...,"2.3n, BST Exercises",the min gap is between successive elements during inorder traversal; same as LC 0783; top-interview-150,0,2.0
+lc0700,to replace with LeetCode link soon...,"2.3n, BST Exercises",the classic BST search process; leetcode-75,0,2.0
+lc0897,to replace with LeetCode link soon...,"2.3n, BST Exercises",create new skewed BST using inorder traversal of original BST,0,2.0
+lc0938,to replace with LeetCode link soon...,"2.3n, BST Exercises",customize inorder traversal of BST,0,2.0
+00599,Fetching from uHunt,"2.4a, Graph Data Structures",V-E = number of CCs; use a bitset of size 26 to count the number of vertices that have some edge,,0.0
+11550,Fetching from uHunt,"2.4a, Graph Data Structures",graph representation; incidence matrix,,0.0
+11991,Fetching from uHunt,"2.4a, Graph Data Structures",Adjacency List,,0.0
+abinitio,abinitio,"2.4a, Graph Data Structures","combo: EL input, AM as working graph DS, AL output (in hash format); all operations must be O(V) or better",104,7.3
+chopwood,chopwood,"2.4a, Graph Data Structures",Prüfer sequence; use priority_queue,258,3.5
+traveltheskies,traveltheskies,"2.4a, Graph Data Structures",(graph) DS manipulation; an array of ALs (one per each day); simulate the number of people day by day,188,3.2
+01197,Fetching from uHunt,"2.4b, Union-Find",LA 2817 - Kaohsiung03; Connected Components,,0.0
+01329,Fetching from uHunt,"2.4b, Union-Find",LA 3027 - SouthEasternEurope04; interesting UFDS variant; modify the union and find routine,,0.0
+10608,Fetching from uHunt,"2.4b, Union-Find",find the set with the largest element,,0.0
+10685,Fetching from uHunt,"2.4b, Union-Find",find the set with the largest element,,0.0
+almostunionfind,almostunionfind,"2.4b, Union-Find",new operation: move; idea: do not destroy the parent array structure; also available at UVa 11987 - Almost Union-Find,618,7.0
+control,control,"2.4b, Union-Find",LA 7480 - Singapore15; simulation of UFDS; size of set; number of disjoint sets,424,4.6
+ladice,ladice,"2.4b, Union-Find",size of set; decrement one per usage,615,2.8
+unionfind,unionfind,"2.4b, Union-Find",basic UFDS; similar to UVa 00793,1086,4.8
+11402,Fetching from uHunt,"2.4c, Tree-related DS",Segment Tree with lazy updates,,0.0
+11423,Fetching from uHunt,"2.4c, Tree-related DS",clever usage of Fenwick Tree and large array; important hint: look at the constraints carefully,,0.0
+12299,Fetching from uHunt,"2.4c, Tree-related DS",Segment Tree with a few point (not range) updates; RMQs,,0.0
+fenwick,fenwick,"2.4c, Tree-related DS",basic Fenwick Tree; use long long,695,4.5
+justforsidekicks,justforsidekicks,"2.4c, Tree-related DS","use six Fenwick Trees, one for each gem type",359,3.8
+moviecollection,moviecollection,"2.4c, Tree-related DS",LA 5902 - NorthWesternEurope11; not a stack but a dynamic RSQ problem; also available at UVa 01513 - Movie collection,547,5.5
+supercomputer,supercomputer,"2.4c, Tree-related DS",easy problem if we use Fenwick Tree,760,3.8
+00750,Fetching from uHunt,"3.2a, Pre-calculate-able",classic backtracking problem; only 92 possible 8-queens positions,,0.0
+10128,Fetching from uHunt,"3.2a, Pre-calculate-able",backtracking with pruning; try all $N!$ permutations that satisfy the requirement; 13! will TLE; pre-calculate the resul...,,0.0
+10276,Fetching from uHunt,"3.2a, Pre-calculate-able",insert a number one by one,,0.0
+cardtrick2,cardtrick2,"3.2a, Pre-calculate-able","n <= 13, we can simulate the process using queue and precalculate all 13 possible answers",869,1.6
+foolingaround,foolingaround,"3.2a, Pre-calculate-able",there are only 379 different values of N where Bob wins; pre-calculateable,117,5.8
+lc0052,to replace with LeetCode link soon...,"3.2a, Pre-calculate-able",pre-calculate answers for n = 1 to 9; top-interview-150,0,6.0
+sgcoin,sgcoin,"3.2a, Pre-calculate-able",we can either brute force short string message; precompute all possible hash values; or come up with O(1) solution,271,2.4
+12488,Fetching from uHunt,"3.2b, Iterative (Two Loops), E",2 nested loops; simulate overtaking process,,0.0
+blackfriday,blackfriday,"3.2b, Iterative (Two Loops), E",2D nested loops; frequency counting,2384,2.2
+closestsums,closestsums,"3.2b, Iterative (Two Loops), E",sort and then do O(n^2) pairings; also available at UVa 10487 - Closest Sums,1105,2.9
+golombrulers,golombrulers,"3.2b, Iterative (Two Loops), E",2D nested loops; additional 1D loops for checking,297,3.2
+lc3184,to replace with LeetCode link soon...,"3.2b, Iterative (Two Loops), E",2 nested loops,0,2.0
+01588,Fetching from uHunt,"3.2c, Iterative (Two Loops), H",LA 3712 - NorthEasternEurope06; good iterative brute force problem; beware of corner cases,,0.0
+00441,Fetching from uHunt,"3.2d, Three+ Nested Loops, E",6 nested loops; easy,,0.0
+12515,Fetching from uHunt,"3.2d, Three+ Nested Loops, E",3 nested loops,,0.0
+12844,Fetching from uHunt,"3.2d, Three+ Nested Loops, E",5 nested loops; scaled down version of UVa 10202; do observations first,,0.0
+cudoviste,cudoviste,"3.2d, Three+ Nested Loops, E",4 nested loops; the inner loops is just 2x2; 5 possibilities of crushed cars; skip 2x2 area that contains building,1194,1.4
+lc1790,to replace with LeetCode link soon...,"3.2d, Three+ Nested Loops, E",3 nested loops,0,2.0
+npuzzle,npuzzle,"3.2d, Three+ Nested Loops, E",4 nested loops; easy,683,2.2
+set,set,"3.2d, Three+ Nested Loops, E",4 nested loops; easy,364,1.8
+00386,Fetching from uHunt,"3.2e, Three+ Nested Loops, H",4 nested loops with pruning,,0.0
+10660,Fetching from uHunt,"3.2e, Three+ Nested Loops, H",7 nested loops; Manhattan distance,,0.0
+11804,Fetching from uHunt,"3.2e, Three+ Nested Loops, H",5 nested loops,,0.0
+calculatingdartscores,calculatingdartscores,"3.2e, Three+ Nested Loops, H",6 nested loops but easy; see if a*i +b*j + c*k == n,752,2.8
+lc2352,to replace with LeetCode link soon...,"3.2e, Three+ Nested Loops, H",3 nested loops solution is still acceptable; leetcode-75,0,4.0
+lektira,lektira,"3.2e, Three+ Nested Loops, H",2 nested loops to try all 2 cutting points plus 1 more loop to actually do the reversing of sub words,376,3.2
+tautology,tautology,"3.2e, Three+ Nested Loops, H",try all 2^5 = 32 values with pruning; also available at UVa 11108 - Tautology,160,3.4
+00234,Fetching from uHunt,"3.2f, Iterative (Permutation)",LA 5173 - WorldFinals Phoenix94; use next_permutation; simulation,,0.0
+01064,Fetching from uHunt,"3.2f, Iterative (Permutation)",LA 3808 - WorldFinals Tokyo07; permutation of up to 5 messages; simulation; mind the word 'consecutive',,0.0
+11742,Fetching from uHunt,"3.2f, Iterative (Permutation)",try all permutations,,0.0
+dancerecital,dancerecital,"3.2f, Iterative (Permutation)",try all R! permutations; compare adjacent routines,274,4.2
+dreamer,dreamer,"3.2f, Iterative (Permutation)",try all 8! permutations of digits; check if the date is valid; output earliest valid date,406,2.0
+lc0046,to replace with LeetCode link soon...,"3.2f, Iterative (Permutation)",C++ next_permutation from sorted to reverse-sorted permutations; top-100-liked; top-interview-150,0,4.0
+veci,veci,"3.2f, Iterative (Permutation)",try all permutations; get the one that is larger than X,1193,1.8
+00639,Fetching from uHunt,"3.2g, Iterative (Combination)",generate 2^(4x4) = 2^16 combinations and prune,,0.0
+01047,Fetching from uHunt,"3.2g, Iterative (Combination)",LA 3278 - WorldFinals Shanghai05; try all 2^n subsets of towers to be taken; use inclusion-exclusion principle,,0.0
+12694,Fetching from uHunt,"3.2g, Iterative (Combination)",LA 6606 - Phuket13; it is safest to just brute force all 2^20 possibilities; greedy solution should be possible too,,0.0
+geppetto,geppetto,"3.2g, Iterative (Combination)",try all 2^N subsets of ingredients,305,3.3
+lc0077,to replace with LeetCode link soon...,"3.2g, Iterative (Combination)",standard nCk; use itertools.combinations; top-interview-150,0,4.0
+squaredeal,squaredeal,"3.2g, Iterative (Combination)",try all 3! permutations of rectangles and try all 2^3 combinations of rectangle orientations; test figure 1.a and 1.b co...,232,4.6
+zagrade,zagrade,"3.2g, Iterative (Combination)",try all subsets of bracket pairs to be removed,298,3.1
+00725,Fetching from uHunt,"3.2h, Try All Answers",try all possible answers,,0.0
+10908,Fetching from uHunt,"3.2h, Try All Answers",4 nested loops; try all possible odd square lengths,,0.0
+communication,communication,"3.2h, Try All Answers",try all possible bytes; apply the bitmask formula,764,2.0
+flexible,flexible,"3.2h, Try All Answers",try all possible answers,2354,1.7
+islands,islands,"3.2h, Try All Answers",try all possible subsets; prune the non-contiguous ones (only 55 valid bitmasks between [0..1023]); check the 'island' p...,443,2.6
+lc2843,to replace with LeetCode link soon...,"3.2h, Try All Answers",create helper function is_symmetric; try all numbers between low..high,0,2.0
+walls,walls,"3.2h, Try All Answers",try whether the answer is 1/2/3/4; or Impossible; use up to 4 nested loops,513,4.0
+01225,Fetching from uHunt,"3.2i, Math Simulation, E",LA 3996 - Danang07; N is small,,0.0
+10346,Fetching from uHunt,"3.2i, Math Simulation, E",interesting simulation problem,,0.0
+easiest,easiest,"3.2i, Math Simulation, E",complete search; sum of digit,3991,1.6
+growlinggears,growlinggears,"3.2i, Math Simulation, E",physics of parabola; derivation; try all gears,496,2.4
+lc1823,to replace with LeetCode link soon...,"3.2i, Math Simulation, E",use Josephus formula,0,4.0
+lc2427,to replace with LeetCode link soon...,"3.2i, Math Simulation, E",try all x; a and b are small,0,2.0
+trollhunt,trollhunt,"3.2i, Math Simulation, E",brute force; simple,976,2.6
+videospeedup,videospeedup,"3.2i, Math Simulation, E",brute force; simple for loop; do as asked,298,2.0
+lc0970,to replace with LeetCode link soon...,"3.2j, Math Simulation, M",the values of x^i or y^j will grow fast; search space is small,0,4.0
+00616,Fetching from uHunt,"3.2k, Math Simulation, H",brute force up to sqrt(n); get pattern,,0.0
+11130,Fetching from uHunt,"3.2k, Math Simulation, H",mirror the billiard table to the right (and/or top) so that we will only deal with one straight line instead of bouncing...,,0.0
+11254,Fetching from uHunt,"3.2k, Math Simulation, H",use sum of AP; brute force all values of r from sqrt(2n) down to 1; stop at the first valid a,,0.0
+11490,Fetching from uHunt,"3.2k, Math Simulation, H",let missing_people = 2*a^2; thickness_of_soldiers = b; derive a formula involving a; b; and the given S,,0.0
+crackingrsa,crackingrsa,"3.2k, Math Simulation, H",a bit number theory; solvable with complete search,258,2.3
+falling,falling,"3.2k, Math Simulation, H",rework the formula; complete search up to sqrt(D),588,3.1
+thanosthehero,thanosthehero,"3.2k, Math Simulation, H",for-loop from backwards,320,3.9
+00151,Fetching from uHunt,"3.2l, Josephus Problem",the original Josephus problem,,0.0
+01176,Fetching from uHunt,"3.2l, Josephus Problem",LA 2346 - Dhaka01; special case when k = 2; use Josephus recurrence; simulation,,0.0
+11351,Fetching from uHunt,"3.2l, Josephus Problem",use general case Josephus recurrence,,0.0
+eenymeeny,eenymeeny,"3.2l, Josephus Problem",Josephus problem; small n; just simulate,492,1.7
+musicalchairs,musicalchairs,"3.2l, Josephus Problem",Josephus variant; brute force,139,4.0
+toys,toys,"3.2l, Josephus Problem",use general case Josephus recurrence,142,4.5
+10344,Fetching from uHunt,"3.2m, Backtracking, Easier",5 operands + 3 operators,,0.0
+10576,Fetching from uHunt,"3.2m, Backtracking, Easier",generate all; prune; take max,,0.0
+12840,Fetching from uHunt,"3.2m, Backtracking, Easier",simple backtracking,,0.0
+goodmorning,goodmorning,"3.2m, Backtracking, Easier",we can use backtracking to generate all possible (small) numbers that can be pressed according to the constraints,347,2.7
+lc0017,to replace with LeetCode link soon...,"3.2m, Backtracking, Easier",classic backtracking; leetcode-75; top-100-liked; top-interview-150,0,4.0
+natjecanje,natjecanje,"3.2m, Backtracking, Easier","4 options for each team with kayak: do nothing, pass to left (if damaged), keep to self (if damaged), pass to right (if ...",701,2.5
+paintings,paintings,"3.2m, Backtracking, Easier",try all possible paintings based on Catherine's preference; skip hideous color pairs,162,3.6
+00208,Fetching from uHunt,"3.2n, Backtracking, Harder",LA 5147 - WorldFinals SanAntonio91; backtracking with some pruning,,0.0
+00222,Fetching from uHunt,"3.2n, Backtracking, Harder",LA 5161 - WorldFinals Indianapolis93; cannot use DP 'tank' is floating-point; use backtracking,,0.0
+01262,Fetching from uHunt,"3.2n, Backtracking, Harder",LA 4845 - Daejeon10; sort grid columns; process common passwords in lexicographic order; skip two similar passwords,,0.0
+dobra,dobra,"3.2n, Backtracking, Harder","try all possible 3^n changes of '_' (to a vowel, an 'L', or other consonant not 'L'); prune invalid states; count valid ...",44,3.9
+fruitbaskets,fruitbaskets,"3.2n, Backtracking, Harder",interesting backtracking problem; compute the small numbers < 200; output all minus this value computed via backtrack...,493,4.1
+lc0216,to replace with LeetCode link soon...,"3.2n, Backtracking, Harder",backtracking; bitmask; generate solutions; leetcode-75,0,4.0
+pagelayout,pagelayout,"3.2n, Backtracking, Harder",a bit of geometry; O(2^n 	imes n^2 iterative bitmask will TLE; need to use recursive backtracking with pruning,84,5.1
+11057,Fetching from uHunt,"3.3a, Binary Search",sort; target pair problem,,0.0
+11621,Fetching from uHunt,"3.3a, Binary Search",generate numbers with factor 2 and/or 3; sort; upper_bound,,0.0
+12965,Fetching from uHunt,"3.3a, Binary Search",sort producer/consumer prices; the answer is one of the prices mentioned; use binary searches to count the answer,,0.0
+firefly,firefly,"3.3a, Binary Search",sort stalactites vs stalagmites separately; brute force height; binary search the obstacles hit,323,4.0
+lc0162,to replace with LeetCode link soon...,"3.3a, Binary Search",interesting binary-search modification; leetcode-75; top-interview-150,0,4.0
+outofsorts,outofsorts,"3.3a, Binary Search",do O(log n) binary searches on unsorted array n times,107,3.7
+roompainting,roompainting,"3.3a, Binary Search",sort the cans at shop (can be used more than once); use lower_bound for what Joe needs at shop,416,3.8
+12190,Fetching from uHunt,"3.3b, Bisection and BSTA, E",BSTA + algebra,,0.0
+13142,Fetching from uHunt,"3.3b, Bisection and BSTA, E",BSTA + Physics simulation,,0.0
+carefulascent,carefulascent,"3.3b, Bisection and BSTA, E",BSTA + Physics simulation,558,1.8
+freeweights,freeweights,"3.3b, Bisection and BSTA, E",BSTA + simulation; Mathematical observation,356,4.5
+lc0875,to replace with LeetCode link soon...,"3.3b, Bisection and BSTA, E",BSTA + simulation check; leetcode-75,0,4.0
+monk,monk,"3.3b, Bisection and BSTA, E",BSTA + simulation; cool,86,3.3
+suspensionbridges,suspensionbridges,"3.3b, Bisection and BSTA, E",BSTA + Maths; be careful of precision error,409,4.6
+00183,Fetching from uHunt,"3.3c, Ternary Search & Others",simple exercise of DnC,,0.0
+10385,Fetching from uHunt,"3.3c, Ternary Search & Others",the function is unimodal; ternary search,,0.0
+12893,Fetching from uHunt,"3.3c, Ternary Search & Others",convert the given code into recursive DnC,,0.0
+a1paper,a1paper,"3.3c, Ternary Search & Others",division of A1 paper is a kind of DnC principle,1212,3.9
+ceiling,ceiling,"3.3c, Ternary Search & Others",LA 7578 - WorldFinals Phuket16; BST insertion then tree equality check; also available at UVa 01738 - Ceiling Function,1871,1.9
+goingtoseed,goingtoseed,"3.3c, Ternary Search & Others",divide to search into four regions; extension of binary/ternary search concept,199,6.3
+lc2293,to replace with LeetCode link soon...,"3.3c, Ternary Search & Others",simulate the game; n halves each level,0,2.0
+01193,Fetching from uHunt,"3.4a, Greedy (Classical)",LA 2519 - Beijing02; interval covering,,0.0
+10020,Fetching from uHunt,"3.4a, Greedy (Classical)",interval covering,,0.0
+11264,Fetching from uHunt,"3.4a, Greedy (Classical)",coin change variant,,0.0
+classrooms,classrooms,"3.4a, Greedy (Classical)",variant of interval covering; multiple rooms,229,5.9
+froshweek2,froshweek2,"3.4a, Greedy (Classical)",greedy; sort first; similar to Dragon of Loowater; greedy matching,489,2.3
+lc0455,to replace with LeetCode link soon...,"3.4a, Greedy (Classical)",sort; greedy bipartite matching,0,2.0
+squarepegs,squarepegs,"3.4a, Greedy (Classical)",convert square to circular; sort; greedy matching,265,3.1
+11369,Fetching from uHunt,"3.4b, Involving Sorting, E",greedy; sorting,,0.0
+11900,Fetching from uHunt,"3.4b, Involving Sorting, E",greedy; sorting,,0.0
+13109,Fetching from uHunt,"3.4b, Involving Sorting, E",greedy; sorting,,0.0
+icpcteamselection,icpcteamselection,"3.4b, Involving Sorting, E",greedy; sorting,586,3.0
+lc1913,to replace with LeetCode link soon...,"3.4b, Involving Sorting, E",sort; use the last and first two,0,2.0
+minimumscalar,minimumscalar,"3.4b, Involving Sorting, E",one sort increasing; one sort decreasing,1202,2.3
+shopaholic,shopaholic,"3.4b, Involving Sorting, E","sort prices in descending order, pick every third item",959,2.4
+lc0435,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M",sort by non-decreasing endpoints; greedy; leetcode-75,0,4.0
+lc0452,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M",sort by non-decreasing endpoints; greedy; leetcode-75; top-interview-150,0,4.0
+lc0881,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M",sort people by non-dec weights; two pointers: lightest+heaviest; greedy,0,4.0
+lc1090,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M",sort by non-increasing values,0,4.0
+lc1282,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M","sort by non-decreasing size, keep the original indices",0,4.0
+lc2895,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M",sort tasks by non-increasing order and processor time by non-decreasing order,0,4.0
+lc3301,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M",sort by non-increasing maximum height,0,4.0
+12673,Fetching from uHunt,"3.4d, Involving Sorting, H",LA 6530 - LatinAmerica13; greedy; sorting,,0.0
+12834,Fetching from uHunt,"3.4d, Involving Sorting, H",greedy; sorting,,0.0
+13054,Fetching from uHunt,"3.4d, Involving Sorting, H",greedy; sorting,,0.0
+airconditioned,airconditioned,"3.4d, Involving Sorting, H",greedy; sorting,1116,3.9
+birds,birds,"3.4d, Involving Sorting, H",greedy; sorting,566,3.5
+delivery,delivery,"3.4d, Involving Sorting, H","sort, process positive and negative delivery separately; go to rightmost, come back and fill as many from the right",253,3.3
+lc0055,to replace with LeetCode link soon...,"3.4d, Involving Sorting, H","for each reachable i, greedily extend the furthest jump, if we can; top-100-liked; top-interview-150",0,4.0
+01153,Fetching from uHunt,"3.4e, Involving PQ",greedy; priority queue,,0.0
+13177,Fetching from uHunt,"3.4e, Involving PQ",greedy; priority queue,,0.0
+ballotboxes,ballotboxes,"3.4e, Involving PQ",greedy; priority queue,776,4.4
+canvas,canvas,"3.4e, Involving PQ",PQ simulation; process from N canvases to 1 all-white canvas; take two minimum canvas size; greedy; add them and re-enqu...,214,3.5
+lc2542,to replace with LeetCode link soon...,"3.4e, Involving PQ","sort (nums2[i], nums1[i]) by non-increasing nums2; maintain min PQ of nums1; keep largest k; leetcode-75",0,4.0
+vegetables,vegetables,"3.4e, Involving PQ","store cut lengths as fractions; keep taking the largest portion; greedy; try to cut 1/2,1/3,1/4,etc; re-enqueue the resu...",347,3.4
+workstations,workstations,"3.4e, Involving PQ",greedy; priority queue,1110,3.6
+10656,Fetching from uHunt,"3.4f, Non-Classical, Easier",greedy,,0.0
+11520,Fetching from uHunt,"3.4f, Non-Classical, Easier",greedy,,0.0
+12482,Fetching from uHunt,"3.4f, Non-Classical, Easier",greedy,,0.0
+ants,ants,"3.4f, Non-Classical, Easier",greedy; also available at UVa 10714 - Ants,1145,2.5
+bank,bank,"3.4f, Non-Classical, Easier",greedy,2389,2.6
+lc0860,to replace with LeetCode link soon...,"3.4f, Non-Classical, Easier",use 10+5 before 5+5+5; programming-skills,0,2.0
+marblestree,marblestree,"3.4f, Non-Classical, Easier",greedy; also available at UVa 10672 - Marbles on a tree,258,3.0
+10821,Fetching from uHunt,"3.4g, Non-Classical, Harder",greedy,,0.0
+11491,Fetching from uHunt,"3.4g, Non-Classical, Harder",greedy,,0.0
+11583,Fetching from uHunt,"3.4g, Non-Classical, Harder",greedy,,0.0
+11890,Fetching from uHunt,"3.4g, Non-Classical, Harder",greedy,,0.0
+dvds,dvds,"3.4g, Non-Classical, Harder",greedy,731,2.9
+lc0763,to replace with LeetCode link soon...,"3.4g, Non-Classical, Harder",DAT last occurence of ('a'..'z'); one-pass greedy solution is possible; top-100-liked,0,4.0
+stockbroker,stockbroker,"3.4g, Non-Classical, Harder",greedy,578,3.4
+virus,virus,"3.4g, Non-Classical, Harder",greedy,753,3.6
+10684,Fetching from uHunt,"3.5a, 1D Range Sum",standard; Kadane's algorithm,,0.0
+commercials,commercials,"3.5a, 1D Range Sum",transform each input by -P; Kadane's algorithm,1570,2.0
+lc0053,to replace with LeetCode link soon...,"3.5a, 1D Range Sum",Kadane's; special case for all negatives; top-100-liked; top-interview-150,0,4.0
+sellingspatulas,sellingspatulas,"3.5a, 1D Range Sum",-8 per time slot initially; read sale data; 1D range sum; complete search,109,8.0
+shortsell,shortsell,"3.5a, 1D Range Sum",similar to Kadane's algorithm; linear pass; prefix sum,104,4.1
+01105,Fetching from uHunt,"3.5b, 2D Range Sum",LA 5132 - WorldFinals Orlando11; more advanced 2D Range Sum Queries,,0.0
+10755,Fetching from uHunt,"3.5b, 2D Range Sum",max 2D range sum in 2 of the 3 dimensions; max 1D range sum with Kadane's algorithm on the 3rd dimension,,0.0
+lc0085,to replace with LeetCode link soon...,"3.5b, 2D Range Sum","after penalising the 0s heavily, this is just max 2D range sum",0,6.0
+prozor,prozor,"3.5b, 2D Range Sum",2D range sum with fix range; output formatting,558,1.6
+00481,Fetching from uHunt,"3.5c, LIS",O(n log k) LIS+solution,,0.0
+01196,Fetching from uHunt,"3.5c, LIS",LA 2815 - Kaohsiung03; sort all the blocks in increasing L[i]; then we get the classical LIS problem,,0.0
+11790,Fetching from uHunt,"3.5c, LIS",combination of LIS LDS; weighted,,0.0
+increasingsubsequence,increasingsubsequence,"3.5c, LIS","LIS; n ≤ 200$; print lexicographically smallest solution, 99% similar to 'longincsubseq'",352,4.1
+lc0334,to replace with LeetCode link soon...,"3.5c, LIS",LIS problem with a very small tweak; leetcode-75,0,4.0
+nesteddolls,nesteddolls,"3.5c, LIS",sort in one dimension; Dilworth's theorem; LIS in the other; also available at UVa 11368 - Nested Dolls,115,7.1
+trainsorting,trainsorting,"3.5c, LIS","max(LIS(i)+LDS(i)-1), ∀i ∈ [0...n-1]; also available at UVa 11456",522,5.4
+01213,Fetching from uHunt,"3.5d, 0-1 KNAPSACK/SS","LA 3619 - Yokohama06; extension of 0-1 KNAPSACK; s: (id, remN, remK) instead of s: (id, remN)",,0.0
+10130,Fetching from uHunt,"3.5d, 0-1 KNAPSACK/SS",basic 0-1 Knapsack problem,,0.0
+11832,Fetching from uHunt,"3.5d, 0-1 KNAPSACK/SS",interesting DP; s: (id; val); use offset to handle negative numbers; t: plus or minus; print solution,,0.0
+knapsack,knapsack,"3.5d, 0-1 KNAPSACK/SS",basic DP KNAPSACK; print the solution,687,4.8
+lc0474,to replace with LeetCode link soon...,"3.5d, 0-1 KNAPSACK/SS",Knapsack; skip or take a string,0,4.0
+orders,orders,"3.5d, 0-1 KNAPSACK/SS",interesting KNAPSACK variant; print the solution,713,4.5
+presidentialelections,presidentialelections,"3.5d, 0-1 KNAPSACK/SS",pre-process the input to discard non winnable states; be careful of negative total voters; then standard DP KNAPSACK,116,5.7
+00242,Fetching from uHunt,"3.5e, COIN-CHANGE",LA 5181 - WorldFinals Nashville95; Complete Search + DP Coin-Change,,0.0
+00674,Fetching from uHunt,"3.5e, COIN-CHANGE",basic coin change problem,,0.0
+11259,Fetching from uHunt,"3.5e, COIN-CHANGE",part of the problem is DP COIN-CHANGE with restricted number of coins per type; inclusion-exclusion,,0.0
+bagoftiles,bagoftiles,"3.5e, COIN-CHANGE",count number of ways to do COIN-CHANGE; meet in the middle; DP combinatorics (n choose k) to find the answer for a+b,102,6.5
+canonical,canonical,"3.5e, COIN-CHANGE",complete search possible range of counter examples; do both greedy COIN-CHANGE and DP COIN-CHANGE,502,5.7
+exactchange2,exactchange2,"3.5e, COIN-CHANGE",a variation to the Coin-Change problem; also available at UVa 11517 - Exact Change,708,5.4
+lc0322,to replace with LeetCode link soon...,"3.5e, COIN-CHANGE",COIN-CHANGE; top-100-liked; top-interview-150,0,4.0
+00216,Fetching from uHunt,"3.5f, TSP",LA 5155 - WorldFinals KansasCity92; DP TSP problem; but still solvable with backtracking,,0.0
+11795,Fetching from uHunt,"3.5f, TSP",DP TSP variant; counting paths on DAG; DP+bitmask; let Mega Buster owned by a dummy 'Robot 0',,0.0
+12841,Fetching from uHunt,"3.5f, TSP",simply find and print the lexicographically smallest Hamiltonian path; use DP-TSP technique,,0.0
+beepers,beepers,"3.5f, TSP",DP or recursive backtracking with sufficient pruning; also available at UVa 10496 - Collecting Beepers,196,4.6
+bustour,bustour,"3.5f, TSP",LA 6028 - WorldFinals Warsaw12; DP TSP variant; also available at UVa 01281 - Bus Tour,124,6.1
+cycleseasy,cycleseasy,"3.5f, TSP",Count number of HAMILTONIAN-TOURs,108,4.1
+errands,errands,"3.5f, TSP",map location names to integer indices; DP TSP,51,7.0
+01261,Fetching from uHunt,"3.5g, Non-Classical, 1D, E",LA 4844 - Daejeon10; backtracking possible; but we use a set<string> to prevent recomputation,,0.0
+11420,Fetching from uHunt,"3.5g, Non-Classical, 1D, E",s: (prev; id; numlck); lock/unlock this chest,,0.0
+12654,Fetching from uHunt,"3.5g, Non-Classical, 1D, E",s: (hole); t: use patch T1 or patch T2,,0.0
+lc0746,to replace with LeetCode link soon...,"3.5g, Non-Classical, 1D, E",s: (i); t: to (i+1) or (i+2); Fibonacci variant; leetcode-75,0,2.0
+10003,Fetching from uHunt,"3.5h, Non-Classical, 2D, E",discussed in this section,,0.0
+11450,Fetching from uHunt,"3.5h, Non-Classical, 2D, E",discussed in this section,,0.0
+13141,Fetching from uHunt,"3.5h, Non-Classical, 2D, E","s: (level, branch_previously); t: not branching if branch_previously or branching (one side) otherwise",,0.0
+nikola,nikola,"3.5h, Non-Classical, 2D, E","s: (pos, last_jump); t: jump forward or backward",295,3.6
+spiderman,spiderman,"3.5h, Non-Classical, 2D, E",simple DP; go up or down; print solution,1010,3.9
+ticketpricing,ticketpricing,"3.5h, Non-Classical, 2D, E",LA 6867 - Rocky Mountain15; similar with UVa 11450 discussed in this book; real life problem; print (the first) part of ...,138,4.9
+12324,Fetching from uHunt,"3.5i, DP level 2",spheres > n are useless,,0.0
+12862,Fetching from uHunt,"3.5i, DP level 2",1D DP to compute the path cost from every vertex that goes up to the mountain top; compute answer,,0.0
+12955,Fetching from uHunt,"3.5i, DP level 2","there are only 8 eligible factorials under 100000; we can use DP; s: (i, sum); t: take/stay, take/move, don't take/move",,0.0
+kutevi,kutevi,"3.5i, DP level 2",s: (360 integer degrees),170,2.6
+lc0714,to replace with LeetCode link soon...,"3.5i, DP level 2","s: (own, i); t: skip day i or sell if own/buy if not; leetcode-75",0,4.0
+tight,tight,"3.5i, DP level 2","s: (i, j); #tight words of length i that end in digit j divided by #words: (k+1)^n; also available at UVa 10081 - Tight ...",100,3.5
+walrusweights,walrusweights,"3.5i, DP level 2",backtracking with memoization,570,3.8
+11749,Fetching from uHunt,"4.2a, Finding CCs",find the largest CC with highest average PPA; also solvable with UFDS,,0.0
+11906,Fetching from uHunt,"4.2a, Finding CCs",DFS/BFS for reachability; several tricky cases; be careful when M = 0; N = 0; or M = N,,0.0
+lc0547,to replace with LeetCode link soon...,"4.2a, Finding CCs",count number of CCs; leetcode-75,0,4.0
+reachableroads,reachableroads,"4.2a, Finding CCs",report number of CC-1,892,2.1
+securitybadge,securitybadge,"4.2a, Finding CCs",reachability test; clever idea to compress ids,129,7.6
+terraces,terraces,"4.2a, Finding CCs","group cells with similar height together; if it cannot flow to any other component with lower height, add the size of th...",339,3.6
+wheresmyinternet,wheresmyinternet,"4.2a, Finding CCs",check connectivity to vertex 1,1716,3.7
+00352,Fetching from uHunt,"4.2b, Flood Fill, Easier",count number of CCs; see UVa 00572,,0.0
+11953,Fetching from uHunt,"4.2b, Flood Fill, Easier",interesting twist of flood fill problem,,0.0
+amoebas,amoebas,"4.2b, Flood Fill, Easier",easy floodfill,1079,1.8
+countingstars,countingstars,"4.2b, Flood Fill, Easier",basic flood fill problem; count CCs,1494,2.7
+fontan,fontan,"4.2b, Flood Fill, Easier",modified multi-sources BFS/floodfill,866,2.0
+gold,gold,"4.2b, Flood Fill, Easier",flood fill with extra blocking constraint; also available at UVa 11561 - Getting Gold,735,2.2
+lc0733,to replace with LeetCode link soon...,"4.2b, Flood Fill, Easier",basic flood fill problem,0,2.0
+01103,Fetching from uHunt,"4.2c, Flood Fill, Harder",LA 5130 - WorldFinals Orlando11; major hint: each hieroglyph has unique number of white CCs,,0.0
+10kindsofpeople,10kindsofpeople,"4.2c, Flood Fill, Harder",intelligent flood fill; just run once to avoid TLE as there are many queries,2380,3.9
+11585,Fetching from uHunt,"4.2c, Flood Fill, Harder",polynomial-time verifier for an NP-complete puzzle Nurikabe; this verifier requires clever usage of flood fill algorithm,,0.0
+coast,coast,"4.2c, Flood Fill, Harder",intelligent flood fill; just run once to avoid TLE as there are many queries,1339,3.2
+islands3,islands3,"4.2c, Flood Fill, Harder",optimistic flood fill; assume all Cs are Ls,936,2.1
+lc1254,to replace with LeetCode link soon...,"4.2c, Flood Fill, Harder",flood fill; avoiding borders,0,4.0
+00872,Fetching from uHunt,"4.2d, Topological Sort",similar to UVa 00124; use backtracking,,0.0
+11060,Fetching from uHunt,"4.2d, Topological Sort",Kahn's algorithm---modified BFS toposort,,0.0
+brexit,brexit,"4.2d, Topological Sort",toposort; chain reaction; modified Kahn's algorithm,826,3.6
+builddeps,builddeps,"4.2d, Topological Sort",the graph is acyclic; toposort with DFS from the changed file,626,4.7
+conservation,conservation,"4.2d, Topological Sort",modified Kahn's algorithm; greedily process all steps in a certain lab before alternating to the other lab,133,4.2
+lc0210,to replace with LeetCode link soon...,"4.2d, Topological Sort",cycle check; compute toposort if acyclic; top-interview-150,0,4.0
+pickupsticks,pickupsticks,"4.2d, Topological Sort",cycle check + toposort if DAG; also available at item UVa 11686 - Pick up sticks,373,4.7
+10116,Fetching from uHunt,"4.2e, Graph Properties Check",traversal on implicit graph; cycle check,,0.0
+10505,Fetching from uHunt,"4.2e, Graph Properties Check",bipartite; take max(left; right),,0.0
+hoppers,hoppers,"4.2e, Graph Properties Check",the answer is number of CC-1 if there is at least one non-bipartite component in the graph; or number of CC otherwise,234,3.9
+lc0207,to replace with LeetCode link soon...,"4.2e, Graph Properties Check",is the directed graph acyclic?; top-100-liked; top-interview-150,0,4.0
+molekule,molekule,"4.2e, Graph Properties Check",undirected tree is also Bipartite/bi-colorable; bi-color it with 0 and 1; direct all edges from 0 to 1 (or vice versa),175,3.5
+runningmom,runningmom,"4.2e, Graph Properties Check",find a cycle in a directed graph,591,3.8
+torn2pieces,torn2pieces,"4.2e, Graph Properties Check",construct graph from strings; traversal from source to target; reachability check; print path,1115,3.6
+10765,Fetching from uHunt,"4.2f, Cut Vertices/Bridges",finding articulation points,,0.0
+12363,Fetching from uHunt,"4.2f, Cut Vertices/Bridges",LA 5796 - Latin America; transform input to graph of its bridges; see if b is reachable from a with only the bridges,,0.0
+12783,Fetching from uHunt,"4.2f, Cut Vertices/Bridges",finding bridges,,0.0
+birthday,birthday,"4.2f, Cut Vertices/Bridges",check if the input graph contains any bridge; N is small though so weaker solution can still be accepted,323,4.3
+caveexploration,caveexploration,"4.2f, Cut Vertices/Bridges",find size of bi-connected components that contains vertex 0; identify the bridges,848,3.3
+gymleadersterritory,gymleadersterritory,"4.2f, Cut Vertices/Bridges","if all edges connected to vertex k are bridges, then `YES`; otherwise `NO`",165,3.5
+intercept,intercept,"4.2f, Cut Vertices/Bridges",Articulation Points in SSSP Spanning DAG; clever modification of Dijkstra's,112,6.6
+00247,Fetching from uHunt,"4.2g, Finding SCCs",SCC + printing solution,,0.0
+11709,Fetching from uHunt,"4.2g, Finding SCCs",find the number of SCCs,,0.0
+11770,Fetching from uHunt,"4.2g, Finding SCCs",similar to UVa 11504,,0.0
+cantinaofbabel,cantinaofbabel,"4.2g, Finding SCCs",build directed graph 'can_speak'; compute the largest SCC of 'can_speak'; keep this largest SCC,1294,3.2
+dominos,dominos,"4.2g, Finding SCCs",count the number of SCCs without incoming edge from a vertex outside that SCC; also available at UVa 11504 - Dominos,248,6.2
+equivalences,equivalences,"4.2g, Finding SCCs",contract input directed graph into SCCs; count SCCs that have in-/out-degrees = 0; report the max,281,5.4
+reversingroads,reversingroads,"4.2g, Finding SCCs","if #SCC = 1, print 'valid'; or try reversing one of the m directed edges until we either have #SCC = 1, or print 'invali...",640,3.7
+11831,Fetching from uHunt,"4.2h, Really Ad Hoc",traversal on implicit graph,,0.0
+12442,Fetching from uHunt,"4.2h, Really Ad Hoc",modified DFS; special graph,,0.0
+dominoes2,dominoes2,"4.2h, Really Ad Hoc","unlike UVa 11504, we treat SCCs as CCs; also available at UVa 11518 - Dominos 2",599,3.3
+faultyrobot,faultyrobot,"4.2h, Really Ad Hoc",interesting graph traversal variant; add one more state to each vertex: bug_used,556,3.6
+lc0841,to replace with LeetCode link soon...,"4.2h, Really Ad Hoc",DFS/BFS from 0; see if all rooms are visited; leetcode-75,0,4.0
+promotions,promotions,"4.2h, Really Ad Hoc",modified DFS; special graph; DAG; also available at UVa 13015 - Promotions,129,5.5
+succession,succession,"4.2h, Really Ad Hoc",(upwards) traversal of family DAG; use unordered_maps; make the founder has very large starting blood to avoid fraction,165,3.1
+11631,Fetching from uHunt,"4.3a, MST, Standard",weight of (all graph edges - all MST edges),,0.0
+11747,Fetching from uHunt,"4.3a, MST, Standard",sum the edge weights of the chords,,0.0
+cats,cats,"4.3a, MST, Standard",standard MST,456,4.1
+islandhopping,islandhopping,"4.3a, MST, Standard",MST on small complete graph,440,3.0
+lc1584,to replace with LeetCode link soon...,"4.3a, MST, Standard",basic MST problem,0,4.0
+lostmap,lostmap,"4.3a, MST, Standard",actually just a standard MST problem,782,2.1
+minspantree,minspantree,"4.3a, MST, Standard",very standard MST problem; check if a spanning tree is formed; also output the edges in any spanning tree in lexicograph...,862,4.0
+01013,Fetching from uHunt,"4.3b, MST, Variants",LA 2478 - WorldFinals Honolulu02; very interesting MST variant,,0.0
+01265,Fetching from uHunt,"4.3b, MST, Variants",LA 4848 - Daejeon10; very interesting non-standard variant of 'maximum' spanning tree,,0.0
+10457,Fetching from uHunt,"4.3b, MST, Variants",interesting MST modeling,,0.0
+millionairemadness,millionairemadness,"4.3b, MST, Variants",MiniMax path problem,649,2.4
+muddyhike,muddyhike,"4.3b, MST, Variants",MiniMax path problem,209,3.9
+naturereserve,naturereserve,"4.3b, MST, Variants",Prim's algorithm from multiple sources,180,4.6
+10653,Fetching from uHunt,"4.4a, SSSP, BFS, Easier",need efficient BFS implementation,,0.0
+12160,Fetching from uHunt,"4.4a, SSSP, BFS, Easier",LA 4408 - KualaLumpur08; s: (4-digits number); edges: button pushes; BFS,,0.0
+buttonbashing,buttonbashing,"4.4a, SSSP, BFS, Easier",very similar to UVa 12160,728,3.4
+horror,horror,"4.4a, SSSP, BFS, Easier",SSSP from all sources = horror movies; report lowest ID with the highest unweighted SSSP distance,500,3.3
+11352,Fetching from uHunt,"4.4b, SSSP, BFS, Medium",filter the graph first; then it becomes SSSP,,0.0
+12826,Fetching from uHunt,"4.4b, SSSP, BFS, Medium",SSSP from (r1; c1) to (r2; c2) avoiding (r3; c3); BFS,,0.0
+fire2,fire2,"4.4b, SSSP, BFS, Medium",very similar to UVa 11624,395,4.2
+lc1926,to replace with LeetCode link soon...,"4.4b, SSSP, BFS, Medium",BFS on grid; stop at border (that is not source); leetcode-75,0,4.0
+lost,lost,"4.4b, SSSP, BFS, Medium",interesting twist of BFS/SSSP spanning tree,269,4.7
+mallmania,mallmania,"4.4b, SSSP, BFS, Medium",multi-sources BFS from m1; get minimum at border of m2; also available at UVa 11101 - Mall Mania,48,4.9
+oceancurrents,oceancurrents,"4.4b, SSSP, BFS, Medium",0/1-weighted SSSP; BFS+deque; also available at UVa 11573 - Ocean Currents,118,5.4
+00439,Fetching from uHunt,"4.4c, Knight Moves, BFS",one BFS per query is enough,,0.0
+10426,Fetching from uHunt,"4.4c, Knight Moves, BFS","for each knight, do BFS when the monster is sleep/awake; try: one awake the monster, the rest go around",,0.0
+10477,Fetching from uHunt,"4.4c, Knight Moves, BFS",s: (row; col; knight_state); implicit unweighted graph; different edges per different knight_state,,0.0
+grasshopper,grasshopper,"4.4c, Knight Moves, BFS",BFS on implicit Knight jump graph,136,4.0
+hidingplaces,hidingplaces,"4.4c, Knight Moves, BFS","SSSP from (r, c); find cells with max distance; print",607,1.9
+lc2596,to replace with LeetCode link soon...,"4.4c, Knight Moves, BFS",standard knight tour; BFS; 8 directions,0,4.0
+01112,Fetching from uHunt,"4.4e, SSSP, Dijkstra, Easier",LA 2425 - SouthwesternEurope01; SDSP,,0.0
+13127,Fetching from uHunt,"4.4e, SSSP, Dijkstra, Easier",Dijkstra's from multiple sources,,0.0
+flowerytrails,flowerytrails,"4.4e, SSSP, Dijkstra, Easier",Dijkstra's; record predecessor graph as there can be multiple shortest paths; also available at UVa 12878 - Flowery Trai...,305,3.9
+shortestpath1,shortestpath1,"4.4e, SSSP, Dijkstra, Easier",very standard Dijkstra's problem,1470,3.5
+shortestpath2,shortestpath2,"4.4e, SSSP, Dijkstra, Easier",Dijkstra's with modification; edges only available periodically; be careful with P = 0 case,423,3.9
+texassummers,texassummers,"4.4e, SSSP, Dijkstra, Easier",Dijkstra's; complete weighted graph; print path,97,4.0
+00589,Fetching from uHunt,"4.4g, SSSP, Dijkstra, Harder",weighted SSSP: move box from s to t + unweighted SSSP: move player to correct position to push the box,,0.0
+12047,Fetching from uHunt,"4.4g, SSSP, Dijkstra, Harder",clever usage of Dijkstra's; run Dijkstra's from source and from d from destination,,0.0
+12950,Fetching from uHunt,"4.4g, SSSP, Dijkstra, Harder","clever usage of Dijstra's; instead of extending by one edge, we can extend by two edges at a time",,0.0
+blockcrusher,blockcrusher,"4.4g, SSSP, Dijkstra, Harder",Dijkstra's from top row to bottom row (or vice versa); print path,257,5.1
+emptyingbaltic,emptyingbaltic,"4.4g, SSSP, Dijkstra, Harder",Dijkstra's variant; grow spanning tree from drain/source,287,5.4
+invasion,invasion,"4.4g, SSSP, Dijkstra, Harder",SSSP with multiple and successive sources; multiple calls of Dijkstra's (gets lighter each time if pruned properly),46,4.3
+visualgo,visualgo,"4.4g, SSSP, Dijkstra, Harder",Dijkstra's produces SSSP spanning DAG if there are multiple shortest paths from s to t; counting paths on DAG,496,3.4
+00558,Fetching from uHunt,"4.4h, SSSP, Bellman-Ford",check if negative cycle exists,,0.0
+10449,Fetching from uHunt,"4.4h, SSSP, Bellman-Ford",find the minimum weight path; which may be negative; be careful: INF negative weight is lower than INF,,0.0
+12768,Fetching from uHunt,"4.4h, SSSP, Bellman-Ford",insert -F as edge weight; see if negative cycle exists; or find min SSSP value from s = 1,,0.0
+hauntedgraveyard,hauntedgraveyard,"4.4h, SSSP, Bellman-Ford",Bellman-Ford; negative cycle check needed,95,8.2
+lc0743,to replace with LeetCode link soon...,"4.4h, SSSP, Bellman-Ford",SSSP on a small directed weighted graph,0,4.0
+shortestpath3,shortestpath3,"4.4h, SSSP, Bellman-Ford",Bellman-Ford; do DFS/BFS from vertices that are part of any negative cycle,524,5.1
+xyzzy,xyzzy,"4.4h, SSSP, Bellman-Ford",check 'positive' cycle; check connectedness; also available at UVa 10557,152,6.7
+00821,Fetching from uHunt,"4.5a, APSP, Standard",LA 5221 - WorldFinals Orlando00; one of the easiest ICPC WorldFinals problem,,0.0
+01247,Fetching from uHunt,"4.5a, APSP, Standard",LA 4524 - Hsinchu09; Floyd-Warshall with modification: prefer shortest path with less intermediate vertices,,0.0
+10354,Fetching from uHunt,"4.5a, APSP, Standard",find and remove edges involved in boss's shortest paths; re-run shortest paths from home to market,,0.0
+allpairspath,allpairspath,"4.5a, APSP, Standard",basic Floyd-Warshall; tricky negative cycle checks,772,5.5
+importspaghetti,importspaghetti,"4.5a, APSP, Standard",smallest cycle; print path by breaking the self-loop into i - other vertex j - i,292,5.1
+lc1334,to replace with LeetCode link soon...,"4.5a, APSP, Standard",get APSP information using Floyd-Warshall; compute reachability; get the answer,0,4.0
+transportationplanning,transportationplanning,"4.5a, APSP, Standard","APSP; FW; for each unused edge, use it and see how much distance is reduced; get minimum; O(n^4)",65,3.9
+01056,Fetching from uHunt,"4.5b, APSP, Variants",LA 3569 - WorldFinals SanAntonio06; finding diameter of a small graph with Floyd-Warshall,,0.0
+10342,Fetching from uHunt,"4.5b, APSP, Variants","Floyd-Warshall to get APSP values; to get the second best shortest path, try to make a single mistake",,0.0
+10987,Fetching from uHunt,"4.5b, APSP, Variants","creative usage of Floyd-Warshall algorithm; if we can detour without increasing cost, then delete the direct edge",,0.0
+arbitrage,arbitrage,"4.5b, APSP, Variants",arbitrage problem; similar to UVa 00104 and 00436,324,3.3
+kastenlauf,kastenlauf,"4.5b, APSP, Variants",n ≤ 100; Warshall's transitive closure problem,713,3.8
+secretchamber,secretchamber,"4.5b, APSP, Variants",LA 8047 - WorldFinals RapidCity17; Warshall's transitive closure; also available at UVa 01757 - Secret Chamber ...,1187,2.2
+00452,Fetching from uHunt,"4.7a, S/Longest Paths on DAG",LONGEST-PATH on DAG,,0.0
+10350,Fetching from uHunt,"4.7a, S/Longest Paths on DAG",shortest paths; implicit DAG; DP,,0.0
+fibtour,fibtour,"4.7a, S/Longest Paths on DAG",only ~90 Fibonacci numbers not more than 10^18; LONGEST-PATH on DAG problem; special case for first two Fibonacci number...,105,6.4
+lc0064,to replace with LeetCode link soon...,"4.7a, S/Longest Paths on DAG",basic SSSP on DAG; top-100-liked; top-interview-150,0,4.0
+mravi,mravi,"4.7a, S/Longest Paths on DAG",reverse edge directions to change the input tree into a DAG; find longest path from leaf that contains ant to root,197,2.7
+safepassage,safepassage,"4.7a, S/Longest Paths on DAG","SSSP; implicit DAG; s: (cloak_pos, bitmask); try all ways to go back and forth between gate and dorm; report minimum",387,4.9
+10544,Fetching from uHunt,"4.7b, Counting Paths, Easier",counting paths in implicit DAG,,0.0
+11569,Fetching from uHunt,"4.7b, Counting Paths, Easier",determine the length of one of the longest paths and then count the number of such longest paths in DAG,,0.0
+compositions,compositions,"4.7b, Counting Paths, Easier","LA 7365 - Greater NY15; s: (N_left); t: try all values, skip some numbers",160,2.3
+lc0062,to replace with LeetCode link soon...,"4.7b, Counting Paths, Easier",counting paths; DAG; leetcode-75; top-100-liked,0,4.0
+robotsonagrid,robotsonagrid,"4.7b, Counting Paths, Easier",counting paths in implicit DAG,147,4.3
+runningsteps,runningsteps,"4.7b, Counting Paths, Easier","LA 7360 - Greater NY15; s: (leg, l2, r2, l1, r1); t: left/right leg 1/2 steps; use unordered_map as memo table; use prun...",168,2.6
+scenes,scenes,"4.7b, Counting Paths, Easier","s: (pos, ribbon_left); t: try all possible heights; ignore the flat scenes first and subtract those cases at the end",407,3.6
+00590,Fetching from uHunt,"4.7c, Conversion to DAG",s: (pos; day_left),,0.0
+10913,Fetching from uHunt,"4.7c, Conversion to DAG",s: (r; c; neg_left; stat); t: down/(left/right),,0.0
+12875,Fetching from uHunt,"4.7c, Conversion to DAG",LA 6853 - Bangkok14; similar to UVa 10702; s: (cur_store; cur_concert); t: pick any next store for next concert,,0.0
+cardmagic,cardmagic,"4.7c, Conversion to DAG","s: (deck, tgt_left); t: val 1 to K ≤ tgt_left",133,3.9
+drinkresponsibly,drinkresponsibly,"4.7c, Conversion to DAG","s: (cur_drink, money_left, u_left); be careful with precision errors; print solution",98,4.2
+maximizingwinnings,maximizingwinnings,"4.7c, Conversion to DAG","separate the maximizing and minimizing problem; s: (cur_room, turns_left); t: go to other room or stay",193,3.9
+00536,Fetching from uHunt,"4.7d, Tree",reconstructing binary tree from preorder and inorder binary tree traversal,,0.0
+11695,Fetching from uHunt,"4.7d, Tree",cut the worst edge along the tree diameter; link two centers; also available at Kattis - flight,,0.0
+12347,Fetching from uHunt,"4.7d, Tree",given pre-order traversal of a BST; use BST property to get the BST; output the post-order traversal that BST,,0.0
+12379,Fetching from uHunt,"4.7d, Tree",find the diameter of tree first; we only traverse the diameter once and we traverse the other edges twice,,0.0
+adjoin,adjoin,"4.7d, Tree",the key parts are finding tree diameter and its center (along that diameter); also see UVa 11695,373,5.3
+flight,flight,"4.7d, Tree",cut the worst edge along the tree diameter; link two centers; also available at UVa 11695 - Flight Planning,46,6.3
+lc1466,to replace with LeetCode link soon...,"4.7d, Tree",create undirected tree; traverse from the root 0 to identify the answers; leetcode-75,0,4.0
+tourists,tourists,"4.7d, Tree",APSP on Tree (special requirements); LCA,431,3.8
+00670,Fetching from uHunt,"4.7e, Bipartite Graph",MCBM,,0.0
+11138,Fetching from uHunt,"4.7e, Bipartite Graph",a pure MCBM problem,,0.0
+12644,Fetching from uHunt,"4.7e, Bipartite Graph",classic MCBM problem wrapped inside a creative problem statement,,0.0
+12668,Fetching from uHunt,"4.7e, Bipartite Graph",LA 6525 - LatinAmerica13; split rows/columns due to the presence of pawns; then run MCBM,,0.0
+bookclub,bookclub,"4.7e, Bipartite Graph",check if perfect MCBM is possible,307,4.5
+escapeplan,escapeplan,"4.7e, Bipartite Graph",left set: robots; right set: holes; 3 version of similar bipartite graphs; MCBM,98,5.7
+flippingcards,flippingcards,"4.7e, Bipartite Graph",left set: n card numbers; right set: 2*n picture numbers; possible if MCBM = n; need fast algorithm,169,7.0
+00291,Fetching from uHunt,"4.7f, Eulerian Graph",Euler tour on a small graph; backtracking is sufficient,,0.0
+10054,Fetching from uHunt,"4.7f, Eulerian Graph",printing the Euler tour,,0.0
+10203,Fetching from uHunt,"4.7f, Eulerian Graph",the underlying graph is Euler graph,,0.0
+10596,Fetching from uHunt,"4.7f, Eulerian Graph",Euler Graph property check,,0.0
+catenyms,catenyms,"4.7f, Eulerian Graph",Euler graph property check; 26 vertices; directed non simple graph; printing the Euler tour in lexicographic order,67,7.1
+eulerianpath,eulerianpath,"4.7f, Eulerian Graph",Euler graph property check; directed graph; printing the Euler tour,219,5.6
+railroad2,railroad2,"4.7f, Eulerian Graph",x-shaped level junctions have even degrees - ignore X; y-shaped switches have degree 3 - Y has to be even,2188,1.4
+lc0102,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS; expand frontier; top-100-liked; top-interview-150,0,4.0
+lc0111,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS until there is a leaf,0,2.0
+lc0199,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS; last item per level; leetcode-75; top-100-liked; top-interview-150,0,4.0
+lc0429,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS on n-ary tree,0,4.0
+lc1161,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS; max level sum; leetcode-75,0,4.0
+lc1609,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS; with custom ordering rules,0,4.0
+12004,Fetching from uHunt,"5.2a, Finding Formula, Easier",try small n; get the pattern; use long long,,0.0
+12918,Fetching from uHunt,"5.2a, Finding Formula, Easier",sum of arithmetic progression; long long,,0.0
+averageshard,averageshard,"5.2a, Finding Formula, Easier",find O(n) formula; also see Kattis - averageseasy,605,2.6
+bishops,bishops,"5.2a, Finding Formula, Easier",chess pattern involving bishops; from IPSC 2004,1185,2.2
+crne,crne,"5.2a, Finding Formula, Easier",simulate cutting process on small numbers; get formula,477,2.5
+lc1523,to replace with LeetCode link soon...,"5.2a, Finding Formula, Easier",simple formula; inclusion-exclusion; programming-skills,0,2.0
+lc2413,to replace with LeetCode link soon...,"5.2a, Finding Formula, Easier",a simple number theory; n or 2n,0,2.0
+twostones,twostones,"5.2a, Finding Formula, Easier",just check odd or even,15317,1.3
+10161,Fetching from uHunt,"5.2b, Finding Formula, Harder",sqrt and ceil,,0.0
+11038,Fetching from uHunt,"5.2b, Finding Formula, Harder",define a function f that counts the number of 0s from 1 to n; also available at Kattis - howmanyzeros,,0.0
+11718,Fetching from uHunt,"5.2b, Finding Formula, Harder",convert loops to a closed form formula; use modPow to compute the results,,0.0
+lc0781,to replace with LeetCode link soon...,"5.2b, Finding Formula, Harder","count the answer frequencies; for each answer k, group the rabbits into size k+1",0,4.0
+mortgage,mortgage,"5.2b, Finding Formula, Harder",geometric progression; divergent but finite; special case when r = 1.0 (no interest),51,7.9
+neighborhoodwatch,neighborhoodwatch,"5.2b, Finding Formula, Harder",sum of AP; inclusion-exclusion,319,3.1
+nine,nine,"5.2b, Finding Formula, Harder",find the required formula,681,3.2
+00389,Fetching from uHunt,"5.2c, Base Number Conversion",use Java Integer class,,0.0
+11952,Fetching from uHunt,"5.2c, Base Number Conversion",check base 2 to 18; special case for base 1,,0.0
+allaboutthatbase,allaboutthatbase,"5.2c, Base Number Conversion",check base 1 to 36; base 1 is special; Big Integer,927,2.9
+arithmetic,arithmetic,"5.2c, Base Number Conversion",conversion of octal (per 4 bits) to hexa (per 3 bits); be careful with leading zeroes,726,3.9
+basicremains,basicremains,"5.2c, Base Number Conversion",also involving Big Integer modulo; also available at UVa 10551 - Basic Remains,174,3.4
+lc0067,to replace with LeetCode link soon...,"5.2c, Base Number Conversion",convert a and b from bin to dec; add them; convert back; programming-skills; top-interview-150,0,2.0
+oktalni,oktalni,"5.2c, Base Number Conversion",convert each 3-bits of binary strings to octal; Big Integer,634,1.8
+00575,Fetching from uHunt,"5.2d, Base Number Variants",base modification,,0.0
+10931,Fetching from uHunt,"5.2d, Base Number Variants",convert decimal to binary; count number of 1s,,0.0
+11121,Fetching from uHunt,"5.2d, Base Number Variants",search for the term 'negabinary',,0.0
+aliennumbers,aliennumbers,"5.2d, Base Number Variants",source base to decimal; decimal to target base,1050,2.1
+ignore,ignore,"5.2d, Base Number Variants",actually a base 7 conversion problem as only 7 digits are meaningful when rotated,268,3.2
+lc2595,to replace with LeetCode link soon...,"5.2d, Base Number Variants",convert n from base 10 to 2; process,0,2.0
+mixedbasearithmetic,mixedbasearithmetic,"5.2d, Base Number Variants",mix of base 10 and two versions of base 26,54,5.9
+00443,Fetching from uHunt,"5.2e, Number Systems/Seqs",try all 2^i * 3^j * 5^k * 7^l; sort,,0.0
+11970,Fetching from uHunt,"5.2e, Number Systems/Seqs",square numbers; divisibility; brute force,,0.0
+candlebox,candlebox,"5.2e, Number Systems/Seqs",sum of arithmetic series [1..N]; -6 for Rita or -3 for Theo; brute force Rita's age; also available at UVa 13161 - Candl...,448,2.6
+collatz,collatz,"5.2e, Number Systems/Seqs",similar to UVa 00694; just do as asked,757,3.7
+lc3099,to replace with LeetCode link soon...,"5.2e, Number Systems/Seqs",compute sum of digits; check as asked,0,2.0
+permutedarithmeticsequence,permutedarithmeticsequence,"5.2e, Number Systems/Seqs",sort differences of adjacent items,1262,2.0
+rationalsequence,rationalsequence,"5.2e, Number Systems/Seqs",pattern finding; tree traversal on a special tree,458,4.6
+11384,Fetching from uHunt,"5.2f, Log, Exp, Pow",find the smallest power of two greater than n; can be solved easily using ceil(eps log2(n)),,0.0
+11847,Fetching from uHunt,"5.2f, Log, Exp, Pow",O(1) math formula exists: floor(log2(n)),,0.0
+cokolada,cokolada,"5.2f, Log, Exp, Pow",the answers involve powers of two and a simulation,605,2.2
+factstone,factstone,"5.2f, Log, Exp, Pow",use logarithm; power; also available at UVa 10916 - Factstone Benchmark,200,3.6
+lc0231,to replace with LeetCode link soon...,"5.2f, Log, Exp, Pow",n ≤ 0 is False; log2 and exp test,0,2.0
+lemonadetrade,lemonadetrade,"5.2f, Log, Exp, Pow",use log transformation technique; linear pass,82,5.3
+thebackslashproblem,thebackslashproblem,"5.2f, Log, Exp, Pow",actually power of two,349,2.2
+00264,Fetching from uHunt,"5.2g, Grid",grid; pattern,,0.0
+10022,Fetching from uHunt,"5.2g, Grid",this is not an SSSP problem; find the pattern in this grid (triangle)-like system,,0.0
+10182,Fetching from uHunt,"5.2g, Grid",grid,,0.0
+10233,Fetching from uHunt,"5.2g, Grid",the number of items in row forms arithmetic progression series; use hypot,,0.0
+beehouseperimeter,beehouseperimeter,"5.2g, Grid",transform the hexagonal grid like Kattis - honeyheist; flood fill from outside Alice's house; count #walls touched,155,4.0
+honeyheist,honeyheist,"5.2g, Grid",transform the hexagonal grid input into 2D grid first; then run SSSP on unweighted graph; BFS,135,3.8
+maptiles2,maptiles2,"5.2g, Grid",simple conversion between two grid indexing systems,1338,1.6
+00930,Fetching from uHunt,"5.2h, Polynomial",Ruffini's rule; roots of quadratic eq,,0.0
+10268,Fetching from uHunt,"5.2h, Polynomial",polynomial derivation; Horner's rule,,0.0
+10302,Fetching from uHunt,"5.2h, Polynomial",use long double,,0.0
+10586,Fetching from uHunt,"5.2h, Polynomial",compute number of prime factors of each integer in the desired range; use 1D RSQ DP; binary search,,0.0
+ada,ada,"5.2h, Polynomial",polynomial problem; apply the given procedure recursively,346,2.8
+curvyblocks,curvyblocks,"5.2h, Polynomial",differentiate degree 3 to degree 2 polynomial; get roots of quadratic equation; the two blocks will touch at either root...,89,4.3
+plot,plot,"5.2h, Polynomial",analyze the given pseudocode; the required pattern involves Binomial Coefficients,210,2.5
+00332,Fetching from uHunt,"5.2i, Fractions",use GCD,,0.0
+00834,Fetching from uHunt,"5.2i, Fractions",do as asked,,0.0
+12068,Fetching from uHunt,"5.2i, Fractions",involving fraction; use LCM and GCD,,0.0
+deadfraction,deadfraction,"5.2i, Fractions",try every single possible repeating decimals; also available at UVa 10555 - Dead Fraction,153,4.9
+fraction,fraction,"5.2i, Fractions",continued fraction to normal fraction and vice versa,154,3.8
+mixedfractions,mixedfractions,"5.2i, Fractions",convert fraction to mixed fraction,5154,1.5
+thermostat,thermostat,"5.2i, Fractions",convert one temperature to another; use fraction; use Java BigInteger; gcd,81,3.4
+00496,Fetching from uHunt,"5.2j, Really Ad Hoc",set manipulation,,0.0
+11241,Fetching from uHunt,"5.2j, Really Ad Hoc",the hardest case is computing Dew point given temperature and Humidex; derive it with Algebra,,0.0
+12036,Fetching from uHunt,"5.2j, Really Ad Hoc",use pigeon hole principle,,0.0
+lc0598,to replace with LeetCode link soon...,"5.2j, Really Ad Hoc",keep the largest upper-left rectangle size,0,2.0
+matrix,matrix,"5.2j, Really Ad Hoc",use simple linear algebra; one special case when c = 0,784,3.1
+trip,trip,"5.2j, Really Ad Hoc",be careful with precision error; also available at UVa 10137 - The Trip,103,5.5
+yoda,yoda,"5.2j, Really Ad Hoc",ad hoc; 9 digits comparison,1607,2.1
+00543,Fetching from uHunt,"5.3a, Prime Numbers","sieve; complete search; Goldbach's conjecture; similar to UVa 00686, 10311, and 10948",,0.0
+01644,Fetching from uHunt,"5.3a, Prime Numbers",LA 3883 - Tokyo07; sieve; prime check; upper bound - lower bound,,0.0
+10650,Fetching from uHunt,"5.3a, Prime Numbers",3 uni-distance consecutive primes,,0.0
+enlarginghashtables,enlarginghashtables,"5.3a, Prime Numbers",use sieve up to 40 000; prime test numbers greater than 2n; check primality of n itself,448,3.4
+primesieve,primesieve,"5.3a, Prime Numbers",use sieve up to 10^8; it is fast enough,865,4.5
+reseto,reseto,"5.3a, Prime Numbers",sieve of Eratosthenes until the k-th crossing,460,2.7
+01180,Fetching from uHunt,"5.3b, (Prob) Prime Testing",LA 2350 - Dhaka01; small prime check,,0.0
+01210,Fetching from uHunt,"5.3b, (Prob) Prime Testing",LA 3399 - Tokyo05; simple,,0.0
+flowergarden,flowergarden,"5.3b, (Prob) Prime Testing",Euclidean dist; small prime check; use isProbablePrime; simulation; faster solutions exist,317,4.4
+goldbach2,goldbach2,"5.3b, (Prob) Prime Testing",simple brute force problem; use isProbablePrime; faster solutions exist,1219,2.7
+lc2614,to replace with LeetCode link soon...,"5.3b, (Prob) Prime Testing",check primes (Java isProbablePrime works) along the diagonals,0,2.0
+primes2,primes2,"5.3b, (Prob) Prime Testing",convert input to either base 2/8/10/16; skip those that cause NumberFormatException error; use isProbablePrime test and ...,289,4.7
+pseudoprime,pseudoprime,"5.3b, (Prob) Prime Testing","yes if !isPrime(p) && a.modPow(p, p) = a; Big Integer; also available at UVa 11287 - Pseudoprime Numbers",347,3.5
+00583,Fetching from uHunt,"5.3c, Finding Prime Factors",basic factorization problem,,0.0
+11466,Fetching from uHunt,"5.3c, Finding Prime Factors",use efficient sieve implementation to get the largest prime factors,,0.0
+12703,Fetching from uHunt,"5.3c, Finding Prime Factors",uses small Fibonacci numbers up to 40 and simple prime factorization as a and b can be non-primes,,0.0
+12805,Fetching from uHunt,"5.3c, Finding Prime Factors",prime check; primes of format 4m-1 and 4m plus 1; simple prime factorization,,0.0
+pascal,pascal,"5.3c, Finding Prime Factors",find lowest prime factor of N; special case: N = 1,351,3.8
+primalrepresentation,primalrepresentation,"5.3c, Finding Prime Factors",factorization problem; use sieve to avoid TLE; use long long; 231-1 is a prime,258,5.4
+primereduction,primereduction,"5.3c, Finding Prime Factors",factorization problem,465,3.9
+00294,Fetching from uHunt,"5.3d, Prime Factors Functions",numDiv(N),,0.0
+10179,Fetching from uHunt,"5.3d, Prime Factors Functions",EulerPhi(N),,0.0
+11353,Fetching from uHunt,"5.3d, Prime Factors Functions",numPF(N); sort variant,,0.0
+11728,Fetching from uHunt,"5.3d, Prime Factors Functions",sumDiv(N),,0.0
+almostperfect,almostperfect,"5.3d, Prime Factors Functions",sumDiv(N)-N; minor variation,1507,3.2
+divisors,divisors,"5.3d, Prime Factors Functions",return numDiv(nCk); but do not compute nCk directly; work with its prime factors,208,5.2
+relatives,relatives,"5.3d, Prime Factors Functions",EulerPhi(N); also available at UVa 10299 - Relatives,231,3.8
+10699,Fetching from uHunt,"5.3e, Modified Sieve",numDiffPF(N) for a range,,0.0
+10990,Fetching from uHunt,"5.3e, Modified Sieve",modified sieve to compute a range of Euler Phi values; use DP to compute depth Phi values; then finally use Max 1D Range...,,0.0
+11426,Fetching from uHunt,"5.3e, Modified Sieve",pre-calculate EulerPhi(N),,0.0
+12043,Fetching from uHunt,"5.3e, Modified Sieve",sumDiv(N) and numDiv(N); brute force,,0.0
+data,data,"5.3e, Modified Sieve",numDiffPF(V) for V up to N x 1000; Brute force combination/all subsets; DP Subset,68,5.9
+farey,farey,"5.3e, Modified Sieve",pre-calculate EulerPhi(N); do prefix sum (1D RSQ) of EulerPhi(N) from 1 to each N; the answer is related to this value,257,3.6
+nonprimefactors,nonprimefactors,"5.3e, Modified Sieve",numDiv(i) - numDiffPF(i) ∀i in the range; the I/O files are large so Buffered I/O speed is needed,389,5.6
+10407,Fetching from uHunt,"5.3f, GCD and/or LCM",subtract the set s with s[0]; find gcd,,0.0
+11388,Fetching from uHunt,"5.3f, GCD and/or LCM",understand the relationship of GCD with LCM,,0.0
+11417,Fetching from uHunt,"5.3f, GCD and/or LCM",just use brute force as input is small,,0.0
+jackpot,jackpot,"5.3f, GCD and/or LCM",similar to Kattis - smallestmultiple; use Java BigInteger or other faster solutions,379,3.2
+lc3411,to replace with LeetCode link soon...,"5.3f, GCD and/or LCM","complete search; compute product, GCD, and LCM of all subarrays",0,2.0
+prsteni,prsteni,"5.3f, GCD and/or LCM",GCD of first circle radius with subsequent circle radiuses,993,1.6
+smallestmultiple,smallestmultiple,"5.3f, GCD and/or LCM",simple LCMs of all numbers; use Java BigInteger to be safe,335,3.5
+12335,Fetching from uHunt,"5.3g, Factorial","given the k-th permutation, recover the 1st permutation; use factorial; use Java BigInteger",,0.0
+12869,Fetching from uHunt,"5.3g, Factorial",LA 6847 - Bangkok 2014; every zero in factorial(n) is due to multiplication of factor 2 and 5; factor 2 grows faster tha...,,0.0
+inversefactorial,inversefactorial,"5.3g, Factorial",good problem; number of digits in factorial,1059,5.3
+loworderzeros,loworderzeros,"5.3g, Factorial",last non zero digit of factorial; classic,288,4.2
+namethatpermutation,namethatpermutation,"5.3g, Factorial",permutation number; involving factorial,154,4.8
+tutorial,tutorial,"5.3g, Factorial",factorial is just part of the problem; pruning,1249,2.8
+10680,Fetching from uHunt,"5.3h, Working with PFs",use primefactors([1..N]) to get LCM(1; 2; ...; N),,0.0
+11347,Fetching from uHunt,"5.3h, Working with PFs",prime-power factorization; numDiv(N),,0.0
+11395,Fetching from uHunt,"5.3h, Working with PFs",key hint: a square number multiplied by powers of two; i.e. 2^k * i^2 for k >= 0; i >= 1 has odd sum of divisors,,0.0
+consecutivesums,consecutivesums,"5.3h, Working with PFs",work with factor; sum of Arithmetic Progression series,239,5.2
+factovisors,factovisors,"5.3h, Working with PFs",factorize m; see if it has support in n!; Legendre's formula; also available at UVa 10139 - Factovisors,373,6.4
+iks,iks,"5.3h, Working with PFs",sieve of Eratosthenes; prime factorize each number; spread the factors around to maximize final GCD/minimize total opera...,115,3.0
+lc0172,to replace with LeetCode link soon...,"5.3h, Working with PFs",count number of prime factor 5; top-interview-150,0,4.0
+lc2761,to replace with LeetCode link soon...,"5.3h, Working with PFs",sieve up to 1000; do prime tests,0,4.0
+10174,Fetching from uHunt,"5.3i, Modular Arithmetic",no Spinster number,,0.0
+10176,Fetching from uHunt,"5.3i, Modular Arithmetic",convert binary to decimal digit by digit; do modulo 131071 to the intermediate result,,0.0
+10212,Fetching from uHunt,"5.3i, Modular Arithmetic",multiply numbers from N down to N-M+1; use / 10 to discard the trailing zero(es); use % 1 Billion,,0.0
+10489,Fetching from uHunt,"5.3i, Modular Arithmetic",keep values small with modulo,,0.0
+anothercandies,anothercandies,"5.3i, Modular Arithmetic",simple modular arithmetic,1843,2.7
+ones,ones,"5.3i, Modular Arithmetic",no factor of 2 and 5 implies that there is no trailing zero; also available at UVa 10127 - Ones,567,4.6
+threedigits,threedigits,"5.3i, Modular Arithmetic",simulate factorial computation; remove trailing zeroes; keep many last few non-zero digits using modulo,289,5.9
+10090,Fetching from uHunt,"5.3j, Extended Euclid",use solution for Linear Diophantine Equation,,0.0
+10104,Fetching from uHunt,"5.3j, Extended Euclid",pure Ext Euclid problem,,0.0
+10633,Fetching from uHunt,"5.3j, Extended Euclid","let C = N-M, N = 10a+b, and M = a; Linear Diophantine Equation: 9a+b = C",,0.0
+10673,Fetching from uHunt,"5.3j, Extended Euclid",uses Extended Euclidean,,0.0
+candydistribution,candydistribution,"5.3j, Extended Euclid","the problem boils down to finding C-1 (mod K); be careful when the answer is ""IMPOSSIBLE"" or ≤ K",199,4.9
+modulararithmetic,modulararithmetic,"5.3j, Extended Euclid",the division operation requires modular inverse; use Extended Euclidean algorithm,333,2.9
+soyoulikeyourfoodhot,soyoulikeyourfoodhot,"5.3j, Extended Euclid",Linear Diophantine Equation; still solvable with brute force,103,5.2
+10922,Fetching from uHunt,"5.3k, Divisibility Test",test divisibility by 9,,0.0
+10929,Fetching from uHunt,"5.3k, Divisibility Test",test divisibility by 11,,0.0
+11344,Fetching from uHunt,"5.3k, Divisibility Test",use divisibility theory of [1..12],,0.0
+divisible,divisible,"5.3k, Divisibility Test",divisibility; linear pass algorithm,327,4.3
+lc1952,to replace with LeetCode link soon...,"5.3k, Divisibility Test",divisibility test up to sqrt of n,0,2.0
+meowfactor,meowfactor,"5.3k, Divisibility Test",divisibility test of 9^ans; small range of ans,310,3.5
+thinkingofanumber,thinkingofanumber,"5.3k, Divisibility Test",simple range; use min/max properly; then small divisibility tests,379,3.8
+00763,Fetching from uHunt,"5.4a, Fibonacci Numbers",Zeckendorf representation; greedy; Big Integer,,0.0
+10689,Fetching from uHunt,"5.4a, Fibonacci Numbers",easy; Pisano period,,0.0
+anti11,anti11,"5.4a, Fibonacci Numbers",this problem degenerates into a modified Fibonacci numbers,518,2.7
+batmanacci,batmanacci,"5.4a, Fibonacci Numbers",Fibonacci; observation on N; Divide and Conquer,331,3.8
+lc0070,to replace with LeetCode link soon...,"5.4a, Fibonacci Numbers",basically compute Fib(n+1); DP; top-100-liked; top-interview-150,0,2.0
+lc1137,to replace with LeetCode link soon...,"5.4a, Fibonacci Numbers",basic Tribonacci; DP; leetcode-75,0,2.0
+rijeci,rijeci,"5.4a, Fibonacci Numbers",simple simulation with a single loop; Fibonacci,2478,1.5
+00369,Fetching from uHunt,"5.4b, Binomial Coefficients",be careful with overflow issue,,0.0
+10541,Fetching from uHunt,"5.4b, Binomial Coefficients",a good combinatorics problem,,0.0
+11955,Fetching from uHunt,"5.4b, Binomial Coefficients",pure application; DP,,0.0
+12712,Fetching from uHunt,"5.4b, Binomial Coefficients",the answer is sum i=M to N of C(L*L;i)*i!; but simplify the computation of this formula instead of running it directly,,0.0
+election,election,"5.4b, Binomial Coefficients",compute the answers with help of binomial coefficients,213,6.2
+lc0118,to replace with LeetCode link soon...,"5.4b, Binomial Coefficients",basic bottom-up DP to generate Pascal's triangle; top-100-liked,0,2.0
+lockedtreasure,lockedtreasure,"5.4b, Binomial Coefficients",the answer is nCm-1,321,2.8
+oddbinom,oddbinom,"5.4b, Binomial Coefficients",OEIS A006046,245,3.5
+10007,Fetching from uHunt,"5.4c, Catalan Numbers",answer is Cat(n) * n!; BigInteger,,0.0
+10223,Fetching from uHunt,"5.4c, Catalan Numbers",you can precalculate the answers as there are only 19 Catalan Numbers < 2^{32}-1,,0.0
+10312,Fetching from uHunt,"5.4c, Catalan Numbers",number of binary bracketing = Cat(n); number of bracketing = Super-Catalan numbers,,0.0
+catalan,catalan,"5.4c, Catalan Numbers",basic Catalan Numbers,521,3.6
+catalansquare,catalansquare,"5.4c, Catalan Numbers",Catalan Numbers++; follow the description,507,3.5
+fiat,fiat,"5.4c, Catalan Numbers",N-th Catalan Number; use Fermat's little theorem,75,6.7
+lc0096,to replace with LeetCode link soon...,"5.4c, Catalan Numbers",Catalan numbers; pre-calculateable 1 to 19,0,4.0
+11310,Fetching from uHunt,"5.4d, Others, Easier",requires DP: let dp[i] be the number of ways the cakes can be packed for a box 2*i,,0.0
+11401,Fetching from uHunt,"5.4d, Others, Easier",spot the pattern,,0.0
+11597,Fetching from uHunt,"5.4d, Others, Easier",uses knowledge of graph theory; the answer is very trivial,,0.0
+12463,Fetching from uHunt,"5.4d, Others, Easier",double the socks and the shoes to simplify the problem,,0.0
+character,character,"5.4d, Others, Easier",OEIS A000295,841,2.4
+honey,honey,"5.4d, Others, Easier",OEIS A002898,415,2.4
+integerdivision,integerdivision,"5.4d, Others, Easier","count frequencies of each remainder of [0..d-1]; add C(freq, 2) per such remainder",242,3.3
+lc1175,to replace with LeetCode link soon...,"5.4d, Others, Easier","let k be number of primes up to n; output k! * (n-k)!, mod 10^9+7",0,2.0
+01224,Fetching from uHunt,"5.4e, Others, Harder",LA 3904 - Seoul07; derive formula from observing the small instances first,,0.0
+10784,Fetching from uHunt,"5.4e, Others, Harder",the number of diagonals in n-gon = n*(n-3)/2; use it to derive the solution,,0.0
+11069,Fetching from uHunt,"5.4e, Others, Harder",use Dynamic Programming,,0.0
+11538,Fetching from uHunt,"5.4e, Others, Harder",count along rows; columns; and diagonals,,0.0
+anagramcounting,anagramcounting,"5.4e, Others, Harder",use Big Integer,1117,3.1
+incognito,incognito,"5.4e, Others, Harder",count frequencies; combinatorics; minus one,791,2.7
+tritiling,tritiling,"5.4e, Others, Harder",there are two related recurrences here; also available at UVa 10918 - Tri Tiling,465,2.1
+01636,Fetching from uHunt,"5.5a, Probability, Easier","LA 4596 - NorthEasternEurope09; ad hoc probability question, one tricky special case involving all zeroes",,0.0
+10238,Fetching from uHunt,"5.5a, Probability, Easier","DP; s: (dice_left, score); try F values; Big Integer; no need to simplify the fraction; see UVa 10759",,0.0
+10491,Fetching from uHunt,"5.5a, Probability, Easier",two ways to get a car: either pick a cow first; then switch to a car; or pick a car first; and then switch to another ca...,,0.0
+11181,Fetching from uHunt,"5.5a, Probability, Easier",iterative brute force; try all possibilities,,0.0
+bobby,bobby,"5.5a, Probability, Easier",computation of expected value,618,2.8
+dicebetting,dicebetting,"5.5a, Probability, Easier","s: (dice_left, distinct_numbers_so_far); each throw can increase distinct_numbers_so_far or not",261,3.3
+odds,odds,"5.5a, Probability, Easier",complete search; simple probability,142,2.5
+10056,Fetching from uHunt,"5.5b, Probability, Harder",get the closed form formula,,0.0
+10648,Fetching from uHunt,"5.5b, Probability, Harder",DP; s: (rem_boxes; num_empty),,0.0
+11176,Fetching from uHunt,"5.5b, Probability, Harder","DP, s: (rem_games, streak); t: lose this game, or win the next W = [1..n] games and lose the (W+1)-th game",,0.0
+11628,Fetching from uHunt,"5.5b, Probability, Harder",p[i] = ticket bought by i at the last round/total tickets bought at the last round by all n; gcd,,0.0
+anthony,anthony,"5.5b, Probability, Harder",DP probability; need to drop one parameter (N or M) and recover it from the other one,203,5.2
+goodcoalition,goodcoalition,"5.5b, Probability, Harder",DP probability; like KNAPSACK,276,3.4
+lostinthewoods,lostinthewoods,"5.5b, Probability, Harder",simulate random walks of various lengths and distribute the probabilities per iteration; the answer will converge eventu...,77,3.1
+00350,Fetching from uHunt,"5.6a, Cycle Finding",very basic cycle-finding problem; simply run Floyd's cycle-finding algorithm,,0.0
+11036,Fetching from uHunt,"5.6a, Cycle Finding",cycle-finding; evaluate Reverse Polish f with a stack,,0.0
+11053,Fetching from uHunt,"5.6a, Cycle Finding",cycle-finding; the answer is N-lambda,,0.0
+fibonaccicycles,fibonaccicycles,"5.6a, Cycle Finding",detect cycle of fib(n)%k using fast data structure,118,3.2
+lc0287,to replace with LeetCode link soon...,"5.6a, Cycle Finding","find μ, start of the cycle; Floyd's cycle-finding algorithm; popularized by Joma Tech YouTube video; top-100-liked",0,4.0
+rats,rats,"5.6a, Cycle Finding",string processing plus cycle-finding; unordered_set,92,6.3
+10111,Fetching from uHunt,"5.7a, Game Theory (Basic)",Tic-Tac-Toe; minimax; backtracking,,0.0
+10536,Fetching from uHunt,"5.7a, Game Theory (Basic)",model the 4*4 board and 48 possible pins as bitmask; then this is a simple two player game,,0.0
+bachetsgame,bachetsgame,"5.7a, Game Theory (Basic)",2 players game; Dynamic Programming; also available at UVa 10404 - Bachet's Game,724,2.1
+blockgame2,blockgame2,"5.7a, Game Theory (Basic)",observe the pattern; 2 winnable cases if N == M and N%M == 0; only 1 move if M < N < 2M; we can always win if N &g...,314,3.2
+euclidsgame,euclidsgame,"5.7a, Game Theory (Basic)",minimax; backtracking; also available at UVa 10368 - Euclid's Game,199,4.8
+lc3360,to replace with LeetCode link soon...,"5.7a, Game Theory (Basic)",simulate the process to determine the winner,0,2.0
+linije,linije,"5.7a, Game Theory (Basic)",game theory; check conditions on how Mirko can win and when Slavko can win; involves MCBM,39,7.9
+10229,Fetching from uHunt,"5.8a, Matrix Power",Fibonacci; modPow,,0.0
+10655,Fetching from uHunt,"5.8a, Matrix Power",derive the square matrix,,0.0
+12796,Fetching from uHunt,"5.8a, Matrix Power",count the number of paths of length L in an undirected graph where L can be up to 2^30,,0.0
+checkingforcorrectness,checkingforcorrectness,"5.8a, Matrix Power",Java Big Integer; one subtask uses modPow,244,4.1
+lc0050,to replace with LeetCode link soon...,"5.8a, Matrix Power",D&C exponentiation; programming-skills; top-interview-150,0,4.0
+porpoises,porpoises,"5.8a, Matrix Power",Fibonacci; matrix power; modulo,268,2.9
+squawk,squawk,"5.8a, Matrix Power",count the number of paths of length L in an undirected graph after t steps that are reachable from source s,409,3.5
+00213,Fetching from uHunt,"6.2a, Cipher, Harder",LA 5152 - WorldFinals SanAntonio91,,0.0
+00554,Fetching from uHunt,"6.2a, Cipher, Harder",try all shifts; output formatting,,0.0
+11385,Fetching from uHunt,"6.2a, Cipher, Harder",string manipulation and Fibonacci,,0.0
+crackingthecode,crackingthecode,"6.2a, Cipher, Harder",one corner case involving the 25th to 26th character determination,48,6.4
+itsasecret,itsasecret,"6.2a, Cipher, Harder",playfair cipher; 2D array; quite tedious,81,5.9
+playfair,playfair,"6.2a, Cipher, Harder",follow the description; a bit tedious; also available at UVa 11697 - Playfair Cipher,156,2.5
+progressivescramble,progressivescramble,"6.2a, Cipher, Harder",the encode part is trivial; the decode part requires a bit of thinking,977,2.1
+textencryption,textencryption,"6.2a, Cipher, Harder",convert input alphabets to UPPERCASEs; loop,305,3.2
+11070,Fetching from uHunt,"6.2b, Input Parsing (Rec)",recursive grammar evaluation,,0.0
+11291,Fetching from uHunt,"6.2b, Input Parsing (Rec)",recursive grammar check,,0.0
+calculator,calculator,"6.2b, Input Parsing (Rec)",recursive parser and evaluator,351,3.3
+otpor,otpor,"6.2b, Input Parsing (Rec)",parallel vs series evaluation; write a recursive parser; or use linear pass with stack,94,4.3
+polish,polish,"6.2b, Input Parsing (Rec)",recursive parser,224,3.3
+subexpression,subexpression,"6.2b, Input Parsing (Rec)",recursive parsing; use DP; similar to https://visualgo.net/en/recursion tree versus DAG,44,5.9
+00494,Fetching from uHunt,"6.2c, Regular Expression",trivial with regex,,0.0
+00576,Fetching from uHunt,"6.2c, Regular Expression",solvable with regex,,0.0
+10058,Fetching from uHunt,"6.2c, Regular Expression",solvable with regex,,0.0
+apaxiaaans,apaxiaaans,"6.2c, Regular Expression",solvable with regex,6751,1.4
+hidden,hidden,"6.2c, Regular Expression",just a careful 1D array manipulation; we can also use regex,1100,2.3
+lindenmayorsystem,lindenmayorsystem,"6.2c, Regular Expression",DAT; map char to string; simulation; max answer ≤ 30*5^5; we can also use regex,302,2.5
+11403,Fetching from uHunt,"6.2d, Output Formatting, H",similar with UVa 00338; tedious,,0.0
+12155,Fetching from uHunt,"6.2d, Output Formatting, H",LA 4403 - KualaLumpur08; use proper index manipulation,,0.0
+asciifigurerotation,asciifigurerotation,"6.2d, Output Formatting, H",rotate the input 90 degrees clockwise; remove trailing whitespaces; tedious,521,3.5
+imagedecoding,imagedecoding,"6.2d, Output Formatting, H",simple Run-Length Encoding,321,3.4
+juryjeopardy,juryjeopardy,"6.2d, Output Formatting, H",tedious problem,309,2.3
+nizovi,nizovi,"6.2d, Output Formatting, H",formatting with indentation; not that trivial but sample input/output helps,199,3.8
+11048,Fetching from uHunt,"6.2e, String Comparison",flexible string comparison with respect to a dictionary,,0.0
+11056,Fetching from uHunt,"6.2e, String Comparison",sorting; case-insensitive string comparison,,0.0
+11734,Fetching from uHunt,"6.2e, String Comparison",custom comparison,,0.0
+lc0014,to replace with LeetCode link soon...,"6.2e, String Comparison",complete search; try each prefix; see if it all strings start with it; top-interview-150,0,2.0
+phonelist,phonelist,"6.2e, String Comparison",sort the numbers; see if num i is a prefix of num i+1,1955,4.3
+rhyming,rhyming,"6.2e, String Comparison",compare suffix of a common word with the list of other given words,296,2.5
+smartphone,smartphone,"6.2e, String Comparison",compare prefix so far with the target string and the 3 suggestions; output 1 of 4 options with shortest number of keypre...,354,2.6
+11483,Fetching from uHunt,"6.2f, Really Ad Hoc",straightforward; use 'escape character',,0.0
+12916,Fetching from uHunt,"6.2f, Really Ad Hoc",factorize n; string period; also see UVa 11452,,0.0
+irepeatmyself,irepeatmyself,"6.2f, Really Ad Hoc",string period; complete search,380,2.4
+lc0459,to replace with LeetCode link soon...,"6.2f, Really Ad Hoc",complete search; test repeated substring; programming-skills,0,2.0
+lc0890,to replace with LeetCode link soon...,"6.2f, Really Ad Hoc",custom matching; map each word to appropriate index (signature); compare signatures,0,4.0
+periodicstrings,periodicstrings,"6.2f, Really Ad Hoc",brute force; skip non divisor,299,3.0
+raggedright,raggedright,"6.2f, Really Ad Hoc",just simulate the requirement,1708,1.8
+zipfslaw,zipfslaw,"6.2f, Really Ad Hoc",sort the words to simplify this problem; also available at UVa 10126 - Zipf's Law,157,5.7
+01192,Fetching from uHunt,"6.3a, DP String, Classic",LA2460 - Singapore01; classic String Alignment DP problem with a bit of (unclear) output formatting,,0.0
+12747,Fetching from uHunt,"6.3a, DP String, Classic",similar to UVa 10635,,0.0
+13146,Fetching from uHunt,"6.3a, DP String, Classic",classic Edit Distance problem,,0.0
+inflagrantedelicto,inflagrantedelicto,"6.3a, DP String, Classic",k_p is always 2 (read the problem description); k_r is the LCS of the two permutations plus one; O(n log k) solution,75,4.8
+lc1143,to replace with LeetCode link soon...,"6.3a, DP String, Classic",classic; leetcode-75; top-100-liked,0,4.0
+pandachess,pandachess,"6.3a, DP String, Classic",LCS of 2 permutations → LIS; O(n log k) solution; also see UVa 10635,267,6.0
+princeandprincess,princeandprincess,"6.3a, DP String, Classic",find LCS of two permutations; also available at UVa 10635 - Prince and Princess,140,6.7
+11258,Fetching from uHunt,"6.3b, DP String, Non Classic",dp(i) = int from substring [i..k] dp(k),,0.0
+11552,Fetching from uHunt,"6.3b, DP String, Non Classic",dp(i; c) = minimum number of chunks after considering the first i segments ending with character c,,0.0
+exam,exam,"6.3b, DP String, Non Classic","s: (pos, correct_left); t: either your friend is wrong or your friend is right, process accordingly; easier solution exi...",891,1.9
+heritage,heritage,"6.3b, DP String, Non Classic",s: (cur_pos); t: try all N words in dictionary; final answer modulo prime,348,5.2
+hillnumbers,hillnumbers,"6.3b, DP String, Non Classic","digit DP; s: (prev_digit, pos, is_rising, is_lower); try digit by digit",84,6.7
+lc0097,to replace with LeetCode link soon...,"6.3b, DP String, Non Classic","s: (i, j); k is derived from i+j; t: use a[i] or b[i] next; top-interview-150",0,4.0
+stringfactoring,stringfactoring,"6.3b, DP String, Non Classic",s: the min weight of substring [i..j]; also available at UVa 11022 - String Factoring,57,5.1
+01449,Fetching from uHunt,"6.4a, String Matching",LA 4670 - Hefei09; just use strstr; Suffix Array will get TLE as there are too many long strings to be processed,,0.0
+11837,Fetching from uHunt,"6.4a, String Matching",transform the input of X notes into X-1 distances; then apply KMP,,0.0
+geneticsearch,geneticsearch,"6.4a, String Matching",multiple string matchings,346,2.1
+lc0028,to replace with LeetCode link soon...,"6.4a, String Matching",simple string matching; programming-skills; top-interview-150,0,2.0
+powerstrings,powerstrings,"6.4a, String Matching",find s in s+s; similar with UVa 00455; also available at UVa 10298 - Power Strings,451,5.2
+quiteaproblem,quiteaproblem,"6.4a, String Matching",trivial string matching per line,1212,2.1
+scrollingsign,scrollingsign,"6.4a, String Matching",modified string matching; complete search; also available at UVa 11576 - Scrolling Sign,238,3.1
+00736,Fetching from uHunt,"6.4b, String Matching, 2D",2D grid; a bit modified,,0.0
+10010,Fetching from uHunt,"6.4b, String Matching, 2D",2D grid; backtracking,,0.0
+11283,Fetching from uHunt,"6.4b, String Matching, 2D",2D grid; backtracking; do not count twice,,0.0
+boggle,boggle,"6.4b, String Matching, 2D",2D grid; backtracking,323,3.8
+kinarow,kinarow,"6.4b, String Matching, 2D","brute the top left point of each possible x or o row, then straight-line (horizontal, vertical) or two diagonals 2D stri...",107,4.6
+knightsearch,knightsearch,"6.4b, String Matching, 2D",2D grid; backtracking or DP,425,3.2
+lc0079,to replace with LeetCode link soon...,"6.4b, String Matching, 2D",backtracking; top-100-liked; top-interview-150,0,4.0
+bing,bing,"6.5a, Trie",map all prefixes to frequencies using Hash Table; or use Trie,1061,3.6
+lc0208,to replace with LeetCode link soon...,"6.5a, Trie",Trie implementation; leetcode-75; top-100-liked; top-interview-150,0,4.0
+lc0648,to replace with LeetCode link soon...,"6.5a, Trie",use Trie to speed-up the identification of the shortest root for each derivative,0,4.0
+lc1268,to replace with LeetCode link soon...,"6.5a, Trie",use Trie to speed-up; leetcode-75,0,4.0
+lc2416,to replace with LeetCode link soon...,"6.5a, Trie",we can use Trie or frequency Counter of each prefixes,0,6.0
+01254,Fetching from uHunt,"6.5b, Suffix Tree/Array",LA 4657 - Jakarta09; Suffix Array with Segment Tree or Sparse Table; LCP range,,0.0
+01584,Fetching from uHunt,"6.5b, Suffix Tree/Array",LA 3225 - Seoul04; min lexicographic rotation; similar with UVa 00719; other solutions exist,,0.0
+automatictrading,automatictrading,"6.5b, Suffix Tree/Array",Suffix Array; LCP of a range; use Sparse Table,160,5.2
+buzzwords,buzzwords,"6.5b, Suffix Tree/Array",Longest Repeated Substring that appears X times (2 ≤ X < N); also available at UVa 11855 - Buzzwords,141,5.0
+lc1044,to replace with LeetCode link soon...,"6.5b, Suffix Tree/Array",classic Longest Repeated Substring problem; solvable with Suffix Array,0,6.0
+suffixarrayreconstruction,suffixarrayreconstruction,"6.5b, Suffix Tree/Array",clever creative problem involving Suffix Array concept; be careful that '*' can be more than one character,125,4.1
+suffixsorting,suffixsorting,"6.5b, Suffix Tree/Array",basic Suffix Array construction problem; be careful with terminating symbol,201,5.7
+12467,Fetching from uHunt,"6.6a, String Hashing",hashing/'border' of KMP; see UVa 11475,,0.0
+12604,Fetching from uHunt,"6.6a, String Hashing",try Rabin-Karp/KMP up to 62 times,,0.0
+hashing,hashing,"6.6a, String Hashing",the problem description is very clear; good rolling hash practice; or use Suffix Array+Sparse Table,142,7.3
+lc0187,to replace with LeetCode link soon...,"6.6a, String Hashing",classic rolling hash task; maintain hash of 10-characters substring as the window slides,0,4.0
+stringmatching,stringmatching,"6.6a, String Hashing",try Rabin-Karp or KMP,719,4.5
+00156,Fetching from uHunt,"6.7a, Anagram",easier with algorithm::sort,,0.0
+00195,Fetching from uHunt,"6.7a, Anagram",use algorithm::next_permutation,,0.0
+12641,Fetching from uHunt,"6.7a, Anagram",anagram problem variation,,0.0
+12770,Fetching from uHunt,"6.7a, Anagram",count frequencies; print odd frequency characters with except the last one -- put it in the middle of a palindrome,,0.0
+lc0242,to replace with LeetCode link soon...,"6.7a, Anagram",sort s and t; compare; programming-skills; top-interview-150,0,2.0
+multigram,multigram,"6.7a, Anagram",brute force lengths that is divisor of the original length of the string; test,221,2.8
+00401,Fetching from uHunt,"6.7b, Palindrome (Checking)",simple palindrome check,,0.0
+10848,Fetching from uHunt,"6.7b, Palindrome (Checking)","related to UVa 10453; palindrome check, character frequency check, and a few others",,0.0
+11888,Fetching from uHunt,"6.7b, Palindrome (Checking)","let ss = s+s; find reverse(s) in ss, but it cannot match the first n chars or the last n chars of ss",,0.0
+kaleidoscopicpalindromes,kaleidoscopicpalindromes,"6.7b, Palindrome (Checking)","test all; when you try enlarging k, the answers are actually 'small'",233,3.2
+lc0647,to replace with LeetCode link soon...,"6.7b, Palindrome (Checking)","complete search all substrings plus DP isPalindrome(l, r) speedup",0,4.0
+palindromesubstring,palindromesubstring,"6.7b, Palindrome (Checking)",try all pairs of O(n^2) substrings with at least 2 characters; keep the ones that are palindrome (use DP) in a sorted se...,298,4.2
+peragrams,peragrams,"6.7b, Palindrome (Checking)",only one odd frequency character can be in the center of palindrome once; the rest need to have even frequency,1692,1.7
+01239,Fetching from uHunt,"6.7c, Palindrome (Generating)",LA 4144 - Jakarta08; as S <= 1000; brute-force is enough; consider odd and even length palindromes,,0.0
+10018,Fetching from uHunt,"6.7c, Palindrome (Generating)",generating palindrome with specific math simulation; very easy,,0.0
+12718,Fetching from uHunt,"6.7c, Palindrome (Generating)",LA 6659 - Dhaka13; try all substrings; count character frequencies in them and analyze,,0.0
+evilstraw,evilstraw,"6.7c, Palindrome (Generating)","greedily match leftmost char s[0]/rightmost char s[n-1] with rightmost/leftmost matching s[i], respectively",137,3.8
+lc0409,to replace with LeetCode link soon...,"6.7c, Palindrome (Generating)",count character frequencies; even cases are easy; odd cases need a small observation,0,2.0
+names,names,"6.7c, Palindrome (Generating)",add a letter or change a letter; complete search,368,4.0
+01595,Fetching from uHunt,"7.2a, Points",use set to record the positions of all sorted points; check half of the points if the symmetries are in the set too?,,0.0
+11894,Fetching from uHunt,"7.2a, Points",about rotating and translating points,,0.0
+browniepoints,browniepoints,"7.2a, Points",points and quadrants; simple; also available at UVa 10865 - Brownie Points,154,2.3
+cursethedarkness,cursethedarkness,"7.2a, Points",Euclidean dist,596,2.2
+imperfectgps,imperfectgps,"7.2a, Points",Euclidean dist; simulation,487,4.2
+jointjogjam,jointjogjam,"7.2a, Points",take the max Euclidean dist between two starting vs two ending points,448,1.6
+lc1232,to replace with LeetCode link soon...,"7.2a, Points",check if all other points are collinear with the line defined by the first two points; programming-skills,0,2.0
+10263,Fetching from uHunt,"7.2b, Lines",use distToLineSegment,,0.0
+11783,Fetching from uHunt,"7.2b, Lines",O(N^2) brute force line segment intersection tests,,0.0
+13117,Fetching from uHunt,"7.2b, Lines",dist + distToLineSegment,,0.0
+hurricanedanger,hurricanedanger,"7.2b, Lines",distance from point to line (not vector); be careful of precision error; work with integers,114,5.9
+logo2,logo2,"7.2b, Lines","n vectors that sum to 0; given n-1 vectors, find the unknown vector; also available at UVa 11519 - Logo 2",114,5.6
+platforme,platforme,"7.2b, Lines",line segment intersection tests; N ≤ 100; complete search,210,2.7
+unlockpattern,unlockpattern,"7.2b, Lines",complete search; Euclidean dist,902,1.7
+01388,Fetching from uHunt,"7.2c, Circles",LA 3708 - NortheasternEurope06; divide the circle into n sectors first and then into (n m) sectors,,0.0
+10678,Fetching from uHunt,"7.2c, Circles",area of an ellipse; generalization of the formula for area of a circle,,0.0
+amsterdamdistance,amsterdamdistance,"7.2c, Circles",arcs of circles; no need to model this as an SSSP problem/Dijkstra's,571,2.9
+biggest,biggest,"7.2c, Circles",find biggest area of sector using simulation; use array (not that larget) to avoid precision error,147,6.6
+estimatingtheareaofacircle,estimatingtheareaofacircle,"7.2c, Circles",PI estimation experiment,2084,1.6
+lc1828,to replace with LeetCode link soon...,"7.2c, Circles","for each circle query, check how many points are inside; O(QN)",0,4.0
+ornaments,ornaments,"7.2c, Circles",arch length plus two times tangent lengths,236,2.2
+00427,Fetching from uHunt,"7.2d, Triangles (Trig)","for each 2 consecutive corridors, try rotating the piano by a angle α ∈ [0.1..89.9] degrees; trigonometry",,0.0
+11326,Fetching from uHunt,"7.2d, Triangles (Trig)",trigonometry; tangent; reflection trick,,0.0
+alldifferentdirections,alldifferentdirections,"7.2d, Triangles (Trig)",use trigonometry to compute x and y displacement,446,2.6
+billiard,billiard,"7.2d, Triangles (Trig)",enlarge the billiard table; then this is solvable with atan2,856,1.6
+egypt,egypt,"7.2d, Triangles (Trig)",Pythagorean theorem/triple; also available at UVa 11854 - Egypt,862,1.9
+lc1925,to replace with LeetCode link soon...,"7.2d, Triangles (Trig)",Pythagorean triples; complete search,0,2.0
+mountainbiking,mountainbiking,"7.2d, Triangles (Trig)",up to 4 line segments; simple trigonometry; simple Physics/Kinematic equation,216,2.8
+00438,Fetching from uHunt,"7.2e, Triangles + Circles",compute triangle's circumcircle,,0.0
+10577,Fetching from uHunt,"7.2e, Triangles + Circles",get center radius of outer circle from 3 points; get all vertices; get the min-x/max-x/min-y/max-y of the polygon; also ...,,0.0
+11281,Fetching from uHunt,"7.2e, Triangles + Circles",circumcircle for a non obtuse triangle; largest side of the triangle for an obtuse triangle,,0.0
+13215,Fetching from uHunt,"7.2e, Triangles + Circles",area of rectangle minus area of squares and equilateral triangles,,0.0
+cropeasy,cropeasy,"7.2e, Triangles + Circles",complete search 3 points/tree; check if the center is integer,178,3.0
+stickysituation,stickysituation,"7.2e, Triangles + Circles",see if 3 sides form a triangle; see UVa 11579,675,2.7
+trilemma,trilemma,"7.2e, Triangles + Circles",triangle properties; sort the 3 sides first,225,3.6
+00209,Fetching from uHunt,"7.2f, Quadrilaterals","LA 5148 - WorldFinals SanAntonio91; brute force check; answer is either triangle, parallelogram, or hexagon",,0.0
+11800,Fetching from uHunt,"7.2f, Quadrilaterals",use next_permutation to try all possible 4! = 24 permutations of 4 points; check the requirements,,0.0
+cetvrta,cetvrta,"7.2f, Quadrilaterals","sort the x and y points, then you will know the 4th point",4727,1.3
+lc0836,to replace with LeetCode link soon...,"7.2f, Quadrilaterals",set rec2 as reference point; simple case analysis of where rec1 is vs rec2,0,2.0
+officespace,officespace,"7.2f, Quadrilaterals",rectangles; small numbers; 2D Boolean arrays,143,5.5
+rectanglesurrounding,rectanglesurrounding,"7.2f, Quadrilaterals",rectangles; small; 2D Boolean arrays,187,3.8
+roundedbuttons,roundedbuttons,"7.2f, Quadrilaterals",in-rectangle/in-square test; in-4-circles tests,176,2.9
+00634,Fetching from uHunt,"7.3a, Polygon, Easier",basic inPolygon routine; notice that the input polygon can be convex or concave,,0.0
+11447,Fetching from uHunt,"7.3a, Polygon, Easier",area of polygon,,0.0
+convexhull,convexhull,"7.3a, Polygon, Easier",basic convex hull problem; be careful with duplicate points and collinear points,644,4.8
+cuttingcorners,cuttingcorners,"7.3a, Polygon, Easier",simulation of angle checks,95,3.5
+lc0587,to replace with LeetCode link soon...,"7.3a, Polygon, Easier",Convex Hull; collinear allowed,0,6.0
+robotprotection,robotprotection,"7.3a, Polygon, Easier",simply find the area of convex hull,236,2.4
+00361,Fetching from uHunt,"7.3b, Polygon, Harder","check if a point is inside CH of Cop/Robber; if $pt$ is inside CH, pt satisfies the requirement",,0.0
+01111,Fetching from uHunt,"7.3b, Polygon, Harder",LA 5138 - WorldFinals Orlando11; CH; output minimax distance of each CH side to the other vertices,,0.0
+10256,Fetching from uHunt,"7.3b, Polygon, Harder","given 2 CHs, output 'No' if there is a point in 1st CH inside the 2nd one; 'Yes' otherwise",,0.0
+11265,Fetching from uHunt,"7.3b, Polygon, Harder",seems to be a complex problem; but essentially just cutPolygon; inPolygon; area,,0.0
+convex,convex,"7.3b, Polygon, Harder",must understand the concept of convex polygon; a bit of mathematical insights: GCD; sort,132,6.4
+pointinpolygon,pointinpolygon,"7.3b, Polygon, Harder",in/out and on polygon,311,5.5
+roberthood,roberthood,"7.3b, Polygon, Harder",the classic furthest pair problem; use convex hull and then rotating caliper,376,4.6
+00535,Fetching from uHunt,"7.4a, 3D Geometry",gcDistance,,0.0
+00737,Fetching from uHunt,"7.4a, 3D Geometry",cube and cube intersection,,0.0
+00815,Fetching from uHunt,"7.4a, 3D Geometry",LA 5215 - WorldFinals Eindhoven99; volume; greedy,,0.0
+11817,Fetching from uHunt,"7.4a, 3D Geometry",gcDistance; 3D Euclidean distance; also available at Kattis - tunnelingtheearth,,0.0
+airlinehub,airlinehub,"7.4a, 3D Geometry",gcDistance; also available at UVa 10316 - Airline Hub,211,6.6
+beavergnaw,beavergnaw,"7.4a, 3D Geometry",volumes of cylinders and cones; inclusion-exclusion; also available at UVa 10297 - Beavergnaw,1210,1.4
+bottles,bottles,"7.4a, 3D Geometry",LA 6027 - WorldFinals Warsaw12; BSTA+geometric formula; also available at UVa 01280 - Curvy Little Bottles,217,3.0
+flowers,flowers,"7.4a, 3D Geometry",the key part of this problem is integration,63,4.4
+movingday,movingday,"7.4a, 3D Geometry",output volume of the largest cuboid - V,261,2.1
+00711,Fetching from uHunt,"8.2a, Harder Backtracking",backtracking with pruning,,0.0
+01052,Fetching from uHunt,"8.2a, Harder Backtracking",LA 3565 - WorldFinals SanAntonio06; backtracking with some form of bitmask,,0.0
+11090,Fetching from uHunt,"8.2a, Harder Backtracking",this is the simplest form of Min Mean Cycle problem; however it has small constraints and thus this problem is still sol...,,0.0
+11451,Fetching from uHunt,"8.2a, Harder Backtracking",the input constraints are small; backtracking with bitmask without memoization; or use DP,,0.0
+11699,Fetching from uHunt,"8.2a, Harder Backtracking",try all the possible row combinations on which we put rooks and keep the best,,0.0
+committeeassignment,committeeassignment,"8.2a, Harder Backtracking",backtracking; pruning; add a member to existing committee or create a new committee; TLE with DP bitmask,68,7.4
+greatswercporto,greatswercporto,"8.2a, Harder Backtracking",use backtracking with pruning; testing up to 10! possible permutations possibly TLE,120,4.1
+holeynqueensbatman,holeynqueensbatman,"8.2a, Harder Backtracking",similar with UVa 11195,527,2.2
+01600,Fetching from uHunt,"8.2b, State-Space, BFS, E",LA 3670 - Hanoi06; s: (row; col; k_left); reset k_left to the original k as soon as the robot enters a non obstacle cell,,0.0
+10047,Fetching from uHunt,"8.2b, State-Space, BFS, E","s: (row, col, dir, color)",,0.0
+12135,Fetching from uHunt,"8.2b, State-Space, BFS, E",LA 4201 - Dhaka08; s: (bitmask); BFS; similar with UVa 11974,,0.0
+ecoins,ecoins,"8.2b, State-Space, BFS, E","s: (conventional-value, infotechnological-value); BFS; also available at UVa 10306 - e-Coins",169,4.6
+flipfive,flipfive,"8.2b, State-Space, BFS, E",s: (bitmask); only 2^9 = 512 grid configurations; BFS,621,2.7
+lc0433,to replace with LeetCode link soon...,"8.2b, State-Space, BFS, E",unweighted SSSP; BFS; s: (8-char-gene); t: as described; top-interview-150,0,4.0
+safe,safe,"8.2b, State-Space, BFS, E",s: (convert 3x3 grid into a base 4 integer); BFS,181,3.0
+11198,Fetching from uHunt,"8.2c, State-Space, BFS, H",s: (permutation); tricky to code,,0.0
+11212,Fetching from uHunt,"8.2c, State-Space, BFS, H",meet in the middle,,0.0
+11329,Fetching from uHunt,"8.2c, State-Space, BFS, H",s: (bitmask); 4 bits for die position; 16 bits for cells with fleas; 6 bits for side with a flea; use map; tedious,,0.0
+keyboard,keyboard,"8.2c, State-Space, BFS, H","LA 7155 - WorldFinals Marrakech15; s: (row, col, char_typed); also available at UVa 01714 - Keyboarding",258,5.0
+lc0126,to replace with LeetCode link soon...,"8.2c, State-Space, BFS, H",map string to indices; BFS on state-space graph; backtrack,0,6.0
+robotmaze,robotmaze,"8.2c, State-Space, BFS, H","s: (r, c, dir, steps); be careful of corner cases",87,5.7
+robotturtles,robotturtles,"8.2c, State-Space, BFS, H","s: (r, c, dir, bitmask_ice_castles); print solution; very tedious",114,4.5
+00658,Fetching from uHunt,"8.2d, State-Space, Dijkstra",s: (bitmask---whether a bug is present or not); the state-space graph is weighted,,0.0
+01048,Fetching from uHunt,"8.2d, State-Space, Dijkstra",LA 3561 - WorldFinals SanAntonio06; tedious state-space search problem; use Dijkstra's,,0.0
+01057,Fetching from uHunt,"8.2d, State-Space, Dijkstra",LA 3570 - WorldFinals SanAntonio06; Floyd-Warshall; APSP; reduce to weighted SSSP problem; Dijkstra's,,0.0
+10269,Fetching from uHunt,"8.2d, State-Space, Dijkstra","use Floyd-Warshall to pre-compute APSP using only Villages; use Dijkstra's on s: (u, super_run_left)",,0.0
+bumped,bumped,"8.2d, State-Space, Dijkstra","s: (city, has_use_free_ticket); use Dijkstra's",545,4.4
+destinationunknown,destinationunknown,"8.2d, State-Space, Dijkstra","use Dijkstra's twice; one normally; one with s: (point, has_edge_g_h_used); compare the results",101,5.6
+justpassingthrough,justpassingthrough,"8.2d, State-Space, Dijkstra","s: (r, c, n_left); Dijkstra's/SSSP on DAG",92,5.1
+01172,Fetching from uHunt,"8.3a, DP level 3",LA 3986 - SouthWesternEurope07; weighted bipartite matching with additional constraints,,0.0
+01211,Fetching from uHunt,"8.3a, DP level 3","LA 3404 - Tokyo05; precompute T[L], the time to run a path of length L; s: (i) - checkpoint i is we change tire",,0.0
+10645,Fetching from uHunt,"8.3a, DP level 3","s: (days_left, budget_left, prev_dish, prev_dish_cnt); the first 2 params are knapsack-style; the last 2 params to deter...",,0.0
+aspenavenue,aspenavenue,"8.3a, DP level 3","sort; compute tree positions; s: (l_left, r_left), t: put next tree on the left/right; also available at UVa 11555 - Asp...",223,5.8
+busticket,busticket,"8.3a, DP level 3",s: (day_i); t: either buy daily ticket or jump to end of period ticket (use binary search to avoid TLE),186,4.4
+lc0188,to replace with LeetCode link soon...,"8.3a, DP level 3","s: (i, own, k_left); t: skip or buy/sell; also consider k_left; top-interview-150",0,6.0
+01238,Fetching from uHunt,"8.3b, DP level 4",LA 4143 - Jakarta08; offset technique,,0.0
+12870,Fetching from uHunt,"8.3b, DP level 4",LA 6848 - Bangkok14; split DP for fishing and nourishing; try all combination of K fishing + 2K nourishing events,,0.0
+coke,coke,"8.3b, DP level 4","drop parameter n1; recover it from b (number of coke bought), n5, and n10; also available at UVa 10626 - Buying Coke",304,5.6
+companypicnic,companypicnic,"8.3b, DP level 4","s: (name, has_been_matched); DP weighted matching (both cardinality and weight) on Tree",200,5.0
+lc0790,to replace with LeetCode link soon...,"8.3b, DP level 4","s: (n, got_hole); t: depends whether there is a hole (due to a Triomino) or not; simple profile DP; leetcode-75",0,4.0
+rollercoasterfun,rollercoasterfun,"8.3b, DP level 4",s: (T); split DPs when b = 0 and when b != 0,101,7.7
+11125,Fetching from uHunt,"8.3c, Counting Paths, Harder",counting paths in implicit DAG; the implicit DAG is not trivial; 8 parameters,,0.0
+11375,Fetching from uHunt,"8.3c, Counting Paths, Harder",counting paths in DAG; 2 parameters; be careful that we can create a 0 with 6 sticks; need to use Java BigInteger,,0.0
+11432,Fetching from uHunt,"8.3c, Counting Paths, Harder",counting paths in DAG; the implicit DAG is not trivial; 6 parameters,,0.0
+countcircuits,countcircuits,"8.3c, Counting Paths, Harder","s: (id, cur_x, cur_y); t: skip or use this vector; use offset technique to avoid negative indices",278,5.8
+favourable,favourable,"8.3c, Counting Paths, Harder",s: (cur_page); t: jump to one of the 3 sections,304,4.5
+pachinkoprobability,pachinkoprobability,"8.3c, Counting Paths, Harder",s: (pos); DAG modeling; long long,113,5.8
+01099,Fetching from uHunt,"8.3d, DP with Bitmask",LA 4794 - WorldFinals Harbin10; s: (w; bitmask); recover parameter value h,,0.0
+01252,Fetching from uHunt,"8.3d, DP with Bitmask","LA 4643 - Tokyo09; DP, s: (mask1, mask2) where mask1/mask2 describes the features/answers, respectively",,0.0
+10911,Fetching from uHunt,"8.3d, DP with Bitmask",the intro problem of this book; DP with bitmask; weighted MCM; small complete weighted graph,,0.0
+hidingchickens,hidingchickens,"8.3d, DP with Bitmask",weighted MCM; small complete weighted graph; make fox goes back to the killing spot first after hiding one or two chicke...,89,5.7
+lc3530,to replace with LeetCode link soon...,"8.3d, DP with Bitmask","s: (mult, mask); t: go to unprocessed vertex if the topological order is not violated",0,6.0
+narrowartgallery,narrowartgallery,"8.3d, DP with Bitmask","interesting DP; s: (row, state_of_prev_row, k_left)",1417,2.8
+pebblesolitaire2,pebblesolitaire2,"8.3d, DP with Bitmask",backtracking suffices  for Kattis - pebblesolitair; but this version needs extra memoization,400,3.6
+00820,Fetching from uHunt,"8.4a, Network Flow, Standard",LA 5220 - WorldFinals Orlando00; very basic max flow problem,,0.0
+11167,Fetching from uHunt,"8.4a, Network Flow, Standard",many edges in the flow graph; compress the capacity-1 edges when possible; use Dinic's,,0.0
+11418,Fetching from uHunt,"8.4a, Network Flow, Standard",two layers of graph matching (not really bipartite matching); use max flow solution,,0.0
+12873,Fetching from uHunt,"8.4a, Network Flow, Standard","LA 6851 - Bangkok14; assignment problem; similar to UVa 00259, 11045, and 10092; use Dinic's",,0.0
+maxflow,maxflow,"8.4a, Network Flow, Standard",standard max flow problem for practice; print edges used in the max flow,531,6.3
+mazemovement,mazemovement,"8.4a, Network Flow, Standard",use gcd for all pairs of vertices to construct the flow graph; then it is just a standard max flow problem,135,4.4
+mincut,mincut,"8.4a, Network Flow, Standard",standard min cut problem for practice; print vertices reachable from source s after max flow,293,4.1
+00563,Fetching from uHunt,"8.4b, Network Flow, Variants",check whether the maximum number of independent paths on the flow graph equals to b banks,,0.0
+11380,Fetching from uHunt,"8.4b, Network Flow, Variants",max flow modeling with vertex capacities; similar to UVa 12125,,0.0
+11757,Fetching from uHunt,"8.4b, Network Flow, Variants",creative problem about min cut; build the flow graph with a bit of simple geometry involving circle; then find the min c...,,0.0
+11765,Fetching from uHunt,"8.4b, Network Flow, Variants",interesting min cut variant,,0.0
+avoidingtheapocalypse,avoidingtheapocalypse,"8.4b, Network Flow, Variants",interesting max flow modeling; blow the vertices based on time,191,4.4
+thekingofthenorth,thekingofthenorth,"8.4b, Network Flow, Variants",interesting min cut problem,193,5.0
+transportation,transportation,"8.4b, Network Flow, Variants",max flow with vertex capacities,165,5.6
+00989,Fetching from uHunt,"8.6a, NP-hard/C, small, E",classic SUDOKU puzzle; the small 9x9 instance is solvable with backtracking with pruning; use bitmask to speed up,,0.0
+11088,Fetching from uHunt,"8.6a, NP-hard/C, small, E",similar to UVa 10911 but partitioning of three persons to one team; PARTITION-INTO-TRIANGLES,,0.0
+12455,Fetching from uHunt,"8.6a, NP-hard/C, small, E",SUBSET-SUM; try all; see the harder UVa 12911 that requires meet in the middle,,0.0
+equalsumseasy,equalsumseasy,"8.6a, NP-hard/C, small, E",PARTITION; generate all possible subsets with bitmask; use set to record which sums have been computed,474,2.3
+flowfree,flowfree,"8.6a, NP-hard/C, small, E",brute force combination 3^10 or 4^8; then LONGEST-PATH problem on non DAG between two end points of the same color,109,4.4
+font,font,"8.6a, NP-hard/C, small, E",count number of possible SET-COVERs; use 2^N backtracking; but use bitmask to represent small set of covered letters,199,4.2
+socialadvertising,socialadvertising,"8.6a, NP-hard/C, small, E",MIN-DOMINATING-SET/MIN-SET-COVER; n ≤ 20; use compact Adjacency Matrix technique,59,5.1
+01098,Fetching from uHunt,"8.6b, NP-hard/C, small, H",LA 4793 - WorldFinals Harbin10; HAMILTONIAN-TOUR; backtracking+pruning; meet in the middle,,0.0
+11095,Fetching from uHunt,"8.6b, NP-hard/C, small, H",optimization version of Min Vertex Cover on general graph which is NP-Hard,,0.0
+12911,Fetching from uHunt,"8.6b, NP-hard/C, small, H",SUBSET-SUM; we cannot use DP as 1 ≤ N ≤ 40 and -10^9 ≤ T ≤ 10^9; use meet in the middle,,0.0
+beanbag,beanbag,"8.6b, NP-hard/C, small, H",SET-COVER problem; T farmers can collude to give Jack the hardest possible subset of beans to be given freely to Jack,119,4.9
+busplanning,busplanning,"8.6b, NP-hard/C, small, H",MIN-CLIQUE-COVER; DP bitmask over sets,91,5.4
+lc0015,to replace with LeetCode link soon...,"8.6b, NP-hard/C, small, H",one possible way is to hash all numbers and try all-pairs; avoid duplicates; top-100-liked; top-interview-150,0,4.0
+programmingteamselection,programmingteamselection,"8.6b, NP-hard/C, small, H",PARTITION-INTO-TRIANGLES; prune if #students % 3 != 0; generate up to m/3 teams; backtracking with memo,64,7.2
+01347,Fetching from uHunt,"8.6c, NP-hard/C, special, E",LA 3305 - SoutheasternEurope05; this is the pure version of Bitonic TSP problem; you may want to start from here,,0.0
+10859,Fetching from uHunt,"8.6c, NP-hard/C, special, E",Min-Vertex-Cover; on several trees; maximize number of edges with its two endpoints covered,,0.0
+11159,Fetching from uHunt,"8.6c, NP-hard/C, special, E",MAX-INDEPENDENT-SET; on Bipartite Graph; ans equals to its MCBM,,0.0
+bilateral,bilateral,"8.6c, NP-hard/C, special, E",MIN-VERTEX-COVER on Bipartite Graph; MCBM; Konig's theorem that can handle the 1009 case correctly,43,6.5
+europeantrip,europeantrip,"8.6c, NP-hard/C, special, E",STEINER-TREE with 3 terminal vertices and up to 1 Steiner point; we can use two ternary searches,297,3.3
+lc0198,to replace with LeetCode link soon...,"8.6c, NP-hard/C, special, E",MWIS; on line graph; simple DP; leetcode-75; top-100-liked; top-interview-150,0,4.0
+reactivity,reactivity,"8.6c, NP-hard/C, special, E",verify if a HAMILTONIAN-PATH exists in the DAG; find one topological sort of the DAG; verify if it is the only one in li...,280,4.0
+01086,Fetching from uHunt,"8.6d, NP-hard/C, special, H",LA 4452 - WorldFinals Stockholm09; can be modeled as a 2-SAT problem,,0.0
+01096,Fetching from uHunt,"8.6d, NP-hard/C, special, H",LA 4791 - WorldFinals Harbin10; Bitonic TSP variant; print the actual path,,0.0
+01184,Fetching from uHunt,"8.6d, NP-hard/C, special, H",LA 2696 - Dhaka02; MPC on DAG ~ MCBM,,0.0
+01212,Fetching from uHunt,"8.6d, NP-hard/C, special, H",LA 3483 - Hangzhou05; MWIS on Bipartite Graph,,0.0
+jailbreak,jailbreak,"8.6d, NP-hard/C, special, H",STEINER-TREE; grid; BFS from 3 vertices: 'outside' and 2 prisoners (open doors independently or meet a Steiner point fir...,130,4.8
+ridofcoins,ridofcoins,"8.6d, NP-hard/C, special, H",not the minimizing COIN-CHANGE problem; but the maximizing one; greedy pruning; complete search on much smaller instance,94,7.9
+wedding,wedding,"8.6d, NP-hard/C, special, H",can be modeled as a 2-SAT problem; also available at UVa 11294 - Wedding,36,6.7
+00714,Fetching from uHunt,"8.7a, BSTA+Other, Easier",binary search the answer and greedy,,0.0
+11262,Fetching from uHunt,"8.7a, BSTA+Other, Easier",binary search the answer and MCBM; similar with UVa 10804,,0.0
+12097,Fetching from uHunt,"8.7a, BSTA+Other, Easier",binary search the answer and geometric formula,,0.0
+arrivingontime,arrivingontime,"8.7a, BSTA+Other, Easier",BSTA: the latest starting time; use Dijkstra's to compute whether we can still arrive at meeting point on time,79,6.3
+charlesincharge,charlesincharge,"8.7a, BSTA+Other, Easier",BSTA: max edge that Charles can use; SSSP from 1 to $N$ passing through edges that do not exceed that; is it OK?,149,4.8
+programmingtutors,programmingtutors,"8.7a, BSTA+Other, Easier",+perfect MCBM,161,3.7
+01221,Fetching from uHunt,"8.7b, BSTA+Other, Harder",LA 3795 - Tehran06; +MCBM,,0.0
+10537,Fetching from uHunt,"8.7b, BSTA+Other, Harder",+Dijkstra's on State-Space graph,,0.0
+10983,Fetching from uHunt,"8.7b, BSTA+Other, Harder",binary search the answer and max flow,,0.0
+catandmice,catandmice,"8.7b, BSTA+Other, Harder",BSTA: the initial velocity of Cartesian Cat; DP TSP to verify if the cat can catch all mice in the shortest possible tim...,141,6.8
+enemyterritory,enemyterritory,"8.7b, BSTA+Other, Harder","MSSP from all enemy vertices; BSTA, run BFS from (xi, yi) to (xr, yr) avoiding vertices that are too close to any enemy",66,4.2
+gravamen,gravamen,"8.7b, BSTA+Other, Harder",BSTA + max flow,45,6.1
+wifi,wifi,"8.7b, BSTA+Other, Harder",+greedy; also available at UVa 11516 - WiFi,214,4.3
+11960,Fetching from uHunt,"8.7c, Fast DS+Other, Easier",modified Sieve; number of divisors; static Range Maximum Query; use Sparse Table data structure,,0.0
+12318,Fetching from uHunt,"8.7c, Fast DS+Other, Easier",brute force with unordered_set,,0.0
+12460,Fetching from uHunt,"8.7c, Fast DS+Other, Easier",a simple BFS problem; use set of string data structure to speed up the check if a word is inside dictionary,,0.0
+busnumbers2,busnumbers2,"8.7c, Fast DS+Other, Easier",complete search; use unordered_map,377,3.0
+quickscope,quickscope,"8.7c, Fast DS+Other, Easier",use stack of sets and hash table of stacks,1326,3.9
+selfsimilarstrings,selfsimilarstrings,"8.7c, Fast DS+Other, Easier",complete search as the string is short; frequency counting; use unordered_map; repetition,181,3.5
+undetected,undetected,"8.7c, Fast DS+Other, Easier",brute force; simple geometry; UFDS,274,3.9
+00843,Fetching from uHunt,"8.7d, Fast DS+Other, Harder",backtracking; try mapping each letter to another letter in alphabet; use Trie data structure for speed up,,0.0
+11474,Fetching from uHunt,"8.7d, Fast DS+Other, Harder",UFDS; connect all tree branches; connect two reachable trees (use geometry); connect trees that can reach doctor,,0.0
+11525,Fetching from uHunt,"8.7d, Fast DS+Other, Harder",use Fenwick Tree and binary search the answer to find the lowest index i that has RSQ(1;i) = Si,,0.0
+dictionaryattack,dictionaryattack,"8.7d, Fast DS+Other, Harder",time limit is generous; you can generate all possible password with just 3 swaps; store in sets,101,7.0
+doublets,doublets,"8.7d, Fast DS+Other, Harder",s: (string); BFS; use trie to quickly identify neighbor that is one Hamming distance away; also available at UVa 10150 -...,56,8.3
+magicallights,magicallights,"8.7d, Fast DS+Other, Harder",LA 7487 - Singapore15; flatten the tree with DFS; use Fenwick Tree for Range Odd Query; use long long,309,5.4
+sparklesseven,sparklesseven,"8.7d, Fast DS+Other, Harder",seven nested loops with fast DS,52,5.7
+10012,Fetching from uHunt,"8.7e, Geometry+CS",try all 8! permutations; Euclidean dist,,0.0
+11227,Fetching from uHunt,"8.7e, Geometry+CS",brute force; collinear test,,0.0
+collidingtraffic,collidingtraffic,"8.7e, Geometry+CS","try all pairs of boats; 0.0 if one pair collide; or, use a quadratic equation; also available at UVa 11574 - Colliding T...",48,5.0
+cranes,cranes,"8.7e, Geometry+CS",circle-circle intersection; backtracking or brute force subsets with bitmask; also available at UVa 11515 - Cranes,137,3.8
+doggopher,doggopher,"8.7e, Geometry+CS",complete search; Euclidean distance dist; also available at UVa 10310 - Dog and Gopher,119,2.5
+lc0149,to replace with LeetCode link soon...,"8.7e, Geometry+CS",identical with UVa 11227; top-interview-150,0,6.0
+11008,Fetching from uHunt,"8.7f, Geometry+Other",collinear test; DP bitmask,,0.0
+12322,Fetching from uHunt,"8.7f, Geometry+Other",first; use atan2 to convert angles to 1D intervals; then sort it and use a greedy scan to get the answer,,0.0
+findinglines,findinglines,"8.7f, Geometry+Other",randomly pick two points; there is a good chance that 20% or more points are on that line defined by those two points,209,6.3
+humancannonball,humancannonball,"8.7f, Geometry+Other",build the travel time graph with Euclidean distance computations; use Floyd-Warshall,757,2.2
+lc0976,to replace with LeetCode link soon...,"8.7f, Geometry+Other",sort nums in non-increasing order; do triangle inequality checks; programming-skills,0,2.0
+walkway,walkway,"8.7f, Geometry+Other",we can build the graph and compute area of trapezoid using simple geometry; SSSP on weighted graph; Dijkstra's,190,3.4
+00393,Fetching from uHunt,"8.7g, Graph+Other",build the small visibility graph with line segment intersection checks; run Floyd-Warshall routine to get the answer,,0.0
+01092,Fetching from uHunt,"8.7g, Graph+Other",LA 4787 - WorldFinals Harbin10; compress graph; traversal from exit with S/W direction; inclusion-exclusion,,0.0
+12159,Fetching from uHunt,"8.7g, Graph+Other",LA 4407 - KualaLumpur08; use simple CCW tests (geometry) to build the bipartite graph; MCBM,,0.0
+crowdcontrol,crowdcontrol,"8.7g, Graph+Other",maximin path problem; MST; DFS from train station to BAPC; block unused edges,100,3.8
+gears2,gears2,"8.7g, Graph+Other",graph reachability test; cycle with equal ratio is actually OK; math fraction,95,3.7
+gridmst,gridmst,"8.7g, Graph+Other",Singapore15 preliminary; rectilinear MST problem; small 2D grid; multi-sources BFS to construct short edges; Kruskal's t...,245,7.4
+01069,Fetching from uHunt,"8.7h, Mathematics+Other","LA 4119 - WorldFinals Banff08; string parsing, divisibility of polynomial, brute force, and modPow",,0.0
+11282,Fetching from uHunt,"8.7h, Mathematics+Other",derangement and binomial coefficient; Big Integer,,0.0
+emergency,emergency,"8.7h, Mathematics+Other",the problem is posed as an SSSP problem on special graph; but turns out a simple formula solves the problem; Big Integer,319,3.7
+industrialspy,industrialspy,"8.7h, Mathematics+Other",brute force recursive bitmask with prime check; also available at UVa 12218 - An Industrial Spy,556,3.3
+lc1071,to replace with LeetCode link soon...,"8.7h, Mathematics+Other",divisibility; on string; leetcode-75,0,2.0
+megainversions,megainversions,"8.7h, Mathematics+Other",a bit of combinatorics; use Fenwick Tree to compute smaller/larger numbers quickly,333,5.0
+ontrack,ontrack,"8.7h, Mathematics+Other","DFS on Tree; the input is a tree, we can try all possible junctions as the critical junction",156,4.1
+00976,Fetching from uHunt,"8.7i, Graph+DP",flood fill to separate North and South banks; compute the cost of installing a bridge at each column; DP,,0.0
+10937,Fetching from uHunt,"8.7i, Graph+DP",BFS -> APSP information for TSP; then DP or backtracking,,0.0
+11324,Fetching from uHunt,"8.7i, Graph+DP","LONGEST-PATH on DAG; first, transform the graph into DAG of its SCCs; toposort",,0.0
+11331,Fetching from uHunt,"8.7i, Graph+DP",bipartite graph checks; compute size of left/right sets per bipartite component; DP SUBSET-SUM,,0.0
+treasurediving,treasurediving,"8.7i, Graph+DP",SSSP from source and all idol positions; TSP-like but there is a knapsack style parameter 'air_left'; use backtracking,87,7.3
+walkforest,walkforest,"8.7i, Graph+DP",counting paths in DAG; build the DAG; Dijkstra's from 'home'; also available at UVa 10917 - A Walk Through the Forest,245,4.4
+10533,Fetching from uHunt,"8.7j, Other+DP 1D RSQ/RMQ",sieve; check if a prime is a digit prime; DP 1D range sum,,0.0
+10891,Fetching from uHunt,"8.7j, Other+DP 1D RSQ/RMQ","Double DP; 1D RSQ plus another DP to evaluate decision tree; s: (i, j); try all splitting points; minimax",,0.0
+11032,Fetching from uHunt,"8.7j, Other+DP 1D RSQ/RMQ",observation: sod(i) can be only from 1 to 63; use 1D Range Sum Query for fun(a; b),,0.0
+11408,Fetching from uHunt,"8.7j, Other+DP 1D RSQ/RMQ",need 1D Range Sum Query,,0.0
+centsavings,centsavings,"8.7j, Other+DP 1D RSQ/RMQ","1D RSQ DP for sum of prices from [i..j]; round up/down; s: (idx, d_left); t: try all positioning of the next divider",531,4.6
+dvoniz,dvoniz,"8.7j, Other+DP 1D RSQ/RMQ",involving 1D RSQ DP; binary search the answer,47,7.1
+program,program,"8.7j, Other+DP 1D RSQ/RMQ",somewhat like Sieve of Eratosthenes initially and 1D RSQ DP speedup at the end,89,7.7
+00295,Fetching from uHunt,"8.7k, Three++ Components, E","BSTA x: if the person has diameter x, can he go from left to right? graph connectivity; similar with UVa 10876",,0.0
+01250,Fetching from uHunt,"8.7k, Three++ Components, E",LA 4607 - SoutheastUSA09; geometry; SSSP on DAG -> DP; DP 1D range sum,,0.0
+beeproblem,beeproblem,"8.7k, Three++ Components, E",transform bee grid into 2D grid; compute size of each CCs; sort; greedy,156,4.9
+gettingthrough,gettingthrough,"8.7k, Three++ Components, E",BSTA+graph connectivity; Union-Find; similar to UVa 00295,51,7.2
+lc2300,to replace with LeetCode link soon...,"8.7k, Three++ Components, E",sort potions; try all spells and BSTA each time; leetcode-75,0,4.0
+researchproductivityindex,researchproductivityindex,"8.7k, Three++ Components, E",sort papers by decreasing probability; brute force k and greedily submit k best papers; DP probability; keep max,358,3.2
+00811,Fetching from uHunt,"8.7l, Three++ Components, H",LA 5211 - WorldFinals Eindhoven99; get CH and perimeter of polygon; generate all subsets iteratively with bitmask,,0.0
+01040,Fetching from uHunt,"8.7l, Three++ Components, H",LA 3271 - WorldFinals Shanghai05; try all subsets of 2^20 cities; MST; complex output formatting,,0.0
+01079,Fetching from uHunt,"8.7l, Three++ Components, H",LA 4445 - WorldFinals Stockholm09; iterative complete search (permutation); BSTA + greedy,,0.0
+carpool,carpool,"8.7l, Three++ Components, H",Floyd-Warshall/APSP; iterative brute force subset and permutation; DP; also available at UVa 11288 - Carpool,40,6.4
+clockpictures,clockpictures,"8.7l, Three++ Components, H",sort angles; compute 'string' of differences of adjacent angles (use modulo); min lexicographic rotation; use SA or KMP,463,5.5
+guessthenumbers,guessthenumbers,"8.7l, Three++ Components, H",brute force permute up to 5!; recursive string parsing (simple BNF); also available at UVa 12392 - Guess the Numbers,64,8.5
+00588,Fetching from uHunt,"9.artg, Art Gallery",cutPolygon,,0.0
+01304,Fetching from uHunt,"9.artg, Art Gallery",LA 2512 - SouthEasternEurope02; cutPolygon and area of polygon,,0.0
+01571,Fetching from uHunt,"9.artg, Art Gallery",LA 3617 - Yokohama06; cutPolygon,,0.0
+10078,Fetching from uHunt,"9.artg, Art Gallery",isConvex,,0.0
+00652,Fetching from uHunt,"9.asta, A* or IDA*",classic sliding block 8-puzzle; IDA*,,0.0
+00656,Fetching from uHunt,"9.asta, A* or IDA*",we can use IDDFS with pruning,,0.0
+10181,Fetching from uHunt,"9.asta, A* or IDA*",similar with UVa 652 but larger (now 15 instead of 8); we can use IDA*,,0.0
+11163,Fetching from uHunt,"9.asta, A* or IDA*",another puzzle game solvable with IDA*,,0.0
+joggingtrails,joggingtrails,"9.chi1, Chinese Postman",basic Chinese Postman Problem; also available at UVa 10296 - Jogging Trails,75,5.0
+00756,Fetching from uHunt,"9.chi2, Chinese Remainder",CRT or brute force,,0.0
+chineseremainder,chineseremainder,"9.chi2, Chinese Remainder",basic CRT; 2 linear congruences; Big Integer,343,5.4
+generalchineseremainder,generalchineseremainder,"9.chi2, Chinese Remainder",general CRT; 2 linear congruences,362,3.7
+granica,granica,"9.chi2, Chinese Remainder",CRT; GCD of all N differences of 2 numbers,95,6.2
+heliocentric,heliocentric,"9.chi2, Chinese Remainder",CRT or brute force,1030,1.8
+remainderreminder,remainderreminder,"9.chi2, Chinese Remainder",a bit of brute force + sorting; generalized CRT,124,5.2
+10245,Fetching from uHunt,"9.clos, Closest Pair",classic,,0.0
+11378,Fetching from uHunt,"9.clos, Closest Pair",also a closest pair problem,,0.0
+closestpair1,closestpair1,"9.clos, Closest Pair",classic closest pair problem - the easier one,269,5.7
+10165,Fetching from uHunt,"9.comb, Comb Game Theory",Nim game; application of Sprague-Grundy theorem,,0.0
+11311,Fetching from uHunt,"9.comb, Comb Game Theory",there are 4 heaps; Nim sum,,0.0
+01266,Fetching from uHunt,"9.cons, Construction",LA 3478 - LatinAmerica05; follow the given construction strategy,,0.0
+10741,Fetching from uHunt,"9.cons, Construction",similar idea as 2D Magic Square; but now in 3D; just follow the given construction strategy,,0.0
+base2palindrome,base2palindrome,"9.cons, Construction",construct all possible base 2 palindromes; put into a set to remove duplicates and maintain order; output the M-th one,385,4.4
+espressobucks,espressobucks,"9.cons, Construction",easy brute force construction; small nxm; not about Min-Vertex-Cover,159,2.4
+exofficio,exofficio,"9.cons, Construction",we can use BFS spanning tree from center of the grid; be careful of corner cases,41,7.5
+plowking,plowking,"9.cons, Construction",greedy construction; reverse MST problem,92,3.2
+poplava,poplava,"9.cons, Construction",actually there is a rather simple construction algorithm to achieve the required requirement,105,3.4
+10506,Fetching from uHunt,"9.debr, De Bruijn Sequence",any valid solution is AC; generate all possible next digit (up to base 10/digit [0..9]); check if it is still a valid Ou...,,0.0
+11439,Fetching from uHunt,"9.edmo, Edmonds' Matching",BSTA (the minimum weight); use it to reconstruct the graph; perfect matching on medium-sized general graph,,0.0
+10934,Fetching from uHunt,"9.eggd, Egg Dropping Puzzle",Egg dropping puzzle; interesting DP; try all possible answers,,0.0
+batteries,batteries,"9.eggd, Egg Dropping Puzzle",Egg dropping puzzle with just 2 batteries; special case,146,3.6
+powereggs,powereggs,"9.eggd, Egg Dropping Puzzle",Egg dropping puzzle; similar to UVa 10934,92,5.2
+golfbot,golfbot,"9.fast, Fast Fourier Trans",count frequencies dist of each reachable distance in one shot; use FFT to multiply dist*dist; count distances reachable ...,133,6.1
+polymul2,polymul2,"9.fast, Fast Fourier Trans",basic polynomial multiplication problem that needs an O(n log n) algorithm; also see Kattis - polymul1,227,6.8
+01645,Fetching from uHunt,"9.form, Formulas/Theorems",LA 6368 - Chengdu12; number of rooted trees with n vertices in which vertices at the same level have the same degree,,0.0
+11719,Fetching from uHunt,"9.form, Formulas/Theorems",count the number of spanning tree in a complete bipartite graph; use Java BigInteger,,0.0
+12786,Fetching from uHunt,"9.form, Formulas/Theorems",similar to UVa 10720 and 11414; Erdos-Gallai Theorem,,0.0
+13108,Fetching from uHunt,"9.form, Formulas/Theorems",Moser's circle; the formula is hard to derive; g(n) = nC4 + nC2 + 1,,0.0
+houseofcards,houseofcards,"9.form, Formulas/Theorems",number of cards for certain height h is h * (3*h + 1) / 2; use Python to handle Big Integer,432,3.4
+janitortroubles,janitortroubles,"9.form, Formulas/Theorems",Brahmagupta's formula,745,1.5
+sjecista,sjecista,"9.form, Formulas/Theorems",number of intersections of diagonals in a convex polygon,581,1.9
+00684,Fetching from uHunt,"9.gaus, Gauss Elimination",modified Gaussian elimination to find (integral) determinant of a square matrix,,0.0
+11319,Fetching from uHunt,"9.gaus, Gauss Elimination",solve the system of the first 7 linear equations; then use all 1500 equations for 'smart sequence' checks,,0.0
+seti,seti,"9.gaus, Gauss Elimination","n equations and n unknowns; but there are division under modulo, so use Gaussian elimination with modular multiplicative...",52,3.1
+pizza,pizza,"9.grad, Gradient Descent",gradient descent,252,4.5
+amazing,amazing,"9.inte, Interactive Problem",run DFS and react based on the output of the program,215,5.2
+askmarilyn,askmarilyn,"9.inte, Interactive Problem",the famous Monty hall problem in interactive format,135,4.2
+blackout,blackout,"9.inte, Interactive Problem",interactive game theory; block one row; mirror jury's move,129,3.1
+crusaders,crusaders,"9.inte, Interactive Problem",another nice interactive problem about binary search,34,7.4
+guess,guess,"9.inte, Interactive Problem",interactive problem; binary search,1682,2.7
+01045,Fetching from uHunt,"9.kuhn, Kuhn-Munkres",LA 3276 - WorldFinals Shanghai05; try all configurations; weighted matching; pick the best; Kuhn-Munkres,,0.0
+10746,Fetching from uHunt,"9.kuhn, Kuhn-Munkres",min weighted bipartite matching,,0.0
+10888,Fetching from uHunt,"9.kuhn, Kuhn-Munkres",BFS/SSSP; min weighted bipartite matching,,0.0
+11553,Fetching from uHunt,"9.kuhn, Kuhn-Munkres",brute force; DP bitmask; or Hungarian,,0.0
+aqueducts,aqueducts,"9.kuhn, Kuhn-Munkres",build bipartite graph; weighted MCBM; Hungarian,51,6.0
+engaging,engaging,"9.kuhn, Kuhn-Munkres",LA 8437 - HoChiMinhCity17; Hungarian; print solution,135,5.8
+cheeseifyouplease,cheeseifyouplease,"9.line, Linear Programming",simple Linear Programming problem; use Simplex,51,3.3
+maximumrent,maximumrent,"9.line, Linear Programming",basic Linear Programming problem with integer output; we can use simplex algorithm or another simpler solution,241,3.1
+10938,Fetching from uHunt,"9.lowe, Lowest Common Anc",basic LCA problem,,0.0
+12238,Fetching from uHunt,"9.lowe, Lowest Common Anc",similar to UVa 10938,,0.0
+chewbacca,chewbacca,"9.lowe, Lowest Common Anc",complete short k-ary tree; binary heap indexing; LCA,186,3.6
+00348,Fetching from uHunt,"9.matr, Matrix Chain Mult","DP; s(i, j); output the optimal solution; the optimal sequence is not unique",,0.0
+10594,Fetching from uHunt,"9.minc, Min Cost (Max) Flow",basic min cost max flow problem,,0.0
+10806,Fetching from uHunt,"9.minc, Min Cost (Max) Flow",send 2 edge-disjoint flows with min cost,,0.0
+11301,Fetching from uHunt,"9.minc, Min Cost (Max) Flow",modeling; vertex capacity; MCMF,,0.0
+12821,Fetching from uHunt,"9.minc, Min Cost (Max) Flow",similar to UVa 10806,,0.0
+catering,catering,"9.minc, Min Cost (Max) Flow",LA 7152 - WorldFinals Marrakech15; MCMF modeling,246,3.9
+mincostmaxflow,mincostmaxflow,"9.minc, Min Cost (Max) Flow",very basic MCMF problem; good starting point,232,5.3
+ragingriver,ragingriver,"9.minc, Min Cost (Max) Flow",MCMF; unit capacity and unit cost,96,7.1
+00120,Fetching from uHunt,"9.panc, Pancake Sorting",greedy pancake sorting,,0.0
+lc0969,to replace with LeetCode link soon...,"9.panc, Pancake Sorting","the easier form of Pancake Sorting; flip largest to top (index 1), then to target; at most 2*n flips",0,4.0
+11476,Fetching from uHunt,"9.poll, Pollard's rho",basic integer factorization problem that requires Pollard's rho algorithm,,0.0
+lc0169,to replace with LeetCode link soon...,"9.rand, Randomized Algo","try a random number and see if it is the majority element, repeat; top-100-liked; top-interview-150",0,2.0
+lc0398,to replace with LeetCode link soon...,"9.rand, Randomized Algo",separate chaining; record indices of each value; randomly return a valid index,0,4.0
+lc0519,to replace with LeetCode link soon...,"9.rand, Randomized Algo","randomly pick (r, c) inside the grid; repeat if it has been taken",0,4.0
+cardboardcontainer,cardboardcontainer,"9.sqrt, Square Root Decomp","two out of L, W, and H  must be ≤ sqrt(V); brute force L and W in sqrt(V)*sqrt(V) and test if V is divisible by (L*W)",141,2.5
+modulodatastructures,modulodatastructures,"9.sqrt, Square Root Decomp",basic problem that can be solved with Square Root Decomposition technique,277,4.6
+00254,Fetching from uHunt,"9.towe, Tower of Hanoi",define a recursive formula,,0.0
+10017,Fetching from uHunt,"9.towe, Tower of Hanoi",classical problem,,0.0
+10254,Fetching from uHunt,"9.towe, Tower of Hanoi",find pattern; use Java BigInteger,,0.0
