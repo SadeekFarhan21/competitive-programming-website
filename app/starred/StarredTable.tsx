@@ -23,7 +23,7 @@ const chapterNames: Record<string, string> = {
   "5": "Mathematics",
   "6": "String Processing",
   "7": "Geometry",
-  "8": "More Advanced Topics",
+  "8": "Advanced Topics",
   "9": "Rare Topics",
 };
 
@@ -49,27 +49,52 @@ function chapterOf(section: string) {
   return section.split(".")[0];
 }
 
-function pointsStyle(points: number) {
-  if (points < 2) return "bg-emerald-500/10 text-emerald-300 ring-emerald-400/25";
-  if (points < 4) return "bg-sky-500/10 text-sky-300 ring-sky-400/25";
-  if (points < 6) return "bg-amber-500/10 text-amber-300 ring-amber-400/25";
-  return "bg-rose-500/10 text-rose-300 ring-rose-400/25";
+// Display preferences are personal, so they live in localStorage rather than the URL.
+function usePreference(key: string, fallback: boolean) {
+  const [value, setValue] = useState(fallback);
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem(key);
+      if (stored !== null) setValue(stored === "1");
+    } catch {}
+  }, [key]);
+  function update(next: boolean) {
+    setValue(next);
+    try {
+      localStorage.setItem(key, next ? "1" : "0");
+    } catch {}
+  }
+  return [value, update] as const;
+}
+
+function Switch({ checked, onChange, label }: { checked: boolean; onChange: (next: boolean) => void; label: string }) {
+  return (
+    <button
+      role="switch"
+      aria-checked={checked}
+      onClick={() => onChange(!checked)}
+      className="flex items-center gap-2 text-sm text-neutral-400 transition hover:text-neutral-200"
+    >
+      <span className={`relative h-5 w-9 shrink-0 rounded-full transition ${checked ? "bg-white/80" : "bg-white/10"}`}>
+        <span
+          className={`absolute top-0.5 h-4 w-4 rounded-full shadow transition-all ${
+            checked ? "left-[18px] bg-neutral-900" : "left-0.5 bg-white"
+          }`}
+        />
+      </span>
+      {label}
+    </button>
+  );
 }
 
 function SolvedMark({ solved }: { solved: boolean }) {
-  return solved ? (
-    <span
-      title="Solved"
-      className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-300 ring-1 ring-inset ring-emerald-400/30"
-    >
-      <svg viewBox="0 0 20 20" fill="none" className="h-3 w-3" aria-hidden>
+  if (!solved) return null;
+  return (
+    <span title="Solved" className="inline-flex text-emerald-400">
+      <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden>
         <path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
       <span className="sr-only">Solved</span>
-    </span>
-  ) : (
-    <span title="Unsolved" className="inline-block h-5 w-5 rounded-full ring-1 ring-inset ring-white/10">
-      <span className="sr-only">Unsolved</span>
     </span>
   );
 }
@@ -79,6 +104,23 @@ function SearchIcon() {
     <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden>
       <circle cx="9" cy="9" r="5.5" stroke="currentColor" strokeWidth="1.6" />
       <path d="m13.5 13.5 3 3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function FilterIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden>
+      <path d="M3 5h14M6 10h8M8.5 15h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+    </svg>
+  );
+}
+
+function EyeIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="none" className="h-3.5 w-3.5" aria-hidden>
+      <path d="M1.5 10S4.5 4 10 4s8.5 6 8.5 6-3 6-8.5 6-8.5-6-8.5-6Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
+      <circle cx="10" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.5" />
     </svg>
   );
 }
@@ -104,28 +146,32 @@ function ProblemLink({ problem }: { problem: StarredProblem }) {
       href={problem.url}
       target="_blank"
       rel="noreferrer"
-      className="group inline-flex max-w-full items-center gap-1.5 font-medium text-neutral-100 decoration-white/30 underline-offset-4 hover:underline"
+      className="group inline-flex min-w-0 max-w-full items-center gap-1.5 font-medium text-neutral-100 decoration-white/30 underline-offset-4 hover:underline"
     >
       {content}
     </a>
   ) : (
-    <span className="inline-flex max-w-full items-center font-medium text-neutral-100">{content}</span>
+    <span className="inline-flex min-w-0 max-w-full items-center font-medium text-neutral-100">{content}</span>
   );
 }
 
-// Blurred hints stay hidden until clicked, so a spoiler is only revealed on purpose.
-function Hint({ hint, blurred, className = "" }: { hint: string; blurred: boolean; className?: string }) {
+// Hidden hints sit behind an eye button, so a spoiler is only revealed on purpose.
+function Hint({ hint, hidden, className = "" }: { hint: string; hidden: boolean; className?: string }) {
   const [revealed, setRevealed] = useState(false);
-  if (!blurred || revealed) return <p className={className}>{hint}</p>;
+  if (!hidden || revealed) return <p className={className}>{hint}</p>;
   return (
     <button
       onClick={() => setRevealed(true)}
-      title="Click to reveal hint"
-      className={`block text-left blur-sm transition select-none hover:blur-[3px] ${className}`}
+      className={`inline-flex items-center gap-1.5 text-xs text-neutral-500 transition hover:text-neutral-200 ${className}`}
     >
-      {hint}
+      <EyeIcon />
+      Show hint
     </button>
   );
+}
+
+function CP5Badge() {
+  return <span className="shrink-0 text-[10px] font-medium uppercase tracking-wide text-neutral-500">CP5</span>;
 }
 
 export default function StarredTable({ problems }: { problems: StarredProblem[] }) {
@@ -135,13 +181,16 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
   const [section, setSection] = useState("");
   const [cp5Only, setCp5Only] = useState(false);
   const [hideSolved, setHideSolved] = useState(false);
-  const [blurHints, setBlurHints] = useState(true);
   const [minPoints, setMinPoints] = useState("");
   const [maxPoints, setMaxPoints] = useState("");
   const [sortKey, setSortKey] = useState<SortKey>("order");
   const [sortAsc, setSortAsc] = useState(true);
   const [visible, setVisible] = useState(PAGE_SIZE);
+  const [filtersOpen, setFiltersOpen] = useState(false);
   const [ready, setReady] = useState(false);
+  const [hideHints, setHideHints] = usePreference("starred:blurHints", true);
+  const [hideSections, setHideSections] = usePreference("starred:hideSections", false);
+  const [showDacu, setShowDacu] = usePreference("starred:showDacu", false);
   const searchRef = useRef<HTMLInputElement>(null);
 
   // Restore filters from the URL so a filtered view can be bookmarked or shared.
@@ -153,9 +202,6 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
     setSection(params.get("section") ?? "");
     setCp5Only(params.get("cp5") === "1");
     setHideSolved(params.get("unsolved") === "1");
-    try {
-      setBlurHints(localStorage.getItem("starred:blurHints") !== "0");
-    } catch {}
     setMinPoints(params.get("min") ?? "");
     setMaxPoints(params.get("max") ?? "");
     const sort = params.get("sort");
@@ -163,6 +209,8 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
       setSortKey(sort.replace(/^-/, "") as SortKey);
       setSortAsc(!sort.startsWith("-"));
     }
+    // A shared link with advanced filters should show them, not hide them behind the button.
+    if (["chapter", "section", "cp5", "unsolved", "min", "max"].some((key) => params.has(key))) setFiltersOpen(true);
     setReady(true);
   }, []);
 
@@ -273,24 +321,13 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
   }, [problems, query, activeJudges, chapter, section, cp5Only, hideSolved, minPoints, maxPoints, sortKey, sortAsc]);
 
   const shown = filtered.slice(0, visible);
-  const isFiltered =
-    query !== "" ||
-    activeJudges.length !== judges.length ||
-    chapter !== "" ||
-    section !== "" ||
-    cp5Only ||
-    hideSolved ||
-    minPoints !== "" ||
-    maxPoints !== "";
-
-  // Hint blurring is a personal preference, so it lives in localStorage rather than the URL.
-  function toggleBlurHints() {
-    const next = !blurHints;
-    setBlurHints(next);
-    try {
-      localStorage.setItem("starred:blurHints", next ? "1" : "0");
-    } catch {}
-  }
+  const advancedCount =
+    (chapter ? 1 : 0) +
+    (section ? 1 : 0) +
+    (cp5Only ? 1 : 0) +
+    (hideSolved ? 1 : 0) +
+    (minPoints !== "" || maxPoints !== "" ? 1 : 0);
+  const isFiltered = query !== "" || activeJudges.length !== judges.length || advancedCount > 0;
 
   function toggleJudge(judge: string) {
     setActiveJudges((current) =>
@@ -328,7 +365,7 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
   function header(label: string, key: SortKey, className = "") {
     const active = sortKey === key;
     return (
-      <th className={`px-4 py-3 font-medium ${className}`}>
+      <th className={`px-4 py-2.5 font-medium ${className}`}>
         <button
           onClick={() => toggleSort(key)}
           className={`inline-flex items-center gap-1 uppercase tracking-wide transition hover:text-neutral-200 ${active ? "text-neutral-200" : ""}`}
@@ -342,10 +379,10 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
 
   return (
     <div>
-      {/* Filters */}
-      <div className="z-20 -mx-4 md:sticky md:top-0 mb-6 border-b border-white/5 bg-[#0a0a0b]/85 px-4 py-4 backdrop-blur-xl sm:-mx-6 sm:px-6">
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
+      {/* Search, judges, and the filters toggle */}
+      <div className="z-20 -mx-4 mb-4 border-b border-white/5 bg-[#0a0a0b]/85 px-4 py-3 backdrop-blur-xl sm:-mx-6 sm:px-6 md:sticky md:top-0">
+        <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
+          <div className="flex flex-1 gap-2">
             <div className="relative flex-1">
               <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center text-neutral-500">
                 <SearchIcon />
@@ -355,90 +392,105 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
                 type="search"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                placeholder="Search problems, topics, or hints"
+                placeholder="Search problems..."
                 className={`${fieldClass} h-10 w-full pl-9 pr-10`}
               />
               <kbd className="pointer-events-none absolute inset-y-0 right-3 my-auto hidden h-5 items-center rounded border border-white/10 px-1.5 font-mono text-[11px] text-neutral-500 sm:flex">
                 /
               </kbd>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {judges.map((judge) => {
-                const on = activeJudges.includes(judge);
-                return (
-                  <button
-                    key={judge}
-                    onClick={() => toggleJudge(judge)}
-                    aria-pressed={on}
-                    className={`inline-flex h-10 items-center gap-2 rounded-lg px-3 text-sm font-medium ring-1 ring-inset transition ${
-                      on
-                        ? judgeStyles[judge].chip
-                        : "text-neutral-500 ring-white/10 hover:text-neutral-300 hover:ring-white/20"
-                    }`}
-                  >
-                    <span className={`h-1.5 w-1.5 rounded-full ${on ? judgeStyles[judge].dot : "bg-neutral-600"}`} />
-                    {judge}
-                    <span className="tabular-nums text-xs opacity-60">{judgeCounts[judge] ?? 0}</span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          <div className="-mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1 [scrollbar-width:none]">
             <button
-              onClick={() => {
-                setChapter("");
-                setSection("");
-              }}
-              className={`h-8 shrink-0 rounded-full px-3 text-xs font-medium transition ${
-                chapter === "" ? "bg-white text-neutral-900" : "text-neutral-400 ring-1 ring-inset ring-white/10 hover:text-neutral-200"
+              onClick={() => setFiltersOpen(!filtersOpen)}
+              aria-expanded={filtersOpen}
+              className={`inline-flex h-10 shrink-0 items-center gap-2 rounded-lg px-3 text-sm font-medium ring-1 ring-inset transition ${
+                filtersOpen
+                  ? "bg-white/10 text-white ring-white/20"
+                  : "text-neutral-300 ring-white/10 hover:bg-white/5 hover:text-white"
               }`}
             >
-              All chapters
+              <FilterIcon />
+              Filters
+              {advancedCount > 0 && (
+                <span className="rounded-full bg-white px-1.5 text-[11px] font-semibold tabular-nums text-neutral-900">
+                  {advancedCount}
+                </span>
+              )}
             </button>
-            {chapters.map((c) => (
-              <button
-                key={c}
-                onClick={() => {
-                  setChapter(chapter === c ? "" : c);
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {judges.map((judge) => {
+              const on = activeJudges.includes(judge);
+              return (
+                <button
+                  key={judge}
+                  onClick={() => toggleJudge(judge)}
+                  aria-pressed={on}
+                  className={`inline-flex h-10 items-center gap-2 rounded-lg px-3 text-sm font-medium ring-1 ring-inset transition ${
+                    on ? judgeStyles[judge].chip : "text-neutral-500 ring-white/10 hover:text-neutral-300 hover:ring-white/20"
+                  }`}
+                >
+                  <span className={`h-1.5 w-1.5 rounded-full ${on ? judgeStyles[judge].dot : "bg-neutral-600"}`} />
+                  {judge}
+                  <span className="tabular-nums text-xs opacity-60">{judgeCounts[judge] ?? 0}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {filtersOpen && (
+          <div className="mt-3 grid gap-4 rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:grid-cols-2 lg:grid-cols-3">
+            <label className="flex flex-col gap-1.5 text-xs font-medium text-neutral-500">
+              Chapter
+              <select
+                value={chapter}
+                onChange={(e) => {
+                  setChapter(e.target.value);
                   setSection("");
                 }}
-                title={chapterNames[c]}
-                className={`h-8 shrink-0 rounded-full px-3 text-xs font-medium transition ${
-                  chapter === c ? "bg-white text-neutral-900" : "text-neutral-400 ring-1 ring-inset ring-white/10 hover:text-neutral-200"
-                }`}
+                className={`${fieldClass} w-full min-w-0`}
               >
-                <span className="tabular-nums">{c}</span>
-                <span className="ml-1.5 hidden sm:inline">{chapterNames[c] ?? ""}</span>
-              </button>
-            ))}
-          </div>
+                <option value="">All chapters</option>
+                {chapters.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                    {chapterNames[c] ? ` · ${chapterNames[c]}` : ""}
+                  </option>
+                ))}
+              </select>
+            </label>
 
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
-            <select
-              value={section}
-              onChange={(e) => {
-                setSection(e.target.value);
-                if (e.target.value) setChapter(chapterOf(e.target.value));
-              }}
-              className={`${fieldClass} w-full min-w-0 sm:w-72`}
-            >
-              <option value="">All sections</option>
-              {sectionGroups.map(([c, items]) => (
-                <optgroup key={c} label={`Chapter ${c}${chapterNames[c] ? ` · ${chapterNames[c]}` : ""}`}>
-                  {items.map(([s, topic]) => (
-                    <option key={s} value={s}>
-                      {s} · {topic}
-                    </option>
-                  ))}
-                </optgroup>
-              ))}
-            </select>
+            <label className="flex flex-col gap-1.5 text-xs font-medium text-neutral-500">
+              Section
+              <select
+                value={section}
+                onChange={(e) => {
+                  setSection(e.target.value);
+                  if (e.target.value) setChapter(chapterOf(e.target.value));
+                }}
+                className={`${fieldClass} w-full min-w-0`}
+              >
+                <option value="">All sections</option>
+                {sectionGroups.map(([c, items]) => (
+                  <optgroup key={c} label={`Chapter ${c}${chapterNames[c] ? ` · ${chapterNames[c]}` : ""}`}>
+                    {items.map(([s, topic]) => (
+                      <option key={s} value={s}>
+                        {s} · {topic}
+                      </option>
+                    ))}
+                  </optgroup>
+                ))}
+              </select>
+            </label>
 
-            <div className="flex w-full items-center gap-3 text-sm text-neutral-400 sm:w-auto">
-              <span>Points</span>
-              <div className="relative h-9 w-full sm:w-56">
+            <div className="flex flex-col gap-1.5 text-xs font-medium text-neutral-500">
+              <span className="flex justify-between">
+                Points
+                <span className="tabular-nums text-neutral-300">
+                  {low.toFixed(1)}–{high.toFixed(1)}
+                </span>
+              </span>
+              <div className="relative h-9 w-full">
                 <div className="absolute inset-x-0 top-1/2 h-1 -translate-y-1/2 rounded-full bg-white/10" />
                 <div
                   className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-white/70"
@@ -468,81 +520,29 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
                   className={`${sliderClass} z-10`}
                 />
               </div>
-              <span className="w-16 shrink-0 text-right font-medium tabular-nums text-neutral-200">
-                {low.toFixed(1)}–{high.toFixed(1)}
-              </span>
             </div>
 
-            <button
-              role="switch"
-              aria-checked={cp5Only}
-              onClick={() => setCp5Only(!cp5Only)}
-              className="flex items-center gap-2 text-sm text-neutral-400 transition hover:text-neutral-200"
-            >
-              <span
-                className={`relative h-5 w-9 rounded-full transition ${cp5Only ? "bg-fuchsia-500/80" : "bg-white/10"}`}
-              >
-                <span
-                  className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-all ${
-                    cp5Only ? "left-[18px]" : "left-0.5"
-                  }`}
-                />
-              </span>
-              New in CP5
-            </button>
-
-            <button
-              role="switch"
-              aria-checked={hideSolved}
-              onClick={() => setHideSolved(!hideSolved)}
-              className="flex items-center gap-2 text-sm text-neutral-400 transition hover:text-neutral-200"
-            >
-              <span
-                className={`relative h-5 w-9 rounded-full transition ${hideSolved ? "bg-emerald-500/80" : "bg-white/10"}`}
-              >
-                <span
-                  className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-all ${
-                    hideSolved ? "left-[18px]" : "left-0.5"
-                  }`}
-                />
-              </span>
-              Hide solved
-            </button>
-
-            <button
-              role="switch"
-              aria-checked={blurHints}
-              onClick={toggleBlurHints}
-              className="flex items-center gap-2 text-sm text-neutral-400 transition hover:text-neutral-200"
-            >
-              <span
-                className={`relative h-5 w-9 rounded-full transition ${blurHints ? "bg-sky-500/80" : "bg-white/10"}`}
-              >
-                <span
-                  className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-all ${
-                    blurHints ? "left-[18px]" : "left-0.5"
-                  }`}
-                />
-              </span>
-              Blur hints
-            </button>
-
-            <div className="flex items-center gap-3 text-sm sm:ml-auto">
-              <span className="tabular-nums text-neutral-400">
-                <span className="font-medium text-neutral-100">{filtered.length.toLocaleString()}</span> of{" "}
-                {problems.length.toLocaleString()}
-              </span>
-              {isFiltered && (
-                <button
-                  onClick={reset}
-                  className="rounded-md px-2 py-1 text-neutral-400 ring-1 ring-inset ring-white/10 transition hover:text-white hover:ring-white/25"
-                >
-                  Clear filters
-                </button>
-              )}
+            <div className="flex flex-wrap gap-x-6 gap-y-3 border-t border-white/5 pt-4 sm:col-span-2 lg:col-span-3">
+              <Switch checked={cp5Only} onChange={setCp5Only} label="New in CP5" />
+              <Switch checked={hideSolved} onChange={setHideSolved} label="Hide solved" />
+              <Switch checked={hideHints} onChange={setHideHints} label="Hide hints" />
+              <Switch checked={hideSections} onChange={setHideSections} label="Hide sections" />
+              <Switch checked={showDacu} onChange={setShowDacu} label="Show DACU" />
             </div>
           </div>
-        </div>
+        )}
+      </div>
+
+      <div className="mb-3 flex min-h-8 items-center justify-between gap-3 text-sm">
+        <span className="tabular-nums text-neutral-400">
+          <span className="font-medium text-neutral-100">{filtered.length.toLocaleString()}</span>{" "}
+          {filtered.length === 1 ? "problem" : "problems"} found
+        </span>
+        {isFiltered && (
+          <button onClick={reset} className="text-neutral-400 transition hover:text-white">
+            Clear filters
+          </button>
+        )}
       </div>
 
       {filtered.length === 0 ? (
@@ -562,37 +562,32 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
       ) : (
         <>
           {/* Desktop table */}
-          <div className="hidden overflow-hidden rounded-2xl border border-white/10 bg-white/[0.015] md:block">
+          <div className="hidden overflow-hidden rounded-xl border border-white/10 md:block">
             <table className="w-full table-fixed text-left text-sm">
               <colgroup>
-                <col className="w-14" />
                 <col className="w-28" />
-                <col className="w-[22%]" />
-                <col className="w-[22%]" />
+                <col className="w-[24%]" />
+                {!hideSections && <col className="w-[24%]" />}
                 <col />
-                <col className="w-20" />
+                {showDacu && <col className="w-20" />}
+                <col className="w-16" />
                 <col className="w-20" />
               </colgroup>
-              <thead className="border-b border-white/10 bg-white/[0.02] text-xs uppercase tracking-wide text-neutral-500">
+              <thead className="border-b border-white/10 text-xs uppercase tracking-wide text-neutral-500">
                 <tr>
-                  <th className="py-3 pl-4 pr-0 text-center font-medium" title="Solved">
-                    ✓
-                  </th>
                   {header("Judge", "judge")}
                   {header("Problem", "problem")}
-                  {header("Section", "section")}
-                  <th className="px-4 py-3 font-medium">Hint</th>
-                  {header("DACU", "dacu", "text-right")}
+                  {!hideSections && header("Section", "section")}
+                  <th className="px-4 py-2.5 font-medium">Hint</th>
+                  {showDacu && header("DACU", "dacu", "text-right")}
                   {header("Pts", "points", "text-right")}
+                  <th className="px-4 py-2.5 text-center font-medium">Solved</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
                 {shown.map((p) => (
-                  <tr key={`${p.judge}:${p.id}`} className="align-top transition hover:bg-white/[0.03]">
-                    <td className="py-3 pl-4 pr-0 text-center">
-                      <SolvedMark solved={p.solved} />
-                    </td>
-                    <td className="px-4 py-3">
+                  <tr key={`${p.judge}:${p.id}`} className="align-top transition hover:bg-white/[0.02]">
+                    <td className="px-4 py-2.5">
                       <span
                         className={`inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset ${judgeStyles[p.judge]?.chip}`}
                       >
@@ -600,42 +595,40 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
                         {p.judge}
                       </span>
                     </td>
-                    <td className="px-4 py-3">
-                      <div className="flex min-w-0 flex-col gap-0.5">
+                    <td className="px-4 py-2.5">
+                      <div className="flex min-w-0 items-center gap-2">
                         <ProblemLink problem={p} />
-                        <div className="flex items-center gap-2 text-xs text-neutral-500">
-                          {p.title && p.title !== p.id && <span className="font-mono">{p.id}</span>}
-                          {p.cp5 && (
-                            <span className="rounded bg-fuchsia-500/10 px-1.5 py-px text-[10px] font-semibold uppercase tracking-wide text-fuchsia-300">
-                              CP5
-                            </span>
-                          )}                        </div>
+                        {p.cp5 && <CP5Badge />}
                       </div>
+                      {p.title && p.title !== p.id && (
+                        <span className="font-mono text-xs text-neutral-500">{p.id}</span>
+                      )}
                     </td>
-                    <td className="px-4 py-3">
-                      <button
-                        onClick={() => pickSection(p.section)}
-                        title="Show only this section"
-                        className="group flex min-w-0 items-baseline gap-2 text-left"
-                      >
-                        <span className="shrink-0 font-mono text-xs text-neutral-500 group-hover:text-neutral-300">
-                          {p.section}
-                        </span>
-                        <span className="text-neutral-300 group-hover:text-white">{p.topic}</span>
-                      </button>
+                    {!hideSections && (
+                      <td className="px-4 py-2.5">
+                        <button
+                          onClick={() => pickSection(p.section)}
+                          title="Show only this section"
+                          className="group flex min-w-0 items-baseline gap-2 text-left"
+                        >
+                          <span className="shrink-0 font-mono text-xs text-neutral-500 group-hover:text-neutral-300">
+                            {p.section}
+                          </span>
+                          <span className="text-neutral-300 group-hover:text-white">{p.topic}</span>
+                        </button>
+                      </td>
+                    )}
+                    <td className="px-4 py-2.5 leading-relaxed text-neutral-400">
+                      <Hint key={String(hideHints)} hint={p.hint} hidden={hideHints} />
                     </td>
-                    <td className="px-4 py-3 leading-relaxed text-neutral-400">
-                      <Hint key={String(blurHints)} hint={p.hint} blurred={blurHints} />
-                    </td>
-                    <td className="px-4 py-3 text-right tabular-nums text-neutral-400">
-                      {p.dacu ? p.dacu.toLocaleString() : <span className="text-neutral-700">—</span>}
-                    </td>
-                    <td className="px-4 py-3 text-right">
-                      <span
-                        className={`inline-block rounded-md px-1.5 py-0.5 text-xs font-medium tabular-nums ring-1 ring-inset ${pointsStyle(p.points)}`}
-                      >
-                        {p.points.toFixed(1)}
-                      </span>
+                    {showDacu && (
+                      <td className="px-4 py-2.5 text-right tabular-nums text-neutral-400">
+                        {p.dacu ? p.dacu.toLocaleString() : <span className="text-neutral-700">—</span>}
+                      </td>
+                    )}
+                    <td className="px-4 py-2.5 text-right tabular-nums text-neutral-300">{p.points.toFixed(1)}</td>
+                    <td className="px-4 py-2.5 text-center">
+                      <SolvedMark solved={p.solved} />
                     </td>
                   </tr>
                 ))}
@@ -644,43 +637,41 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
           </div>
 
           {/* Mobile cards */}
-          <ul className="flex flex-col gap-3 md:hidden">
+          <ul className="flex flex-col gap-2 md:hidden">
             {shown.map((p) => (
-              <li
-                key={`${p.judge}:${p.id}`}
-                className="rounded-xl border border-white/10 bg-white/[0.02] p-4"
-              >
+              <li key={`${p.judge}:${p.id}`} className="rounded-xl border border-white/10 p-3.5">
                 <div className="flex items-start justify-between gap-3">
-                  <span className="mt-0.5 shrink-0">
-                    <SolvedMark solved={p.solved} />
-                  </span>
                   <div className="min-w-0 flex-1">
-                    <ProblemLink problem={p} />
+                    <div className="flex min-w-0 items-center gap-2">
+                      <ProblemLink problem={p} />
+                      {p.cp5 && <CP5Badge />}
+                    </div>
                     <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-neutral-500">
-                      <span className={`inline-flex items-center gap-1.5 ${judgeStyles[p.judge] ? "" : ""}`}>
+                      <span className="inline-flex items-center gap-1.5">
                         <span className={`h-1.5 w-1.5 rounded-full ${judgeStyles[p.judge]?.dot}`} />
                         {p.judge}
                       </span>
                       {p.title && p.title !== p.id && <span className="font-mono">{p.id}</span>}
-                      {p.cp5 && <span className="font-semibold text-fuchsia-300">CP5</span>}                    </div>
+                    </div>
                   </div>
-                  <span
-                    className={`shrink-0 rounded-md px-1.5 py-0.5 text-xs font-medium tabular-nums ring-1 ring-inset ${pointsStyle(p.points)}`}
-                  >
-                    {p.points.toFixed(1)}
-                  </span>
+                  <div className="flex shrink-0 items-center gap-2">
+                    <span className="text-xs tabular-nums text-neutral-300">{p.points.toFixed(1)} pts</span>
+                    <SolvedMark solved={p.solved} />
+                  </div>
                 </div>
-                <button
-                  onClick={() => pickSection(p.section)}
-                  className="mt-3 flex items-baseline gap-2 text-left text-sm"
-                >
-                  <span className="font-mono text-xs text-neutral-500">{p.section}</span>
-                  <span className="text-neutral-300">{p.topic}</span>
-                </button>
+                {!hideSections && (
+                  <button
+                    onClick={() => pickSection(p.section)}
+                    className="mt-2 flex items-baseline gap-2 text-left text-sm"
+                  >
+                    <span className="font-mono text-xs text-neutral-500">{p.section}</span>
+                    <span className="text-neutral-300">{p.topic}</span>
+                  </button>
+                )}
                 <Hint
-                  key={String(blurHints)}
+                  key={String(hideHints)}
                   hint={p.hint}
-                  blurred={blurHints}
+                  hidden={hideHints}
                   className="mt-1.5 text-sm leading-relaxed text-neutral-400"
                 />
               </li>
