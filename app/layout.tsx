@@ -18,7 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      {/* Browser extensions inject attributes (e.g. style="isolation:isolate") before hydration. */}
+      <body className="antialiased" suppressHydrationWarning>
         {children}
         <Analytics />
       </body>

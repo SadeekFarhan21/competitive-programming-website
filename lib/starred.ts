@@ -11,6 +11,7 @@ export type StarredProblem = {
   dacu: number | null;
   points: number;
   cp5: boolean;
+  solved: boolean;
 };
 
 export const starred = data as StarredProblem[];
@@ -26,6 +27,7 @@ const columns: (keyof StarredProblem)[] = [
   "dacu",
   "points",
   "cp5",
+  "solved",
 ];
 
 function escapeCsv(value: unknown): string {

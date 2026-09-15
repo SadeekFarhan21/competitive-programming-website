@@ -56,6 +56,24 @@ function pointsStyle(points: number) {
   return "bg-rose-500/10 text-rose-300 ring-rose-400/25";
 }
 
+function SolvedMark({ solved }: { solved: boolean }) {
+  return solved ? (
+    <span
+      title="Solved"
+      className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-300 ring-1 ring-inset ring-emerald-400/30"
+    >
+      <svg viewBox="0 0 20 20" fill="none" className="h-3 w-3" aria-hidden>
+        <path d="m4.5 10.5 3.5 3.5 7.5-8" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+      <span className="sr-only">Solved</span>
+    </span>
+  ) : (
+    <span title="Unsolved" className="inline-block h-5 w-5 rounded-full ring-1 ring-inset ring-white/10">
+      <span className="sr-only">Unsolved</span>
+    </span>
+  );
+}
+
 function SearchIcon() {
   return (
     <svg viewBox="0 0 20 20" fill="none" className="h-4 w-4" aria-hidden>
@@ -95,12 +113,29 @@ function ProblemLink({ problem }: { problem: StarredProblem }) {
   );
 }
 
+// Blurred hints stay hidden until clicked, so a spoiler is only revealed on purpose.
+function Hint({ hint, blurred, className = "" }: { hint: string; blurred: boolean; className?: string }) {
+  const [revealed, setRevealed] = useState(false);
+  if (!blurred || revealed) return <p className={className}>{hint}</p>;
+  return (
+    <button
+      onClick={() => setRevealed(true)}
+      title="Click to reveal hint"
+      className={`block text-left blur-sm transition select-none hover:blur-[3px] ${className}`}
+    >
+      {hint}
+    </button>
+  );
+}
+
 export default function StarredTable({ problems }: { problems: StarredProblem[] }) {
   const [query, setQuery] = useState("");
   const [activeJudges, setActiveJudges] = useState<string[]>([...judges]);
   const [chapter, setChapter] = useState("");
   const [section, setSection] = useState("");
   const [cp5Only, setCp5Only] = useState(false);
+  const [hideSolved, setHideSolved] = useState(false);
+  const [blurHints, setBlurHints] = useState(true);
   const [minPoints, setMinPoints] = useState("");
   const [maxPoints, setMaxPoints] = useState("");
   const [sortKey, setSortKey] = useState<SortKey>("order");
@@ -117,6 +152,10 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
     setChapter(params.get("chapter") ?? "");
     setSection(params.get("section") ?? "");
     setCp5Only(params.get("cp5") === "1");
+    setHideSolved(params.get("unsolved") === "1");
+    try {
+      setBlurHints(localStorage.getItem("starred:blurHints") !== "0");
+    } catch {}
     setMinPoints(params.get("min") ?? "");
     setMaxPoints(params.get("max") ?? "");
     const sort = params.get("sort");
@@ -135,13 +174,14 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
     if (chapter) params.set("chapter", chapter);
     if (section) params.set("section", section);
     if (cp5Only) params.set("cp5", "1");
+    if (hideSolved) params.set("unsolved", "1");
     if (minPoints) params.set("min", minPoints);
     if (maxPoints) params.set("max", maxPoints);
     if (sortKey !== "order" || !sortAsc) params.set("sort", `${sortAsc ? "" : "-"}${sortKey}`);
     const search = params.toString();
     window.history.replaceState(null, "", search ? `?${search}` : window.location.pathname);
     setVisible(PAGE_SIZE);
-  }, [ready, query, activeJudges, chapter, section, cp5Only, minPoints, maxPoints, sortKey, sortAsc]);
+  }, [ready, query, activeJudges, chapter, section, cp5Only, hideSolved, minPoints, maxPoints, sortKey, sortAsc]);
 
   // Press "/" anywhere to jump to search.
   useEffect(() => {
@@ -208,6 +248,7 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
         if (chapter && chapterOf(p.section) !== chapter) return false;
         if (section && p.section !== section) return false;
         if (cp5Only && !p.cp5) return false;
+        if (hideSolved && p.solved) return false;
         if (p.points < min || p.points > max) return false;
         if (!needle) return true;
         return [p.id, p.title, p.topic, p.hint, p.section].some((field) =>
@@ -229,7 +270,7 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
     });
 
     return rows.map(({ problem }) => problem);
-  }, [problems, query, activeJudges, chapter, section, cp5Only, minPoints, maxPoints, sortKey, sortAsc]);
+  }, [problems, query, activeJudges, chapter, section, cp5Only, hideSolved, minPoints, maxPoints, sortKey, sortAsc]);
 
   const shown = filtered.slice(0, visible);
   const isFiltered =
@@ -238,8 +279,18 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
     chapter !== "" ||
     section !== "" ||
     cp5Only ||
+    hideSolved ||
     minPoints !== "" ||
     maxPoints !== "";
+
+  // Hint blurring is a personal preference, so it lives in localStorage rather than the URL.
+  function toggleBlurHints() {
+    const next = !blurHints;
+    setBlurHints(next);
+    try {
+      localStorage.setItem("starred:blurHints", next ? "1" : "0");
+    } catch {}
+  }
 
   function toggleJudge(judge: string) {
     setActiveJudges((current) =>
@@ -267,6 +318,7 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
     setChapter("");
     setSection("");
     setCp5Only(false);
+    setHideSolved(false);
     setMinPoints("");
     setMaxPoints("");
     setSortKey("order");
@@ -439,6 +491,42 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
               New in CP5
             </button>
 
+            <button
+              role="switch"
+              aria-checked={hideSolved}
+              onClick={() => setHideSolved(!hideSolved)}
+              className="flex items-center gap-2 text-sm text-neutral-400 transition hover:text-neutral-200"
+            >
+              <span
+                className={`relative h-5 w-9 rounded-full transition ${hideSolved ? "bg-emerald-500/80" : "bg-white/10"}`}
+              >
+                <span
+                  className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-all ${
+                    hideSolved ? "left-[18px]" : "left-0.5"
+                  }`}
+                />
+              </span>
+              Hide solved
+            </button>
+
+            <button
+              role="switch"
+              aria-checked={blurHints}
+              onClick={toggleBlurHints}
+              className="flex items-center gap-2 text-sm text-neutral-400 transition hover:text-neutral-200"
+            >
+              <span
+                className={`relative h-5 w-9 rounded-full transition ${blurHints ? "bg-sky-500/80" : "bg-white/10"}`}
+              >
+                <span
+                  className={`absolute top-0.5 h-4 w-4 rounded-full bg-white shadow transition-all ${
+                    blurHints ? "left-[18px]" : "left-0.5"
+                  }`}
+                />
+              </span>
+              Blur hints
+            </button>
+
             <div className="flex items-center gap-3 text-sm sm:ml-auto">
               <span className="tabular-nums text-neutral-400">
                 <span className="font-medium text-neutral-100">{filtered.length.toLocaleString()}</span> of{" "}
@@ -477,6 +565,7 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
           <div className="hidden overflow-hidden rounded-2xl border border-white/10 bg-white/[0.015] md:block">
             <table className="w-full table-fixed text-left text-sm">
               <colgroup>
+                <col className="w-14" />
                 <col className="w-28" />
                 <col className="w-[22%]" />
                 <col className="w-[22%]" />
@@ -486,6 +575,9 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
               </colgroup>
               <thead className="border-b border-white/10 bg-white/[0.02] text-xs uppercase tracking-wide text-neutral-500">
                 <tr>
+                  <th className="py-3 pl-4 pr-0 text-center font-medium" title="Solved">
+                    ✓
+                  </th>
                   {header("Judge", "judge")}
                   {header("Problem", "problem")}
                   {header("Section", "section")}
@@ -497,6 +589,9 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
               <tbody className="divide-y divide-white/5">
                 {shown.map((p) => (
                   <tr key={`${p.judge}:${p.id}`} className="align-top transition hover:bg-white/[0.03]">
+                    <td className="py-3 pl-4 pr-0 text-center">
+                      <SolvedMark solved={p.solved} />
+                    </td>
                     <td className="px-4 py-3">
                       <span
                         className={`inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset ${judgeStyles[p.judge]?.chip}`}
@@ -514,8 +609,7 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
                             <span className="rounded bg-fuchsia-500/10 px-1.5 py-px text-[10px] font-semibold uppercase tracking-wide text-fuchsia-300">
                               CP5
                             </span>
-                          )}
-                        </div>
+                          )}                        </div>
                       </div>
                     </td>
                     <td className="px-4 py-3">
@@ -530,7 +624,9 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
                         <span className="text-neutral-300 group-hover:text-white">{p.topic}</span>
                       </button>
                     </td>
-                    <td className="px-4 py-3 leading-relaxed text-neutral-400">{p.hint}</td>
+                    <td className="px-4 py-3 leading-relaxed text-neutral-400">
+                      <Hint key={String(blurHints)} hint={p.hint} blurred={blurHints} />
+                    </td>
                     <td className="px-4 py-3 text-right tabular-nums text-neutral-400">
                       {p.dacu ? p.dacu.toLocaleString() : <span className="text-neutral-700">—</span>}
                     </td>
@@ -555,7 +651,10 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
                 className="rounded-xl border border-white/10 bg-white/[0.02] p-4"
               >
                 <div className="flex items-start justify-between gap-3">
-                  <div className="min-w-0">
+                  <span className="mt-0.5 shrink-0">
+                    <SolvedMark solved={p.solved} />
+                  </span>
+                  <div className="min-w-0 flex-1">
                     <ProblemLink problem={p} />
                     <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-neutral-500">
                       <span className={`inline-flex items-center gap-1.5 ${judgeStyles[p.judge] ? "" : ""}`}>
@@ -563,8 +662,7 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
                         {p.judge}
                       </span>
                       {p.title && p.title !== p.id && <span className="font-mono">{p.id}</span>}
-                      {p.cp5 && <span className="font-semibold text-fuchsia-300">CP5</span>}
-                    </div>
+                      {p.cp5 && <span className="font-semibold text-fuchsia-300">CP5</span>}                    </div>
                   </div>
                   <span
                     className={`shrink-0 rounded-md px-1.5 py-0.5 text-xs font-medium tabular-nums ring-1 ring-inset ${pointsStyle(p.points)}`}
@@ -579,7 +677,12 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
                   <span className="font-mono text-xs text-neutral-500">{p.section}</span>
                   <span className="text-neutral-300">{p.topic}</span>
                 </button>
-                <p className="mt-1.5 text-sm leading-relaxed text-neutral-400">{p.hint}</p>
+                <Hint
+                  key={String(blurHints)}
+                  hint={p.hint}
+                  blurred={blurHints}
+                  className="mt-1.5 text-sm leading-relaxed text-neutral-400"
+                />
               </li>
             ))}
           </ul>

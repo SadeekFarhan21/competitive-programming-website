@@ -34,11 +34,13 @@ jobs:
           CODECHEF_API_URL: https://algo.farhansadeek.com/api/codechef
           REFRESH_CSES: ${{ github.event_name == 'workflow_dispatch' }}
         run: corepack pnpm refresh
+      - name: Mark solved starred problems
+        run: corepack pnpm starred:solved
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/submissions.json
+          git add data/submissions.json data/starred.json data/starred.csv data/kattis-titles.json
           git diff --cached --quiet || git commit -m "chore: refresh submission data"
           git pull --rebase origin main
           git push
