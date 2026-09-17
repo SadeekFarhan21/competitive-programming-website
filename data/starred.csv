@@ -626,10 +626,10 @@ walrusweights,walrusweights,"3.5i, DP level 2",backtracking with memoization,570
 11749,Fetching from uHunt,"4.2a, Finding CCs",find the largest CC with highest average PPA; also solvable with UFDS,,0.0,false
 11906,Fetching from uHunt,"4.2a, Finding CCs",DFS/BFS for reachability; several tricky cases; be careful when M = 0; N = 0; or M = N,,0.0,false
 lc0547,to replace with LeetCode link soon...,"4.2a, Finding CCs",count number of CCs; leetcode-75,0,4.0,false
-reachableroads,reachableroads,"4.2a, Finding CCs",report number of CC-1,892,2.1,false
+reachableroads,reachableroads,"4.2a, Finding CCs",report number of CC-1,892,2.1,true
 securitybadge,securitybadge,"4.2a, Finding CCs",reachability test; clever idea to compress ids,129,7.6,false
 terraces,terraces,"4.2a, Finding CCs","group cells with similar height together; if it cannot flow to any other component with lower height, add the size of th...",339,3.6,false
-wheresmyinternet,wheresmyinternet,"4.2a, Finding CCs",check connectivity to vertex 1,1716,3.7,false
+wheresmyinternet,wheresmyinternet,"4.2a, Finding CCs",check connectivity to vertex 1,1716,3.7,true
 00352,Fetching from uHunt,"4.2b, Flood Fill, Easier",count number of CCs; see UVa 00572,,0.0,false
 11953,Fetching from uHunt,"4.2b, Flood Fill, Easier",interesting twist of flood fill problem,,0.0,false
 amoebas,amoebas,"4.2b, Flood Fill, Easier",easy floodfill,1079,1.8,false
