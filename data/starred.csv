@@ -573,7 +573,7 @@ virus,virus,"3.4g, Non-Classical, Harder",greedy,753,3.6,false
 commercials,commercials,"3.5a, 1D Range Sum",transform each input by -P; Kadane's algorithm,1570,2.0,true
 lc0053,to replace with LeetCode link soon...,"3.5a, 1D Range Sum",Kadane's; special case for all negatives; top-100-liked; top-interview-150,0,4.0,false
 sellingspatulas,sellingspatulas,"3.5a, 1D Range Sum",-8 per time slot initially; read sale data; 1D range sum; complete search,109,8.0,false
-shortsell,shortsell,"3.5a, 1D Range Sum",similar to Kadane's algorithm; linear pass; prefix sum,104,4.1,false
+shortsell,shortsell,"3.5a, 1D Range Sum",similar to Kadane's algorithm; linear pass; prefix sum,104,4.1,true
 01105,Fetching from uHunt,"3.5b, 2D Range Sum",LA 5132 - WorldFinals Orlando11; more advanced 2D Range Sum Queries,,0.0,false
 10755,Fetching from uHunt,"3.5b, 2D Range Sum",max 2D range sum in 2 of the 3 dimensions; max 1D range sum with Kadane's algorithm on the 3rd dimension,,0.0,false
 lc0085,to replace with LeetCode link soon...,"3.5b, 2D Range Sum","after penalising the 0s heavily, this is just max 2D range sum",0,6.0,false

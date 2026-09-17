@@ -22860,5 +22860,16 @@
     "language": "C++11",
     "runtimeMs": 40000,
     "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20453715",
+    "epoch": 1789598060,
+    "problem": "Short Sell",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 10,
+    "memoryBytes": null
   }
 ]
