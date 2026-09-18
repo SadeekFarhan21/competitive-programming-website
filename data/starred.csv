@@ -459,7 +459,7 @@ zagrade,zagrade,"3.2g, Iterative (Combination)",try all subsets of bracket pairs
 10908,Fetching from uHunt,"3.2h, Try All Answers",4 nested loops; try all possible odd square lengths,,0.0,false
 communication,communication,"3.2h, Try All Answers",try all possible bytes; apply the bitmask formula,764,2.0,false
 flexible,flexible,"3.2h, Try All Answers",try all possible answers,2354,1.7,true
-islands,islands,"3.2h, Try All Answers",try all possible subsets; prune the non-contiguous ones (only 55 valid bitmasks between [0..1023]); check the 'island' p...,443,2.6,false
+islands,islands,"3.2h, Try All Answers",try all possible subsets; prune the non-contiguous ones (only 55 valid bitmasks between [0..1023]); check the 'island' p...,443,2.6,true
 lc2843,to replace with LeetCode link soon...,"3.2h, Try All Answers",create helper function is_symmetric; try all numbers between low..high,0,2.0,false
 walls,walls,"3.2h, Try All Answers",try whether the answer is 1/2/3/4; or Impossible; use up to 4 nested loops,513,4.0,false
 01225,Fetching from uHunt,"3.2i, Math Simulation, E",LA 3996 - Danang07; N is small,,0.0,false
@@ -630,7 +630,7 @@ reachableroads,reachableroads,"4.2a, Finding CCs",report number of CC-1,892,2.1,
 securitybadge,securitybadge,"4.2a, Finding CCs",reachability test; clever idea to compress ids,129,7.6,false
 terraces,terraces,"4.2a, Finding CCs","group cells with similar height together; if it cannot flow to any other component with lower height, add the size of th...",339,3.6,false
 wheresmyinternet,wheresmyinternet,"4.2a, Finding CCs",check connectivity to vertex 1,1716,3.7,true
-00352,Fetching from uHunt,"4.2b, Flood Fill, Easier",count number of CCs; see UVa 00572,,0.0,false
+00352,Fetching from uHunt,"4.2b, Flood Fill, Easier",count number of CCs; see UVa 00572,,0.0,true
 11953,Fetching from uHunt,"4.2b, Flood Fill, Easier",interesting twist of flood fill problem,,0.0,false
 amoebas,amoebas,"4.2b, Flood Fill, Easier",easy floodfill,1079,1.8,true
 countingstars,countingstars,"4.2b, Flood Fill, Easier",basic flood fill problem; count CCs,1494,2.7,true
@@ -638,10 +638,10 @@ fontan,fontan,"4.2b, Flood Fill, Easier",modified multi-sources BFS/floodfill,86
 gold,gold,"4.2b, Flood Fill, Easier",flood fill with extra blocking constraint; also available at UVa 11561 - Getting Gold,735,2.2,false
 lc0733,to replace with LeetCode link soon...,"4.2b, Flood Fill, Easier",basic flood fill problem,0,2.0,false
 01103,Fetching from uHunt,"4.2c, Flood Fill, Harder",LA 5130 - WorldFinals Orlando11; major hint: each hieroglyph has unique number of white CCs,,0.0,false
-10kindsofpeople,10kindsofpeople,"4.2c, Flood Fill, Harder",intelligent flood fill; just run once to avoid TLE as there are many queries,2380,3.9,false
+10kindsofpeople,10kindsofpeople,"4.2c, Flood Fill, Harder",intelligent flood fill; just run once to avoid TLE as there are many queries,2380,3.9,true
 11585,Fetching from uHunt,"4.2c, Flood Fill, Harder",polynomial-time verifier for an NP-complete puzzle Nurikabe; this verifier requires clever usage of flood fill algorithm,,0.0,false
 coast,coast,"4.2c, Flood Fill, Harder",intelligent flood fill; just run once to avoid TLE as there are many queries,1339,3.2,false
-islands3,islands3,"4.2c, Flood Fill, Harder",optimistic flood fill; assume all Cs are Ls,936,2.1,false
+islands3,islands3,"4.2c, Flood Fill, Harder",optimistic flood fill; assume all Cs are Ls,936,2.1,true
 lc1254,to replace with LeetCode link soon...,"4.2c, Flood Fill, Harder",flood fill; avoiding borders,0,4.0,false
 00872,Fetching from uHunt,"4.2d, Topological Sort",similar to UVa 00124; use backtracking,,0.0,false
 11060,Fetching from uHunt,"4.2d, Topological Sort",Kahn's algorithm---modified BFS toposort,,0.0,false
