@@ -632,8 +632,8 @@ terraces,terraces,"4.2a, Finding CCs","group cells with similar height together;
 wheresmyinternet,wheresmyinternet,"4.2a, Finding CCs",check connectivity to vertex 1,1716,3.7,true
 00352,Fetching from uHunt,"4.2b, Flood Fill, Easier",count number of CCs; see UVa 00572,,0.0,false
 11953,Fetching from uHunt,"4.2b, Flood Fill, Easier",interesting twist of flood fill problem,,0.0,false
-amoebas,amoebas,"4.2b, Flood Fill, Easier",easy floodfill,1079,1.8,false
-countingstars,countingstars,"4.2b, Flood Fill, Easier",basic flood fill problem; count CCs,1494,2.7,false
+amoebas,amoebas,"4.2b, Flood Fill, Easier",easy floodfill,1079,1.8,true
+countingstars,countingstars,"4.2b, Flood Fill, Easier",basic flood fill problem; count CCs,1494,2.7,true
 fontan,fontan,"4.2b, Flood Fill, Easier",modified multi-sources BFS/floodfill,866,2.0,false
 gold,gold,"4.2b, Flood Fill, Easier",flood fill with extra blocking constraint; also available at UVa 11561 - Getting Gold,735,2.2,false
 lc0733,to replace with LeetCode link soon...,"4.2b, Flood Fill, Easier",basic flood fill problem,0,2.0,false

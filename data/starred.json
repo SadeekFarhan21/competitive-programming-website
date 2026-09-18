@@ -8239,7 +8239,7 @@
     "dacu": 1079,
     "points": 1.8,
     "cp5": false,
-    "solved": false
+    "solved": true
   },
   {
     "judge": "Kattis",
@@ -8252,7 +8252,7 @@
     "dacu": 1494,
     "points": 2.7,
     "cp5": false,
-    "solved": false
+    "solved": true
   },
   {
     "judge": "Kattis",

@@ -22893,5 +22893,27 @@
     "language": "C++",
     "runtimeMs": 10,
     "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20462592",
+    "epoch": 1789698555,
+    "problem": "Counting Stars",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 10,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20462775",
+    "epoch": 1789699892,
+    "problem": "Sheba's Amoebas",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 0,
+    "memoryBytes": null
   }
 ]
