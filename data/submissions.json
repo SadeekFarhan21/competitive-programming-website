@@ -22981,5 +22981,16 @@
     "language": "C++",
     "runtimeMs": 100,
     "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20477785",
+    "epoch": 1789865650,
+    "problem": "Pick up sticks",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 230,
+    "memoryBytes": null
   }
 ]

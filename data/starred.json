@@ -8460,7 +8460,7 @@
     "dacu": 373,
     "points": 4.7,
     "cp5": false,
-    "solved": false
+    "solved": true
   },
   {
     "judge": "UVa",

@@ -649,7 +649,7 @@ brexit,brexit,"4.2d, Topological Sort",toposort; chain reaction; modified Kahn's
 builddeps,builddeps,"4.2d, Topological Sort",the graph is acyclic; toposort with DFS from the changed file,626,4.7,false
 conservation,conservation,"4.2d, Topological Sort",modified Kahn's algorithm; greedily process all steps in a certain lab before alternating to the other lab,133,4.2,false
 lc0210,to replace with LeetCode link soon...,"4.2d, Topological Sort",cycle check; compute toposort if acyclic; top-interview-150,0,4.0,false
-pickupsticks,pickupsticks,"4.2d, Topological Sort",cycle check + toposort if DAG; also available at item UVa 11686 - Pick up sticks,373,4.7,false
+pickupsticks,pickupsticks,"4.2d, Topological Sort",cycle check + toposort if DAG; also available at item UVa 11686 - Pick up sticks,373,4.7,true
 10116,Fetching from uHunt,"4.2e, Graph Properties Check",traversal on implicit graph; cycle check,,0.0,false
 10505,Fetching from uHunt,"4.2e, Graph Properties Check",bipartite; take max(left; right),,0.0,false
 hoppers,hoppers,"4.2e, Graph Properties Check",the answer is number of CC-1 if there is at least one non-bipartite component in the graph; or number of CC otherwise,234,3.9,false
