@@ -646,7 +646,7 @@ lc1254,to replace with LeetCode link soon...,"4.2c, Flood Fill, Harder",flood fi
 00872,Fetching from uHunt,"4.2d, Topological Sort",similar to UVa 00124; use backtracking,,0.0,false
 11060,Fetching from uHunt,"4.2d, Topological Sort",Kahn's algorithm---modified BFS toposort,,0.0,false
 brexit,brexit,"4.2d, Topological Sort",toposort; chain reaction; modified Kahn's algorithm,826,3.6,false
-builddeps,builddeps,"4.2d, Topological Sort",the graph is acyclic; toposort with DFS from the changed file,626,4.7,false
+builddeps,builddeps,"4.2d, Topological Sort",the graph is acyclic; toposort with DFS from the changed file,626,4.7,true
 conservation,conservation,"4.2d, Topological Sort",modified Kahn's algorithm; greedily process all steps in a certain lab before alternating to the other lab,133,4.2,false
 lc0210,to replace with LeetCode link soon...,"4.2d, Topological Sort",cycle check; compute toposort if acyclic; top-interview-150,0,4.0,false
 pickupsticks,pickupsticks,"4.2d, Topological Sort",cycle check + toposort if DAG; also available at item UVa 11686 - Pick up sticks,373,4.7,true

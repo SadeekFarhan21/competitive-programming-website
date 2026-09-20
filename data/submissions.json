@@ -22992,5 +22992,16 @@
     "language": "C++",
     "runtimeMs": 230,
     "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20478077",
+    "epoch": 1789873457,
+    "problem": "Build Dependencies",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 670,
+    "memoryBytes": null
   }
 ]
