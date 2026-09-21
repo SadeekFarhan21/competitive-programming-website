@@ -678,13 +678,13 @@ faultyrobot,faultyrobot,"4.2h, Really Ad Hoc",interesting graph traversal varian
 lc0841,to replace with LeetCode link soon...,"4.2h, Really Ad Hoc",DFS/BFS from 0; see if all rooms are visited; leetcode-75,0,4.0,false
 promotions,promotions,"4.2h, Really Ad Hoc",modified DFS; special graph; DAG; also available at UVa 13015 - Promotions,129,5.5,false
 succession,succession,"4.2h, Really Ad Hoc",(upwards) traversal of family DAG; use unordered_maps; make the founder has very large starting blood to avoid fraction,165,3.1,false
-11631,Fetching from uHunt,"4.3a, MST, Standard",weight of (all graph edges - all MST edges),,0.0,false
+11631,Fetching from uHunt,"4.3a, MST, Standard",weight of (all graph edges - all MST edges),,0.0,true
 11747,Fetching from uHunt,"4.3a, MST, Standard",sum the edge weights of the chords,,0.0,false
 cats,cats,"4.3a, MST, Standard",standard MST,456,4.1,false
-islandhopping,islandhopping,"4.3a, MST, Standard",MST on small complete graph,440,3.0,false
+islandhopping,islandhopping,"4.3a, MST, Standard",MST on small complete graph,440,3.0,true
 lc1584,to replace with LeetCode link soon...,"4.3a, MST, Standard",basic MST problem,0,4.0,false
-lostmap,lostmap,"4.3a, MST, Standard",actually just a standard MST problem,782,2.1,false
-minspantree,minspantree,"4.3a, MST, Standard",very standard MST problem; check if a spanning tree is formed; also output the edges in any spanning tree in lexicograph...,862,4.0,false
+lostmap,lostmap,"4.3a, MST, Standard",actually just a standard MST problem,782,2.1,true
+minspantree,minspantree,"4.3a, MST, Standard",very standard MST problem; check if a spanning tree is formed; also output the edges in any spanning tree in lexicograph...,862,4.0,true
 01013,Fetching from uHunt,"4.3b, MST, Variants",LA 2478 - WorldFinals Honolulu02; very interesting MST variant,,0.0,false
 01265,Fetching from uHunt,"4.3b, MST, Variants",LA 4848 - Daejeon10; very interesting non-standard variant of 'maximum' spanning tree,,0.0,false
 10457,Fetching from uHunt,"4.3b, MST, Variants",interesting MST modeling,,0.0,false

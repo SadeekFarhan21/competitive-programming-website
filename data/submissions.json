@@ -23003,5 +23003,49 @@
     "language": "C++",
     "runtimeMs": 670,
     "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20486549",
+    "epoch": 1790002178,
+    "problem": "Lost Map",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 900,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20486708",
+    "epoch": 1790003488,
+    "problem": "Island Hopping",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 370,
+    "memoryBytes": null
+  },
+  {
+    "platform": "UVA",
+    "id": "31303810",
+    "epoch": 1790012421,
+    "problem": "11631 - Dark roads",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 120000,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20487662",
+    "epoch": 1790013374,
+    "problem": "Minimum Spanning Tree",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 100,
+    "memoryBytes": null
   }
 ]
