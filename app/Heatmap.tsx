@@ -24,7 +24,6 @@ type PlatformStats = {
   submissions: number;
   accepted: number | null;
   accuracy: number | null;
-  lifetime?: boolean;
 };
 
 type HeatmapData = {
@@ -226,12 +225,6 @@ export default function Heatmap() {
         {visibleTotal.toLocaleString()}{" "}
         {mode === "accepted" ? "accepted submissions" : "submissions"} on {activeDays} active
         days {data.year != null ? `in ${data.year}` : "in the last year"}
-        {mode === "accepted" && enabled.has("leetcode") && data.stats?.leetcode?.lifetime && (
-          <span className="text-neutral-600">
-            {" "}
-            · LeetCode excluded (no public per-day verdicts)
-          </span>
-        )}
       </p>
 
       <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">

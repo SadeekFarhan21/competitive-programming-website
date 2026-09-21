@@ -3,9 +3,15 @@ import { StoredSub } from "./store";
 const GRAPHQL_URL = "https://leetcode.com/graphql";
 const USERNAME = "FarhanSadeek21";
 
-const RECENT_ACCEPTED_QUERY = `
-  query recentAcSubmissionList($username: String!, $limit: Int!, $skip: Int!) {
-    recentAcSubmissionList(username: $username, limit: $limit, skip: $skip) {
+// LeetCode's public feeds are capped at the latest 20 submissions. The
+// alfa-leetcode-api wrapper exposes that feed with verdicts for every attempt.
+const PUBLIC_FEED_URL =
+  process.env.LEETCODE_API_URL ??
+  `https://alfa-leetcode-api.onrender.com/${USERNAME}/submission?limit=10000`;
+
+const RECENT_SUBMISSIONS_QUERY = `
+  query recentSubmissionList($username: String!, $limit: Int!) {
+    recentSubmissionList(username: $username, limit: $limit) {
       id title titleSlug timestamp statusDisplay lang
     }
   }
@@ -20,6 +26,13 @@ const SUBMISSION_LIST_QUERY = `
     }
   }
 `;
+
+const BASE_HEADERS = {
+  "Content-Type": "application/json",
+  Referer: "https://leetcode.com/",
+  Origin: "https://leetcode.com",
+  "User-Agent": "Mozilla/5.0",
+};
 
 function asNumber(value: unknown): number | null {
   if (typeof value === "number" && Number.isFinite(value)) return value;
@@ -51,6 +64,7 @@ function runtimeMs(value: unknown): number | null {
 export function normalizeLeetCodeSubmissions(payload: any): StoredSub[] {
   const rows = [
     payload?.submissionList?.submissions,
+    payload?.recentSubmissionList,
     payload?.recentAcSubmissionList,
     payload?.submission,
     payload?.submissions,
@@ -70,8 +84,9 @@ export function normalizeLeetCodeSubmissions(payload: any): StoredSub[] {
       row.statusDisplay ?? row.status_display ?? row.status ?? "UNKNOWN"
     ).toUpperCase();
     return [{
+      ...(row.id != null ? { id: String(row.id) } : {}),
       platform: "LeetCode" as const,
-      epoch,
+      epoch: Math.floor(epoch),
       problem: String(title),
       verdict,
       ac: verdict === "ACCEPTED",
@@ -82,25 +97,39 @@ export function normalizeLeetCodeSubmissions(payload: any): StoredSub[] {
   });
 }
 
-export async function fetchLeetCodeSubmissions(limit = 20): Promise<StoredSub[]> {
-  const session = process.env.LEETCODE_SESSION;
-  const query = session ? SUBMISSION_LIST_QUERY : RECENT_ACCEPTED_QUERY;
-  const variables = session
-    ? { limit, offset: 0 }
-    : { username: USERNAME, limit, skip: 0 };
+async function graphql(query: string, variables: Record<string, unknown>, headers: Record<string, string> = {}) {
   const res = await fetch(GRAPHQL_URL, {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Referer: "https://leetcode.com/",
-      Origin: "https://leetcode.com",
-      ...(session ? { Cookie: `LEETCODE_SESSION=${session}` } : {}),
-    },
+    headers: { ...BASE_HEADERS, ...headers },
     body: JSON.stringify({ query, variables }),
     cache: "no-store",
   });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const payload = await res.json();
   if (payload.errors?.length) throw new Error(payload.errors[0].message ?? "GraphQL error");
-  return normalizeLeetCodeSubmissions(payload.data);
+  return payload.data ?? {};
+}
+
+async function fetchPublicFeed(): Promise<StoredSub[]> {
+  const res = await fetch(PUBLIC_FEED_URL, {
+    headers: { Accept: "application/json", "User-Agent": "Mozilla/5.0" },
+    cache: "no-store",
+  });
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  return normalizeLeetCodeSubmissions(await res.json());
+}
+
+export async function fetchLeetCodeSubmissions(limit = 20): Promise<StoredSub[]> {
+  const session = process.env.LEETCODE_SESSION;
+  if (session) {
+    const data = await graphql(SUBMISSION_LIST_QUERY, { limit, offset: 0 }, { Cookie: `LEETCODE_SESSION=${session}` });
+    // An expired cookie yields `submissions: null` instead of an error.
+    if (Array.isArray(data.submissionList?.submissions)) return normalizeLeetCodeSubmissions(data);
+  }
+  try {
+    return await fetchPublicFeed();
+  } catch {
+    const data = await graphql(RECENT_SUBMISSIONS_QUERY, { username: USERNAME, limit: Math.min(limit, 20) });
+    return normalizeLeetCodeSubmissions(data);
+  }
 }

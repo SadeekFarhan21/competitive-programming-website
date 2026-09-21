@@ -104,47 +104,117 @@ async function fetchAtCoder(knownEpochs) {
   }));
 }
 
-async function fetchLeetCode(knownEpochs) {
-  const session = process.env.LEETCODE_SESSION;
-  const query = session
-    ? `query submissionList($limit: Int!, $offset: Int!) { submissionList(limit: $limit, offset: $offset) { hasNext submissions { id title titleSlug timestamp statusDisplay lang runtime memory } } }`
-    : `query recentAcSubmissionList($username: String!, $limit: Int!, $skip: Int!) { recentAcSubmissionList(username: $username, limit: $limit, skip: $skip) { id title titleSlug timestamp statusDisplay lang } }`;
-  const headers = { "Content-Type": "application/json", Referer: "https://leetcode.com/", Origin: "https://leetcode.com", ...(session ? { Cookie: `LEETCODE_SESSION=${session}` } : {}) };
+// LeetCode's public "recent submissions" feed is capped at the latest 20 rows,
+// which the hourly refresh comfortably covers. alfa-leetcode-api wraps that feed
+// (all verdicts, not just accepted); LeetCode's own GraphQL is the fallback.
+// An optional LEETCODE_SESSION unlocks the full paginated history.
+const LEETCODE_PUBLIC_FEED_URL =
+  process.env.LEETCODE_API_URL ??
+  `https://alfa-leetcode-api.onrender.com/${HANDLES.leetcode}/submission?limit=10000`;
+const LEETCODE_GRAPHQL_URL = "https://leetcode.com/graphql";
+const LEETCODE_HEADERS = {
+  "Content-Type": "application/json",
+  Referer: "https://leetcode.com/",
+  Origin: "https://leetcode.com",
+  "User-Agent": "Mozilla/5.0",
+};
+
+function normalizeLeetCodeRow(s) {
+  const rawEpoch = s.timestamp ?? s.timeStamp ?? s.createdAt;
+  const epoch = typeof rawEpoch === "number" ? rawEpoch : Number(rawEpoch) || Date.parse(rawEpoch) / 1000;
+  const title = s.title ?? s.problem ?? s.titleSlug;
+  if (!Number.isFinite(epoch) || !title) return [];
+  const verdict = String(s.statusDisplay ?? s.status_display ?? s.status ?? "ACCEPTED").toUpperCase();
+  const runtimeMatch = String(s.runtime ?? "").match(/[\d.]+/);
+  const memoryMatch = String(s.memory ?? "").match(/([\d.]+)\s*(KB|MB|GB)/i);
+  const memoryUnit = memoryMatch?.[2]?.toUpperCase();
+  return [{
+    ...(s.id != null ? { id: String(s.id) } : {}),
+    platform: "LeetCode",
+    epoch: Math.floor(epoch),
+    problem: String(title),
+    verdict,
+    ac: verdict === "ACCEPTED",
+    language: s.lang ?? s.language ?? null,
+    runtimeMs: runtimeMatch ? Number(runtimeMatch[0]) : null,
+    memoryBytes: memoryMatch
+      ? Math.round(Number(memoryMatch[1]) * (memoryUnit === "GB" ? 1024 ** 3 : memoryUnit === "KB" ? 1024 : 1024 ** 2))
+      : null,
+  }];
+}
+
+async function leetcodeGraphql(query, variables, extraHeaders = {}) {
+  const res = await fetch(LEETCODE_GRAPHQL_URL, {
+    method: "POST",
+    headers: { ...LEETCODE_HEADERS, ...extraHeaders },
+    body: JSON.stringify({ query, variables }),
+    signal: AbortSignal.timeout(30_000),
+  });
+  if (!res.ok) throw new Error(`LeetCode GraphQL HTTP ${res.status}`);
+  const payload = await res.json();
+  if (payload.errors?.length) throw new Error(payload.errors[0].message ?? "LeetCode GraphQL error");
+  return payload.data ?? {};
+}
+
+// Full history through the logged-in submissionList endpoint. LeetCode answers
+// an expired cookie with `submissions: null` rather than an error, so treat that
+// as a failure instead of silently returning nothing.
+async function fetchLeetCodeSession(session, knownEpochs) {
+  const query = `query submissionList($limit: Int!, $offset: Int!) { submissionList(limit: $limit, offset: $offset) { hasNext submissions { id title titleSlug timestamp statusDisplay lang runtime memory } } }`;
   const all = [];
-  for (let page = 0; page < (session ? 200 : 1); page++) {
+  for (let page = 0; page < 200; page++) {
     if (page > 0) await sleep(FULL ? 3000 : 1200);
-    const variables = session ? { limit: 20, offset: page * 20 } : { username: HANDLES.leetcode, limit: 20, skip: 0 };
-    const res = await fetch("https://leetcode.com/graphql", { method: "POST", headers, body: JSON.stringify({ query, variables }) });
-    if (!res.ok) throw new Error(`LeetCode GraphQL HTTP ${res.status}`);
-    const payload = await res.json();
-    if (payload.errors?.length) throw new Error(payload.errors[0].message ?? "LeetCode GraphQL error");
-    const rows = session ? payload.data?.submissionList?.submissions ?? [] : payload.data?.recentAcSubmissionList ?? [];
+    const data = await leetcodeGraphql(query, { limit: 20, offset: page * 20 }, { Cookie: `LEETCODE_SESSION=${session}` });
+    const rows = data.submissionList?.submissions;
+    if (!Array.isArray(rows)) throw new Error("LEETCODE_SESSION is expired or invalid");
     all.push(...rows);
     const sawKnown = rows.some((s) => knownEpochs.has(`LeetCode:${s.timestamp}`));
-    if (!session || (sawKnown && !FULL) || !payload.data?.submissionList?.hasNext) break;
+    if ((sawKnown && !FULL) || !data.submissionList?.hasNext) break;
   }
-  return all.flatMap((s) => {
-    const rawEpoch = s.timestamp ?? s.timeStamp ?? s.createdAt;
-    const epoch = typeof rawEpoch === "number" ? rawEpoch : Number(rawEpoch) || Date.parse(rawEpoch) / 1000;
-    const title = s.title ?? s.problem ?? s.titleSlug;
-    if (!Number.isFinite(epoch) || !title) return [];
-    const verdict = String(s.statusDisplay ?? "ACCEPTED").toUpperCase();
-    const runtimeMatch = String(s.runtime ?? "").match(/[\d.]+/);
-    const memoryMatch = String(s.memory ?? "").match(/([\d.]+)\s*(KB|MB|GB)/i);
-    const memoryUnit = memoryMatch?.[2]?.toUpperCase();
-    return [{
-      platform: "LeetCode",
-      epoch,
-      problem: String(title),
-      verdict,
-      ac: verdict === "ACCEPTED",
-      language: s.lang ?? s.language ?? null,
-      runtimeMs: runtimeMatch ? Number(runtimeMatch[0]) : null,
-      memoryBytes: memoryMatch
-        ? Math.round(Number(memoryMatch[1]) * (memoryUnit === "GB" ? 1024 ** 3 : memoryUnit === "KB" ? 1024 : 1024 ** 2))
-        : null,
-    }];
+  return all;
+}
+
+// Latest 20 submissions with verdicts, via alfa-leetcode-api. The free Render
+// instance cold-starts, so allow a generous timeout.
+async function fetchLeetCodePublicFeed() {
+  const res = await fetch(LEETCODE_PUBLIC_FEED_URL, {
+    headers: { Accept: "application/json", "User-Agent": "Mozilla/5.0" },
+    signal: AbortSignal.timeout(90_000),
   });
+  if (!res.ok) throw new Error(`LeetCode public feed HTTP ${res.status}`);
+  const payload = await res.json();
+  const rows = payload.submission ?? payload.submissions ?? payload.recentSubmissionList;
+  if (!Array.isArray(rows)) throw new Error(`LeetCode public feed: ${payload.message ?? payload.errors ?? "unexpected response"}`);
+  return rows;
+}
+
+// Same 20-row feed straight from LeetCode, used when the wrapper is down.
+async function fetchLeetCodePublicGraphql() {
+  const query = `query recentSubmissionList($username: String!, $limit: Int!) { recentSubmissionList(username: $username, limit: $limit) { id title titleSlug timestamp statusDisplay lang } }`;
+  const data = await leetcodeGraphql(query, { username: HANDLES.leetcode, limit: 20 });
+  const rows = data.recentSubmissionList;
+  if (!Array.isArray(rows)) throw new Error("LeetCode recentSubmissionList unavailable");
+  return rows;
+}
+
+async function fetchLeetCode(knownEpochs) {
+  const session = process.env.LEETCODE_SESSION;
+  if (session) {
+    try {
+      return (await fetchLeetCodeSession(session, knownEpochs)).flatMap(normalizeLeetCodeRow);
+    } catch (error) {
+      console.warn(`LeetCode: session fetch failed (${error.message}) — falling back to public feed`);
+    }
+  }
+
+  let rows;
+  try {
+    rows = await fetchLeetCodePublicFeed();
+  } catch (error) {
+    console.warn(`LeetCode: public feed failed (${error.message}) — trying leetcode.com directly`);
+    rows = await fetchLeetCodePublicGraphql();
+  }
+  return rows.flatMap(normalizeLeetCodeRow);
 }
 
 async function fetchCodeChef(knownEpochs) {

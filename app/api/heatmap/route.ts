@@ -139,7 +139,6 @@ export async function GET(request: NextRequest) {
       {
         submissions: t.submissions,
         accepted: t.accepted,
-        lifetime: true,
         accuracy:
           t.submissions > 0 ? Math.round((t.accepted / t.submissions) * 1000) / 10 : null,
       },

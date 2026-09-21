@@ -33,7 +33,7 @@ browser session and must never be committed.
 To update the dashboard data directly instead of exporting a file, use
 `npm run fetch:kattis -- --full --merge`.
 
-The refresh script uses the configured platform credentials from `.env.local`. LeetCode uses authenticated GraphQL through `LEETCODE_SESSION`; CSES uses `CSES_SESSION`; Kattis uses `KATTIS_USERNAME` and, when required for private submission history, `KATTIS_COOKIE`; and UVa uses `UVA_USERNAME` or `UVA_USER_ID`. SPOJ entries are maintained manually in `data/spoj-manual.json` because its public submission page blocks automated refreshes.
+The refresh script uses the configured platform credentials from `.env.local`. LeetCode reads the public recent-submissions feed from [alfa-leetcode-api](https://alfa-leetcode-api.onrender.com) (latest 20 attempts with verdicts, falling back to LeetCode's own GraphQL), and uses the full authenticated history instead when a valid `LEETCODE_SESSION` is set; override the feed URL with `LEETCODE_API_URL`; CSES uses `CSES_SESSION`; Kattis uses `KATTIS_USERNAME` and, when required for private submission history, `KATTIS_COOKIE`; and UVa uses `UVA_USERNAME` or `UVA_USER_ID`. SPOJ entries are maintained manually in `data/spoj-manual.json` because its public submission page blocks automated refreshes.
 
 ## Build and deploy
 
