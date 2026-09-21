@@ -425,7 +425,7 @@ sgcoin,sgcoin,"3.2a, Pre-calculate-able",we can either brute force short string 
 blackfriday,blackfriday,"3.2b, Iterative (Two Loops), E",2D nested loops; frequency counting,2384,2.2,false
 closestsums,closestsums,"3.2b, Iterative (Two Loops), E",sort and then do O(n^2) pairings; also available at UVa 10487 - Closest Sums,1105,2.9,false
 golombrulers,golombrulers,"3.2b, Iterative (Two Loops), E",2D nested loops; additional 1D loops for checking,297,3.2,false
-lc3184,to replace with LeetCode link soon...,"3.2b, Iterative (Two Loops), E",2 nested loops,0,2.0,false
+lc3184,to replace with LeetCode link soon...,"3.2b, Iterative (Two Loops), E",2 nested loops,0,2.0,true
 01588,Fetching from uHunt,"3.2c, Iterative (Two Loops), H",LA 3712 - NorthEasternEurope06; good iterative brute force problem; beware of corner cases,,0.0,false
 00441,Fetching from uHunt,"3.2d, Three+ Nested Loops, E",6 nested loops; easy,,0.0,true
 12515,Fetching from uHunt,"3.2d, Three+ Nested Loops, E",3 nested loops,,0.0,false
@@ -680,7 +680,7 @@ promotions,promotions,"4.2h, Really Ad Hoc",modified DFS; special graph; DAG; al
 succession,succession,"4.2h, Really Ad Hoc",(upwards) traversal of family DAG; use unordered_maps; make the founder has very large starting blood to avoid fraction,165,3.1,false
 11631,Fetching from uHunt,"4.3a, MST, Standard",weight of (all graph edges - all MST edges),,0.0,true
 11747,Fetching from uHunt,"4.3a, MST, Standard",sum the edge weights of the chords,,0.0,false
-cats,cats,"4.3a, MST, Standard",standard MST,456,4.1,false
+cats,cats,"4.3a, MST, Standard",standard MST,456,4.1,true
 islandhopping,islandhopping,"4.3a, MST, Standard",MST on small complete graph,440,3.0,true
 lc1584,to replace with LeetCode link soon...,"4.3a, MST, Standard",basic MST problem,0,4.0,false
 lostmap,lostmap,"4.3a, MST, Standard",actually just a standard MST problem,782,2.1,true

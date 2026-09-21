@@ -5548,7 +5548,7 @@
     "dacu": 0,
     "points": 2,
     "cp5": true,
-    "solved": false
+    "solved": true
   },
   {
     "judge": "UVa",
@@ -8863,7 +8863,7 @@
     "dacu": 456,
     "points": 4.1,
     "cp5": false,
-    "solved": false
+    "solved": true
   },
   {
     "judge": "Kattis",
