@@ -24465,5 +24465,15 @@
     "language": "C++",
     "runtimeMs": 560,
     "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790038454,
+    "problem": "Min Cost to Connect All Points",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
