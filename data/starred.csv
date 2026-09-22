@@ -523,9 +523,9 @@ lc2293,to replace with LeetCode link soon...,"3.3c, Ternary Search & Others",sim
 10020,Fetching from uHunt,"3.4a, Greedy (Classical)",interval covering,,0.0,false
 11264,Fetching from uHunt,"3.4a, Greedy (Classical)",coin change variant,,0.0,false
 classrooms,classrooms,"3.4a, Greedy (Classical)",variant of interval covering; multiple rooms,229,5.9,false
-froshweek2,froshweek2,"3.4a, Greedy (Classical)",greedy; sort first; similar to Dragon of Loowater; greedy matching,489,2.3,false
+froshweek2,froshweek2,"3.4a, Greedy (Classical)",greedy; sort first; similar to Dragon of Loowater; greedy matching,489,2.3,true
 lc0455,to replace with LeetCode link soon...,"3.4a, Greedy (Classical)",sort; greedy bipartite matching,0,2.0,false
-squarepegs,squarepegs,"3.4a, Greedy (Classical)",convert square to circular; sort; greedy matching,265,3.1,false
+squarepegs,squarepegs,"3.4a, Greedy (Classical)",convert square to circular; sort; greedy matching,265,3.1,true
 11369,Fetching from uHunt,"3.4b, Involving Sorting, E",greedy; sorting,,0.0,false
 11900,Fetching from uHunt,"3.4b, Involving Sorting, E",greedy; sorting,,0.0,false
 13109,Fetching from uHunt,"3.4b, Involving Sorting, E",greedy; sorting,,0.0,false
@@ -694,7 +694,7 @@ naturereserve,naturereserve,"4.3b, MST, Variants",Prim's algorithm from multiple
 10653,Fetching from uHunt,"4.4a, SSSP, BFS, Easier",need efficient BFS implementation,,0.0,false
 12160,Fetching from uHunt,"4.4a, SSSP, BFS, Easier",LA 4408 - KualaLumpur08; s: (4-digits number); edges: button pushes; BFS,,0.0,false
 buttonbashing,buttonbashing,"4.4a, SSSP, BFS, Easier",very similar to UVa 12160,728,3.4,false
-horror,horror,"4.4a, SSSP, BFS, Easier",SSSP from all sources = horror movies; report lowest ID with the highest unweighted SSSP distance,500,3.3,false
+horror,horror,"4.4a, SSSP, BFS, Easier",SSSP from all sources = horror movies; report lowest ID with the highest unweighted SSSP distance,500,3.3,true
 11352,Fetching from uHunt,"4.4b, SSSP, BFS, Medium",filter the graph first; then it becomes SSSP,,0.0,false
 12826,Fetching from uHunt,"4.4b, SSSP, BFS, Medium",SSSP from (r1; c1) to (r2; c2) avoiding (r3; c3); BFS,,0.0,false
 fire2,fire2,"4.4b, SSSP, BFS, Medium",very similar to UVa 11624,395,4.2,false

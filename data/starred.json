@@ -6822,7 +6822,7 @@
     "dacu": 489,
     "points": 2.3,
     "cp5": false,
-    "solved": false
+    "solved": true
   },
   {
     "judge": "LeetCode",
@@ -6848,7 +6848,7 @@
     "dacu": 265,
     "points": 3.1,
     "cp5": false,
-    "solved": false
+    "solved": true
   },
   {
     "judge": "UVa",
@@ -9045,7 +9045,7 @@
     "dacu": 500,
     "points": 3.3,
     "cp5": false,
-    "solved": false
+    "solved": true
   },
   {
     "judge": "UVa",

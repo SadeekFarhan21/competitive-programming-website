@@ -24475,5 +24475,38 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20495251",
+    "epoch": 1790089119,
+    "problem": "Frosh Week",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 50,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20495581",
+    "epoch": 1790091855,
+    "problem": "Square Peg in a Round Hole",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 0,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20495767",
+    "epoch": 1790093954,
+    "problem": "Horror List",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 0,
+    "memoryBytes": null
   }
 ]
