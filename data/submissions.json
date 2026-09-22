@@ -24508,5 +24508,25 @@
     "language": "C++",
     "runtimeMs": 0,
     "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790094828,
+    "problem": "01 Matrix",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790095327,
+    "problem": "Map of Highest Peak",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
