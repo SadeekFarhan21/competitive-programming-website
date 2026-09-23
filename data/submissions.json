@@ -24645,5 +24645,35 @@
     "language": "C++23 (GCC 15.2.0)",
     "runtimeMs": 4,
     "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790199958,
+    "problem": "Valid Parentheses",
+    "verdict": "RUNTIME ERROR",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790200037,
+    "problem": "Valid Parentheses",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790201023,
+    "problem": "Min Stack",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
