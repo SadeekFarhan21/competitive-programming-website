@@ -29,6 +29,7 @@ type PlatformStats = {
 type HeatmapData = {
   since: string;
   year: number | null;
+  allTime?: boolean;
   availableYears: number[];
   totalSubmissions: number;
   days: Record<string, DayCounts>;
@@ -123,7 +124,8 @@ export default function Heatmap() {
   useEffect(() => {
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     const query = new URLSearchParams({ tz: timeZone });
-    if (period !== "rolling") query.set("year", period);
+    if (period === "all") query.set("range", "all");
+    else if (period !== "rolling") query.set("year", period);
     fetch(`/api/heatmap?${query}`)
       .then((r) => r.json())
       .then(setData)
@@ -199,6 +201,7 @@ export default function Heatmap() {
           aria-label="Heatmap period"
         >
           <option value="rolling">Last 365 days</option>
+          <option value="all">All time</option>
           {data.availableYears.map((year) => (
             <option key={year} value={year}>{year}</option>
           ))}
@@ -224,7 +227,7 @@ export default function Heatmap() {
       <p className="mb-4 text-sm text-neutral-400">
         {visibleTotal.toLocaleString()}{" "}
         {mode === "accepted" ? "accepted submissions" : "submissions"} on {activeDays} active
-        days {data.year != null ? `in ${data.year}` : "in the last year"}
+        days {data.year != null ? `in ${data.year}` : data.allTime ? `since ${data.since}` : "in the last year"}
       </p>
 
       <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">

@@ -42,15 +42,20 @@ export async function GET(request: NextRequest) {
   }
   const yearParam = request.nextUrl.searchParams.get("year");
   const selectedYear = yearParam && /^\d{4}$/.test(yearParam) ? Number(yearParam) : null;
+  // range=all: totals and platform stats cover the whole history. The client
+  // still draws the last 365 days of the calendar it gets back.
+  const allTime = request.nextUrl.searchParams.get("range") === "all";
   const days = Math.min(Number(request.nextUrl.searchParams.get("days")) || 365, 730);
-  const sinceEpoch = selectedYear != null
-    ? Date.UTC(selectedYear, 0, 1) / 1000
-    : Math.floor((Date.now() - days * DAY_MS) / 1000);
-  const untilEpoch = selectedYear != null ? Date.UTC(selectedYear + 1, 0, 1) / 1000 : null;
 
   // The heatmap is backed by the bundled dataset so it renders immediately.
   // scripts/refresh-data.mjs updates this file through the scheduled workflow.
   const all = (await getSubmissions()).slice().sort((a, b) => a.epoch - b.epoch);
+  const sinceEpoch = allTime
+    ? (all[0]?.epoch ?? 0)
+    : selectedYear != null
+      ? Date.UTC(selectedYear, 0, 1) / 1000
+      : Math.floor((Date.now() - days * DAY_MS) / 1000);
+  const untilEpoch = !allTime && selectedYear != null ? Date.UTC(selectedYear + 1, 0, 1) / 1000 : null;
   const availableYears = [...new Set(all.map((s) => new Date(s.epoch * 1000).getUTCFullYear()))].sort((a, b) => b - a);
   const errors: string[] = [];
   const warnings: string[] = [];
@@ -148,7 +153,8 @@ export async function GET(request: NextRequest) {
   return NextResponse.json(
     {
       since: new Date(sinceEpoch * 1000).toISOString().slice(0, 10),
-      year: selectedYear,
+      year: allTime ? null : selectedYear,
+      allTime,
       availableYears,
       totalSubmissions: Object.values(calendar).reduce((sum, d) => sum + d.total, 0),
       days: calendar,
