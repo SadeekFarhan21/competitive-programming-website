@@ -106,7 +106,7 @@ accepts a `full` input for a one-time backfill of the whole history.
 - `app/api/heatmap/route.ts` — local heatmap data endpoint
 - `app/api/submissions/route.ts` — local recent-submission endpoint
 - `app/submissions.json/route.ts` — full AI-friendly submission export at `/submissions.json`
-- `app/halim-book/` — starred CP4/CP5 problems (Steven Halim) with solved marks; exports at `/halim-book.json` and `/halim-book.csv`
+- `app/halim-book/` — starred CP4/CP5 problems (Steven Halim) with solved marks; exports at `/halim-book.json`, `/halim-book.csv`, and `/halim-book.txt`
 - `app/youkn0wwho/` — YouKn0wWho's topic list with solved marks; exports at `/youkn0wwho.json`, `/youkn0wwho.csv`, and `/youkn0wwho.txt`
 - `scripts/mark-halim-book-solved.mjs` — flags solved Halim book problems from the submission data
 - `scripts/build-youkn0wwho.mjs` — builds `data/youkn0wwho.json` from the topic list sources and flags solved problems
@@ -126,7 +126,7 @@ export is served.
 
 The two problem lists are exported the same way, each with a `solved` flag per problem:
 
-- `/halim-book.json` and `/halim-book.csv` — starred CP4/CP5 problems
+- `/halim-book.json`, `/halim-book.csv`, and `/halim-book.txt` — starred CP4/CP5 problems
 - `/youkn0wwho.json`, `/youkn0wwho.csv`, and `/youkn0wwho.txt` — YouKn0wWho topic list problems; the JSON carries a `topics` map describing each topic's category and order, and the text file is a fixed-width table with every field
 
 ## Contributing

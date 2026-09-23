@@ -40,6 +40,7 @@ export default function HalimBookPage() {
             </summary>
             <div className="absolute right-0 z-30 mt-2 w-36 overflow-hidden rounded-lg border border-white/10 bg-[#141416] py-1 shadow-xl">
               {[
+                { href: "/halim-book.txt", label: "Text" },
                 { href: "/halim-book.csv", label: "CSV" },
                 { href: "/halim-book.json", label: "JSON" },
               ].map((link) => (
