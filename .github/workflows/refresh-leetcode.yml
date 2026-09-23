@@ -1,8 +1,6 @@
 name: Refresh LeetCode
 
 on:
-  schedule:
-    - cron: "20 * * * *"
   workflow_dispatch:
     inputs:
       full:

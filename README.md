@@ -82,30 +82,22 @@ submission dataset on schedule.
 
 ### Workflows
 
-Each judge has its own workflow so it can run on its own schedule, be triggered by
-hand from the Actions tab, and fail without affecting the others. They all call the
-reusable `refresh-platform.yml` and share one concurrency group, so only one commits
-at a time and the data files never race.
+`refresh-data.yml` runs once a day at 07:00 UTC (3 AM US Eastern in summer),
+refreshes every judge, and backs the site's **Refresh now** button.
 
-| Workflow | Schedule (UTC) |
-| --- | --- |
-| `refresh-codeforces.yml` | hourly at :00 |
-| `refresh-atcoder.yml` | hourly at :10 |
-| `refresh-leetcode.yml` | hourly at :20 |
-| `refresh-codechef.yml` | hourly at :30 |
-| `refresh-kattis.yml` | hourly at :40 |
-| `refresh-uva.yml` | hourly at :50 |
-| `refresh-cses.yml` | daily at 06:00 (CSES rate-limits aggressively) |
-| `refresh-data.yml` | manual only; refreshes every judge and backs the **Refresh now** button |
+Each judge also has a manual-only workflow (`refresh-codeforces.yml`,
+`refresh-atcoder.yml`, `refresh-leetcode.yml`, `refresh-codechef.yml`,
+`refresh-cses.yml`, `refresh-kattis.yml`, `refresh-uva.yml`) for targeted re-runs
+from the Actions tab or the CLI:
 
-Every workflow accepts a `full` input for a one-time backfill of the whole history.
+```bash
+gh workflow run refresh-leetcode.yml
+gh workflow run refresh-cses.yml -f full=true   # full history backfill
+```
 
-To enable the **Refresh now** button, add a Vercel environment variable named
-`GITHUB_REFRESH_TOKEN` containing a fine-grained GitHub token with Actions: write
-permission for the repository. The token stays server-side. The target repository
-defaults to the one linked to the Vercel project; override it with `GITHUB_REPO`
-(`owner/repo`), and the workflow file or branch with `GITHUB_REFRESH_WORKFLOW` and
-`GITHUB_REFRESH_BRANCH`.
+All of them call the reusable `refresh-platform.yml` and share one concurrency
+group, so only one commits at a time and the data files never race. Every workflow
+accepts a `full` input for a one-time backfill of the whole history.
 
 ## Structure
 

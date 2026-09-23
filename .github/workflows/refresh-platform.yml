@@ -44,7 +44,7 @@ jobs:
           UVA_USERNAME: ${{ secrets.UVA_USERNAME }}
           UVA_USER_ID: ${{ secrets.UVA_USER_ID }}
           PLATFORMS: ${{ inputs.platforms }}
-          REFRESH_CSES: ${{ github.event_name == 'workflow_dispatch' }}
+          REFRESH_CSES: "true" # runs are daily/manual now, so no need to throttle CSES
         run: corepack pnpm refresh -- ${{ inputs.full && '--full' || '' }}
       - name: Mark solved starred problems
         run: corepack pnpm starred:solved

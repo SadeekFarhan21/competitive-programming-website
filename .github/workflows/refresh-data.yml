@@ -1,9 +1,11 @@
-# Refreshes every judge at once. No schedule: the per-platform workflows
-# (refresh-codeforces.yml, …) run hourly. This one backs the site's
-# "Refresh now" button and one-time backfills.
+# Refreshes every judge once a day and backs the site's "Refresh now"
+# button. The per-judge workflows (refresh-codeforces.yml, …) are manual-only
+# for targeted re-runs and backfills.
 name: Refresh submission data
 
 on:
+  schedule:
+    - cron: "0 7 * * *" # daily at 07:00 UTC = 3 AM EDT (2 AM EST in winter)
   workflow_dispatch:
     inputs:
       full:

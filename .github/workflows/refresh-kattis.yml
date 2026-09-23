@@ -1,8 +1,6 @@
 name: Refresh Kattis
 
 on:
-  schedule:
-    - cron: "40 * * * *"
   workflow_dispatch:
     inputs:
       full:
