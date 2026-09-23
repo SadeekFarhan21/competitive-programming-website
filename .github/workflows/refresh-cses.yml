@@ -1,9 +1,8 @@
-# Refreshes every judge at once. No schedule: the per-platform workflows
-# (refresh-codeforces.yml, …) run hourly. This one backs the site's
-# "Refresh now" button and one-time backfills.
-name: Refresh submission data
+name: Refresh CSES
 
 on:
+  schedule:
+    - cron: "0 6 * * *"
   workflow_dispatch:
     inputs:
       full:
@@ -14,6 +13,7 @@ on:
 permissions:
   contents: write
 
+# Shared with every other refresh workflow so only one commits at a time.
 concurrency:
   group: refresh-submission-data
   cancel-in-progress: false
@@ -22,6 +22,6 @@ jobs:
   refresh:
     uses: ./.github/workflows/refresh-platform.yml
     with:
-      platforms: ""
+      platforms: cses
       full: ${{ inputs.full == true }}
     secrets: inherit

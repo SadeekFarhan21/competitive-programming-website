@@ -43,7 +43,15 @@ handle and identity variables on your Vercel project.
 pnpm refresh
 ```
 
-Add `--full` to paginate entire histories for a one-time backfill.
+Add `--full` to paginate entire histories for a one-time backfill, and `--only` to
+refresh a subset of judges:
+
+```bash
+pnpm refresh -- --only=codeforces,atcoder
+```
+
+Valid keys are `codeforces`, `atcoder`, `leetcode`, `codechef`, `cses`, `kattis`,
+and `uva`. The `PLATFORMS` environment variable does the same thing.
 
 To export only Kattis submissions, use the standalone scraper:
 
@@ -69,7 +77,28 @@ pnpm build
 pnpm start
 ```
 
-The project deploys directly to Vercel. GitHub Actions refreshes and commits the submission dataset on schedule.
+The project deploys directly to Vercel. GitHub Actions refreshes and commits the
+submission dataset on schedule.
+
+### Workflows
+
+Each judge has its own workflow so it can run on its own schedule, be triggered by
+hand from the Actions tab, and fail without affecting the others. They all call the
+reusable `refresh-platform.yml` and share one concurrency group, so only one commits
+at a time and the data files never race.
+
+| Workflow | Schedule (UTC) |
+| --- | --- |
+| `refresh-codeforces.yml` | hourly at :00 |
+| `refresh-atcoder.yml` | hourly at :10 |
+| `refresh-leetcode.yml` | hourly at :20 |
+| `refresh-codechef.yml` | hourly at :30 |
+| `refresh-kattis.yml` | hourly at :40 |
+| `refresh-uva.yml` | hourly at :50 |
+| `refresh-cses.yml` | daily at 06:00 (CSES rate-limits aggressively) |
+| `refresh-data.yml` | manual only; refreshes every judge and backs the **Refresh now** button |
+
+Every workflow accepts a `full` input for a one-time backfill of the whole history.
 
 To enable the **Refresh now** button, add a Vercel environment variable named
 `GITHUB_REFRESH_TOKEN` containing a fine-grained GitHub token with Actions: write

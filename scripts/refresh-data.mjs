@@ -67,6 +67,22 @@ function localDateTimeToEpoch(value, timeZone) {
 // (slower pacing to stay under rate limits). Use for one-time backfills.
 const FULL = process.argv.includes("--full");
 
+// --only=codeforces,atcoder (or PLATFORMS env): refresh a subset of judges.
+// Used by the per-platform GitHub workflows; defaults to every platform.
+const PLATFORM_KEYS = ["codeforces", "atcoder", "leetcode", "codechef", "cses", "kattis", "uva"];
+const onlyArg = process.argv.find((arg) => arg.startsWith("--only="))?.slice("--only=".length);
+const ONLY = (onlyArg ?? process.env.PLATFORMS ?? "")
+  .split(",")
+  .map((key) => key.trim().toLowerCase())
+  .filter(Boolean);
+for (const key of ONLY) {
+  if (!PLATFORM_KEYS.includes(key)) {
+    console.error(`Unknown platform "${key}". Expected one of: ${PLATFORM_KEYS.join(", ")}`);
+    process.exit(1);
+  }
+}
+const wanted = (key) => ONLY.length === 0 || ONLY.includes(key);
+
 // ---------- fetchers (return {platform, epoch, problem, verdict, ac, language, runtimeMs, memoryBytes}) ----------
 
 async function fetchCodeforces() {
@@ -340,7 +356,8 @@ async function fetchCodeChef(knownEpochs) {
 
 async function fetchCSES() {
   const scheduledCsesWindow = new Date().getUTCHours() === 6;
-  if (process.env.REFRESH_CSES !== "true" && !scheduledCsesWindow) {
+  const explicitlyRequested = ONLY.includes("cses");
+  if (process.env.REFRESH_CSES !== "true" && !scheduledCsesWindow && !explicitlyRequested) {
     console.log("CSES refresh skipped — scheduled separately to protect quota");
     return [];
   }
@@ -516,17 +533,21 @@ const existing = loadExisting();
 const knownEpochs = new Set(existing.flatMap(submissionKeys));
 console.log(`existing rows: ${existing.length}`);
 
-const results = await Promise.allSettled([
-  fetchCodeforces(),
-  fetchAtCoder(knownEpochs),
-  fetchLeetCode(knownEpochs),
-  fetchCodeChef(knownEpochs),
-  fetchCSES(),
-  fetchKattis(),
-  fetchUva(),
-]);
+const fetchers = [
+  { key: "codeforces", name: "Codeforces", run: () => fetchCodeforces() },
+  { key: "atcoder", name: "AtCoder", run: () => fetchAtCoder(knownEpochs) },
+  { key: "leetcode", name: "LeetCode", run: () => fetchLeetCode(knownEpochs) },
+  { key: "codechef", name: "CodeChef", run: () => fetchCodeChef(knownEpochs) },
+  { key: "cses", name: "CSES", run: () => fetchCSES() },
+  { key: "kattis", name: "Kattis", run: () => fetchKattis() },
+  { key: "uva", name: "UVA", run: () => fetchUva() },
+].filter((fetcher) => wanted(fetcher.key));
 
-const names = ["Codeforces", "AtCoder", "LeetCode", "CodeChef", "CSES", "Kattis", "UVA"];
+if (ONLY.length > 0) console.log(`platforms: ${fetchers.map((f) => f.name).join(", ")}`);
+
+const results = await Promise.allSettled(fetchers.map((fetcher) => fetcher.run()));
+
+const names = fetchers.map((fetcher) => fetcher.name);
 let fresh = [];
 results.forEach((r, i) => {
   if (r.status === "fulfilled") {
