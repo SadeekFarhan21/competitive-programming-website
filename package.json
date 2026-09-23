@@ -5,7 +5,8 @@
   "packageManager": "pnpm@10.14.0",
   "scripts": {
     "refresh": "node scripts/refresh-data.mjs",
-    "starred:solved": "node scripts/mark-starred-solved.mjs",
+    "halim:solved": "node scripts/mark-halim-book-solved.mjs",
+    "youkn0wwho:build": "node scripts/build-youkn0wwho.mjs",
     "fetch:kattis":"node scripts/fetch-kattis.mjs",
     "dev": "next dev",
     "build": "next build",

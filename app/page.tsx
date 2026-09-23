@@ -1,10 +1,12 @@
 import Heatmap from "./Heatmap";
 import RecentFeed from "./RecentFeed";
 import RefreshButton from "./RefreshButton";
+import Nav from "./Nav";
 
 export default function Home() {
   return (
     <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <Nav current="/" />
       <header className="mb-6">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>

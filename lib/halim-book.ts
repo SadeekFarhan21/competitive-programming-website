@@ -1,6 +1,6 @@
-import data from "../data/starred.json";
+import data from "../data/halim-book.json";
 
-export type StarredProblem = {
+export type HalimBookProblem = {
   judge: string;
   id: string;
   title: string | null;
@@ -14,9 +14,9 @@ export type StarredProblem = {
   solved: boolean;
 };
 
-export const starred = data as StarredProblem[];
+export const halimBook = data as HalimBookProblem[];
 
-const columns: (keyof StarredProblem)[] = [
+const columns: (keyof HalimBookProblem)[] = [
   "judge",
   "id",
   "title",
@@ -35,7 +35,7 @@ function escapeCsv(value: unknown): string {
   return /[",\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
 }
 
-export function starredCsv(): string {
-  const rows = starred.map((problem) => columns.map((column) => escapeCsv(problem[column])).join(","));
+export function halimBookCsv(): string {
+  const rows = halimBook.map((problem) => columns.map((column) => escapeCsv(problem[column])).join(","));
   return [columns.join(","), ...rows].join("\n") + "\n";
 }

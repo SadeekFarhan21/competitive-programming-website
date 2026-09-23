@@ -1,4 +1,4 @@
-// Adds a `solved` flag to data/starred.json and data/starred.csv based on the
+// Adds a `solved` flag to data/halim-book.json and data/halim-book.csv based on the
 // accepted submissions in data/submissions.json. Run after `pnpm refresh`.
 //
 // Matching per judge:
@@ -16,7 +16,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const norm = (value) => String(value).normalize("NFKC").trim().toLowerCase();
 
 const submissions = read("submissions.json");
-const starred = read("starred.json");
+const starred = read("halim-book.json");
 
 const accepted = (platform) => submissions.filter((s) => s.platform === platform && s.ac);
 
@@ -75,9 +75,9 @@ for (const problem of starred) {
   }
   problem.solved = solved;
 }
-fs.writeFileSync(path.join(DATA, "starred.json"), JSON.stringify(starred, null, 2) + "\n");
+fs.writeFileSync(path.join(DATA, "halim-book.json"), JSON.stringify(starred, null, 2) + "\n");
 
-// starred.csv keeps its original layout (one row per starred.json entry, same
+// halim-book.csv keeps its original layout (one row per halim-book.json entry, same
 // order); only a trailing Solved column is added or updated.
 function parseCsv(textValue) {
   const rows = [];
@@ -98,13 +98,13 @@ function parseCsv(textValue) {
 }
 const escapeCsv = (value) => (/[",\n]/.test(value) ? `"${value.replace(/"/g, '""')}"` : value);
 
-const csvPath = path.join(DATA, "starred.csv");
+const csvPath = path.join(DATA, "halim-book.csv");
 const [header, ...body] = parseCsv(fs.readFileSync(csvPath, "utf8"));
-if (body.length !== starred.length) throw new Error(`starred.csv has ${body.length} rows, starred.json has ${starred.length}`);
+if (body.length !== starred.length) throw new Error(`halim-book.csv has ${body.length} rows, halim-book.json has ${starred.length}`);
 let solvedIndex = header.indexOf("Solved");
 if (solvedIndex < 0) solvedIndex = header.push("Solved") - 1;
 body.forEach((row, i) => {
-  if (row[0] !== starred[i].id) throw new Error(`starred.csv row ${i + 2} (${row[0]}) does not match starred.json (${starred[i].id})`);
+  if (row[0] !== starred[i].id) throw new Error(`halim-book.csv row ${i + 2} (${row[0]}) does not match halim-book.json (${starred[i].id})`);
   row[solvedIndex] = String(starred[i].solved);
 });
 fs.writeFileSync(csvPath, [header, ...body].map((row) => row.map(escapeCsv).join(",")).join("\n") + "\n");

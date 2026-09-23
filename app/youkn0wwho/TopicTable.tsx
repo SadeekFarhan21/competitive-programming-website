@@ -1,31 +1,32 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { StarredProblem } from "../../lib/starred";
+import type { TopicMeta, TopicProblem } from "../../lib/youkn0wwho";
 
-type SortKey = "order" | "judge" | "problem" | "section" | "dacu" | "points";
+type SortKey = "order" | "judge" | "problem" | "topic" | "difficulty";
 
 const PAGE_SIZE = 100;
 
-const judges = ["UVa", "Kattis", "LeetCode"] as const;
+// The judges that carry most of the list get a chip each; the long tail is grouped as "Other".
+const judges = ["Codeforces", "CF Gym", "CSES", "AtCoder", "CodeChef", "SPOJ", "UVa", "Other"] as const;
+const OTHER = "Other";
 
 const judgeStyles: Record<string, { chip: string; dot: string }> = {
-  UVa: { chip: "bg-sky-500/10 text-sky-300 ring-sky-400/30", dot: "bg-sky-400" },
+  Codeforces: { chip: "bg-sky-500/10 text-sky-300 ring-sky-400/30", dot: "bg-sky-400" },
+  "CF Gym": { chip: "bg-indigo-500/10 text-indigo-300 ring-indigo-400/30", dot: "bg-indigo-400" },
+  CSES: { chip: "bg-lime-500/10 text-lime-300 ring-lime-400/30", dot: "bg-lime-400" },
+  AtCoder: { chip: "bg-neutral-500/10 text-neutral-200 ring-neutral-400/30", dot: "bg-neutral-300" },
+  CodeChef: { chip: "bg-orange-500/10 text-orange-300 ring-orange-400/30", dot: "bg-orange-400" },
+  SPOJ: { chip: "bg-violet-500/10 text-violet-300 ring-violet-400/30", dot: "bg-violet-400" },
+  UVa: { chip: "bg-cyan-500/10 text-cyan-300 ring-cyan-400/30", dot: "bg-cyan-400" },
   Kattis: { chip: "bg-amber-500/10 text-amber-300 ring-amber-400/30", dot: "bg-amber-400" },
   LeetCode: { chip: "bg-emerald-500/10 text-emerald-300 ring-emerald-400/30", dot: "bg-emerald-400" },
+  Other: { chip: "bg-white/5 text-neutral-300 ring-white/15", dot: "bg-neutral-400" },
 };
+const styleFor = (judge: string) => judgeStyles[judge] ?? judgeStyles[OTHER];
+const groupOf = (judge: string) => ((judges as readonly string[]).includes(judge) ? judge : OTHER);
 
-const chapterNames: Record<string, string> = {
-  "1": "Introduction",
-  "2": "Data Structures",
-  "3": "Problem Solving Paradigms",
-  "4": "Graph",
-  "5": "Mathematics",
-  "6": "String Processing",
-  "7": "Geometry",
-  "8": "Advanced Topics",
-  "9": "Rare Topics",
-};
+const difficultyNames: Record<number, string> = { 1: "Easy", 2: "Medium", 3: "Hard", 4: "Very Hard" };
 
 const fieldClass =
   "h-9 rounded-lg border border-white/10 bg-white/[0.03] px-3 text-sm text-neutral-200 placeholder:text-neutral-500 transition focus:border-white/25 focus:bg-white/[0.05] focus:outline-none";
@@ -40,14 +41,6 @@ const sliderClass =
   "[&::-moz-range-thumb]:pointer-events-auto [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:w-4 " +
   "[&::-moz-range-thumb]:cursor-grab [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:border-0 " +
   "[&::-moz-range-thumb]:bg-white [&::-moz-range-track]:bg-transparent";
-
-function compareSections(a: string, b: string) {
-  return a.localeCompare(b, undefined, { numeric: true });
-}
-
-function chapterOf(section: string) {
-  return section.split(".")[0];
-}
 
 // Display preferences are personal, so they live in localStorage rather than the URL.
 function usePreference(key: string, fallback: boolean) {
@@ -116,15 +109,6 @@ function FilterIcon() {
   );
 }
 
-function EyeIcon() {
-  return (
-    <svg viewBox="0 0 20 20" fill="none" className="h-3.5 w-3.5" aria-hidden>
-      <path d="M1.5 10S4.5 4 10 4s8.5 6 8.5 6-3 6-8.5 6-8.5-6-8.5-6Z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <circle cx="10" cy="10" r="2.5" stroke="currentColor" strokeWidth="1.5" />
-    </svg>
-  );
-}
-
 function ExternalIcon() {
   return (
     <svg viewBox="0 0 20 20" fill="none" className="h-3 w-3 opacity-0 transition group-hover:opacity-70" aria-hidden>
@@ -133,64 +117,45 @@ function ExternalIcon() {
   );
 }
 
-function ProblemLink({ problem }: { problem: StarredProblem }) {
-  const label = problem.title ?? problem.id;
-  const content = (
-    <>
-      <span className="truncate">{label}</span>
-      {problem.url && <ExternalIcon />}
-    </>
-  );
-  return problem.url ? (
+function ProblemLink({ problem }: { problem: TopicProblem }) {
+  return (
     <a
       href={problem.url}
       target="_blank"
       rel="noreferrer"
       className="group inline-flex min-w-0 max-w-full items-center gap-1.5 font-medium text-neutral-100 decoration-white/30 underline-offset-4 hover:underline"
     >
-      {content}
+      <span className="truncate">{problem.title}</span>
+      <ExternalIcon />
     </a>
-  ) : (
-    <span className="inline-flex min-w-0 max-w-full items-center font-medium text-neutral-100">{content}</span>
   );
 }
 
-// Hidden hints sit behind an eye button, so a spoiler is only revealed on purpose.
-function Hint({ hint, hidden, className = "" }: { hint: string; hidden: boolean; className?: string }) {
-  const [revealed, setRevealed] = useState(false);
-  if (!hidden || revealed) return <p className={className}>{hint}</p>;
-  return (
-    <button
-      onClick={() => setRevealed(true)}
-      className={`inline-flex items-center gap-1.5 text-xs text-neutral-500 transition hover:text-neutral-200 ${className}`}
-    >
-      <EyeIcon />
-      Show hint
-    </button>
-  );
+function StarBadge() {
+  return <span className="shrink-0 text-[10px] font-medium uppercase tracking-wide text-amber-300/80">★</span>;
 }
 
-function CP5Badge() {
-  return <span className="shrink-0 text-[10px] font-medium uppercase tracking-wide text-neutral-500">CP5</span>;
-}
-
-export default function StarredTable({ problems }: { problems: StarredProblem[] }) {
+export default function TopicTable({
+  problems,
+  topics,
+}: {
+  problems: TopicProblem[];
+  topics: Record<string, TopicMeta>;
+}) {
   const [query, setQuery] = useState("");
   const [activeJudges, setActiveJudges] = useState<string[]>([...judges]);
-  const [chapter, setChapter] = useState("");
-  const [section, setSection] = useState("");
-  const [cp5Only, setCp5Only] = useState(false);
+  const [category, setCategory] = useState("");
+  const [topic, setTopic] = useState("");
+  const [starredOnly, setStarredOnly] = useState(true);
   const [hideSolved, setHideSolved] = useState(false);
-  const [minPoints, setMinPoints] = useState("");
-  const [maxPoints, setMaxPoints] = useState("");
+  const [minDifficulty, setMinDifficulty] = useState("");
+  const [maxDifficulty, setMaxDifficulty] = useState("");
   const [sortKey, setSortKey] = useState<SortKey>("order");
   const [sortAsc, setSortAsc] = useState(true);
   const [visible, setVisible] = useState(PAGE_SIZE);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [ready, setReady] = useState(false);
-  const [hideHints, setHideHints] = usePreference("starred:blurHints", true);
-  const [hideSections, setHideSections] = usePreference("starred:hideSections", false);
-  const [showDacu, setShowDacu] = usePreference("starred:showDacu", false);
+  const [hideTopics, setHideTopics] = usePreference("youkn0wwho:hideTopics", false);
   const searchRef = useRef<HTMLInputElement>(null);
 
   // Restore filters from the URL so a filtered view can be bookmarked or shared.
@@ -198,19 +163,19 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
     const params = new URLSearchParams(window.location.search);
     setQuery(params.get("q") ?? "");
     if (params.get("judge")) setActiveJudges(params.get("judge")!.split(","));
-    setChapter(params.get("chapter") ?? "");
-    setSection(params.get("section") ?? "");
-    setCp5Only(params.get("cp5") === "1");
+    setCategory(params.get("category") ?? "");
+    setTopic(params.get("topic") ?? "");
+    setStarredOnly(params.get("all") !== "1");
     setHideSolved(params.get("unsolved") === "1");
-    setMinPoints(params.get("min") ?? "");
-    setMaxPoints(params.get("max") ?? "");
+    setMinDifficulty(params.get("min") ?? "");
+    setMaxDifficulty(params.get("max") ?? "");
     const sort = params.get("sort");
     if (sort) {
       setSortKey(sort.replace(/^-/, "") as SortKey);
       setSortAsc(!sort.startsWith("-"));
     }
     // A shared link with advanced filters should show them, not hide them behind the button.
-    if (["chapter", "section", "cp5", "unsolved", "min", "max"].some((key) => params.has(key))) setFiltersOpen(true);
+    if (["category", "topic", "all", "unsolved", "min", "max"].some((key) => params.has(key))) setFiltersOpen(true);
     setReady(true);
   }, []);
 
@@ -219,17 +184,17 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
     const params = new URLSearchParams();
     if (query) params.set("q", query);
     if (activeJudges.length !== judges.length) params.set("judge", activeJudges.join(","));
-    if (chapter) params.set("chapter", chapter);
-    if (section) params.set("section", section);
-    if (cp5Only) params.set("cp5", "1");
+    if (category) params.set("category", category);
+    if (topic) params.set("topic", topic);
+    if (!starredOnly) params.set("all", "1");
     if (hideSolved) params.set("unsolved", "1");
-    if (minPoints) params.set("min", minPoints);
-    if (maxPoints) params.set("max", maxPoints);
+    if (minDifficulty) params.set("min", minDifficulty);
+    if (maxDifficulty) params.set("max", maxDifficulty);
     if (sortKey !== "order" || !sortAsc) params.set("sort", `${sortAsc ? "" : "-"}${sortKey}`);
     const search = params.toString();
     window.history.replaceState(null, "", search ? `?${search}` : window.location.pathname);
     setVisible(PAGE_SIZE);
-  }, [ready, query, activeJudges, chapter, section, cp5Only, hideSolved, minPoints, maxPoints, sortKey, sortAsc]);
+  }, [ready, query, activeJudges, category, topic, starredOnly, hideSolved, minDifficulty, maxDifficulty, sortKey, sortAsc]);
 
   // Press "/" anywhere to jump to search.
   useEffect(() => {
@@ -244,62 +209,64 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const chapters = useMemo(
-    () => [...new Set(problems.map((p) => chapterOf(p.section)))].sort(compareSections),
-    [problems]
+  const orderedTopics = useMemo(
+    () => Object.entries(topics).sort(([, a], [, b]) => a.order - b.order),
+    [topics]
   );
 
-  const sectionGroups = useMemo(() => {
-    const topics = new Map<string, string>();
-    for (const p of problems) topics.set(p.section, p.topic);
-    const groups = new Map<string, [string, string][]>();
-    for (const [s, topic] of [...topics].sort(([a], [b]) => compareSections(a, b))) {
-      const c = chapterOf(s);
-      if (chapter && c !== chapter) continue;
-      groups.set(c, [...(groups.get(c) ?? []), [s, topic]]);
+  const categories = useMemo(() => [...new Set(orderedTopics.map(([, t]) => t.category))], [orderedTopics]);
+
+  // Topics grouped by category for the <select>, narrowed to the chosen category.
+  const topicGroups = useMemo(() => {
+    const groups = new Map<string, [string, TopicMeta][]>();
+    for (const entry of orderedTopics) {
+      const c = entry[1].category;
+      if (category && c !== category) continue;
+      groups.set(c, [...(groups.get(c) ?? []), entry]);
     }
     return [...groups];
-  }, [problems, chapter]);
+  }, [orderedTopics, category]);
 
   const judgeCounts = useMemo(() => {
     const counts: Record<string, number> = {};
-    for (const p of problems) counts[p.judge] = (counts[p.judge] ?? 0) + 1;
+    for (const p of problems) {
+      const g = groupOf(p.judge);
+      counts[g] = (counts[g] ?? 0) + 1;
+    }
     return counts;
   }, [problems]);
 
-  const pointBounds = useMemo(() => {
-    const values = problems.map((p) => p.points);
-    return { min: Math.floor(Math.min(...values)), max: Math.ceil(Math.max(...values)) };
-  }, [problems]);
-  const pointSpan = pointBounds.max - pointBounds.min || 1;
-  const low = minPoints === "" ? pointBounds.min : Math.max(Number(minPoints), pointBounds.min);
-  const high = maxPoints === "" ? pointBounds.max : Math.min(Number(maxPoints), pointBounds.max);
+  const difficultyBounds = { min: 1, max: 4 };
+  const difficultySpan = difficultyBounds.max - difficultyBounds.min;
+  const low = minDifficulty === "" ? difficultyBounds.min : Math.max(Number(minDifficulty), difficultyBounds.min);
+  const high = maxDifficulty === "" ? difficultyBounds.max : Math.min(Number(maxDifficulty), difficultyBounds.max);
 
   // A thumb resting at the edge of the range means "no limit", so it stays out of the URL.
   function setLow(value: number) {
-    setMinPoints(value <= pointBounds.min ? "" : value.toFixed(1));
+    setMinDifficulty(value <= difficultyBounds.min ? "" : String(value));
   }
 
   function setHigh(value: number) {
-    setMaxPoints(value >= pointBounds.max ? "" : value.toFixed(1));
+    setMaxDifficulty(value >= difficultyBounds.max ? "" : String(value));
   }
 
   const filtered = useMemo(() => {
     const needle = query.trim().toLowerCase();
-    const min = minPoints === "" ? -Infinity : Number(minPoints);
-    const max = maxPoints === "" ? Infinity : Number(maxPoints);
+    const min = minDifficulty === "" ? -Infinity : Number(minDifficulty);
+    const max = maxDifficulty === "" ? Infinity : Number(maxDifficulty);
 
     const rows = problems
       .map((problem, order) => ({ problem, order }))
       .filter(({ problem: p }) => {
-        if (!activeJudges.includes(p.judge)) return false;
-        if (chapter && chapterOf(p.section) !== chapter) return false;
-        if (section && p.section !== section) return false;
-        if (cp5Only && !p.cp5) return false;
+        if (!activeJudges.includes(groupOf(p.judge))) return false;
+        if (category && topics[p.topic]?.category !== category) return false;
+        if (topic && !p.topics.includes(topic)) return false;
+        if (starredOnly && !p.starred) return false;
         if (hideSolved && p.solved) return false;
-        if (p.points < min || p.points > max) return false;
+        if (p.difficulty != null && (p.difficulty < min || p.difficulty > max)) return false;
         if (!needle) return true;
-        return [p.id, p.title, p.topic, p.hint, p.section].some((field) =>
+        const meta = topics[p.topic];
+        return [p.id, p.title, p.judge, meta?.title, meta?.subCategory, meta?.category].some((field) =>
           field?.toLowerCase().includes(needle)
         );
       });
@@ -310,23 +277,22 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
       const pb = b.problem;
       let result = 0;
       if (sortKey === "judge") result = pa.judge.localeCompare(pb.judge);
-      if (sortKey === "problem") result = (pa.title ?? pa.id).localeCompare(pb.title ?? pb.id);
-      if (sortKey === "section") result = compareSections(pa.section, pb.section);
-      if (sortKey === "dacu") result = (pa.dacu ?? -1) - (pb.dacu ?? -1);
-      if (sortKey === "points") result = pa.points - pb.points;
+      if (sortKey === "problem") result = pa.title.localeCompare(pb.title);
+      if (sortKey === "topic") result = (topics[pa.topic]?.order ?? 0) - (topics[pb.topic]?.order ?? 0);
+      if (sortKey === "difficulty") result = (pa.difficulty ?? 9) - (pb.difficulty ?? 9);
       return (result || a.order - b.order) * direction;
     });
 
     return rows.map(({ problem }) => problem);
-  }, [problems, query, activeJudges, chapter, section, cp5Only, hideSolved, minPoints, maxPoints, sortKey, sortAsc]);
+  }, [problems, topics, query, activeJudges, category, topic, starredOnly, hideSolved, minDifficulty, maxDifficulty, sortKey, sortAsc]);
 
   const shown = filtered.slice(0, visible);
   const advancedCount =
-    (chapter ? 1 : 0) +
-    (section ? 1 : 0) +
-    (cp5Only ? 1 : 0) +
+    (category ? 1 : 0) +
+    (topic ? 1 : 0) +
+    (!starredOnly ? 1 : 0) +
     (hideSolved ? 1 : 0) +
-    (minPoints !== "" || maxPoints !== "" ? 1 : 0);
+    (minDifficulty !== "" || maxDifficulty !== "" ? 1 : 0);
   const isFiltered = query !== "" || activeJudges.length !== judges.length || advancedCount > 0;
 
   function toggleJudge(judge: string) {
@@ -339,25 +305,25 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
     if (sortKey === key) setSortAsc(!sortAsc);
     else {
       setSortKey(key);
-      setSortAsc(key !== "dacu" && key !== "points");
+      setSortAsc(true);
     }
   }
 
-  function pickSection(s: string) {
-    setChapter(chapterOf(s));
-    setSection(s);
+  function pickTopic(id: string) {
+    setCategory(topics[id]?.category ?? "");
+    setTopic(id);
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   function reset() {
     setQuery("");
     setActiveJudges([...judges]);
-    setChapter("");
-    setSection("");
-    setCp5Only(false);
+    setCategory("");
+    setTopic("");
+    setStarredOnly(true);
     setHideSolved(false);
-    setMinPoints("");
-    setMaxPoints("");
+    setMinDifficulty("");
+    setMaxDifficulty("");
     setSortKey("order");
     setSortAsc(true);
   }
@@ -376,6 +342,8 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
       </th>
     );
   }
+
+  const difficultyLabel = (value: number | null) => (value == null ? null : difficultyNames[value] ?? String(value));
 
   return (
     <div>
@@ -441,41 +409,40 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
         {filtersOpen && (
           <div className="mt-3 grid gap-4 rounded-xl border border-white/10 bg-white/[0.02] p-4 sm:grid-cols-2 lg:grid-cols-3">
             <label className="flex flex-col gap-1.5 text-xs font-medium text-neutral-500">
-              Chapter
+              Category
               <select
-                value={chapter}
+                value={category}
                 onChange={(e) => {
-                  setChapter(e.target.value);
-                  setSection("");
+                  setCategory(e.target.value);
+                  setTopic("");
                 }}
                 className={`${fieldClass} w-full min-w-0`}
               >
-                <option value="">All chapters</option>
-                {chapters.map((c) => (
+                <option value="">All categories</option>
+                {categories.map((c) => (
                   <option key={c} value={c}>
                     {c}
-                    {chapterNames[c] ? ` · ${chapterNames[c]}` : ""}
                   </option>
                 ))}
               </select>
             </label>
 
             <label className="flex flex-col gap-1.5 text-xs font-medium text-neutral-500">
-              Section
+              Topic
               <select
-                value={section}
+                value={topic}
                 onChange={(e) => {
-                  setSection(e.target.value);
-                  if (e.target.value) setChapter(chapterOf(e.target.value));
+                  setTopic(e.target.value);
+                  if (e.target.value) setCategory(topics[e.target.value]?.category ?? "");
                 }}
                 className={`${fieldClass} w-full min-w-0`}
               >
-                <option value="">All sections</option>
-                {sectionGroups.map(([c, items]) => (
-                  <optgroup key={c} label={`Chapter ${c}${chapterNames[c] ? ` · ${chapterNames[c]}` : ""}`}>
-                    {items.map(([s, topic]) => (
-                      <option key={s} value={s}>
-                        {s} · {topic}
+                <option value="">All topics</option>
+                {topicGroups.map(([c, items]) => (
+                  <optgroup key={c} label={c}>
+                    {items.map(([id, meta]) => (
+                      <option key={id} value={id}>
+                        {meta.subCategory} · {meta.title}
                       </option>
                     ))}
                   </optgroup>
@@ -485,9 +452,9 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
 
             <div className="flex flex-col gap-1.5 text-xs font-medium text-neutral-500">
               <span className="flex justify-between">
-                Points
+                Difficulty
                 <span className="tabular-nums text-neutral-300">
-                  {low.toFixed(1)}–{high.toFixed(1)}
+                  {difficultyNames[low]}–{difficultyNames[high]}
                 </span>
               </span>
               <div className="relative h-9 w-full">
@@ -495,39 +462,37 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
                 <div
                   className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-white/70"
                   style={{
-                    left: `${((low - pointBounds.min) / pointSpan) * 100}%`,
-                    right: `${((pointBounds.max - high) / pointSpan) * 100}%`,
+                    left: `${((low - difficultyBounds.min) / difficultySpan) * 100}%`,
+                    right: `${((difficultyBounds.max - high) / difficultySpan) * 100}%`,
                   }}
                 />
                 <input
                   type="range"
-                  min={pointBounds.min}
-                  max={pointBounds.max}
-                  step="0.1"
+                  min={difficultyBounds.min}
+                  max={difficultyBounds.max}
+                  step="1"
                   value={low}
                   onChange={(e) => setLow(Math.min(Number(e.target.value), high))}
-                  aria-label="Minimum points"
-                  className={`${sliderClass} ${low > pointBounds.max - 0.5 ? "z-20" : "z-10"}`}
+                  aria-label="Minimum difficulty"
+                  className={`${sliderClass} ${low > difficultyBounds.max - 1 ? "z-20" : "z-10"}`}
                 />
                 <input
                   type="range"
-                  min={pointBounds.min}
-                  max={pointBounds.max}
-                  step="0.1"
+                  min={difficultyBounds.min}
+                  max={difficultyBounds.max}
+                  step="1"
                   value={high}
                   onChange={(e) => setHigh(Math.max(Number(e.target.value), low))}
-                  aria-label="Maximum points"
+                  aria-label="Maximum difficulty"
                   className={`${sliderClass} z-10`}
                 />
               </div>
             </div>
 
             <div className="flex flex-wrap gap-x-6 gap-y-3 border-t border-white/5 pt-4 sm:col-span-2 lg:col-span-3">
-              <Switch checked={cp5Only} onChange={setCp5Only} label="New in CP5" />
+              <Switch checked={starredOnly} onChange={setStarredOnly} label="Starred only" />
               <Switch checked={hideSolved} onChange={setHideSolved} label="Hide solved" />
-              <Switch checked={hideHints} onChange={setHideHints} label="Hide hints" />
-              <Switch checked={hideSections} onChange={setHideSections} label="Hide sections" />
-              <Switch checked={showDacu} onChange={setShowDacu} label="Show DACU" />
+              <Switch checked={hideTopics} onChange={setHideTopics} label="Hide topics" />
             </div>
           </div>
         )}
@@ -565,68 +530,56 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
           <div className="hidden overflow-hidden rounded-xl border border-white/10 md:block">
             <table className="w-full table-fixed text-left text-sm">
               <colgroup>
+                <col className="w-32" />
+                <col className="w-[30%]" />
+                {!hideTopics && <col />}
                 <col className="w-28" />
-                <col className="w-[24%]" />
-                {!hideSections && <col className="w-[24%]" />}
-                <col />
-                {showDacu && <col className="w-20" />}
-                <col className="w-16" />
                 <col className="w-20" />
               </colgroup>
               <thead className="border-b border-white/10 text-xs uppercase tracking-wide text-neutral-500">
                 <tr>
                   {header("Judge", "judge")}
                   {header("Problem", "problem")}
-                  {!hideSections && header("Section", "section")}
-                  <th className="px-4 py-2.5 font-medium">Hint</th>
-                  {showDacu && header("DACU", "dacu", "text-right")}
-                  {header("Pts", "points", "text-right")}
+                  {!hideTopics && header("Topic", "topic")}
+                  {header("Difficulty", "difficulty", "text-right")}
                   <th className="px-4 py-2.5 text-center font-medium">Solved</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
                 {shown.map((p) => (
-                  <tr key={`${p.judge}:${p.id}`} className="align-top transition hover:bg-white/[0.02]">
+                  <tr key={p.id} className="align-top transition hover:bg-white/[0.02]">
                     <td className="px-4 py-2.5">
                       <span
-                        className={`inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset ${judgeStyles[p.judge]?.chip}`}
+                        className={`inline-flex max-w-full items-center gap-1.5 rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset ${styleFor(p.judge).chip}`}
                       >
-                        <span className={`h-1.5 w-1.5 rounded-full ${judgeStyles[p.judge]?.dot}`} />
-                        {p.judge}
+                        <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${styleFor(p.judge).dot}`} />
+                        <span className="truncate">{p.judge}</span>
                       </span>
                     </td>
                     <td className="px-4 py-2.5">
                       <div className="flex min-w-0 items-center gap-2">
                         <ProblemLink problem={p} />
-                        {p.cp5 && <CP5Badge />}
+                        {p.starred && <StarBadge />}
                       </div>
-                      {p.title && p.title !== p.id && (
-                        <span className="font-mono text-xs text-neutral-500">{p.id}</span>
-                      )}
+                      <span className="font-mono text-xs text-neutral-500">{p.id}</span>
                     </td>
-                    {!hideSections && (
+                    {!hideTopics && (
                       <td className="px-4 py-2.5">
                         <button
-                          onClick={() => pickSection(p.section)}
-                          title="Show only this section"
+                          onClick={() => pickTopic(p.topic)}
+                          title="Show only this topic"
                           className="group flex min-w-0 items-baseline gap-2 text-left"
                         >
                           <span className="shrink-0 font-mono text-xs text-neutral-500 group-hover:text-neutral-300">
-                            {p.section}
+                            {topics[p.topic]?.category}
                           </span>
-                          <span className="text-neutral-300 group-hover:text-white">{p.topic}</span>
+                          <span className="text-neutral-300 group-hover:text-white">{topics[p.topic]?.title}</span>
                         </button>
                       </td>
                     )}
-                    <td className="px-4 py-2.5 leading-relaxed text-neutral-400">
-                      <Hint key={String(hideHints)} hint={p.hint} hidden={hideHints} />
+                    <td className="px-4 py-2.5 text-right tabular-nums text-neutral-300">
+                      {difficultyLabel(p.difficulty) ?? <span className="text-neutral-700">—</span>}
                     </td>
-                    {showDacu && (
-                      <td className="px-4 py-2.5 text-right tabular-nums text-neutral-400">
-                        {p.dacu ? p.dacu.toLocaleString() : <span className="text-neutral-700">—</span>}
-                      </td>
-                    )}
-                    <td className="px-4 py-2.5 text-right tabular-nums text-neutral-300">{p.points.toFixed(1)}</td>
                     <td className="px-4 py-2.5 text-center">
                       <SolvedMark solved={p.solved} />
                     </td>
@@ -639,41 +592,37 @@ export default function StarredTable({ problems }: { problems: StarredProblem[] 
           {/* Mobile cards */}
           <ul className="flex flex-col gap-2 md:hidden">
             {shown.map((p) => (
-              <li key={`${p.judge}:${p.id}`} className="rounded-xl border border-white/10 p-3.5">
+              <li key={p.id} className="rounded-xl border border-white/10 p-3.5">
                 <div className="flex items-start justify-between gap-3">
                   <div className="min-w-0 flex-1">
                     <div className="flex min-w-0 items-center gap-2">
                       <ProblemLink problem={p} />
-                      {p.cp5 && <CP5Badge />}
+                      {p.starred && <StarBadge />}
                     </div>
                     <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-neutral-500">
                       <span className="inline-flex items-center gap-1.5">
-                        <span className={`h-1.5 w-1.5 rounded-full ${judgeStyles[p.judge]?.dot}`} />
+                        <span className={`h-1.5 w-1.5 rounded-full ${styleFor(p.judge).dot}`} />
                         {p.judge}
                       </span>
-                      {p.title && p.title !== p.id && <span className="font-mono">{p.id}</span>}
+                      <span className="font-mono">{p.id}</span>
                     </div>
                   </div>
                   <div className="flex shrink-0 items-center gap-2">
-                    <span className="text-xs tabular-nums text-neutral-300">{p.points.toFixed(1)} pts</span>
+                    {difficultyLabel(p.difficulty) && (
+                      <span className="text-xs tabular-nums text-neutral-300">{difficultyLabel(p.difficulty)}</span>
+                    )}
                     <SolvedMark solved={p.solved} />
                   </div>
                 </div>
-                {!hideSections && (
+                {!hideTopics && (
                   <button
-                    onClick={() => pickSection(p.section)}
+                    onClick={() => pickTopic(p.topic)}
                     className="mt-2 flex items-baseline gap-2 text-left text-sm"
                   >
-                    <span className="font-mono text-xs text-neutral-500">{p.section}</span>
-                    <span className="text-neutral-300">{p.topic}</span>
+                    <span className="font-mono text-xs text-neutral-500">{topics[p.topic]?.category}</span>
+                    <span className="text-neutral-300">{topics[p.topic]?.title}</span>
                   </button>
                 )}
-                <Hint
-                  key={String(hideHints)}
-                  hint={p.hint}
-                  hidden={hideHints}
-                  className="mt-1.5 text-sm leading-relaxed text-neutral-400"
-                />
               </li>
             ))}
           </ul>
