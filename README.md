@@ -73,4 +73,7 @@ in `.env.local`.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [PolyForm Noncommercial License 1.0.0](LICENSE).
+You may use, modify, and share it for any noncommercial purpose. Commercial use,
+including selling it or offering it as a paid service, is not permitted without
+the author's permission.
