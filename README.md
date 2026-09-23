@@ -63,3 +63,14 @@ The full deduplicated submission history is available at `/submissions.json`. It
 schema metadata, account handles, summary counts, field definitions, and one normalized
 record per submission. The refresh workflow updates the underlying dataset before the
 export is served.
+
+## Contributing
+
+Issues and pull requests are welcome. If you want to run the dashboard for your own
+accounts, update the handles in `scripts/refresh-data.mjs` and
+`app/submissions.json/route.ts`, then set the platform credentials described above
+in `.env.local`.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
