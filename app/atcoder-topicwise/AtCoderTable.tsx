@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import LoadMore from "../LoadMore";
 import type { AtCoderProblem, AtCoderTopic } from "../../lib/atcoder-topicwise";
 
-type SortKey = "order" | "contest" | "problem" | "topic" | "difficulty";
+type SortKey = "order" | "contest" | "problem" | "topic" | "difficulty" | "solved";
 
 const PAGE_SIZE = 100;
 
@@ -302,6 +303,8 @@ export default function AtCoderTable({
       // than grouped by each problem's primary topic.
       if (sortKey === "difficulty" || (sortKey === "order" && topic))
         result = (pa.difficulty ?? Infinity) - (pb.difficulty ?? Infinity);
+      // Ascending puts solved problems first.
+      if (sortKey === "solved") result = Number(pb.solved) - Number(pa.solved);
       return (result || a.order - b.order) * direction;
     });
 
@@ -559,7 +562,7 @@ export default function AtCoderTable({
                   {header("Problem", "problem")}
                   {!hideTopics && header("Topic", "topic")}
                   {!hideDifficulty && header("Difficulty", "difficulty", "text-right")}
-                  <th className="px-4 py-2.5 text-center font-medium">Solved</th>
+                  {header("Solved", "solved", "text-center")}
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
@@ -579,9 +582,11 @@ export default function AtCoderTable({
                           title="Show only this topic"
                           className="group flex min-w-0 items-baseline gap-2 text-left"
                         >
-                          <span className="shrink-0 font-mono text-xs text-neutral-500 group-hover:text-neutral-300">
-                            {topics[p.topic]?.category}
-                          </span>
+                          {topics[p.topic]?.depth > 0 && (
+                            <span className="shrink-0 font-mono text-xs text-neutral-500 group-hover:text-neutral-300">
+                              {topics[p.topic]?.category}
+                            </span>
+                          )}
                           <span className="text-neutral-300 group-hover:text-white">{topics[p.topic]?.title}</span>
                         </button>
                       </td>
@@ -629,7 +634,9 @@ export default function AtCoderTable({
                     onClick={() => pickTopic(p.topic)}
                     className="mt-2 flex items-baseline gap-2 text-left text-sm"
                   >
-                    <span className="font-mono text-xs text-neutral-500">{topics[p.topic]?.category}</span>
+                    {topics[p.topic]?.depth > 0 && (
+                      <span className="font-mono text-xs text-neutral-500">{topics[p.topic]?.category}</span>
+                    )}
                     <span className="text-neutral-300">{topics[p.topic]?.title}</span>
                   </button>
                 )}
@@ -637,19 +644,7 @@ export default function AtCoderTable({
             ))}
           </ul>
 
-          {visible < filtered.length && (
-            <div className="mt-6 flex flex-col items-center gap-2">
-              <button
-                onClick={() => setVisible((v) => v + PAGE_SIZE)}
-                className="rounded-lg px-4 py-2 text-sm font-medium text-neutral-200 ring-1 ring-inset ring-white/15 transition hover:bg-white/5 hover:ring-white/25"
-              >
-                Show more
-              </button>
-              <span className="text-xs tabular-nums text-neutral-500">
-                Showing {shown.length.toLocaleString()} of {filtered.length.toLocaleString()}
-              </span>
-            </div>
-          )}
+          <LoadMore shown={shown.length} total={filtered.length} onMore={() => setVisible((v) => v + PAGE_SIZE)} />
         </>
       )}
     </div>

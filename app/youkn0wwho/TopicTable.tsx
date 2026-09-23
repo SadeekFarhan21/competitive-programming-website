@@ -1,9 +1,10 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import LoadMore from "../LoadMore";
 import type { TopicMeta, TopicProblem } from "../../lib/youkn0wwho";
 
-type SortKey = "order" | "judge" | "problem" | "topic" | "difficulty";
+type SortKey = "order" | "judge" | "problem" | "topic" | "difficulty" | "solved";
 
 const PAGE_SIZE = 100;
 
@@ -285,6 +286,8 @@ export default function TopicTable({
       if (sortKey === "problem") result = pa.title.localeCompare(pb.title);
       if (sortKey === "topic") result = (topics[pa.topic]?.order ?? 0) - (topics[pb.topic]?.order ?? 0);
       if (sortKey === "difficulty") result = (pa.difficulty ?? 9) - (pb.difficulty ?? 9);
+      // Ascending puts solved problems first.
+      if (sortKey === "solved") result = Number(pb.solved) - Number(pa.solved);
       return (result || a.order - b.order) * direction;
     });
 
@@ -547,7 +550,7 @@ export default function TopicTable({
                   {header("Problem", "problem")}
                   {!hideTopics && header("Topic", "topic")}
                   {header("Difficulty", "difficulty", "text-right")}
-                  <th className="px-4 py-2.5 text-center font-medium">Solved</th>
+                  {header("Solved", "solved", "text-center")}
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
@@ -632,19 +635,7 @@ export default function TopicTable({
             ))}
           </ul>
 
-          {visible < filtered.length && (
-            <div className="mt-6 flex flex-col items-center gap-2">
-              <button
-                onClick={() => setVisible((v) => v + PAGE_SIZE)}
-                className="rounded-lg px-4 py-2 text-sm font-medium text-neutral-200 ring-1 ring-inset ring-white/15 transition hover:bg-white/5 hover:ring-white/25"
-              >
-                Show more
-              </button>
-              <span className="text-xs tabular-nums text-neutral-500">
-                Showing {shown.length.toLocaleString()} of {filtered.length.toLocaleString()}
-              </span>
-            </div>
-          )}
+          <LoadMore shown={shown.length} total={filtered.length} onMore={() => setVisible((v) => v + PAGE_SIZE)} />
         </>
       )}
     </div>
