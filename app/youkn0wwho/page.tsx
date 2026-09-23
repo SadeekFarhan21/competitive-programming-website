@@ -41,6 +41,7 @@ export default function YouKn0wWhoPage() {
             </summary>
             <div className="absolute right-0 z-30 mt-2 w-36 overflow-hidden rounded-lg border border-white/10 bg-[#141416] py-1 shadow-xl">
               {[
+                { href: "/youkn0wwho.txt", label: "Text" },
                 { href: "/youkn0wwho.csv", label: "CSV" },
                 { href: "/youkn0wwho.json", label: "JSON" },
               ].map((link) => (
