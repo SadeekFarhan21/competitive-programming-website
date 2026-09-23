@@ -7,44 +7,76 @@ The heatmap and recent-submission feed read from the bundled `data/submissions.j
 ## Development
 
 ```bash
-npm install
-npm run dev
+cp .env.example .env.local   # then fill in your handles
+pnpm install
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
 
+## Configuration
+
+Every account-specific value is an environment variable, so the project runs for
+any set of accounts. Copy `.env.example` to `.env.local` and fill in what you use;
+platforms without a handle are skipped.
+
+| Variable | Purpose |
+| --- | --- |
+| `CODEFORCES_HANDLE`, `ATCODER_HANDLE`, `LEETCODE_HANDLE`, `CODECHEF_HANDLE` | Public handles fetched by the refresh script |
+| `KATTIS_USERNAME`, `UVA_USERNAME` (or `UVA_USER_ID`) | Kattis and UVa accounts |
+| `OWNER_NAME`, `OWNER_URL`, `SITE_ICON_URL` | Shown in `/submissions.json` and used as the favicon |
+| `LEETCODE_SESSION` | Optional cookie that unlocks full LeetCode history instead of the last 20 |
+| `CSES_SESSION` | Cookie required for CSES |
+| `KATTIS_COOKIE` | `KattisSiteCookie` value, only if your submission history is private |
+| `LEETCODE_API_URL`, `CODECHEF_API_URL` | Optional alternate feed and CodeChef fallback proxy |
+| `GITHUB_REFRESH_TOKEN`, `GITHUB_REPO`, `GITHUB_REFRESH_WORKFLOW`, `GITHUB_REFRESH_BRANCH` | Power the **Refresh now** button (see below) |
+
+Never commit cookies or tokens. `.env*` files are git-ignored.
+
+In GitHub Actions the handles are read from repository **variables** and the cookies
+from repository **secrets** (Settings → Secrets and variables → Actions). Set the same
+handle and identity variables on your Vercel project.
+
 ## Refresh data
 
 ```bash
-npm run refresh
+pnpm refresh
 ```
 
-To export only Kattis submissions, use the standalone scraper. Add `--full` to
-follow pagination until no new submissions are found:
+Add `--full` to paginate entire histories for a one-time backfill.
+
+To export only Kattis submissions, use the standalone scraper:
 
 ```bash
-KATTIS_USERNAME=farhan-sadeek KATTIS_COOKIE='KattisSiteCookie=...' \
-  npm run fetch:kattis -- --full > /tmp/kattis-submissions.json
+pnpm fetch:kattis -- --full > /tmp/kattis-submissions.json
 ```
 
-The script also reads `KATTIS_USERNAME` and `KATTIS_COOKIE` from `.env.local`.
-The cookie is needed when Kattis only shows the submissions table to your logged-in
-browser session and must never be committed.
-To update the dashboard data directly instead of exporting a file, use
-`npm run fetch:kattis -- --full --merge`.
+It reads `KATTIS_USERNAME` and `KATTIS_COOKIE` from `.env.local`. To update the
+dashboard data directly instead of exporting a file, use
+`pnpm fetch:kattis -- --full --merge`.
 
-The refresh script uses the configured platform credentials from `.env.local`. LeetCode reads the public recent-submissions feed from [alfa-leetcode-api](https://alfa-leetcode-api.onrender.com) (latest 20 attempts with verdicts, falling back to LeetCode's own GraphQL), and uses the full authenticated history instead when a valid `LEETCODE_SESSION` is set; override the feed URL with `LEETCODE_API_URL`; CSES uses `CSES_SESSION`; Kattis uses `KATTIS_USERNAME` and, when required for private submission history, `KATTIS_COOKIE`; and UVa uses `UVA_USERNAME` or `UVA_USER_ID`. SPOJ entries are maintained manually in `data/spoj-manual.json` because its public submission page blocks automated refreshes.
+LeetCode reads the public recent-submissions feed from
+[alfa-leetcode-api](https://alfa-leetcode-api.onrender.com) (latest 20 attempts with
+verdicts, falling back to LeetCode's own GraphQL), and uses the full authenticated
+history instead when a valid `LEETCODE_SESSION` is set. SPOJ entries are maintained
+manually in `data/spoj-manual.json` because its public submission page blocks
+automated refreshes.
 
 ## Build and deploy
 
 ```bash
-npm run build
-npm start
+pnpm build
+pnpm start
 ```
 
 The project deploys directly to Vercel. GitHub Actions refreshes and commits the submission dataset on schedule.
 
-To enable the **Refresh now** button, add a Vercel environment variable named `GITHUB_REFRESH_TOKEN` containing a fine-grained GitHub token with Actions: write permission for this repository. The token stays server-side.
+To enable the **Refresh now** button, add a Vercel environment variable named
+`GITHUB_REFRESH_TOKEN` containing a fine-grained GitHub token with Actions: write
+permission for the repository. The token stays server-side. The target repository
+defaults to the one linked to the Vercel project; override it with `GITHUB_REPO`
+(`owner/repo`), and the workflow file or branch with `GITHUB_REFRESH_WORKFLOW` and
+`GITHUB_REFRESH_BRANCH`.
 
 ## Structure
 
@@ -53,6 +85,7 @@ To enable the **Refresh now** button, add a Vercel environment variable named `G
 - `app/api/heatmap/route.ts` — local heatmap data endpoint
 - `app/api/submissions/route.ts` — local recent-submission endpoint
 - `app/submissions.json/route.ts` — full AI-friendly submission export at `/submissions.json`
+- `lib/config.ts` — handles and identity read from environment variables
 - `lib/leetcode.ts` — authenticated/public LeetCode GraphQL client
 - `scripts/refresh-data.mjs` — platform data refresh script
 - `data/submissions.json` — bundled submission history
@@ -66,10 +99,8 @@ export is served.
 
 ## Contributing
 
-Issues and pull requests are welcome. If you want to run the dashboard for your own
-accounts, update the handles in `scripts/refresh-data.mjs` and
-`app/submissions.json/route.ts`, then set the platform credentials described above
-in `.env.local`.
+Issues and pull requests are welcome. To run the dashboard for your own
+accounts, set the variables described in [Configuration](#configuration).
 
 ## License
 

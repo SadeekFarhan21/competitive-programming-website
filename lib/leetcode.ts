@@ -1,7 +1,8 @@
 import { StoredSub } from "./store";
+import { handles } from "./config";
 
 const GRAPHQL_URL = "https://leetcode.com/graphql";
-const USERNAME = "FarhanSadeek21";
+const USERNAME = handles.leetcode ?? "";
 
 // LeetCode's public feeds are capped at the latest 20 submissions. The
 // alfa-leetcode-api wrapper exposes that feed with verdicts for every attempt.
@@ -126,6 +127,7 @@ export async function fetchLeetCodeSubmissions(limit = 20): Promise<StoredSub[]>
     // An expired cookie yields `submissions: null` instead of an error.
     if (Array.isArray(data.submissionList?.submissions)) return normalizeLeetCodeSubmissions(data);
   }
+  if (!USERNAME) return [];
   try {
     return await fetchPublicFeed();
   } catch {

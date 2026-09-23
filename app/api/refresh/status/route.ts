@@ -1,11 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
+import { github } from "../../../../lib/config";
 
-const RUNS_URL =
-  "https://api.github.com/repos/SadeekFarhan21/competitive-programming-website/actions/workflows/refresh-data.yml/runs?branch=main&per_page=5";
+const RUNS_URL = github.repo
+  ? `https://api.github.com/repos/${github.repo}/actions/workflows/${github.workflow}/runs?branch=${encodeURIComponent(github.branch)}&per_page=5`
+  : null;
 
 export async function GET(request: NextRequest) {
   const token = process.env.GITHUB_REFRESH_TOKEN;
-  if (!token) {
+  if (!token || !RUNS_URL) {
     return NextResponse.json(
       { error: "Refresh is not configured on the server." },
       { status: 503 }

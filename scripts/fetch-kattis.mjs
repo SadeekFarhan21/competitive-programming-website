@@ -1,7 +1,7 @@
 // Fetch a Kattis user's submission history as normalized JSON.
 //
 // Usage:
-//   KATTIS_USERNAME=farhan-sadeek KATTIS_COOKIE='KattisSiteCookie=...' \
+//   KATTIS_USERNAME=your-kattis-username KATTIS_COOKIE='KattisSiteCookie=...' \
 //     node scripts/fetch-kattis.mjs --full --merge
 //
 // KATTIS_COOKIE is only needed when the account's submission history is not

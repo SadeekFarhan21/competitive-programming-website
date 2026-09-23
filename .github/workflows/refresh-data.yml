@@ -25,13 +25,19 @@ jobs:
         run: corepack pnpm install --frozen-lockfile
       - name: Refresh data
         env:
+          # Handles are GitHub repository variables (Settings → Secrets and
+          # variables → Actions → Variables); cookies are repository secrets.
+          CODEFORCES_HANDLE: ${{ vars.CODEFORCES_HANDLE }}
+          ATCODER_HANDLE: ${{ vars.ATCODER_HANDLE }}
+          LEETCODE_HANDLE: ${{ vars.LEETCODE_HANDLE }}
+          CODECHEF_HANDLE: ${{ vars.CODECHEF_HANDLE }}
+          KATTIS_USERNAME: ${{ vars.KATTIS_USERNAME }}
+          CODECHEF_API_URL: ${{ vars.CODECHEF_API_URL }}
           LEETCODE_SESSION: ${{ secrets.LEETCODE_SESSION }}
           CSES_SESSION: ${{ secrets.CSES_SESSION }}
-          KATTIS_USERNAME: farhan-sadeek
           KATTIS_COOKIE: ${{ secrets.KATTIS_COOKIE }}
           UVA_USERNAME: ${{ secrets.UVA_USERNAME }}
           UVA_USER_ID: ${{ secrets.UVA_USER_ID }}
-          CODECHEF_API_URL: https://algo.farhansadeek.com/api/codechef
           REFRESH_CSES: ${{ github.event_name == 'workflow_dispatch' }}
         run: corepack pnpm refresh
       - name: Mark solved starred problems

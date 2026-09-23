@@ -1,17 +1,18 @@
 import { NextResponse } from "next/server";
 import { getSubmissions } from "../../lib/store";
+import { handles, owner } from "../../lib/config";
 
 export const dynamic = "force-dynamic";
 
 const accounts = {
-  Codeforces: "FarhanSadeek21",
-  AtCoder: "Farhan2021",
-  LeetCode: "FarhanSadeek21",
-  CodeChef: "farhansadeek21",
+  Codeforces: handles.codeforces,
+  AtCoder: handles.atcoder,
+  LeetCode: handles.leetcode,
+  CodeChef: handles.codechef,
   SPOJ: null,
   CSES: null,
-  Kattis: null,
-  UVA: null,
+  Kattis: handles.kattis,
+  UVA: handles.uva,
 };
 
 export async function GET() {
@@ -50,8 +51,8 @@ export async function GET() {
       schemaVersion: 1,
       generatedAt: new Date().toISOString(),
       user: {
-        name: "Farhan Sadeek",
-        website: "https://farhansadeek.com",
+        name: owner.name,
+        website: owner.website,
         accounts,
       },
       summary: {

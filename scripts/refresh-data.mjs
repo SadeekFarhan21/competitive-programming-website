@@ -19,12 +19,19 @@ for (const file of [".env.local", ".env"]) {
   }
 }
 
+// Platform handles come from the environment so anyone can run this for
+// their own accounts. A platform with no handle is skipped.
 const HANDLES = {
-  codeforces: "FarhanSadeek21",
-  atcoder: "Farhan2021",
-  leetcode: "FarhanSadeek21",
-  codechef: "farhansadeek21",
+  codeforces: process.env.CODEFORCES_HANDLE?.trim() || null,
+  atcoder: process.env.ATCODER_HANDLE?.trim() || null,
+  leetcode: process.env.LEETCODE_HANDLE?.trim() || null,
+  codechef: process.env.CODECHEF_HANDLE?.trim() || null,
 };
+
+function skipWithoutHandle(platform, envName) {
+  console.log(`${envName} not set — skipping ${platform}`);
+  return [];
+}
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -63,6 +70,7 @@ const FULL = process.argv.includes("--full");
 // ---------- fetchers (return {platform, epoch, problem, verdict, ac, language, runtimeMs, memoryBytes}) ----------
 
 async function fetchCodeforces() {
+  if (!HANDLES.codeforces) return skipWithoutHandle("Codeforces", "CODEFORCES_HANDLE");
   const res = await fetch(
     `https://codeforces.com/api/user.status?handle=${HANDLES.codeforces}&from=1&count=${FULL ? 10000 : 1000}`
   );
@@ -81,6 +89,7 @@ async function fetchCodeforces() {
 }
 
 async function fetchAtCoder(knownEpochs) {
+  if (!HANDLES.atcoder) return skipWithoutHandle("AtCoder", "ATCODER_HANDLE");
   const latest = [...knownEpochs]
     .filter((key) => key.startsWith("AtCoder:"))
     .map((key) => Number(key.slice("AtCoder:".length)))
@@ -199,6 +208,7 @@ async function fetchLeetCodePublicGraphql() {
 
 async function fetchLeetCode(knownEpochs) {
   const session = process.env.LEETCODE_SESSION;
+  if (!session && !HANDLES.leetcode) return skipWithoutHandle("LeetCode", "LEETCODE_HANDLE");
   if (session) {
     try {
       return (await fetchLeetCodeSession(session, knownEpochs)).flatMap(normalizeLeetCodeRow);
@@ -218,6 +228,7 @@ async function fetchLeetCode(knownEpochs) {
 }
 
 async function fetchCodeChef(knownEpochs) {
+  if (!HANDLES.codechef) return skipWithoutHandle("CodeChef", "CODECHEF_HANDLE");
   const ownApi = process.env.CODECHEF_API_URL;
 
   function parseEpoch(value) {

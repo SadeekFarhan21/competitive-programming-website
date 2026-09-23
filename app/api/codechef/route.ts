@@ -1,11 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { parseCodeChefSubmissions } from "../../../lib/codechef";
+import { handles } from "../../../lib/config";
 
 export const dynamic = "force-dynamic";
 
 export async function GET(request: NextRequest) {
-  const handle = request.nextUrl.searchParams.get("handle") || "farhansadeek21";
-  if (!/^[A-Za-z0-9_-]+$/.test(handle)) {
+  const handle = request.nextUrl.searchParams.get("handle") || handles.codechef;
+  if (!handle || !/^[A-Za-z0-9_-]+$/.test(handle)) {
     return NextResponse.json({ error: "Invalid CodeChef handle." }, { status: 400 });
   }
 

@@ -1,13 +1,15 @@
 import { NextResponse } from "next/server";
+import { github } from "../../../lib/config";
 
-const WORKFLOW_URL =
-  "https://api.github.com/repos/SadeekFarhan21/competitive-programming-website/actions/workflows/refresh-data.yml/dispatches";
+const WORKFLOW_URL = github.repo
+  ? `https://api.github.com/repos/${github.repo}/actions/workflows/${github.workflow}/dispatches`
+  : null;
 let lastTriggeredAt = 0;
 const COOLDOWN_MS = 10 * 60 * 1000;
 
 export async function POST() {
   const token = process.env.GITHUB_REFRESH_TOKEN;
-  if (!token) {
+  if (!token || !WORKFLOW_URL) {
     return NextResponse.json(
       { error: "Refresh is not configured on the server." },
       { status: 503 }
@@ -28,7 +30,7 @@ export async function POST() {
       Authorization: `Bearer ${token}`,
       "X-GitHub-Api-Version": "2022-11-28",
     },
-    body: JSON.stringify({ ref: "main" }),
+    body: JSON.stringify({ ref: github.branch }),
     cache: "no-store",
   });
 

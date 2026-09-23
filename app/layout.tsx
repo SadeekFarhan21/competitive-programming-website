@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import { owner } from "../lib/config";
 
 export const metadata: Metadata = {
   title: "Submission Activity",
   description:
     "Daily submission heatmap and feed across Codeforces, AtCoder, LeetCode, CodeChef, CSES, Kattis, and UVa.",
-  icons: {
-    icon: "https://www.farhansadeek.com/favicon.svg",
-  },
+  ...(owner.iconUrl ? { icons: { icon: owner.iconUrl } } : {}),
 };
 
 export default function RootLayout({
