@@ -2,6 +2,7 @@ const links = [
   { href: "/", label: "Activity" },
   { href: "/halim-book", label: "Halim Book" },
   { href: "/youkn0wwho", label: "YouKn0wWho" },
+  { href: "/atcoder-topicwise", label: "AtCoder Topicwise" },
 ];
 
 export default function Nav({ current }: { current: string }) {

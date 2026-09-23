@@ -7,6 +7,8 @@
     "refresh": "node scripts/refresh-data.mjs",
     "halim:solved": "node scripts/mark-halim-book-solved.mjs",
     "youkn0wwho:build": "node scripts/build-youkn0wwho.mjs",
+    "atcoder-topicwise:sync": "node scripts/sync-atcoder-topicwise.mjs",
+    "atcoder-topicwise:build": "node scripts/build-atcoder-topicwise.mjs",
     "fetch:kattis":"node scripts/fetch-kattis.mjs",
     "dev": "next dev",
     "build": "next build",

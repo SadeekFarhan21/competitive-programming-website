@@ -108,14 +108,18 @@ accepts a `full` input for a one-time backfill of the whole history.
 - `app/submissions.json/route.ts` — full AI-friendly submission export at `/submissions.json`
 - `app/halim-book/` — starred CP4/CP5 problems (Steven Halim) with solved marks; exports at `/halim-book.json`, `/halim-book.csv`, and `/halim-book.txt`
 - `app/youkn0wwho/` — YouKn0wWho's topic list with solved marks; exports at `/youkn0wwho.json`, `/youkn0wwho.csv`, and `/youkn0wwho.txt`
+- `app/atcoder-topicwise/` — AtCoder problems by topic from [AtCoder Categories](https://atcoder-categories.github.io) with solved marks; exports at `/atcoder-topicwise.json`, `/atcoder-topicwise.csv`, and `/atcoder-topicwise.txt`
 - `scripts/mark-halim-book-solved.mjs` — flags solved Halim book problems from the submission data
 - `scripts/build-youkn0wwho.mjs` — builds `data/youkn0wwho.json` from the topic list sources and flags solved problems
+- `scripts/sync-atcoder-topicwise.mjs` — pulls the category tree and topic lists from AtCoder Categories into `data/atcoder-topicwise-source.json` (pass a local clone's path to read from it instead)
+- `scripts/build-atcoder-topicwise.mjs` — builds `data/atcoder-topicwise.json` from the synced source and flags solved problems
 - `lib/config.ts` — handles and identity read from environment variables
 - `lib/leetcode.ts` — authenticated/public LeetCode GraphQL client
 - `scripts/refresh-data.mjs` — platform data refresh script
 - `data/submissions.json` — bundled submission history
 - `data/halim-book.json`, `data/halim-book.csv` — Halim book problem list
 - `data/youkn0wwho-problems.js`, `data/youkn0wwho-topics.js` — topic list sources from [the-ultimate-topic-list](https://github.com/ShahjalalShohag/the-ultimate-topic-list); `data/youkn0wwho.json` is generated from them
+- `data/atcoder-topicwise-source.json` — topic lists synced from [atcoder-categories.github.io](https://github.com/atcoder-categories/atcoder-categories.github.io); `data/atcoder-topicwise.json` is generated from it
 
 ## Machine-readable exports
 
@@ -124,10 +128,11 @@ schema metadata, account handles, summary counts, field definitions, and one nor
 record per submission. The refresh workflow updates the underlying dataset before the
 export is served.
 
-The two problem lists are exported the same way, each with a `solved` flag per problem:
+The problem lists are exported the same way, each with a `solved` flag per problem:
 
 - `/halim-book.json`, `/halim-book.csv`, and `/halim-book.txt` — starred CP4/CP5 problems
 - `/youkn0wwho.json`, `/youkn0wwho.csv`, and `/youkn0wwho.txt` — YouKn0wWho topic list problems; the JSON carries a `topics` map describing each topic's category and order, and the text file is a fixed-width table with every field
+- `/atcoder-topicwise.json`, `/atcoder-topicwise.csv`, and `/atcoder-topicwise.txt` — AtCoder problems grouped by topic, with AtCoder Problems difficulty estimates; each problem lists every topic it appears under and its most specific one
 
 ## Contributing
 

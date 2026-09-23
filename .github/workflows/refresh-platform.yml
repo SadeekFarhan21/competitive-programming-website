@@ -50,11 +50,17 @@ jobs:
         run: corepack pnpm halim:solved
       - name: Build YouKn0wWho topic list
         run: corepack pnpm youkn0wwho:build
+      - name: Sync AtCoder Topicwise categories
+        # Upstream adds new contests weekly; a failed fetch keeps the last synced lists.
+        continue-on-error: true
+        run: corepack pnpm atcoder-topicwise:sync
+      - name: Build AtCoder Topicwise list
+        run: corepack pnpm atcoder-topicwise:build
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/submissions.json data/halim-book.json data/halim-book.csv data/youkn0wwho.json data/kattis-titles.json
+          git add data/submissions.json data/halim-book.json data/halim-book.csv data/youkn0wwho.json data/atcoder-topicwise-source.json data/atcoder-topicwise.json data/kattis-titles.json
           git diff --cached --quiet || git commit -m "chore: refresh submission data${{ inputs.platforms && format(' ({0})', inputs.platforms) || '' }}"
           git pull --rebase origin main
           git push
