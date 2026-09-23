@@ -14,6 +14,8 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000).
 
+`pnpm dev` deletes `node_modules` and `.next`, reinstalls, and starts from a clean build. Use `pnpm dev:fast` to skip that and start the dev server as-is.
+
 ## Configuration
 
 Every account-specific value is an environment variable, so the project runs for

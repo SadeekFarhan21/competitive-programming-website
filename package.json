@@ -10,7 +10,8 @@
     "atcoder-topicwise:sync": "node scripts/sync-atcoder-topicwise.mjs",
     "atcoder-topicwise:build": "node scripts/build-atcoder-topicwise.mjs",
     "fetch:kattis":"node scripts/fetch-kattis.mjs",
-    "dev": "next dev",
+    "dev": "rm -rf node_modules .next && pnpm install && next dev",
+    "dev:fast": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
