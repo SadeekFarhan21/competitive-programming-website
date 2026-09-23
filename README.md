@@ -134,7 +134,7 @@ The problem lists are exported the same way, each with a `solved` flag per probl
 
 - `/halim-book.json`, `/halim-book.csv`, and `/halim-book.txt` — starred CP4/CP5 problems
 - `/youkn0wwho.json`, `/youkn0wwho.csv`, and `/youkn0wwho.txt` — YouKn0wWho topic list problems; the JSON carries a `topics` map describing each topic's category and order, and the text file is a fixed-width table with every field
-- `/atcoder-topicwise.json`, `/atcoder-topicwise.csv`, and `/atcoder-topicwise.txt` — AtCoder problems grouped by topic, with AtCoder Problems difficulty estimates; each problem lists every topic it appears under and its most specific one
+- `/atcoder-topicwise.json`, `/atcoder-topicwise.csv`, and `/atcoder-topicwise.txt` (also at `/atcoder.json`, `/atcoder.csv`, `/atcoder.txt`) — AtCoder problems grouped by topic, with AtCoder Problems difficulty estimates; each problem lists every topic it appears under and its most specific one
 
 ## Contributing
 
