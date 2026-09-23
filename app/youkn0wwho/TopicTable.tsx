@@ -8,8 +8,10 @@ type SortKey = "order" | "judge" | "problem" | "topic" | "difficulty";
 const PAGE_SIZE = 100;
 
 // The judges that carry most of the list get a chip each; the long tail is grouped as "Other".
-const judges = ["Codeforces", "CF Gym", "CSES", "AtCoder", "CodeChef", "SPOJ", "UVa", "Other"] as const;
+const judges = ["Codeforces", "CSES", "AtCoder", "CodeChef", "SPOJ", "UVa", "Other"] as const;
 const OTHER = "Other";
+// Gym problems count as Codeforces in the chips; rows still label them "CF Gym".
+const chipAliases: Record<string, string> = { "CF Gym": "Codeforces" };
 
 const judgeStyles: Record<string, { chip: string; dot: string }> = {
   Codeforces: { chip: "bg-sky-500/10 text-sky-300 ring-sky-400/30", dot: "bg-sky-400" },
@@ -24,7 +26,10 @@ const judgeStyles: Record<string, { chip: string; dot: string }> = {
   Other: { chip: "bg-white/5 text-neutral-300 ring-white/15", dot: "bg-neutral-400" },
 };
 const styleFor = (judge: string) => judgeStyles[judge] ?? judgeStyles[OTHER];
-const groupOf = (judge: string) => ((judges as readonly string[]).includes(judge) ? judge : OTHER);
+const groupOf = (judge: string) => {
+  const name = chipAliases[judge] ?? judge;
+  return (judges as readonly string[]).includes(name) ? name : OTHER;
+};
 
 const difficultyNames: Record<number, string> = { 1: "Easy", 2: "Medium", 3: "Hard", 4: "Very Hard" };
 
