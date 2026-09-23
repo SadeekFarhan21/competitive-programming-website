@@ -863,8 +863,8 @@ yoda,yoda,"5.2j, Really Ad Hoc",ad hoc; 9 digits comparison,1607,2.1,false
 01644,Fetching from uHunt,"5.3a, Prime Numbers",LA 3883 - Tokyo07; sieve; prime check; upper bound - lower bound,,0.0,false
 10650,Fetching from uHunt,"5.3a, Prime Numbers",3 uni-distance consecutive primes,,0.0,false
 enlarginghashtables,enlarginghashtables,"5.3a, Prime Numbers",use sieve up to 40 000; prime test numbers greater than 2n; check primality of n itself,448,3.4,false
-primesieve,primesieve,"5.3a, Prime Numbers",use sieve up to 10^8; it is fast enough,865,4.5,false
-reseto,reseto,"5.3a, Prime Numbers",sieve of Eratosthenes until the k-th crossing,460,2.7,false
+primesieve,primesieve,"5.3a, Prime Numbers",use sieve up to 10^8; it is fast enough,865,4.5,true
+reseto,reseto,"5.3a, Prime Numbers",sieve of Eratosthenes until the k-th crossing,460,2.7,true
 01180,Fetching from uHunt,"5.3b, (Prob) Prime Testing",LA 2350 - Dhaka01; small prime check,,0.0,false
 01210,Fetching from uHunt,"5.3b, (Prob) Prime Testing",LA 3399 - Tokyo05; simple,,0.0,false
 flowergarden,flowergarden,"5.3b, (Prob) Prime Testing",Euclidean dist; small prime check; use isProbablePrime; simulation; faster solutions exist,317,4.4,false
@@ -876,8 +876,8 @@ pseudoprime,pseudoprime,"5.3b, (Prob) Prime Testing","yes if !isPrime(p) && a.mo
 11466,Fetching from uHunt,"5.3c, Finding Prime Factors",use efficient sieve implementation to get the largest prime factors,,0.0,false
 12703,Fetching from uHunt,"5.3c, Finding Prime Factors",uses small Fibonacci numbers up to 40 and simple prime factorization as a and b can be non-primes,,0.0,false
 12805,Fetching from uHunt,"5.3c, Finding Prime Factors",prime check; primes of format 4m-1 and 4m plus 1; simple prime factorization,,0.0,false
-pascal,pascal,"5.3c, Finding Prime Factors",find lowest prime factor of N; special case: N = 1,351,3.8,false
-primalrepresentation,primalrepresentation,"5.3c, Finding Prime Factors",factorization problem; use sieve to avoid TLE; use long long; 231-1 is a prime,258,5.4,false
+pascal,pascal,"5.3c, Finding Prime Factors",find lowest prime factor of N; special case: N = 1,351,3.8,true
+primalrepresentation,primalrepresentation,"5.3c, Finding Prime Factors",factorization problem; use sieve to avoid TLE; use long long; 231-1 is a prime,258,5.4,true
 primereduction,primereduction,"5.3c, Finding Prime Factors",factorization problem,465,3.9,false
 00294,Fetching from uHunt,"5.3d, Prime Factors Functions",numDiv(N),,0.0,false
 10179,Fetching from uHunt,"5.3d, Prime Factors Functions",EulerPhi(N),,0.0,true
@@ -918,7 +918,7 @@ lc2761,to replace with LeetCode link soon...,"5.3h, Working with PFs",sieve up t
 10176,Fetching from uHunt,"5.3i, Modular Arithmetic",convert binary to decimal digit by digit; do modulo 131071 to the intermediate result,,0.0,false
 10212,Fetching from uHunt,"5.3i, Modular Arithmetic",multiply numbers from N down to N-M+1; use / 10 to discard the trailing zero(es); use % 1 Billion,,0.0,false
 10489,Fetching from uHunt,"5.3i, Modular Arithmetic",keep values small with modulo,,0.0,false
-anothercandies,anothercandies,"5.3i, Modular Arithmetic",simple modular arithmetic,1843,2.7,false
+anothercandies,anothercandies,"5.3i, Modular Arithmetic",simple modular arithmetic,1843,2.7,true
 ones,ones,"5.3i, Modular Arithmetic",no factor of 2 and 5 implies that there is no trailing zero; also available at UVa 10127 - Ones,567,4.6,false
 threedigits,threedigits,"5.3i, Modular Arithmetic",simulate factorial computation; remove trailing zeroes; keep many last few non-zero digits using modulo,289,5.9,false
 10090,Fetching from uHunt,"5.3j, Extended Euclid",use solution for Linear Diophantine Equation,,0.0,false

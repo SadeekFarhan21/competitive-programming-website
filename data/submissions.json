@@ -24528,5 +24528,82 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20502091",
+    "epoch": 1790171378,
+    "problem": "Reseto",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 0,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20502388",
+    "epoch": 1790173323,
+    "problem": "Another Candies",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 0,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20502425",
+    "epoch": 1790173602,
+    "problem": "Pascal",
+    "verdict": "Time Limit Exceeded",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": 1000,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20502502",
+    "epoch": 1790174176,
+    "problem": "Pascal",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 0,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20502602",
+    "epoch": 1790175036,
+    "problem": "Prime Sieve",
+    "verdict": "Memory Limit Exceeded",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": 40,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20502632",
+    "epoch": 1790175294,
+    "problem": "Prime Sieve",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 640,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20502759",
+    "epoch": 1790176648,
+    "problem": "Primal Representation",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 60,
+    "memoryBytes": null
   }
 ]
