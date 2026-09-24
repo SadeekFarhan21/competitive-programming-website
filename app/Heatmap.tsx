@@ -108,6 +108,75 @@ function localToday(): string {
   return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
 }
 
+function shiftDate(date: string, days: number): string {
+  return new Date(Date.parse(date + "T00:00:00Z") + days * DAY_MS).toISOString().slice(0, 10);
+}
+
+type Momentum = {
+  currentStreak: number;
+  longestStreak: number;
+  last7: number;
+  prev7: number;
+  last30: number;
+  prev30: number;
+};
+
+function momentum(
+  days: Record<string, DayCounts>,
+  enabled: Set<Platform>,
+  mode: Mode,
+  today: string
+): Momentum {
+  const countOn = (date: string) => filteredTotal(days[date] ?? null, enabled, mode);
+  const windowSum = (from: number, length: number) => {
+    let sum = 0;
+    for (let i = from; i < from + length; i++) sum += countOn(shiftDate(today, -i));
+    return sum;
+  };
+
+  // A streak stays alive through today until the day is over
+  let currentStreak = 0;
+  for (let i = countOn(today) > 0 ? 0 : 1; countOn(shiftDate(today, -i)) > 0; i++) currentStreak++;
+
+  let longestStreak = 0;
+  let run = 0;
+  let prev: string | null = null;
+  for (const date of Object.keys(days).sort()) {
+    if (countOn(date) === 0) continue;
+    run = prev && shiftDate(prev, 1) === date ? run + 1 : 1;
+    longestStreak = Math.max(longestStreak, run);
+    prev = date;
+  }
+
+  return {
+    currentStreak,
+    longestStreak,
+    last7: windowSum(0, 7),
+    prev7: windowSum(7, 7),
+    last30: windowSum(0, 30),
+    prev30: windowSum(30, 30),
+  };
+}
+
+function Trend({ now, before, span }: { now: number; before: number; span: string }) {
+  const up = now > before;
+  const pct = before === 0 ? null : Math.round((Math.abs(now - before) / before) * 100);
+  return (
+    <>
+      {now === before ? (
+        <span className="text-neutral-500">no change</span>
+      ) : (
+        <span className={up ? "text-emerald-400" : "text-red-400"}>
+          {up ? "▲" : "▼"} {pct != null ? `${pct}%` : "new"}
+        </span>
+      )}
+      <span className="text-neutral-500">
+        {" "}· previous {span}: {before}
+      </span>
+    </>
+  );
+}
+
 function prettyDate(date: string): string {
   return new Date(date + "T00:00:00Z").toLocaleDateString(undefined, {
     weekday: "long",
@@ -172,6 +241,37 @@ export default function Heatmap() {
   const activeDays = Object.values(data.days).filter(
     (d) => filteredTotal(d, enabled, mode) > 0
   ).length;
+  const today = localToday();
+  const m = momentum(data.days, enabled, mode, today);
+  const unit = mode === "accepted" ? "accepted" : "submissions";
+  const momentumCards = [
+    {
+      label: "Current streak",
+      value: `${m.currentStreak} ${m.currentStreak === 1 ? "day" : "days"}`,
+      note:
+        m.currentStreak > 0 && filteredTotal(data.days[today] ?? null, enabled, mode) === 0 ? (
+          <span className="text-amber-400">solve today to keep it</span>
+        ) : (
+          <span className="text-neutral-500">consecutive active days</span>
+        ),
+    },
+    {
+      label: "Longest streak",
+      value: `${m.longestStreak} ${m.longestStreak === 1 ? "day" : "days"}`,
+      note: <span className="text-neutral-500">in this period</span>,
+    },
+    {
+      label: "Last 7 days",
+      value: `${m.last7} ${unit}`,
+      note: <Trend now={m.last7} before={m.prev7} span="7 days" />,
+    },
+    {
+      label: "Last 30 days",
+      value: `${m.last30} ${unit}`,
+      note: <Trend now={m.last30} before={m.prev30} span="30 days" />,
+    },
+  ];
+
   const selectedSubmissionCount = selected ? filteredTotal(selected.counts, enabled) : 0;
   const selectedAcceptedCount = selected
     ? filteredTotal(selected.counts, enabled, "accepted")
@@ -189,7 +289,7 @@ export default function Heatmap() {
   return (
     <div className="relative">
       <div className="mb-3 flex flex-wrap items-center gap-2">
-        <div className="mr-2 flex w-fit overflow-hidden rounded-full border border-neutral-700 text-xs">
+        <div className="mr-2 flex h-7 w-fit overflow-hidden rounded-full border border-neutral-700 text-xs leading-none">
           {(
             [
               ["accepted", "Accepted"],
@@ -199,7 +299,7 @@ export default function Heatmap() {
             <button
               key={m}
               onClick={() => setMode(m)}
-              className={`px-3 py-1 transition-colors ${
+              className={`flex items-center px-3 transition-colors ${
                 mode === m
                   ? "bg-emerald-600 text-white"
                   : "bg-neutral-900 text-neutral-400 hover:text-neutral-200"
@@ -212,7 +312,7 @@ export default function Heatmap() {
         <select
           value={period}
           onChange={(e) => setPeriod(e.target.value)}
-          className="rounded-full border border-neutral-700 bg-neutral-900 px-3 py-1 text-xs text-neutral-300 outline-none"
+          className="h-7 rounded-full border border-neutral-700 bg-neutral-900 px-3 py-0 text-xs leading-none text-neutral-300 outline-none"
           aria-label="Heatmap period"
         >
           <option value="rolling">Last 365 days</option>
@@ -225,7 +325,7 @@ export default function Heatmap() {
           <button
             key={p.key}
             onClick={() => togglePlatform(p.key)}
-            className={`flex items-center gap-1.5 rounded-full border px-3 py-1 text-xs transition-colors ${
+            className={`flex h-7 items-center gap-1.5 rounded-full border px-3 text-xs leading-none transition-colors ${
               enabled.has(p.key)
                 ? "border-neutral-600 bg-neutral-800 text-neutral-200"
                 : "border-neutral-800 bg-transparent text-neutral-600"
@@ -245,7 +345,17 @@ export default function Heatmap() {
         days {data.year != null ? `in ${data.year}` : data.allTime ? `since ${data.since}` : "in the last year"}
       </p>
 
-      <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+      <div className="mb-3 grid grid-cols-2 gap-3 lg:grid-cols-4">
+        {momentumCards.map((c) => (
+          <div key={c.label} className="rounded-lg border border-neutral-800 bg-neutral-900/50 p-3">
+            <div className="text-xs text-neutral-400">{c.label}</div>
+            <p className="mt-1 text-lg font-semibold text-white">{c.value}</p>
+            <p className="text-xs">{c.note}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="mb-6 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-none lg:auto-cols-fr lg:grid-flow-col">
         {PLATFORMS.filter((p) => enabled.has(p.key) && data.stats?.[p.key]).map((p) => {
           const s = data.stats[p.key];
           return (
@@ -360,17 +470,17 @@ export default function Heatmap() {
               ✕ close
             </button>
           </div>
-          <div className="mt-3 flex flex-wrap gap-4">
+          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 lg:flex-nowrap lg:justify-between">
             {PLATFORMS.filter((p) => enabled.has(p.key)).map((p) => {
               const count = selected.counts?.[p.key] ?? 0;
               const ac = selected.counts?.acc[p.key] ?? 0;
               return (
-                <div key={p.key} className="flex items-center gap-1.5 text-sm">
+                <div key={p.key} className="flex items-center gap-1.5 whitespace-nowrap text-sm">
                   <span className={`h-2 w-2 rounded-full ${p.dot}`} />
                   <span className={count > 0 ? "text-neutral-200" : "text-neutral-600"}>
                     {p.label}: {mode === "accepted" ? ac : count}
                     {count > 0 && (
-                      <span className="text-emerald-400">
+                      <span className={ac / count < 0.6 ? "text-red-400" : "text-emerald-400"}>
                         {" "}({mode === "accepted" ? `${count} SB` : `${ac} AC`})
                       </span>
                     )}
