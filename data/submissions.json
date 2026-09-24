@@ -24715,5 +24715,15 @@
     "language": "C++ IOI-Style(GNU++20) (GCC 14.2.0)",
     "runtimeMs": 13,
     "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1790233509,
+    "problem": "abc250_d",
+    "verdict": "AC",
+    "ac": true,
+    "language": "C++ IOI-Style(GNU++20) (GCC 14.2.0)",
+    "runtimeMs": 9,
+    "memoryBytes": null
   }
 ]
