@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSubmissions } from "../../../lib/store";
+import { problemUrl } from "../../../lib/problem-url";
 
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
@@ -20,6 +21,7 @@ export async function GET(request: NextRequest) {
       epoch: s.epoch,
       time: new Date(s.epoch * 1000).toISOString(),
       problemName: s.problem,
+      problemUrl: problemUrl(s),
       verdict: s.verdict,
       language: s.language,
       runtimeMs: s.runtimeMs,

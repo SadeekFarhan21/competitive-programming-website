@@ -121,6 +121,7 @@ async function fetchAtCoder(knownEpochs) {
     platform: "AtCoder",
     epoch: s.epoch_second,
     problem: s.problem_id,
+    ...(s.contest_id ? { url: `https://atcoder.jp/contests/${s.contest_id}/tasks/${s.problem_id}` } : {}),
     verdict: s.result,
     ac: s.result === "AC",
     language: s.language,
@@ -158,6 +159,7 @@ function normalizeLeetCodeRow(s) {
     platform: "LeetCode",
     epoch: Math.floor(epoch),
     problem: String(title),
+    ...(s.titleSlug ? { url: `https://leetcode.com/problems/${s.titleSlug}/` } : {}),
     verdict,
     ac: verdict === "ACCEPTED",
     language: s.lang ?? s.language ?? null,
@@ -438,6 +440,7 @@ async function fetchKattis() {
     const row = rowMatch[0];
     const problemMatches = [...cell(row, "problem").matchAll(/<a[^>]*href="[^"]*\/problems\/[^"#?]*"[^>]*>([\s\S]*?)<\/a>/gi)];
     const problem = problemMatches.length ? text(problemMatches.at(-1)[1]) : text(cell(row, "problem"));
+    const slug = cell(row, "problem").match(/href="[^"]*\/problems\/([^"#?/]+)/i)?.[1];
     const time = text(cell(row, "time"));
     const verdict = text(cell(row, "status")) || "UNKNOWN";
       const timeOnly = /^\d{2}:\d{2}:\d{2}$/.test(time);
@@ -453,6 +456,7 @@ async function fetchKattis() {
       id: row.match(/data-submission-id="(\d+)"/i)?.[1] ?? null,
       epoch,
       problem,
+      ...(slug ? { url: `https://open.kattis.com/problems/${slug}` } : {}),
       verdict,
       ac: verdict.toLowerCase().startsWith("accepted"),
       language: text(cell(row, "lang")) || null,

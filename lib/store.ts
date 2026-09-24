@@ -14,6 +14,7 @@ export type StoredSub = {
     | "UVA";
   epoch: number;
   problem: string;
+  url?: string;
   verdict: string;
   ac: boolean | null;
   language: string | null;

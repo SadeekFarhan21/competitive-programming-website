@@ -7,6 +7,7 @@ type Submission = {
   epoch: number;
   time: string;
   problemName: string;
+  problemUrl: string | null;
   verdict: string;
   language: string | null;
   runtimeMs: number | null;
@@ -185,7 +186,18 @@ export default function RecentFeed() {
           <span className="min-w-0 truncate text-xs text-neutral-500">
             {s.language ?? ""}
           </span>
-          <span className="min-w-0 flex-1 truncate text-neutral-200">{s.problemName}</span>
+          {s.problemUrl ? (
+            <a
+              href={s.problemUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="min-w-0 flex-1 truncate text-neutral-200 decoration-white/30 underline-offset-4 hover:underline"
+            >
+              {s.problemName}
+            </a>
+          ) : (
+            <span className="min-w-0 flex-1 truncate text-neutral-200">{s.problemName}</span>
+          )}
           <span className={`font-medium sm:text-right ${verdictColor(s.verdict)}`}>
             {s.verdict}
           </span>
