@@ -588,7 +588,7 @@ trainsorting,trainsorting,"3.5c, LIS","max(LIS(i)+LDS(i)-1), ∀i ∈ [0...n-1];
 01213,Fetching from uHunt,"3.5d, 0-1 KNAPSACK/SS","LA 3619 - Yokohama06; extension of 0-1 KNAPSACK; s: (id, remN, remK) instead of s: (id, remN)",,0.0,false
 10130,Fetching from uHunt,"3.5d, 0-1 KNAPSACK/SS",basic 0-1 Knapsack problem,,0.0,false
 11832,Fetching from uHunt,"3.5d, 0-1 KNAPSACK/SS",interesting DP; s: (id; val); use offset to handle negative numbers; t: plus or minus; print solution,,0.0,false
-knapsack,knapsack,"3.5d, 0-1 KNAPSACK/SS",basic DP KNAPSACK; print the solution,687,4.8,false
+knapsack,knapsack,"3.5d, 0-1 KNAPSACK/SS",basic DP KNAPSACK; print the solution,687,4.8,true
 lc0474,to replace with LeetCode link soon...,"3.5d, 0-1 KNAPSACK/SS",Knapsack; skip or take a string,0,4.0,false
 orders,orders,"3.5d, 0-1 KNAPSACK/SS",interesting KNAPSACK variant; print the solution,713,4.5,false
 presidentialelections,presidentialelections,"3.5d, 0-1 KNAPSACK/SS",pre-process the input to discard non winnable states; be careful of negative total voters; then standard DP KNAPSACK,116,5.7,false
