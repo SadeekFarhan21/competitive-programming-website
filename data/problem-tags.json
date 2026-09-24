@@ -1,0 +1,4153 @@
+{
+ "AtCoder:abc177_a": [
+  "Combinatorics / Counting",
+  "Number Theory"
+ ],
+ "AtCoder:abc177_c": [
+  "Graph Algorithms",
+  "Range Queries",
+  "Prefix Sums",
+  "Segment Tree",
+  "Number Theory",
+  "Modular Arithmetic"
+ ],
+ "AtCoder:abc181_d": [
+  "Combinatorics / Counting",
+  "Number Theory",
+  "Divisibility / Factorization"
+ ],
+ "AtCoder:abc196_c": [
+  "Sorting & Searching",
+  "Binary Search",
+  "Combinatorics / Counting"
+ ],
+ "AtCoder:abc205_b": [
+  "Sorting & Searching"
+ ],
+ "AtCoder:abc206_c": [
+  "Sorting & Searching",
+  "Combinatorics / Counting"
+ ],
+ "AtCoder:abc209_a": [
+  "Combinatorics / Counting"
+ ],
+ "AtCoder:abc220_a": [
+  "Number Theory",
+  "Modular Arithmetic"
+ ],
+ "AtCoder:abc226_a": [
+  "String Algorithms",
+  "Subarrays / Subsequences"
+ ],
+ "AtCoder:abc229_b": [
+  "Number Theory",
+  "Modular Arithmetic"
+ ],
+ "AtCoder:abc229_c": [
+  "Sorting & Searching",
+  "Greedy Algorithms"
+ ],
+ "AtCoder:abc234_b": [
+  "Number Theory",
+  "Divisibility / Factorization",
+  "GCD / Euclid / Extended Euclidean",
+  "Geometry"
+ ],
+ "AtCoder:abc235_a": [
+  "Number Theory",
+  "Modular Arithmetic"
+ ],
+ "AtCoder:abc240_a": [
+  "Graph Algorithms"
+ ],
+ "AtCoder:abc250_d": [
+  "Sorting & Searching",
+  "Binary Search",
+  "Two Pointers / Sliding Window",
+  "Combinatorics / Counting",
+  "Number Theory",
+  "Divisibility / Factorization",
+  "Factorization Techniques",
+  "Prime Numbers"
+ ],
+ "AtCoder:abc258_a": [
+  "Number Theory",
+  "Modular Arithmetic"
+ ],
+ "AtCoder:abc260_a": [
+  "Sorting & Searching",
+  "Combinatorics / Counting"
+ ],
+ "AtCoder:abc272_c": [
+  "Sorting & Searching"
+ ],
+ "AtCoder:abc284_c": [
+  "Sorting & Searching",
+  "Graph Algorithms",
+  "BFS / DFS",
+  "Disjoint Set Union",
+  "Combinatorics / Counting"
+ ],
+ "AtCoder:abc284_d": [
+  "Number Theory",
+  "Divisibility / Factorization",
+  "Factorization Techniques",
+  "Prime Numbers"
+ ],
+ "AtCoder:abc336_b": [
+  "Bitwise Operations",
+  "Combinatorics / Counting",
+  "Number Theory",
+  "Divisibility / Factorization",
+  "Modular Arithmetic"
+ ],
+ "AtCoder:abc339_c": [
+  "Greedy Algorithms",
+  "Range Queries",
+  "Prefix Sums"
+ ],
+ "AtCoder:abc340_a": [
+  "Number Theory"
+ ],
+ "AtCoder:abc340_c": [
+  "Dynamic Programming",
+  "Counting using DP",
+  "Graph Algorithms",
+  "Combinatorics / Counting"
+ ],
+ "AtCoder:abc435_a": [
+  "Range Queries",
+  "Fenwick Tree"
+ ],
+ "AtCoder:abc435_b": [
+  "Bitwise Operations",
+  "Combinatorics / Counting",
+  "Number Theory",
+  "Divisibility / Factorization",
+  "Modular Arithmetic"
+ ],
+ "AtCoder:abc435_c": [
+  "Combinatorics / Counting",
+  "Geometry"
+ ],
+ "AtCoder:dp_a": [
+  "Dynamic Programming"
+ ],
+ "AtCoder:dp_b": [
+  "Dynamic Programming"
+ ],
+ "AtCoder:dp_c": [
+  "Dynamic Programming"
+ ],
+ "AtCoder:dp_d": [
+  "Dynamic Programming"
+ ],
+ "AtCoder:dp_e": [
+  "Dynamic Programming"
+ ],
+ "AtCoder:dp_f": [
+  "Dynamic Programming"
+ ],
+ "AtCoder:dp_h": [
+  "Dynamic Programming"
+ ],
+ "AtCoder:dp_i": [
+  "Dynamic Programming"
+ ],
+ "AtCoder:dp_j": [
+  "Dynamic Programming"
+ ],
+ "AtCoder:dp_k": [
+  "Dynamic Programming"
+ ],
+ "AtCoder:dp_l": [
+  "Dynamic Programming"
+ ],
+ "CodeChef:ABSTRING": [
+  "String",
+  "Basic Programming Concepts",
+  "Data Structures"
+ ],
+ "CodeChef:ADD13": [
+  "cakewalk",
+  "raysh07_adm",
+  "start217"
+ ],
+ "CodeChef:ADDPOS": [
+  "cakewalk",
+  "raysh07_adm",
+  "start217"
+ ],
+ "CodeChef:ALTSTR": [
+  "String",
+  "Data Structures"
+ ],
+ "CodeChef:AMMEAT": [
+  "1D Arrays",
+  "ad-hoc",
+  "Sorting",
+  "Data Structures",
+  "Arrays",
+  "Algorithms",
+  "Constructive"
+ ],
+ "CodeChef:ANKTRAIN": [
+  "Implementation",
+  "Algorithms"
+ ],
+ "CodeChef:ANTIPALINDR": [
+  "ad-hoc",
+  "Observation",
+  "Algorithms",
+  "Constructive"
+ ],
+ "CodeChef:ANUUND": [
+  "ad-hoc",
+  "anudeep2011",
+  "cook46",
+  "easy",
+  "sorting"
+ ],
+ "CodeChef:APPLEORANGE": [
+  "GCD",
+  "Mathematics",
+  "Number Theory"
+ ],
+ "CodeChef:ARRAYBREAK": [
+  "Mathematics"
+ ],
+ "CodeChef:ARRAYRET": [
+  "Basic Math",
+  "Observation",
+  "Mathematics",
+  "Algorithms"
+ ],
+ "CodeChef:ARRSWAP": [
+  "Arrays",
+  "Sorting",
+  "Two pointers",
+  "Data Structures",
+  "Algorithms",
+  "Simple Algos"
+ ],
+ "CodeChef:ATM2": [
+  "Implementation",
+  "Algorithms"
+ ],
+ "CodeChef:ATTENDU": [
+  "Basic Math",
+  "Brute Force",
+  "Mathematics",
+  "Algorithms"
+ ],
+ "CodeChef:AVG": [
+  "Basic Math",
+  "Mathematics"
+ ],
+ "CodeChef:AVGARR": [
+  "Basic Math",
+  "Constructive",
+  "Mathematics",
+  "Algorithms"
+ ],
+ "CodeChef:AVGOF3": [
+  "cakewalk",
+  "jeevanjyot",
+  "start23"
+ ],
+ "CodeChef:AVGPERM": [
+  "Mathematics"
+ ],
+ "CodeChef:BALLBOX": [
+  "Basic Math",
+  "Mathematics"
+ ],
+ "CodeChef:BESTSEATS": [
+  "cakewalk",
+  "raysh07_adm",
+  "start216"
+ ],
+ "CodeChef:BIT2A": [
+  "Sorting",
+  "Brute Force",
+  "Algorithms"
+ ],
+ "CodeChef:BITMAGIC": [
+  "bit-manipulation",
+  "bitwise-operation",
+  "easy",
+  "ince2019",
+  "prajapat786"
+ ],
+ "CodeChef:BLIMP": [
+  "Mathematics"
+ ],
+ "CodeChef:BLITZ3_2": [
+  "Basic Math",
+  "ad-hoc",
+  "Mathematics",
+  "Algorithms",
+  "Constructive"
+ ],
+ "CodeChef:BSCOST": [
+  "String",
+  "Data Structures"
+ ],
+ "CodeChef:BUY1GET1": [
+  "ad-hoc",
+  "cakewalk",
+  "feb13",
+  "khad_adm"
+ ],
+ "CodeChef:C00K0FF": [
+  "Conditional Statements",
+  "Implementation",
+  "Basic Programming Concepts",
+  "Algorithms"
+ ],
+ "CodeChef:CHAPD": [
+  "easy",
+  "greatest-common-divisor",
+  "may15",
+  "vitalij_adm"
+ ],
+ "CodeChef:CHEFA": [
+  "admin",
+  "cakewalk",
+  "ltime16",
+  "sorting"
+ ],
+ "CodeChef:CHEFFED": [
+  "Number Theory",
+  "Basic Math",
+  "Mathematics"
+ ],
+ "CodeChef:CHNUM": [
+  "Basic Math",
+  "Observation",
+  "Mathematics",
+  "Algorithms"
+ ],
+ "CodeChef:CK87MEDI": [
+  "Mathematics",
+  "ad-hoc",
+  "Sorting",
+  "Algorithms",
+  "Constructive"
+ ],
+ "CodeChef:CNDY": [
+  "Basic Programming Concepts",
+  "Loops"
+ ],
+ "CodeChef:COMPRESSVD": [
+  "String",
+  "Data Structures"
+ ],
+ "CodeChef:COVID19": [
+  "Two pointers"
+ ],
+ "CodeChef:CS2023_STK": [
+  "Loops",
+  "Implementation",
+  "Basic Programming Concepts",
+  "Algorithms"
+ ],
+ "CodeChef:CTHREE": [
+  "Prime Divisors",
+  "Mathematics",
+  "Number Theory",
+  "Integer Factorisation",
+  "Divisors"
+ ],
+ "CodeChef:CUTOFF": [
+  "Brute Force",
+  "Algorithms"
+ ],
+ "CodeChef:DIAGMOVE": [
+  "Chess",
+  "Basic Math",
+  "ad-hoc",
+  "Observation",
+  "Special",
+  "Mathematics",
+  "Algorithms",
+  "Constructive"
+ ],
+ "CodeChef:DIET": [
+  "Implementation",
+  "Algorithms"
+ ],
+ "CodeChef:DIGARR": [
+  "String",
+  "Data Structures"
+ ],
+ "CodeChef:DIGSMPAR": [
+  "Arithmetic",
+  "Mathematics",
+  "Basic Math"
+ ],
+ "CodeChef:DISCNT": [
+  "inov_adm",
+  "start50"
+ ],
+ "CodeChef:DISTELE": [
+  "1D Arrays",
+  "Maps",
+  "Hashmaps",
+  "Modular Arithmetic",
+  "Basic Math",
+  "Sorting",
+  "Data Structures",
+  "Arrays",
+  "Mathematics",
+  "Algorithms"
+ ],
+ "CodeChef:DIVAB": [
+  "Basic Math",
+  "Mathematics"
+ ],
+ "CodeChef:DIVIDEMAKEEQ": [
+  "GCD",
+  "Mathematics",
+  "Number Theory"
+ ],
+ "CodeChef:DOLL": [
+  "1D Arrays",
+  "ad-hoc",
+  "Observation",
+  "Data Structures",
+  "Arrays",
+  "Algorithms",
+  "Constructive"
+ ],
+ "CodeChef:DOMINANT2": [
+  "Frequency Arrays",
+  "Data Structures",
+  "Arrays"
+ ],
+ "CodeChef:EID": [
+  "Greedy",
+  "Sorting",
+  "Algorithms"
+ ],
+ "CodeChef:ELECTIONS": [
+  "cakewalk",
+  "jeevanjyot",
+  "start22"
+ ],
+ "CodeChef:ENDSORTED": [
+  "Implementation",
+  "Algorithms"
+ ],
+ "CodeChef:EQUALELE": [
+  "Frequency Arrays",
+  "Data Structures",
+  "Arrays"
+ ],
+ "CodeChef:EQUATEST": [
+  "raysh07_adm",
+  "simple",
+  "start160"
+ ],
+ "CodeChef:EZSPEAK": [
+  "String",
+  "Loops",
+  "Data Structures",
+  "Basic Programming Concepts"
+ ],
+ "CodeChef:GRIDBL": [
+  "Basic Math",
+  "Mathematics"
+ ],
+ "CodeChef:HORSES": [
+  "Sorting",
+  "Brute Force",
+  "Algorithms"
+ ],
+ "CodeChef:HOTEL": [
+  "cook14",
+  "david_adm",
+  "easy"
+ ],
+ "CodeChef:KEPLERSLAW": [
+  "cakewalk",
+  "jan221",
+  "srikkanth_adm"
+ ],
+ "CodeChef:KOL15A": [
+  "String",
+  "Arithmetic",
+  "ad-hoc",
+  "Loops using Cpp",
+  "Data Structures",
+  "Mathematics",
+  "Basic Math",
+  "Algorithms",
+  "Constructive",
+  "CPP"
+ ],
+ "CodeChef:KTTABLE": [
+  "Loops",
+  "Conditional Statements",
+  "Basic Programming Concepts"
+ ],
+ "CodeChef:LAPIN": [
+  "Frequency Arrays",
+  "Maps",
+  "Hashmaps",
+  "Data Structures",
+  "Arrays"
+ ],
+ "CodeChef:LARGESECOND": [
+  "Loops",
+  "Arrays using C++",
+  "Basic Programming Concepts",
+  "CPP"
+ ],
+ "CodeChef:LUCKYFR": [
+  "Modular Arithmetic",
+  "Basic Math",
+  "Implementation",
+  "Mathematics",
+  "Algorithms"
+ ],
+ "CodeChef:MAGICHF": [
+  "Conditional Statements",
+  "Brute Force",
+  "Implementation",
+  "Basic Programming Concepts",
+  "Algorithms"
+ ],
+ "CodeChef:MAKEAP7": [
+  "raysh07_adm",
+  "simple",
+  "start217"
+ ],
+ "CodeChef:MAKEMONEY": [
+  "Mathematics"
+ ],
+ "CodeChef:MAKEPALAGAIN": [
+  "String",
+  "ad-hoc",
+  "Data Structures",
+  "Algorithms",
+  "Constructive"
+ ],
+ "CodeChef:MATPAN": [
+  "Frequency Arrays",
+  "ad-hoc",
+  "Data Structures",
+  "Arrays",
+  "Algorithms",
+  "Constructive"
+ ],
+ "CodeChef:MATROTAPPLE": [
+  "admin"
+ ],
+ "CodeChef:MAXADD": [
+  "easy",
+  "math",
+  "raysh07_adm",
+  "start217"
+ ],
+ "CodeChef:MEANMEDIAN": [
+  "Basic Math",
+  "Mathematics"
+ ],
+ "CodeChef:MILEAGE": [
+  "inov_adm",
+  "start50"
+ ],
+ "CodeChef:MINMXOR": [
+  "rahularya1",
+  "start109"
+ ],
+ "CodeChef:MISSP": [
+  "Frequency Arrays",
+  "Divisibility",
+  "Data Structures",
+  "Arrays",
+  "Mathematics",
+  "Modular Arithmetic"
+ ],
+ "CodeChef:MSNSADM1": [
+  "Implementation",
+  "Algorithms"
+ ],
+ "CodeChef:MTYFRI": [
+  "Maps",
+  "Data Structures"
+ ],
+ "CodeChef:MUFFINS3": [
+  "Integer Division",
+  "Arithmetic",
+  "Mathematics",
+  "Basic Math"
+ ],
+ "CodeChef:NEARESTCOURT": [
+  "start50",
+  "utkarsh_adm"
+ ],
+ "CodeChef:NONNEGPROD": [
+  "Loops",
+  "Basic Math",
+  "Basic Programming Concepts",
+  "Mathematics"
+ ],
+ "CodeChef:NUGGET": [
+  "cakewalk",
+  "iceknight1093",
+  "start161"
+ ],
+ "CodeChef:ODDPAIRS": [
+  "Basic Math",
+  "Mathematics"
+ ],
+ "CodeChef:ODDSUM": [
+  "Basic Math",
+  "ad-hoc",
+  "Mathematics",
+  "Algorithms",
+  "Constructive"
+ ],
+ "CodeChef:ODDSUMPAIR": [
+  "Basic Math",
+  "Mathematics"
+ ],
+ "CodeChef:OFFICE": [
+  "Basic Programming Concepts",
+  "Basic Math",
+  "Mathematics"
+ ],
+ "CodeChef:ONP": [
+  "Stacks",
+  "Data Structures"
+ ],
+ "CodeChef:PALL01": [
+  "String",
+  "Basic Math",
+  "Implementation",
+  "Data Structures",
+  "Mathematics",
+  "Algorithms"
+ ],
+ "CodeChef:PCJ18B": [
+  "Combinatorics",
+  "Mathematics"
+ ],
+ "CodeChef:PERMGCD": [
+  "start50",
+  "tejas_adm"
+ ],
+ "CodeChef:PERMSUBSEQ": [
+  "Combinatorics",
+  "Mathematics"
+ ],
+ "CodeChef:PERMUTATION": [
+  "Sorting",
+  "Algorithms"
+ ],
+ "CodeChef:PETSTORE": [
+  "Frequency Arrays",
+  "Sorting",
+  "Data Structures",
+  "Arrays",
+  "Algorithms"
+ ],
+ "CodeChef:POTATOES": [
+  "Sieve of Eratosthenes",
+  "Sqrt N Primality Check",
+  "Brute Force",
+  "Implementation",
+  "Mathematics",
+  "Number Theory",
+  "Primality Checking",
+  "Algorithms"
+ ],
+ "CodeChef:PREP68": [
+  "Two pointers",
+  "Algorithms",
+  "Simple Algos"
+ ],
+ "CodeChef:PRGIFT": [
+  "ad-hoc",
+  "Algorithms",
+  "Constructive"
+ ],
+ "CodeChef:PRIMEREVERSE": [
+  "String",
+  "ad-hoc",
+  "Data Structures",
+  "Algorithms",
+  "Constructive"
+ ],
+ "CodeChef:PROBSET": [
+  "Implementation",
+  "Algorithms"
+ ],
+ "CodeChef:PROC18A": [
+  "Two pointers"
+ ],
+ "CodeChef:RANGEMEX7": [
+  "raysh07_adm",
+  "set",
+  "simple",
+  "sorting",
+  "start217"
+ ],
+ "CodeChef:RECTANGL": [
+  "Conditional Statements",
+  "Basic Math",
+  "Basic Programming Concepts",
+  "Mathematics"
+ ],
+ "CodeChef:RETURNCHANGE": [
+  "Basic Math",
+  "Mathematics"
+ ],
+ "CodeChef:SCORING": [
+  "cakewalk",
+  "raysh07_adm",
+  "start216"
+ ],
+ "CodeChef:SEAVOTE": [
+  "Basic Math",
+  "Mathematics"
+ ],
+ "CodeChef:SIMDISH": [
+  "Implementation",
+  "Algorithms"
+ ],
+ "CodeChef:STICKS": [
+  "Greedy",
+  "Brute Force",
+  "Algorithms"
+ ],
+ "CodeChef:STRNG": [
+  "Mathematics",
+  "GCD",
+  "Number Theory"
+ ],
+ "CodeChef:STUDVOTE": [
+  "ad-hoc",
+  "admin2",
+  "cakewalk",
+  "ltime38"
+ ],
+ "CodeChef:SUMOFPROD1": [
+  "Implementation",
+  "Algorithms"
+ ],
+ "CodeChef:SUMPRODSEG": [
+  "Mathematics",
+  "Integer Factorisation",
+  "Number Theory"
+ ],
+ "CodeChef:TOYS": [
+  "cakewalk",
+  "raysh07_adm",
+  "start217"
+ ],
+ "CodeChef:TREE2": [
+  "Arrays",
+  "Observation",
+  "Implementation",
+  "Data Structures",
+  "Algorithms"
+ ],
+ "CodeChef:TREECOUNT": [
+  "dynamic-programming",
+  "easy-medium",
+  "raysh07_adm",
+  "start217",
+  "trees"
+ ],
+ "CodeChef:TRICOIN": [
+  "Basic Math",
+  "Implementation",
+  "Binary Search on Answer",
+  "Mathematics",
+  "Algorithms",
+  "Searching",
+  "Binary Search"
+ ],
+ "CodeChef:TSORT": [
+  "Priority Queue",
+  "Heaps",
+  "Sorting",
+  "Implementation",
+  "Data Structures",
+  "Queues",
+  "Algorithms"
+ ],
+ "CodeChef:TTENIS": [
+  "String",
+  "ad-hoc",
+  "Data Structures",
+  "Algorithms",
+  "Constructive"
+ ],
+ "CodeChef:UTMOPR": [
+  "Implementation",
+  "Algorithms"
+ ],
+ "CodeChef:UWCOI20A": [
+  "Implementation",
+  "Algorithms"
+ ],
+ "CodeChef:VCOUPLE": [
+  "Loops",
+  "Greedy",
+  "Sorting",
+  "Basic Programming Concepts",
+  "Algorithms"
+ ],
+ "CodeChef:WATMELON": [
+  "Basic Math",
+  "Observation",
+  "Mathematics",
+  "Algorithms"
+ ],
+ "CodeChef:WEEDING": [
+  "Basic Programming Concepts"
+ ],
+ "CodeChef:WORDLE": [
+  "String",
+  "Loops",
+  "Data Structures",
+  "Basic Programming Concepts"
+ ],
+ "CodeChef:XLSQUARE": [
+  "Basic Math",
+  "Geometry",
+  "Mathematics"
+ ],
+ "CodeChef:XYSTR": [
+  "Greedy",
+  "Algorithms"
+ ],
+ "CodeChef:ZCOSCH": [
+  "Case work",
+  "Conditional Statements",
+  "Special",
+  "Basic Programming Concepts"
+ ],
+ "CodeChef:ZEROSTRING": [
+  "Observation",
+  "Algorithms"
+ ],
+ "CodeChef:ZOOZ": [
+  "String",
+  "ad-hoc",
+  "Data Structures",
+  "Algorithms",
+  "Constructive"
+ ],
+ "Codeforces:102B - Sum of Digits": [
+  "implementation"
+ ],
+ "Codeforces:1030A - In Search of an Easy Problem": [
+  "implementation"
+ ],
+ "Codeforces:104A - Blackjack": [
+  "implementation"
+ ],
+ "Codeforces:1057A - Bmail Computer Network": [
+  "*special",
+  "dfs and similar",
+  "trees"
+ ],
+ "Codeforces:1061A - Coins": [
+  "greedy",
+  "implementation",
+  "math"
+ ],
+ "Codeforces:1096A - Find Divisible": [
+  "greedy",
+  "implementation",
+  "math"
+ ],
+ "Codeforces:10D - LCIS": [
+  "dp"
+ ],
+ "Codeforces:1105C - Ayoub and Lost Array": [
+  "combinatorics",
+  "dp",
+  "math"
+ ],
+ "Codeforces:110A - Nearly Lucky Number": [
+  "implementation"
+ ],
+ "Codeforces:110B - Lucky String": [
+  "constructive algorithms",
+  "strings"
+ ],
+ "Codeforces:112A - Petya and Strings": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:1154A - Restoring Three Numbers": [
+  "math"
+ ],
+ "Codeforces:115A - Party": [
+  "dfs and similar",
+  "graphs",
+  "trees"
+ ],
+ "Codeforces:116A - Tram": [
+  "implementation"
+ ],
+ "Codeforces:118A - String Task": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:1201C - Maximum Median": [
+  "binary search",
+  "greedy",
+  "math",
+  "sortings"
+ ],
+ "Codeforces:1202A - You Are Given Two Binary Strings...": [
+  "bitmasks",
+  "greedy"
+ ],
+ "Codeforces:1203C - Common Divisors": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:1207A - There Are Two Types Of Burgers": [
+  "brute force",
+  "greedy",
+  "implementation",
+  "math"
+ ],
+ "Codeforces:1208A - XORinacci": [
+  "math"
+ ],
+ "Codeforces:1216C - White Sheet": [
+  "geometry",
+  "math"
+ ],
+ "Codeforces:1216D - Swords": [
+  "math"
+ ],
+ "Codeforces:122A - Lucky Division": [
+  "brute force",
+  "number theory"
+ ],
+ "Codeforces:1266B - Dice Tower": [
+  "constructive algorithms",
+  "math"
+ ],
+ "Codeforces:1283D - Christmas Trees": [
+  "graphs",
+  "greedy",
+  "shortest paths"
+ ],
+ "Codeforces:1285C - Fadi and LCM": [
+  "brute force",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1294C - Product of Three Numbers": [
+  "greedy",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1303A - Erasing Zeroes": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:1305G - Kuroni and Antihype": [
+  "bitmasks",
+  "brute force",
+  "dp",
+  "dsu",
+  "graphs"
+ ],
+ "Codeforces:131A - cAPS lOCK": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:1324D - Pair of Topics": [
+  "binary search",
+  "data structures",
+  "sortings",
+  "two pointers"
+ ],
+ "Codeforces:1325A - EhAb AnD gCd": [
+  "constructive algorithms",
+  "greedy",
+  "number theory"
+ ],
+ "Codeforces:1328A - Divisibility Problem": [
+  "math"
+ ],
+ "Codeforces:1335A - Candies and Two Sisters": [
+  "math"
+ ],
+ "Codeforces:1339B - Sorted Adjacent Differences": [
+  "constructive algorithms",
+  "sortings"
+ ],
+ "Codeforces:133A - HQ9+": [
+  "implementation"
+ ],
+ "Codeforces:1343B - Balanced Array": [
+  "constructive algorithms",
+  "math"
+ ],
+ "Codeforces:1352A - Sum of Round Numbers": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:1352B - Same Parity Summands": [
+  "constructive algorithms",
+  "math"
+ ],
+ "Codeforces:1352C - K-th Not Divisible by n": [
+  "binary search",
+  "math"
+ ],
+ "Codeforces:1353A - Most Unstable Array": [
+  "constructive algorithms",
+  "greedy",
+  "math"
+ ],
+ "Codeforces:1355A - Sequence with Digits": [
+  "brute force",
+  "implementation",
+  "math"
+ ],
+ "Codeforces:1360B - Honest Coach": [
+  "greedy",
+  "sortings"
+ ],
+ "Codeforces:136A - Presents": [
+  "implementation"
+ ],
+ "Codeforces:1370A - Maximum GCD": [
+  "greedy",
+  "implementation",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1374A - Required Remainder": [
+  "math"
+ ],
+ "Codeforces:1374B - Multiply by 2, divide by 6": [
+  "math"
+ ],
+ "Codeforces:1389A - LCM Problem": [
+  "constructive algorithms",
+  "greedy",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1399A - Remove Smallest": [
+  "greedy",
+  "sortings"
+ ],
+ "Codeforces:1409A - Yet Another Two Integers Problem": [
+  "greedy",
+  "math"
+ ],
+ "Codeforces:141A - Amusing Joke": [
+  "implementation",
+  "sortings",
+  "strings"
+ ],
+ "Codeforces:1426A - Floor Number": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:143A - Help Vasilisa the Wise 2": [
+  "brute force",
+  "math"
+ ],
+ "Codeforces:1440A - Buy the String": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:144A - Arrival of the General": [
+  "implementation"
+ ],
+ "Codeforces:1454A - Special Permutation": [
+  "constructive algorithms",
+  "probabilities"
+ ],
+ "Codeforces:1474B - Different Divisors": [
+  "binary search",
+  "constructive algorithms",
+  "greedy",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1475A - Odd Divisor": [
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1476A - K-divisible Sum": [
+  "binary search",
+  "constructive algorithms",
+  "greedy",
+  "math"
+ ],
+ "Codeforces:148A - Insomnia cure": [
+  "constructive algorithms",
+  "implementation",
+  "math"
+ ],
+ "Codeforces:1492B - Card Deck": [
+  "data structures",
+  "greedy",
+  "math"
+ ],
+ "Codeforces:149A - Business trip": [
+  "greedy",
+  "implementation",
+  "sortings"
+ ],
+ "Codeforces:1506D - Epic Transformation": [
+  "constructive algorithms",
+  "data structures",
+  "greedy"
+ ],
+ "Codeforces:1512A - Spy Detected!": [
+  "brute force",
+  "implementation"
+ ],
+ "Codeforces:1514B - AND 0, Sum Big": [
+  "bitmasks",
+  "combinatorics",
+  "math"
+ ],
+ "Codeforces:151A - Soft Drinking": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:1520B - Ordinary Numbers": [
+  "brute force",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1535A - Fair Playoff": [
+  "brute force",
+  "implementation"
+ ],
+ "Codeforces:1543B - Customising the Track": [
+  "combinatorics",
+  "greedy",
+  "math"
+ ],
+ "Codeforces:1554A - Cherry": [
+  "greedy"
+ ],
+ "Codeforces:1555B - Two Tables": [
+  "brute force"
+ ],
+ "Codeforces:155A - I_love_\\%username\\%": [
+  "brute force"
+ ],
+ "Codeforces:1581A - CQXYM Count Permutations": [
+  "combinatorics",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1582B - Luntik and Subsequences": [
+  "combinatorics",
+  "math"
+ ],
+ "Codeforces:158A - Next Round": [
+  "*special",
+  "implementation"
+ ],
+ "Codeforces:158B - Taxi": [
+  "*special",
+  "greedy",
+  "implementation"
+ ],
+ "Codeforces:158C - Cd and pwd commands": [
+  "*special",
+  "data structures",
+  "implementation"
+ ],
+ "Codeforces:1593A - Elections": [
+  "math"
+ ],
+ "Codeforces:160A - Twins": [
+  "greedy",
+  "sortings"
+ ],
+ "Codeforces:1610B - Kalindrome Array": [
+  "greedy",
+  "two pointers"
+ ],
+ "Codeforces:1617B - GCD Problem": [
+  "brute force",
+  "constructive algorithms",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1624A - Plus One on the Subset": [
+  "math"
+ ],
+ "Codeforces:1624B - Make AP": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:1660A - Vasya and Coins": [
+  "greedy",
+  "math"
+ ],
+ "Codeforces:1665A - GCD vs LCM": [
+  "constructive algorithms",
+  "math"
+ ],
+ "Codeforces:166C - Median": [
+  "greedy",
+  "math",
+  "sortings"
+ ],
+ "Codeforces:1672B - I love AAAB": [
+  "constructive algorithms",
+  "implementation"
+ ],
+ "Codeforces:1674B - Dictionary": [
+  "combinatorics",
+  "math"
+ ],
+ "Codeforces:1676A - Lucky?": [
+  "implementation"
+ ],
+ "Codeforces:1676B - Equal Candies": [
+  "greedy",
+  "math",
+  "sortings"
+ ],
+ "Codeforces:1676C - Most Similar Words": [
+  "brute force",
+  "greedy",
+  "implementation",
+  "math",
+  "strings"
+ ],
+ "Codeforces:1676F - Longest Strike": [
+  "data structures",
+  "greedy",
+  "implementation",
+  "sortings",
+  "two pointers"
+ ],
+ "Codeforces:1684A - Digit Minimization": [
+  "constructive algorithms",
+  "games",
+  "math",
+  "strings"
+ ],
+ "Codeforces:1690A - Print a Pedestal (Codeforces logo?)": [
+  "constructive algorithms",
+  "greedy"
+ ],
+ "Codeforces:1692A - Marathon": [
+  "implementation"
+ ],
+ "Codeforces:1702A - Round Down the Price": [
+  "constructive algorithms"
+ ],
+ "Codeforces:1703A - YES or YES?": [
+  "brute force",
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:1703B - ICPC Balloons": [
+  "data structures",
+  "implementation"
+ ],
+ "Codeforces:1717A - Madoka and Strange Thoughts": [
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1729A - Two Elevators": [
+  "math"
+ ],
+ "Codeforces:1731A - Joey Takes Money": [
+  "greedy",
+  "math"
+ ],
+ "Codeforces:1742A - Sum": [
+  "implementation"
+ ],
+ "Codeforces:1742B - Increasing": [
+  "greedy",
+  "implementation",
+  "sortings"
+ ],
+ "Codeforces:1742C - Stripes": [
+  "implementation"
+ ],
+ "Codeforces:1742D - Coprime": [
+  "brute force",
+  "greedy",
+  "number theory"
+ ],
+ "Codeforces:1758A - SSeeeeiinngg DDoouubbllee": [
+  "constructive algorithms",
+  "strings"
+ ],
+ "Codeforces:1760A - Medium Number": [
+  "implementation",
+  "sortings"
+ ],
+ "Codeforces:1760B - Atilla's Favorite Problem": [
+  "greedy",
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:1760C - Advantage": [
+  "data structures",
+  "implementation",
+  "sortings"
+ ],
+ "Codeforces:1765M - Minimum LCM": [
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1766A - Extremely Round": [
+  "brute force",
+  "implementation"
+ ],
+ "Codeforces:1772A - A+B?": [
+  "implementation"
+ ],
+ "Codeforces:1783A - Make it Beautiful": [
+  "constructive algorithms",
+  "math",
+  "sortings"
+ ],
+ "Codeforces:1788B - Sum of Two Numbers": [
+  "constructive algorithms",
+  "greedy",
+  "implementation",
+  "math",
+  "probabilities"
+ ],
+ "Codeforces:1791A - Codeforces Checking": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:1791B - Following Directions": [
+  "geometry",
+  "implementation"
+ ],
+ "Codeforces:1791C - Prepend and Append": [
+  "implementation",
+  "two pointers"
+ ],
+ "Codeforces:1807A - Plus or Minus": [
+  "implementation"
+ ],
+ "Codeforces:1807B - Grab the Candies": [
+  "greedy"
+ ],
+ "Codeforces:1807D - Odd Queries": [
+  "data structures",
+  "implementation"
+ ],
+ "Codeforces:1828B - Permutation Swap": [
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1829A - Love Story": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:1829B - Blank Space": [
+  "implementation"
+ ],
+ "Codeforces:1829C - Mr. Perfectly Fine": [
+  "bitmasks",
+  "greedy",
+  "implementation"
+ ],
+ "Codeforces:1843A - Sasha and Array Coloring": [
+  "greedy",
+  "sortings",
+  "two pointers"
+ ],
+ "Codeforces:1843C - Sum in Binary Tree": [
+  "bitmasks",
+  "combinatorics",
+  "math",
+  "trees"
+ ],
+ "Codeforces:1853A - Desorting": [
+  "brute force",
+  "greedy",
+  "math"
+ ],
+ "Codeforces:1869A - Make It Zero": [
+  "constructive algorithms"
+ ],
+ "Codeforces:1873A - Short Sort": [
+  "brute force",
+  "implementation"
+ ],
+ "Codeforces:1873B - Good Kid": [
+  "brute force",
+  "greedy",
+  "math"
+ ],
+ "Codeforces:1873C - Target Practice": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:1876A - Helmets in Night Light": [
+  "greedy",
+  "sortings"
+ ],
+ "Codeforces:1883C - Raspberries": [
+  "dp",
+  "math"
+ ],
+ "Codeforces:1886A - Sum of Three": [
+  "brute force",
+  "constructive algorithms",
+  "math"
+ ],
+ "Codeforces:1890A - Doremy's Paint 3": [
+  "constructive algorithms"
+ ],
+ "Codeforces:1896A - Jagged Swaps": [
+  "sortings"
+ ],
+ "Codeforces:1899A - Game with Integers": [
+  "games",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:189A - Cut Ribbon": [
+  "brute force",
+  "dp"
+ ],
+ "Codeforces:1901A - Line Trip": [
+  "greedy",
+  "math"
+ ],
+ "Codeforces:1903A - Halloumi Boxes": [
+  "brute force",
+  "greedy",
+  "sortings"
+ ],
+ "Codeforces:1909A - Distinct Buttons": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:1909B - Make Almost Equal With Mod": [
+  "bitmasks",
+  "constructive algorithms",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1913B - Swap and Delete": [
+  "strings"
+ ],
+ "Codeforces:1914A - Problemsolving Log": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:1914B - Preparing for the Contest": [
+  "constructive algorithms",
+  "math"
+ ],
+ "Codeforces:1914D - Three Activities": [
+  "brute force",
+  "dp",
+  "greedy",
+  "implementation",
+  "sortings"
+ ],
+ "Codeforces:1916B - Two Divisors": [
+  "constructive algorithms",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:1921A - Square": [
+  "greedy",
+  "math"
+ ],
+ "Codeforces:1926C - Vlad and a Sum of Sum of Digits": [
+  "dp",
+  "implementation"
+ ],
+ "Codeforces:1A - Theatre Square": [
+  "math"
+ ],
+ "Codeforces:2005A - Simple Palindrome": [
+  "combinatorics",
+  "constructive algorithms",
+  "greedy",
+  "math"
+ ],
+ "Codeforces:2005B1 - The Strict Teacher (Easy Version)": [
+  "greedy",
+  "math",
+  "sortings"
+ ],
+ "Codeforces:2005B2 - The Strict Teacher (Hard Version)": [
+  "binary search",
+  "greedy",
+  "math",
+  "sortings"
+ ],
+ "Codeforces:2009A - Minimize!": [
+  "brute force",
+  "math"
+ ],
+ "Codeforces:200B - Drinks": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:2020A - Find Minimum Operations": [
+  "bitmasks",
+  "brute force",
+  "greedy",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:2036A - Quintomania": [
+  "implementation"
+ ],
+ "Codeforces:2036B - Startup": [
+  "greedy",
+  "sortings"
+ ],
+ "Codeforces:2062A - String": [
+  "constructive algorithms",
+  "greedy",
+  "math",
+  "strings"
+ ],
+ "Codeforces:2062B - Clockwork": [
+  "greedy",
+  "math"
+ ],
+ "Codeforces:2062C - Cirno and Operations": [
+  "brute force",
+  "math"
+ ],
+ "Codeforces:2063A - Minimal Coprime": [
+  "math",
+  "number theory"
+ ],
+ "Codeforces:2064A - Brogramming Contest": [
+  "greedy",
+  "strings"
+ ],
+ "Codeforces:2084D - Arcology On Permafrost": [
+  "binary search",
+  "brute force",
+  "constructive algorithms",
+  "greedy",
+  "math"
+ ],
+ "Codeforces:208A - Dubstep": [
+  "strings"
+ ],
+ "Codeforces:20C - Dijkstra?": [
+  "graphs",
+  "shortest paths"
+ ],
+ "Codeforces:2109A - It's Time To Duel": [
+  "implementation"
+ ],
+ "Codeforces:2109B - Slice to Survive": [
+  "bitmasks",
+  "greedy",
+  "math"
+ ],
+ "Codeforces:2109C1 - Hacking Numbers (Easy Version)": [
+  "bitmasks",
+  "constructive algorithms",
+  "interactive",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:2148A - Sublime Sequence": [
+  "brute force",
+  "hashing",
+  "math"
+ ],
+ "Codeforces:2148B - Lasers": [
+  "geometry"
+ ],
+ "Codeforces:2148C - Pacer": [
+  "greedy",
+  "math"
+ ],
+ "Codeforces:2156A - Pizza Time": [
+  "brute force",
+  "constructive algorithms",
+  "greedy"
+ ],
+ "Codeforces:2156B - Strange Machine": [
+  "binary search",
+  "brute force",
+  "greedy",
+  "implementation"
+ ],
+ "Codeforces:2171A - Shizuku Hoshikawa and Farm Legs": [
+  "brute force",
+  "math"
+ ],
+ "Codeforces:2172A - ASCII Art Contest": [
+  "implementation"
+ ],
+ "Codeforces:2172M - Maximum Distance To Port": [
+  "graphs",
+  "shortest paths"
+ ],
+ "Codeforces:2176A - Operations with Inversions": [
+  "greedy",
+  "implementation",
+  "math"
+ ],
+ "Codeforces:2176B - Optimal Shifts": [
+  "bitmasks",
+  "greedy",
+  "strings"
+ ],
+ "Codeforces:2176C - Odd Process": [
+  "greedy",
+  "sortings"
+ ],
+ "Codeforces:2179A - Blackslex and Password": [
+  "math",
+  "strings"
+ ],
+ "Codeforces:2179B - Blackslex and Showering": [
+  "dp",
+  "greedy",
+  "implementation"
+ ],
+ "Codeforces:2179C - Blackslex and Number Theory": [
+  "implementation",
+  "math",
+  "number theory",
+  "sortings"
+ ],
+ "Codeforces:2180A - Carnival Wheel": [
+  "brute force",
+  "number theory"
+ ],
+ "Codeforces:2180B - Ashmal": [
+  "greedy",
+  "strings"
+ ],
+ "Codeforces:228A - Is your horseshoe on the other hoof?": [
+  "implementation"
+ ],
+ "Codeforces:22A - Second Order Statistics": [
+  "brute force"
+ ],
+ "Codeforces:230A - Dragons": [
+  "greedy",
+  "sortings"
+ ],
+ "Codeforces:230B - T-primes": [
+  "binary search",
+  "implementation",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:231A - Team": [
+  "brute force",
+  "greedy"
+ ],
+ "Codeforces:236A - Boy or Girl": [
+  "brute force",
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:24A - Ring road": [
+  "graphs"
+ ],
+ "Codeforces:258A - Little Elephant and Bits": [
+  "greedy",
+  "math"
+ ],
+ "Codeforces:25A - IQ test": [
+  "brute force"
+ ],
+ "Codeforces:263A - Beautiful Matrix": [
+  "implementation"
+ ],
+ "Codeforces:266A - Stones on the Table": [
+  "implementation"
+ ],
+ "Codeforces:266B - Queue at the School": [
+  "constructive algorithms",
+  "graph matchings",
+  "implementation",
+  "shortest paths"
+ ],
+ "Codeforces:268A - Games": [
+  "brute force"
+ ],
+ "Codeforces:268B - Buttons": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:26A - Almost Prime": [
+  "number theory"
+ ],
+ "Codeforces:270A - Fancy Fence": [
+  "geometry",
+  "implementation",
+  "math"
+ ],
+ "Codeforces:271A - Beautiful Year": [
+  "brute force"
+ ],
+ "Codeforces:279B - Books": [
+  "binary search",
+  "brute force",
+  "implementation",
+  "two pointers"
+ ],
+ "Codeforces:281A - Word Capitalization": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:282A - Bit++": [
+  "implementation"
+ ],
+ "Codeforces:287A - IQ Test": [
+  "brute force",
+  "implementation"
+ ],
+ "Codeforces:292B - Network Topology": [
+  "graphs",
+  "implementation"
+ ],
+ "Codeforces:304A - Pythagorean Theorem II": [
+  "brute force",
+  "math"
+ ],
+ "Codeforces:313A - Ilya and Bank Account": [
+  "implementation",
+  "number theory"
+ ],
+ "Codeforces:318A - Even Odds": [
+  "math"
+ ],
+ "Codeforces:327A - Flipping Game": [
+  "brute force",
+  "dp",
+  "implementation"
+ ],
+ "Codeforces:32B - Borze": [
+  "expression parsing",
+  "implementation"
+ ],
+ "Codeforces:337A - Puzzles": [
+  "greedy"
+ ],
+ "Codeforces:339A - Helpful Maths": [
+  "greedy",
+  "implementation",
+  "sortings",
+  "strings"
+ ],
+ "Codeforces:339B - Xenia and Ringroad": [
+  "implementation"
+ ],
+ "Codeforces:344A - Magnets": [
+  "implementation"
+ ],
+ "Codeforces:34B - Sale": [
+  "greedy",
+  "sortings"
+ ],
+ "Codeforces:35C - Fire Again": [
+  "brute force",
+  "dfs and similar",
+  "shortest paths"
+ ],
+ "Codeforces:379A - New Year Candles": [
+  "implementation"
+ ],
+ "Codeforces:381A - Sereja and Dima": [
+  "greedy",
+  "implementation",
+  "two pointers"
+ ],
+ "Codeforces:381B - Sereja and Stairs": [
+  "greedy",
+  "implementation",
+  "sortings"
+ ],
+ "Codeforces:404A - Valera and X": [
+  "implementation"
+ ],
+ "Codeforces:405A - Gravity Flip": [
+  "greedy",
+  "implementation",
+  "sortings"
+ ],
+ "Codeforces:411A - Password Check": [
+  "*special",
+  "implementation"
+ ],
+ "Codeforces:41A - Translation": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:427A - Police Recruits": [
+  "implementation"
+ ],
+ "Codeforces:431A - Black Square": [
+  "implementation"
+ ],
+ "Codeforces:432A - Choosing Teams": [
+  "greedy",
+  "implementation",
+  "sortings"
+ ],
+ "Codeforces:433B - Kuriyama Mirai's Stones": [
+  "dp",
+  "implementation",
+  "sortings"
+ ],
+ "Codeforces:43A - Football": [
+  "strings"
+ ],
+ "Codeforces:440A - Forgotten Episode": [
+  "implementation"
+ ],
+ "Codeforces:443A - Anton and Letters": [
+  "constructive algorithms",
+  "implementation"
+ ],
+ "Codeforces:44A - Indian Summer": [
+  "implementation"
+ ],
+ "Codeforces:451A - Game With Sticks": [
+  "implementation"
+ ],
+ "Codeforces:455A - Boredom": [
+  "dp"
+ ],
+ "Codeforces:456A - Laptops": [
+  "sortings"
+ ],
+ "Codeforces:459B - Pashmak and Flowers": [
+  "combinatorics",
+  "implementation",
+  "sortings"
+ ],
+ "Codeforces:460A - Vasya and Socks": [
+  "brute force",
+  "implementation",
+  "math"
+ ],
+ "Codeforces:466A - Cheap Travel": [
+  "implementation"
+ ],
+ "Codeforces:466C - Number of Ways": [
+  "binary search",
+  "brute force",
+  "data structures",
+  "dp",
+  "two pointers"
+ ],
+ "Codeforces:467A - George and Accommodation": [
+  "implementation"
+ ],
+ "Codeforces:469A - I Wanna Be the Guy": [
+  "greedy",
+  "implementation"
+ ],
+ "Codeforces:46B - T-shirts from Sponsor": [
+  "implementation"
+ ],
+ "Codeforces:472A - Design Tutorial: Learn from Math": [
+  "math",
+  "number theory"
+ ],
+ "Codeforces:474A - Keyboard": [
+  "implementation"
+ ],
+ "Codeforces:479A - Expression": [
+  "brute force",
+  "math"
+ ],
+ "Codeforces:483A - Counterexample ": [
+  "brute force",
+  "implementation",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:486A - Calculating Function": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:490A - Team Olympiad": [
+  "greedy",
+  "implementation",
+  "sortings"
+ ],
+ "Codeforces:492A - Vanya and Cubes": [
+  "implementation"
+ ],
+ "Codeforces:492B - Vanya and Lanterns": [
+  "binary search",
+  "implementation",
+  "math",
+  "sortings"
+ ],
+ "Codeforces:499B - Lecture": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:49A - Sleuth": [
+  "implementation"
+ ],
+ "Codeforces:4A - Watermelon": [
+  "brute force",
+  "math"
+ ],
+ "Codeforces:4C - Registration System": [
+  "data structures",
+  "hashing",
+  "implementation"
+ ],
+ "Codeforces:501B - Misha and Changing Handles": [
+  "data structures",
+  "dsu",
+  "strings"
+ ],
+ "Codeforces:50A - Domino piling": [
+  "greedy",
+  "math"
+ ],
+ "Codeforces:510A - Fox And Snake": [
+  "implementation"
+ ],
+ "Codeforces:510B - Fox And Two Dots": [
+  "dfs and similar"
+ ],
+ "Codeforces:514A - Chewbaсca and Number": [
+  "greedy",
+  "implementation"
+ ],
+ "Codeforces:520A - Pangram": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:535B - Tavas and SaDDas": [
+  "bitmasks",
+  "brute force",
+  "combinatorics",
+  "implementation"
+ ],
+ "Codeforces:546A - Soldier and Bananas": [
+  "brute force",
+  "implementation",
+  "math"
+ ],
+ "Codeforces:546C - Soldier and Cards": [
+  "brute force",
+  "dfs and similar",
+  "games"
+ ],
+ "Codeforces:550B - Preparing Olympiad": [
+  "bitmasks",
+  "brute force"
+ ],
+ "Codeforces:556A - Case of the Zeros and Ones": [
+  "greedy"
+ ],
+ "Codeforces:56A - Bar": [
+  "implementation"
+ ],
+ "Codeforces:577A - Multiplication Table": [
+  "implementation",
+  "number theory"
+ ],
+ "Codeforces:579A - Raising Bacteria": [
+  "bitmasks"
+ ],
+ "Codeforces:580A - Kefa and First Steps": [
+  "brute force",
+  "dp",
+  "implementation"
+ ],
+ "Codeforces:580C - Kefa and Park": [
+  "dfs and similar",
+  "graphs",
+  "trees"
+ ],
+ "Codeforces:584A - Olesya and Rodion": [
+  "math"
+ ],
+ "Codeforces:58A - Chat room": [
+  "greedy",
+  "strings"
+ ],
+ "Codeforces:598A - Tricky Sum": [
+  "math"
+ ],
+ "Codeforces:59A - Word": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:610A - Pasha and Stick": [
+  "combinatorics",
+  "math"
+ ],
+ "Codeforces:617A - Elephant": [
+  "math"
+ ],
+ "Codeforces:61A - Ultra-Fast Mathematician": [
+  "implementation"
+ ],
+ "Codeforces:621A - Wet Shark and Odd and Even": [
+  "implementation"
+ ],
+ "Codeforces:627D - Preorder Test": [
+  "binary search",
+  "dfs and similar",
+  "dp",
+  "graphs",
+  "greedy",
+  "trees"
+ ],
+ "Codeforces:629A - Far Relative’s Birthday Cake": [
+  "brute force",
+  "combinatorics",
+  "constructive algorithms",
+  "implementation"
+ ],
+ "Codeforces:630A - Again Twenty Five!": [
+  "number theory"
+ ],
+ "Codeforces:630C - Lucky Numbers": [
+  "combinatorics",
+  "math"
+ ],
+ "Codeforces:630D - Hexagons!": [
+  "math"
+ ],
+ "Codeforces:633A - Ebony and Ivory": [
+  "brute force",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:63A - Sinking Ship": [
+  "implementation",
+  "sortings",
+  "strings"
+ ],
+ "Codeforces:677A - Vanya and Fence": [
+  "implementation"
+ ],
+ "Codeforces:678C - Joty and Chocolate": [
+  "implementation",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:679A - Bear and Prime 100": [
+  "constructive algorithms",
+  "interactive",
+  "math"
+ ],
+ "Codeforces:686A - Free Ice Cream": [
+  "constructive algorithms",
+  "implementation"
+ ],
+ "Codeforces:699A - Launch of Collider": [
+  "implementation"
+ ],
+ "Codeforces:69A - Young Physicist": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:6B - President's Office": [
+  "implementation"
+ ],
+ "Codeforces:702A - Maximum Increase": [
+  "dp",
+  "greedy",
+  "implementation"
+ ],
+ "Codeforces:705A - Hulk": [
+  "implementation"
+ ],
+ "Codeforces:706B - Interesting drink": [
+  "binary search",
+  "dp",
+  "implementation"
+ ],
+ "Codeforces:707A - Brain's Photos": [
+  "implementation"
+ ],
+ "Codeforces:71A - Way Too Long Words": [
+  "strings"
+ ],
+ "Codeforces:723A - The New Year: Meeting Friends": [
+  "implementation",
+  "math",
+  "sortings"
+ ],
+ "Codeforces:727A - Transformation: from A to B": [
+  "brute force",
+  "dfs and similar",
+  "math"
+ ],
+ "Codeforces:732A - Buy a Shovel": [
+  "brute force",
+  "constructive algorithms",
+  "implementation",
+  "math"
+ ],
+ "Codeforces:734A - Anton and Danik": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:735D - Taxes": [
+  "math",
+  "number theory"
+ ],
+ "Codeforces:742A - Arpa’s hard exam and Mehrdad’s naive cheat": [
+  "implementation",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:749A - Bachgold Problem": [
+  "greedy",
+  "implementation",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:750A - New Year and Hurry": [
+  "binary search",
+  "brute force",
+  "implementation",
+  "math"
+ ],
+ "Codeforces:758A - Holiday Of Equality": [
+  "implementation",
+  "math"
+ ],
+ "Codeforces:762A - k-th divisor": [
+  "math",
+  "number theory"
+ ],
+ "Codeforces:766B - Mahmoud and a Triangle": [
+  "constructive algorithms",
+  "geometry",
+  "greedy",
+  "math",
+  "number theory",
+  "sortings"
+ ],
+ "Codeforces:776B - Sherlock and his girlfriend": [
+  "constructive algorithms",
+  "number theory"
+ ],
+ "Codeforces:785A - Anton and Polyhedrons": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:78A - Haiku": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:78B - Easter Eggs": [
+  "constructive algorithms",
+  "implementation"
+ ],
+ "Codeforces:791A - Bear and Big Brother": [
+  "implementation"
+ ],
+ "Codeforces:799A - Carrot Cakes": [
+  "brute force",
+  "implementation"
+ ],
+ "Codeforces:802J1 - Send the Fool Further! (easy)": [
+  "dfs and similar",
+  "graphs",
+  "trees"
+ ],
+ "Codeforces:80A - Panoramix's Prediction": [
+  "brute force"
+ ],
+ "Codeforces:822A - I'm bored with life": [
+  "implementation",
+  "math",
+  "number theory"
+ ],
+ "Codeforces:855A - Tom Riddle's Diary": [
+  "brute force",
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:862B - Mahmoud and Ehab and the bipartiteness": [
+  "dfs and similar",
+  "graphs",
+  "trees"
+ ],
+ "Codeforces:868A - Bark to Unlock": [
+  "brute force",
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:879A - Borya's Diagnosis": [
+  "implementation"
+ ],
+ "Codeforces:939A - Love Triangle": [
+  "graphs"
+ ],
+ "Codeforces:959A - Mahmoud and Ehab and the even-odd game": [
+  "games",
+  "math"
+ ],
+ "Codeforces:96A - Football": [
+  "implementation",
+  "strings"
+ ],
+ "Codeforces:96B - Lucky Numbers (easy)": [
+  "binary search",
+  "bitmasks",
+  "brute force"
+ ],
+ "Codeforces:977A - Wrong Subtraction": [
+  "implementation"
+ ],
+ "Codeforces:986A - Fair": [
+  "graphs",
+  "greedy",
+  "number theory",
+  "shortest paths"
+ ],
+ "Codeforces:987B - High School: Become Human": [
+  "math"
+ ],
+ "Codeforces:996A - Hit the Lottery": [
+  "dp",
+  "greedy"
+ ],
+ "Codeforces:9A - Die Roll": [
+  "math",
+  "probabilities"
+ ],
+ "CSES:Apartments": [
+  "Sorting and Searching"
+ ],
+ "CSES:Apple Division": [
+  "Introductory Problems"
+ ],
+ "CSES:Array Description": [
+  "Dynamic Programming"
+ ],
+ "CSES:Bit Strings": [
+  "Introductory Problems"
+ ],
+ "CSES:Book Shop": [
+  "Dynamic Programming"
+ ],
+ "CSES:Building Teams": [
+  "Graph Algorithms"
+ ],
+ "CSES:Coin Combinations I": [
+  "Dynamic Programming"
+ ],
+ "CSES:Coin Combinations II": [
+  "Dynamic Programming"
+ ],
+ "CSES:Coin Piles": [
+  "Introductory Problems"
+ ],
+ "CSES:Collecting Numbers": [
+  "Sorting and Searching"
+ ],
+ "CSES:Concert Tickets": [
+  "Sorting and Searching"
+ ],
+ "CSES:Counting Divisors": [
+  "Mathematics"
+ ],
+ "CSES:Counting Towers": [
+  "Dynamic Programming"
+ ],
+ "CSES:Course Schedule": [
+  "Graph Algorithms"
+ ],
+ "CSES:Cycle Finding": [
+  "Graph Algorithms"
+ ],
+ "CSES:Distinct Values Subarrays": [
+  "Sorting and Searching"
+ ],
+ "CSES:Distinct Values Subsequences": [
+  "Sorting and Searching"
+ ],
+ "CSES:Divisor Analysis": [
+  "Mathematics"
+ ],
+ "CSES:Dynamic Range Sum Queries": [
+  "Range Queries"
+ ],
+ "CSES:Edit Distance": [
+  "Dynamic Programming"
+ ],
+ "CSES:Exponentiation II": [
+  "Mathematics"
+ ],
+ "CSES:Factory Machines": [
+  "Sorting and Searching"
+ ],
+ "CSES:Ferris Wheel": [
+  "Sorting and Searching"
+ ],
+ "CSES:Flight Discount": [
+  "Graph Algorithms"
+ ],
+ "CSES:Flight Routes": [
+  "Graph Algorithms"
+ ],
+ "CSES:Flight Routes Check": [
+  "Graph Algorithms"
+ ],
+ "CSES:Forest Queries": [
+  "Range Queries"
+ ],
+ "CSES:Gray Code": [
+  "Introductory Problems"
+ ],
+ "CSES:Grid Paths I": [
+  "Dynamic Programming"
+ ],
+ "CSES:High Score": [
+  "Graph Algorithms"
+ ],
+ "CSES:Increasing Array": [
+  "Introductory Problems"
+ ],
+ "CSES:Increasing Subsequence": [
+  "Dynamic Programming"
+ ],
+ "CSES:Josephus Problem I": [
+  "Sorting and Searching"
+ ],
+ "CSES:Josephus Problem II": [
+  "Sorting and Searching"
+ ],
+ "CSES:Longest Common Subsequence": [
+  "Dynamic Programming"
+ ],
+ "CSES:Maximum Subarray Sum": [
+  "Sorting and Searching"
+ ],
+ "CSES:Message Route": [
+  "Graph Algorithms"
+ ],
+ "CSES:Minimizing Coins": [
+  "Dynamic Programming"
+ ],
+ "CSES:Missing Coin Sum": [
+  "Sorting and Searching"
+ ],
+ "CSES:Missing Number": [
+  "Introductory Problems"
+ ],
+ "CSES:Money Sums": [
+  "Dynamic Programming"
+ ],
+ "CSES:Monsters": [
+  "Graph Algorithms"
+ ],
+ "CSES:Mountain Range": [
+  "Dynamic Programming"
+ ],
+ "CSES:Movie Festival": [
+  "Sorting and Searching"
+ ],
+ "CSES:Nearest Smaller Values": [
+  "Sorting and Searching"
+ ],
+ "CSES:Number Spiral": [
+  "Introductory Problems"
+ ],
+ "CSES:Palindrome Reorder": [
+  "Introductory Problems"
+ ],
+ "CSES:Permutations": [
+  "Introductory Problems"
+ ],
+ "CSES:Planets and Kingdoms": [
+  "Graph Algorithms"
+ ],
+ "CSES:Projects": [
+  "Dynamic Programming"
+ ],
+ "CSES:Range Update Queries": [
+  "Range Queries"
+ ],
+ "CSES:Reading Books": [
+  "Sorting and Searching"
+ ],
+ "CSES:Removal Game": [
+  "Dynamic Programming"
+ ],
+ "CSES:Removing Digits": [
+  "Dynamic Programming"
+ ],
+ "CSES:Repetitions": [
+  "Introductory Problems"
+ ],
+ "CSES:Restaurant Customers": [
+  "Sorting and Searching"
+ ],
+ "CSES:Road Construction": [
+  "Graph Algorithms"
+ ],
+ "CSES:Round Trip": [
+  "Graph Algorithms"
+ ],
+ "CSES:Round Trip II": [
+  "Graph Algorithms"
+ ],
+ "CSES:Shortest Routes I": [
+  "Graph Algorithms"
+ ],
+ "CSES:Shortest Routes II": [
+  "Graph Algorithms"
+ ],
+ "CSES:Sliding Window Median": [
+  "Sliding Window Problems"
+ ],
+ "CSES:Sliding Window Mex": [
+  "Sliding Window Problems"
+ ],
+ "CSES:Sliding Window Minimum": [
+  "Sliding Window Problems"
+ ],
+ "CSES:Sliding Window Mode": [
+  "Sliding Window Problems"
+ ],
+ "CSES:Sliding Window Xor": [
+  "Sliding Window Problems"
+ ],
+ "CSES:Static Range Minimum Queries": [
+  "Range Queries"
+ ],
+ "CSES:Stick Lengths": [
+  "Sorting and Searching"
+ ],
+ "CSES:Subarray Divisibility": [
+  "Sorting and Searching"
+ ],
+ "CSES:Subarray Sums I": [
+  "Sorting and Searching"
+ ],
+ "CSES:Subarray Sums II": [
+  "Sorting and Searching"
+ ],
+ "CSES:Sum of Four Values": [
+  "Sorting and Searching"
+ ],
+ "CSES:Sum of Three Values": [
+  "Sorting and Searching"
+ ],
+ "CSES:Sum of Two Values": [
+  "Sorting and Searching"
+ ],
+ "CSES:Tasks and Deadlines": [
+  "Sorting and Searching"
+ ],
+ "CSES:Towers": [
+  "Sorting and Searching"
+ ],
+ "CSES:Traffic Lights": [
+  "Sorting and Searching"
+ ],
+ "CSES:Trailing Zeros": [
+  "Introductory Problems"
+ ],
+ "CSES:Tree Diameter": [
+  "Tree Algorithms"
+ ],
+ "CSES:Tree Distances I": [
+  "Tree Algorithms"
+ ],
+ "CSES:Tree Matching": [
+  "Tree Algorithms"
+ ],
+ "CSES:Two Knights": [
+  "Introductory Problems"
+ ],
+ "CSES:Two Sets": [
+  "Introductory Problems"
+ ],
+ "CSES:Two Sets II": [
+  "Dynamic Programming"
+ ],
+ "CSES:Weird Algorithm": [
+  "Introductory Problems"
+ ],
+ "Kattis:10 Kinds of People": [
+  "Flood Fill, Harder"
+ ],
+ "Kattis:A Feast For Cats": [
+  "MST, Standard"
+ ],
+ "Kattis:ACM Contest Scoring": [
+  "1D Array, Easier"
+ ],
+ "Kattis:Another Candies": [
+  "Modular Arithmetic"
+ ],
+ "Kattis:Build Dependencies": [
+  "Topological Sort"
+ ],
+ "Kattis:Counting Stars": [
+  "Flood Fill, Easier"
+ ],
+ "Kattis:Curse the Darkness": [
+  "Points"
+ ],
+ "Kattis:Even Up Solitaire": [
+  "Stack"
+ ],
+ "Kattis:FizzBuzz": [
+  "Real Life, Easier"
+ ],
+ "Kattis:Flexible Spaces": [
+  "Try All Answers"
+ ],
+ "Kattis:Frosh Week": [
+  "Greedy (Classical)"
+ ],
+ "Kattis:Hello World!": [
+  "One-Liner I/O"
+ ],
+ "Kattis:Horror List": [
+  "SSSP, BFS, Easier"
+ ],
+ "Kattis:Island Hopping": [
+  "MST, Standard"
+ ],
+ "Kattis:Islands": [
+  "Flood Fill, Harder"
+ ],
+ "Kattis:Knapsack": [
+  "0-1 KNAPSACK/SS"
+ ],
+ "Kattis:License to Launch": [
+  "Control Flow, Level 1"
+ ],
+ "Kattis:Line Them Up": [
+  "1D Array, Easier"
+ ],
+ "Kattis:Lost Map": [
+  "MST, Standard"
+ ],
+ "Kattis:Minimum Spanning Tree": [
+  "MST, Standard"
+ ],
+ "Kattis:Mixed Fractions": [
+  "Fractions"
+ ],
+ "Kattis:Mravi": [
+  "S/Longest Paths on DAG"
+ ],
+ "Kattis:Pairing Socks": [
+  "Stack"
+ ],
+ "Kattis:Pascal": [
+  "Finding Prime Factors"
+ ],
+ "Kattis:Pick up sticks": [
+  "Topological Sort"
+ ],
+ "Kattis:Primal Representation": [
+  "Finding Prime Factors"
+ ],
+ "Kattis:Prime Sieve": [
+  "Prime Numbers"
+ ],
+ "Kattis:Radio Commercials": [
+  "1D Range Sum"
+ ],
+ "Kattis:Reachable Roads": [
+  "Finding CCs"
+ ],
+ "Kattis:Recount": [
+  "Hash Table (map), E"
+ ],
+ "Kattis:Reseto": [
+  "Prime Numbers"
+ ],
+ "Kattis:Saving Princess Peach": [
+  "DAT, Others"
+ ],
+ "Kattis:Sheba's Amoebas": [
+  "Flood Fill, Easier"
+ ],
+ "Kattis:Short Sell": [
+  "1D Range Sum"
+ ],
+ "Kattis:Square Peg in a Round Hole": [
+  "Greedy (Classical)"
+ ],
+ "Kattis:Where's My Internet??": [
+  "Finding CCs"
+ ],
+ "LeetCode:01 Matrix": [
+  "Array",
+  "Dynamic Programming",
+  "Breadth-First Search",
+  "Matrix"
+ ],
+ "LeetCode:3Sum": [
+  "Array",
+  "Two Pointers",
+  "Sorting"
+ ],
+ "LeetCode:Absolute Difference Between Maximum and Minimum K Elements": [
+  "Array",
+  "Sorting"
+ ],
+ "LeetCode:Add Digits": [
+  "Math",
+  "Simulation",
+  "Number Theory"
+ ],
+ "LeetCode:Add Two Integers": [
+  "Math"
+ ],
+ "LeetCode:Alternating Digit Sum": [
+  "Math"
+ ],
+ "LeetCode:Apple Redistribution into Boxes": [
+  "Array",
+  "Greedy",
+  "Sorting"
+ ],
+ "LeetCode:Arranging Coins": [
+  "Math",
+  "Binary Search"
+ ],
+ "LeetCode:Article Views I": [
+  "Database"
+ ],
+ "LeetCode:Average of Levels in Binary Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Average Salary Excluding the Minimum and Maximum Salary": [
+  "Array",
+  "Sorting"
+ ],
+ "LeetCode:Backspace String Compare": [
+  "Two Pointers",
+  "String",
+  "Stack",
+  "Simulation"
+ ],
+ "LeetCode:Balanced Binary Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Best Time to Buy and Sell Stock": [
+  "Array",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Best Time to Buy and Sell Stock II": [
+  "Array",
+  "Dynamic Programming",
+  "Greedy"
+ ],
+ "LeetCode:Best Time to Buy and Sell Stock using Strategy": [
+  "Array",
+  "Sliding Window",
+  "Prefix Sum"
+ ],
+ "LeetCode:Best Time to Buy and Sell Stock V": [
+  "Array",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Big Countries": [
+  "Database"
+ ],
+ "LeetCode:Binary Prefix Divisible By 5": [
+  "Array",
+  "Bit Manipulation"
+ ],
+ "LeetCode:Binary Search": [
+  "Array",
+  "Binary Search"
+ ],
+ "LeetCode:Binary Tree Inorder Traversal": [
+  "Stack",
+  "Tree",
+  "Depth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Binary Tree Level Order Traversal": [
+  "Tree",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Binary Tree Level Order Traversal II": [
+  "Tree",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Binary Tree Postorder Traversal": [
+  "Stack",
+  "Tree",
+  "Depth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Binary Tree Preorder Traversal": [
+  "Stack",
+  "Tree",
+  "Depth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Binary Tree Zigzag Level Order Traversal": [
+  "Tree",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Build Array from Permutation": [
+  "Array",
+  "Simulation"
+ ],
+ "LeetCode:Bulb Switcher": [
+  "Math",
+  "Brainteaser"
+ ],
+ "LeetCode:Can Make Arithmetic Progression From Sequence": [
+  "Array",
+  "Sorting"
+ ],
+ "LeetCode:Cells in a Range on an Excel Sheet": [
+  "String"
+ ],
+ "LeetCode:Cheapest Flights Within K Stops": [
+  "Dynamic Programming",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Graph Theory",
+  "Heap (Priority Queue)",
+  "Shortest Path"
+ ],
+ "LeetCode:Check if Array Is Sorted and Rotated": [
+  "Array"
+ ],
+ "LeetCode:Check if the Sentence Is Pangram": [
+  "Hash Table",
+  "String"
+ ],
+ "LeetCode:Climbing Stairs": [
+  "Math",
+  "Dynamic Programming",
+  "Memoization"
+ ],
+ "LeetCode:Coin Change": [
+  "Array",
+  "Dynamic Programming",
+  "Breadth-First Search",
+  "Knapsack Problem",
+  "Complete Knapsack"
+ ],
+ "LeetCode:Coin Change II": [
+  "Array",
+  "Dynamic Programming",
+  "Knapsack Problem",
+  "Complete Knapsack"
+ ],
+ "LeetCode:Combination Sum": [
+  "Array",
+  "Backtracking"
+ ],
+ "LeetCode:Combination Sum II": [
+  "Array",
+  "Backtracking"
+ ],
+ "LeetCode:Complete Prime Number": [
+  "Math",
+  "Enumeration",
+  "Number Theory"
+ ],
+ "LeetCode:Concatenate Non-Zero Digits and Multiply by Sum I": [
+  "Math"
+ ],
+ "LeetCode:Concatenation of Array": [
+  "Array",
+  "Simulation"
+ ],
+ "LeetCode:Construct the Rectangle": [
+  "Math"
+ ],
+ "LeetCode:Container With Most Water": [
+  "Array",
+  "Two Pointers",
+  "Greedy"
+ ],
+ "LeetCode:Contains Duplicate": [
+  "Array",
+  "Hash Table",
+  "Sorting"
+ ],
+ "LeetCode:Contains Duplicate II": [
+  "Array",
+  "Hash Table",
+  "Sliding Window"
+ ],
+ "LeetCode:Convert Binary Number in a Linked List to Integer": [
+  "Linked List",
+  "Math"
+ ],
+ "LeetCode:Convert the Temperature": [
+  "Math"
+ ],
+ "LeetCode:Count Complete Tree Nodes": [
+  "Binary Search",
+  "Bit Manipulation",
+  "Tree",
+  "Binary Tree"
+ ],
+ "LeetCode:Count Elements With at Least K Greater Values": [
+  "Array",
+  "Binary Search",
+  "Divide and Conquer",
+  "Sorting",
+  "Quickselect"
+ ],
+ "LeetCode:Count Elements With Maximum Frequency": [
+  "Array",
+  "Hash Table",
+  "Counting"
+ ],
+ "LeetCode:Count Negative Numbers in a Sorted Matrix": [
+  "Array",
+  "Binary Search",
+  "Matrix"
+ ],
+ "LeetCode:Count Odd Numbers in an Interval Range": [
+  "Math"
+ ],
+ "LeetCode:Count Pairs That Form a Complete Day I": [
+  "Array",
+  "Hash Table",
+  "Counting"
+ ],
+ "LeetCode:Count Pairs Whose Sum is Less than Target": [
+  "Array",
+  "Two Pointers",
+  "Binary Search",
+  "Sorting"
+ ],
+ "LeetCode:Count Partitions with Even Sum Difference": [
+  "Array",
+  "Math",
+  "Prefix Sum"
+ ],
+ "LeetCode:Count Primes": [
+  "Array",
+  "Math",
+  "Enumeration",
+  "Number Theory",
+  "Primality Test",
+  "Sieve Theory",
+  "Prime Number Sieve"
+ ],
+ "LeetCode:Count Square Sum Triples": [
+  "Math",
+  "Enumeration"
+ ],
+ "LeetCode:Coupon Code Validator": [
+  "Array",
+  "Hash Table",
+  "String",
+  "Sorting"
+ ],
+ "LeetCode:Course Schedule": [
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Graph Theory",
+  "Topological Sort",
+  "Directed Acyclic Graph"
+ ],
+ "LeetCode:Course Schedule II": [
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Graph Theory",
+  "Topological Sort"
+ ],
+ "LeetCode:Daily Temperatures": [
+  "Array",
+  "Stack",
+  "Monotonic Stack"
+ ],
+ "LeetCode:Day of the Week": [
+  "Math"
+ ],
+ "LeetCode:Decode Ways": [
+  "String",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Decode XORed Array": [
+  "Array",
+  "Bit Manipulation"
+ ],
+ "LeetCode:Defanging an IP Address": [
+  "String"
+ ],
+ "LeetCode:Delete Columns to Make Sorted": [
+  "Array",
+  "String",
+  "Longest Increasing Subsequence"
+ ],
+ "LeetCode:Delete Columns to Make Sorted II": [
+  "Array",
+  "String",
+  "Greedy"
+ ],
+ "LeetCode:Delete Columns to Make Sorted III": [
+  "Array",
+  "String",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Determine if Two Strings Are Close": [
+  "Hash Table",
+  "String",
+  "Sorting",
+  "Counting"
+ ],
+ "LeetCode:Diameter of Binary Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Binary Tree",
+  "DP on Trees"
+ ],
+ "LeetCode:Different Ways to Add Parentheses": [
+  "Math",
+  "String",
+  "Dynamic Programming",
+  "Recursion",
+  "Memoization",
+  "Bracket Sequences"
+ ],
+ "LeetCode:Divide Two Integers": [
+  "Math",
+  "Bit Manipulation"
+ ],
+ "LeetCode:Duplicate Emails": [
+  "Database"
+ ],
+ "LeetCode:Edit Distance": [
+  "String",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Evaluate Boolean Binary Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Excel Sheet Column Number": [
+  "Math",
+  "String"
+ ],
+ "LeetCode:Fibonacci Number": [
+  "Math",
+  "Dynamic Programming",
+  "Recursion",
+  "Memoization"
+ ],
+ "LeetCode:Final Value of Variable After Performing Operations": [
+  "Array",
+  "String",
+  "Simulation"
+ ],
+ "LeetCode:Find a Corresponding Node of a Binary Tree in a Clone of That Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Find All Numbers Disappeared in an Array": [
+  "Array",
+  "Hash Table"
+ ],
+ "LeetCode:Find All People With Secret": [
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Union-Find",
+  "Graph Theory",
+  "Sorting"
+ ],
+ "LeetCode:Find Center of Star Graph": [
+  "Graph Theory"
+ ],
+ "LeetCode:Find Customer Referee": [
+  "Database"
+ ],
+ "LeetCode:Find First Palindromic String in the Array": [
+  "Array",
+  "Two Pointers",
+  "String"
+ ],
+ "LeetCode:Find Greatest Common Divisor of Array": [
+  "Array",
+  "Math",
+  "Number Theory",
+  "Euclidean Algorithm",
+  "Greatest Common Divisor"
+ ],
+ "LeetCode:Find if Path Exists in Graph": [
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Union-Find",
+  "Graph Theory"
+ ],
+ "LeetCode:Find Median from Data Stream": [
+  "Two Pointers",
+  "Design",
+  "Sorting",
+  "Heap (Priority Queue)",
+  "Data Stream"
+ ],
+ "LeetCode:Find Minimum in Rotated Sorted Array": [
+  "Array",
+  "Binary Search"
+ ],
+ "LeetCode:Find Minimum in Rotated Sorted Array II": [
+  "Array",
+  "Binary Search"
+ ],
+ "LeetCode:Find Peak Element": [
+  "Array",
+  "Binary Search"
+ ],
+ "LeetCode:Find Pivot Index": [
+  "Array",
+  "Prefix Sum"
+ ],
+ "LeetCode:Find Target Indices After Sorting Array": [
+  "Array",
+  "Binary Search",
+  "Sorting"
+ ],
+ "LeetCode:Find the Difference": [
+  "Hash Table",
+  "String",
+  "Bit Manipulation",
+  "Sorting"
+ ],
+ "LeetCode:Find the Duplicate Number": [
+  "Array",
+  "Two Pointers",
+  "Binary Search",
+  "Bit Manipulation",
+  "Pigeonhole Principle",
+  "Floyd's Cycle Finding Algorithm"
+ ],
+ "LeetCode:Find the Highest Altitude": [
+  "Array",
+  "Prefix Sum"
+ ],
+ "LeetCode:Find the Index of the First Occurrence in a String": [
+  "Two Pointers",
+  "String",
+  "String Matching",
+  "Z Algorithm",
+  "Knuth–Morris–Pratt Algorithm",
+  "Boyer–Moore String-Search Algorithm"
+ ],
+ "LeetCode:Find the Middle Index in Array": [
+  "Array",
+  "Prefix Sum"
+ ],
+ "LeetCode:Find The Original Array of Prefix Xor": [
+  "Array",
+  "Bit Manipulation"
+ ],
+ "LeetCode:Find the Pivot Integer": [
+  "Math",
+  "Prefix Sum"
+ ],
+ "LeetCode:Find the Town Judge": [
+  "Array",
+  "Hash Table",
+  "Graph Theory"
+ ],
+ "LeetCode:First Unique Character in a String": [
+  "Hash Table",
+  "String",
+  "Queue",
+  "Counting"
+ ],
+ "LeetCode:Flood Fill": [
+  "Array",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Matrix"
+ ],
+ "LeetCode:Four Divisors": [
+  "Array",
+  "Math",
+  "Prime Factorization",
+  "Sieve Theory"
+ ],
+ "LeetCode:Generate Parentheses": [
+  "String",
+  "Dynamic Programming",
+  "Backtracking",
+  "Bracket Sequences"
+ ],
+ "LeetCode:Greatest Common Divisor of Strings": [
+  "Math",
+  "String",
+  "Euclidean Algorithm",
+  "Greatest Common Divisor"
+ ],
+ "LeetCode:Group Anagrams": [
+  "Array",
+  "Hash Table",
+  "String",
+  "Sorting"
+ ],
+ "LeetCode:Guess Number Higher or Lower": [
+  "Binary Search",
+  "Interactive"
+ ],
+ "LeetCode:Happy Number": [
+  "Hash Table",
+  "Math",
+  "Two Pointers",
+  "Floyd's Cycle Finding Algorithm"
+ ],
+ "LeetCode:House Robber": [
+  "Array",
+  "Dynamic Programming"
+ ],
+ "LeetCode:House Robber II": [
+  "Array",
+  "Dynamic Programming"
+ ],
+ "LeetCode:How Many Numbers Are Smaller Than the Current Number": [
+  "Array",
+  "Hash Table",
+  "Sorting",
+  "Counting Sort"
+ ],
+ "LeetCode:Implement Queue using Stacks": [
+  "Stack",
+  "Design",
+  "Queue"
+ ],
+ "LeetCode:Insert Interval": [
+  "Array"
+ ],
+ "LeetCode:Integer Replacement": [
+  "Dynamic Programming",
+  "Greedy",
+  "Bit Manipulation",
+  "Memoization"
+ ],
+ "LeetCode:Integer to Roman": [
+  "Hash Table",
+  "Math",
+  "String"
+ ],
+ "LeetCode:Invalid Tweets": [
+  "Database"
+ ],
+ "LeetCode:Invert Binary Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Is Subsequence": [
+  "Two Pointers",
+  "String",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Isomorphic Strings": [
+  "Hash Table",
+  "String"
+ ],
+ "LeetCode:Jewels and Stones": [
+  "Hash Table",
+  "String"
+ ],
+ "LeetCode:Jump Game": [
+  "Array",
+  "Dynamic Programming",
+  "Greedy"
+ ],
+ "LeetCode:Jump Game II": [
+  "Array",
+  "Dynamic Programming",
+  "Greedy"
+ ],
+ "LeetCode:Kth Largest Element in a Stream": [
+  "Tree",
+  "Design",
+  "Binary Search Tree",
+  "Heap (Priority Queue)",
+  "Binary Tree",
+  "Data Stream"
+ ],
+ "LeetCode:Kth Largest Element in an Array": [
+  "Array",
+  "Divide and Conquer",
+  "Sorting",
+  "Heap (Priority Queue)",
+  "Quickselect"
+ ],
+ "LeetCode:Kth Smallest Element in a BST": [
+  "Tree",
+  "Depth-First Search",
+  "Binary Search Tree",
+  "Binary Tree"
+ ],
+ "LeetCode:Largest Element in an Array after Merge Operations": [
+  "Array",
+  "Greedy"
+ ],
+ "LeetCode:Largest Number": [
+  "Array",
+  "String",
+  "Greedy",
+  "Sorting"
+ ],
+ "LeetCode:Largest Perimeter Triangle": [
+  "Array",
+  "Math",
+  "Greedy",
+  "Sorting",
+  "Quicksort",
+  "Polygons"
+ ],
+ "LeetCode:Largest Prime from Consecutive Prime Sum": [
+  "Array",
+  "Math",
+  "Number Theory"
+ ],
+ "LeetCode:Largest Triangle Area": [
+  "Array",
+  "Math",
+  "Geometry",
+  "Polygons"
+ ],
+ "LeetCode:Last Day Where You Can Still Cross": [
+  "Array",
+  "Binary Search",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Union-Find",
+  "Matrix"
+ ],
+ "LeetCode:Last Stone Weight": [
+  "Array",
+  "Heap (Priority Queue)"
+ ],
+ "LeetCode:Left and Right Sum Differences": [
+  "Array",
+  "Prefix Sum"
+ ],
+ "LeetCode:Length of Last Word": [
+  "String"
+ ],
+ "LeetCode:Letter Combinations of a Phone Number": [
+  "Hash Table",
+  "String",
+  "Backtracking"
+ ],
+ "LeetCode:Linked List Cycle": [
+  "Hash Table",
+  "Linked List",
+  "Two Pointers",
+  "Floyd's Cycle Finding Algorithm"
+ ],
+ "LeetCode:Linked List Cycle II": [
+  "Hash Table",
+  "Linked List",
+  "Two Pointers",
+  "Floyd's Cycle Finding Algorithm"
+ ],
+ "LeetCode:Longest Common Prefix": [
+  "Array",
+  "String",
+  "Trie"
+ ],
+ "LeetCode:Longest Common Subsequence": [
+  "String",
+  "Dynamic Programming",
+  "Longest Common Subsequence"
+ ],
+ "LeetCode:Longest Consecutive Sequence": [
+  "Array",
+  "Hash Table",
+  "Union-Find"
+ ],
+ "LeetCode:Longest Increasing Subsequence": [
+  "Array",
+  "Binary Search",
+  "Dynamic Programming",
+  "Longest Increasing Subsequence"
+ ],
+ "LeetCode:Longest Palindrome": [
+  "Hash Table",
+  "String",
+  "Greedy"
+ ],
+ "LeetCode:Longest Palindromic Substring": [
+  "Two Pointers",
+  "String",
+  "Dynamic Programming",
+  "Manacher"
+ ],
+ "LeetCode:Longest Repeating Character Replacement": [
+  "Hash Table",
+  "String",
+  "Sliding Window"
+ ],
+ "LeetCode:Longest Substring Without Repeating Characters": [
+  "Hash Table",
+  "String",
+  "Sliding Window"
+ ],
+ "LeetCode:Magic Squares In Grid": [
+  "Array",
+  "Hash Table",
+  "Math",
+  "Matrix"
+ ],
+ "LeetCode:Majority Element": [
+  "Array",
+  "Hash Table",
+  "Divide and Conquer",
+  "Sorting",
+  "Counting",
+  "Boyer–Moore Majority Vote Algorithm"
+ ],
+ "LeetCode:Map of Highest Peak": [
+  "Array",
+  "Breadth-First Search",
+  "Matrix"
+ ],
+ "LeetCode:Matrix Diagonal Sum": [
+  "Array",
+  "Matrix"
+ ],
+ "LeetCode:Max Area of Island": [
+  "Array",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Union-Find",
+  "Matrix"
+ ],
+ "LeetCode:Max Consecutive Ones": [
+  "Array"
+ ],
+ "LeetCode:Maximize Happiness of Selected Children": [
+  "Array",
+  "Greedy",
+  "Sorting"
+ ],
+ "LeetCode:Maximize Points After Choosing K Tasks": [
+  "Array",
+  "Greedy",
+  "Sorting",
+  "Heap (Priority Queue)"
+ ],
+ "LeetCode:Maximum Average Subarray I": [
+  "Array",
+  "Sliding Window"
+ ],
+ "LeetCode:Maximum Depth of Binary Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Maximum Depth of N-ary Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search"
+ ],
+ "LeetCode:Maximum Level Sum of a Binary Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Maximum Matrix Sum": [
+  "Array",
+  "Greedy",
+  "Matrix"
+ ],
+ "LeetCode:Maximum Number of Words Found in Sentences": [
+  "Array",
+  "String"
+ ],
+ "LeetCode:Maximum Population Year": [
+  "Array",
+  "Counting",
+  "Prefix Sum"
+ ],
+ "LeetCode:Maximum Product of Two Elements in an Array": [
+  "Array",
+  "Sorting",
+  "Heap (Priority Queue)"
+ ],
+ "LeetCode:Maximum Product Subarray": [
+  "Array",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Maximum Profit from Trading Stocks with Discounts": [
+  "Array",
+  "Dynamic Programming",
+  "Tree",
+  "Depth-First Search"
+ ],
+ "LeetCode:Maximum Subarray": [
+  "Array",
+  "Divide and Conquer",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Maximum Substrings With Distinct Start": [
+  "Hash Table",
+  "String"
+ ],
+ "LeetCode:Maximum Sum Circular Subarray": [
+  "Array",
+  "Divide and Conquer",
+  "Dynamic Programming",
+  "Queue",
+  "Monotonic Queue"
+ ],
+ "LeetCode:Maximum Sum of Three Numbers Divisible by Three": [
+  "Array",
+  "Greedy",
+  "Sorting",
+  "Heap (Priority Queue)"
+ ],
+ "LeetCode:Maximum Sum With Exactly K Elements ": [
+  "Array",
+  "Greedy"
+ ],
+ "LeetCode:Maximum Unique Subarray Sum After Deletion": [
+  "Array",
+  "Hash Table",
+  "Greedy"
+ ],
+ "LeetCode:Median of Two Sorted Arrays": [
+  "Array",
+  "Binary Search",
+  "Divide and Conquer"
+ ],
+ "LeetCode:Meeting Rooms III": [
+  "Array",
+  "Hash Table",
+  "Sorting",
+  "Heap (Priority Queue)",
+  "Simulation"
+ ],
+ "LeetCode:Merge Intervals": [
+  "Array",
+  "Sorting",
+  "Quicksort"
+ ],
+ "LeetCode:Merge Strings Alternately": [
+  "Two Pointers",
+  "String"
+ ],
+ "LeetCode:Merge Two Binary Trees": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Middle of the Linked List": [
+  "Linked List",
+  "Two Pointers"
+ ],
+ "LeetCode:Min Cost Climbing Stairs": [
+  "Array",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Min Cost to Connect All Points": [
+  "Array",
+  "Union-Find",
+  "Graph Theory",
+  "Minimum Spanning Tree",
+  "Prim's Algorithm",
+  "Kruskal's Algorithm",
+  "Borůvka's Algorithm"
+ ],
+ "LeetCode:Min Stack": [
+  "Stack",
+  "Design"
+ ],
+ "LeetCode:Minimum Absolute Difference in BST": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Search Tree",
+  "Binary Tree"
+ ],
+ "LeetCode:Minimum Absolute Distance Between Mirror Pairs": [
+  "Array",
+  "Hash Table",
+  "Math"
+ ],
+ "LeetCode:Minimum Depth of Binary Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Minimum Distance Between BST Nodes": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Search Tree",
+  "Binary Tree"
+ ],
+ "LeetCode:Minimum Moves to Balance Circular Array": [
+  "Array",
+  "Greedy",
+  "Sorting"
+ ],
+ "LeetCode:Minimum Number Game": [
+  "Array",
+  "Sorting",
+  "Heap (Priority Queue)",
+  "Simulation"
+ ],
+ "LeetCode:Minimum Number of Operations to Have Distinct Elements": [
+  "Array",
+  "Hash Table"
+ ],
+ "LeetCode:Minimum Operations to Make Array Sum Divisible by K": [
+  "Array",
+  "Math"
+ ],
+ "LeetCode:Minimum Operations to Make Binary Palindrome": [
+  "Array",
+  "Two Pointers",
+  "Binary Search",
+  "Bit Manipulation"
+ ],
+ "LeetCode:Minimum Path Sum": [
+  "Array",
+  "Dynamic Programming",
+  "Matrix"
+ ],
+ "LeetCode:Minimum Penalty for a Shop": [
+  "String",
+  "Prefix Sum"
+ ],
+ "LeetCode:Minimum Sum of Four Digit Number After Splitting Digits": [
+  "Math",
+  "Greedy",
+  "Sorting"
+ ],
+ "LeetCode:Missing Number": [
+  "Array",
+  "Hash Table",
+  "Math",
+  "Binary Search",
+  "Bit Manipulation",
+  "Sorting"
+ ],
+ "LeetCode:Monotonic Array": [
+  "Array"
+ ],
+ "LeetCode:Move Zeroes": [
+  "Array",
+  "Two Pointers"
+ ],
+ "LeetCode:N-Repeated Element in Size 2N Array": [
+  "Array",
+  "Hash Table",
+  "Pigeonhole Principle"
+ ],
+ "LeetCode:N-th Tribonacci Number": [
+  "Math",
+  "Dynamic Programming",
+  "Memoization"
+ ],
+ "LeetCode:Next Permutation": [
+  "Array",
+  "Two Pointers"
+ ],
+ "LeetCode:Number of 1 Bits": [
+  "Divide and Conquer",
+  "Bit Manipulation"
+ ],
+ "LeetCode:Number of Employees Who Met the Target": [
+  "Array"
+ ],
+ "LeetCode:Number of Good Pairs": [
+  "Array",
+  "Hash Table",
+  "Math",
+  "Counting"
+ ],
+ "LeetCode:Number of Islands": [
+  "Array",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Union-Find",
+  "Matrix"
+ ],
+ "LeetCode:Number of Operations to Make Network Connected": [
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Union-Find",
+  "Graph Theory"
+ ],
+ "LeetCode:Number of Provinces": [
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Union-Find",
+  "Graph Theory"
+ ],
+ "LeetCode:Number of Smooth Descent Periods of a Stock": [
+  "Array",
+  "Math",
+  "Two Pointers",
+  "Dynamic Programming",
+  "Sliding Window"
+ ],
+ "LeetCode:Number of Ways to Divide a Long Corridor": [
+  "Math",
+  "String",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Number of Ways to Paint N × 3 Grid": [
+  "Dynamic Programming",
+  "Graph Coloring"
+ ],
+ "LeetCode:Palindrome Number": [
+  "Math"
+ ],
+ "LeetCode:Palindromic Substrings": [
+  "Two Pointers",
+  "String",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Partition Equal Subset Sum": [
+  "Array",
+  "Dynamic Programming",
+  "Knapsack Problem",
+  "0-1 Knapsack"
+ ],
+ "LeetCode:Pascal's Triangle": [
+  "Array",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Pascal's Triangle II": [
+  "Array",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Path Sum": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Path Sum II": [
+  "Backtracking",
+  "Tree",
+  "Depth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Path With Minimum Effort": [
+  "Array",
+  "Binary Search",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Union-Find",
+  "Heap (Priority Queue)",
+  "Matrix",
+  "Dijkstra's Algorithm"
+ ],
+ "LeetCode:Peak Index in a Mountain Array": [
+  "Array",
+  "Binary Search",
+  "Ternary Search"
+ ],
+ "LeetCode:Permutation Sequence": [
+  "Math",
+  "Recursion"
+ ],
+ "LeetCode:Permutations": [
+  "Array",
+  "Backtracking"
+ ],
+ "LeetCode:Permutations II": [
+  "Array",
+  "Backtracking",
+  "Sorting"
+ ],
+ "LeetCode:Plus One": [
+  "Array",
+  "Math"
+ ],
+ "LeetCode:Pow(x, n)": [
+  "Math",
+  "Recursion"
+ ],
+ "LeetCode:Power of Four": [
+  "Math",
+  "Bit Manipulation",
+  "Recursion"
+ ],
+ "LeetCode:Power of Three": [
+  "Math",
+  "Recursion"
+ ],
+ "LeetCode:Power of Two": [
+  "Math",
+  "Bit Manipulation",
+  "Recursion"
+ ],
+ "LeetCode:Product of Array Except Self": [
+  "Array",
+  "Prefix Sum"
+ ],
+ "LeetCode:Product Sales Analysis I": [
+  "Database"
+ ],
+ "LeetCode:Pyramid Transition Matrix": [
+  "Hash Table",
+  "String",
+  "Backtracking",
+  "Bit Manipulation"
+ ],
+ "LeetCode:Random Pick with Weight": [
+  "Array",
+  "Math",
+  "Binary Search",
+  "Prefix Sum",
+  "Randomized"
+ ],
+ "LeetCode:Range Sum of BST": [
+  "Tree",
+  "Depth-First Search",
+  "Binary Search Tree",
+  "Binary Tree"
+ ],
+ "LeetCode:Range Sum Query - Immutable": [
+  "Array",
+  "Design",
+  "Prefix Sum"
+ ],
+ "LeetCode:Recyclable and Low Fat Products": [
+  "Database"
+ ],
+ "LeetCode:Regular Expression Matching": [
+  "String",
+  "Dynamic Programming",
+  "Recursion"
+ ],
+ "LeetCode:Remove Element": [
+  "Array",
+  "Two Pointers"
+ ],
+ "LeetCode:Remove Letter To Equalize Frequency": [
+  "Hash Table",
+  "String",
+  "Counting"
+ ],
+ "LeetCode:Replace Employee ID With The Unique Identifier": [
+  "Database"
+ ],
+ "LeetCode:Reverse Integer": [
+  "Math"
+ ],
+ "LeetCode:Reverse Linked List": [
+  "Linked List",
+  "Recursion"
+ ],
+ "LeetCode:Reverse String": [
+  "Two Pointers",
+  "String"
+ ],
+ "LeetCode:Reverse Words With Same Vowel Count": [
+  "Two Pointers",
+  "String",
+  "Simulation"
+ ],
+ "LeetCode:Richest Customer Wealth": [
+  "Array",
+  "Matrix"
+ ],
+ "LeetCode:Roman to Integer": [
+  "Hash Table",
+  "Math",
+  "String"
+ ],
+ "LeetCode:Root Equals Sum of Children": [
+  "Tree",
+  "Binary Tree"
+ ],
+ "LeetCode:Rotate Image": [
+  "Array",
+  "Math",
+  "Matrix"
+ ],
+ "LeetCode:Rotting Oranges": [
+  "Array",
+  "Breadth-First Search",
+  "Matrix"
+ ],
+ "LeetCode:Running Sum of 1d Array": [
+  "Array",
+  "Prefix Sum"
+ ],
+ "LeetCode:Same Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Search a 2D Matrix": [
+  "Array",
+  "Binary Search",
+  "Matrix"
+ ],
+ "LeetCode:Search a 2D Matrix II": [
+  "Array",
+  "Binary Search",
+  "Divide and Conquer",
+  "Matrix"
+ ],
+ "LeetCode:Search in a Binary Search Tree": [
+  "Tree",
+  "Binary Search Tree",
+  "Binary Tree"
+ ],
+ "LeetCode:Search in Rotated Sorted Array": [
+  "Array",
+  "Binary Search"
+ ],
+ "LeetCode:Search in Rotated Sorted Array II": [
+  "Array",
+  "Binary Search"
+ ],
+ "LeetCode:Search Insert Position": [
+  "Array",
+  "Binary Search"
+ ],
+ "LeetCode:Set Matrix Zeroes": [
+  "Array",
+  "Hash Table",
+  "Matrix"
+ ],
+ "LeetCode:Set Mismatch": [
+  "Array",
+  "Hash Table",
+  "Bit Manipulation",
+  "Sorting"
+ ],
+ "LeetCode:Shuffle String": [
+  "Array",
+  "String"
+ ],
+ "LeetCode:Shuffle the Array": [
+  "Array"
+ ],
+ "LeetCode:Single Number": [
+  "Array",
+  "Bit Manipulation"
+ ],
+ "LeetCode:Sliding Window Maximum": [
+  "Array",
+  "Queue",
+  "Sliding Window",
+  "Heap (Priority Queue)",
+  "Monotonic Queue",
+  "Range Minimum/Maximum Query"
+ ],
+ "LeetCode:Sliding Window Median": [
+  "Array",
+  "Hash Table",
+  "Sliding Window",
+  "Heap (Priority Queue)",
+  "Treap"
+ ],
+ "LeetCode:Smallest Absent Positive Greater Than Average": [
+  "Array",
+  "Hash Table"
+ ],
+ "LeetCode:Smallest Even Multiple": [
+  "Math",
+  "Number Theory"
+ ],
+ "LeetCode:Smallest Number With All Set Bits": [
+  "Math",
+  "Bit Manipulation"
+ ],
+ "LeetCode:Sort Characters By Frequency": [
+  "Hash Table",
+  "String",
+  "Sorting",
+  "Heap (Priority Queue)",
+  "Bucket Sort",
+  "Counting"
+ ],
+ "LeetCode:Sort Colors": [
+  "Array",
+  "Two Pointers",
+  "Sorting",
+  "Quicksort",
+  "Bubble Sort"
+ ],
+ "LeetCode:Sort Integers by Binary Reflection": [
+  "Array",
+  "Sorting"
+ ],
+ "LeetCode:Sort the People": [
+  "Array",
+  "Hash Table",
+  "String",
+  "Sorting"
+ ],
+ "LeetCode:Sqrt(x)": [
+  "Math",
+  "Binary Search",
+  "Newton's Method"
+ ],
+ "LeetCode:Squares of a Sorted Array": [
+  "Array",
+  "Two Pointers",
+  "Sorting"
+ ],
+ "LeetCode:String to Integer (atoi)": [
+  "String"
+ ],
+ "LeetCode:Student Attendance Record I": [
+  "String"
+ ],
+ "LeetCode:Subarray Sum Equals K": [
+  "Array",
+  "Hash Table",
+  "Prefix Sum"
+ ],
+ "LeetCode:Subsets": [
+  "Array",
+  "Backtracking",
+  "Bit Manipulation"
+ ],
+ "LeetCode:Subsets II": [
+  "Array",
+  "Backtracking",
+  "Bit Manipulation"
+ ],
+ "LeetCode:Subtract the Product and Sum of Digits of an Integer": [
+  "Math"
+ ],
+ "LeetCode:Sum of All Odd Length Subarrays": [
+  "Array",
+  "Math",
+  "Prefix Sum"
+ ],
+ "LeetCode:Sum of Integers with Maximum Digit Range": [
+  "Array",
+  "Math"
+ ],
+ "LeetCode:Sum of Left Leaves": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Sum of Two Integers": [
+  "Math",
+  "Bit Manipulation"
+ ],
+ "LeetCode:Symmetric Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Tenth Line": [
+  "Shell"
+ ],
+ "LeetCode:The kth Factor of n": [
+  "Math",
+  "Number Theory",
+  "Prime Factorization"
+ ],
+ "LeetCode:Three Divisors": [
+  "Math",
+  "Enumeration",
+  "Number Theory",
+  "Prime Factorization",
+  "Sieve Theory"
+ ],
+ "LeetCode:Top K Frequent Elements": [
+  "Array",
+  "Hash Table",
+  "Divide and Conquer",
+  "Sorting",
+  "Heap (Priority Queue)",
+  "Bucket Sort",
+  "Counting",
+  "Quickselect"
+ ],
+ "LeetCode:Total Score of Dungeon Runs": [
+  "Array",
+  "Binary Search",
+  "Prefix Sum"
+ ],
+ "LeetCode:Transpose File": [
+  "Shell"
+ ],
+ "LeetCode:Triangle": [
+  "Array",
+  "Dynamic Programming"
+ ],
+ "LeetCode:Two Best Non-Overlapping Events": [
+  "Array",
+  "Binary Search",
+  "Dynamic Programming",
+  "Sorting",
+  "Heap (Priority Queue)"
+ ],
+ "LeetCode:Two Sum": [
+  "Array",
+  "Hash Table"
+ ],
+ "LeetCode:Two Sum II - Input Array Is Sorted": [
+  "Array",
+  "Two Pointers",
+  "Binary Search"
+ ],
+ "LeetCode:Ugly Number": [
+  "Math"
+ ],
+ "LeetCode:Unique Paths": [
+  "Math",
+  "Dynamic Programming",
+  "Combinatorics"
+ ],
+ "LeetCode:Unique Paths II": [
+  "Array",
+  "Dynamic Programming",
+  "Matrix"
+ ],
+ "LeetCode:Univalued Binary Tree": [
+  "Tree",
+  "Depth-First Search",
+  "Breadth-First Search",
+  "Binary Tree"
+ ],
+ "LeetCode:Valid Anagram": [
+  "Hash Table",
+  "String",
+  "Sorting"
+ ],
+ "LeetCode:Valid Mountain Array": [
+  "Array"
+ ],
+ "LeetCode:Valid Number": [
+  "String"
+ ],
+ "LeetCode:Valid Palindrome": [
+  "Two Pointers",
+  "String"
+ ],
+ "LeetCode:Valid Parentheses": [
+  "String",
+  "Stack",
+  "Bracket Sequences"
+ ],
+ "LeetCode:Valid Perfect Square": [
+  "Math",
+  "Binary Search"
+ ],
+ "LeetCode:Word Ladder": [
+  "Hash Table",
+  "String",
+  "Breadth-First Search",
+  "Bidirectional Search"
+ ],
+ "SPOJ:2D-SORT": [
+  "C++ STL Sort and Custom Comparator"
+ ],
+ "SPOJ:A Bug’s Life": [
+  "Depth First Search (DFS)"
+ ],
+ "SPOJ:Catapult that ball": [
+  "Sparse Table"
+ ],
+ "SPOJ:Cumulative Sum Query": [
+  "Uncategorized"
+ ],
+ "SPOJ:Eagle and Dogs": [
+  "Tree Diameter"
+ ],
+ "SPOJ:Euler Totient Function": [
+  "Euler's Totient Function / Phi Function"
+ ],
+ "SPOJ:Number of common divisors": [
+  "Sieve, Prime Factorization and Divisors",
+  "Number of Divisors / Sum of Divisors / Sigma Function",
+  "Harmonic Number"
+ ],
+ "SPOJ:Primal Fear": [
+  "Sieve, Prime Factorization and Divisors"
+ ],
+ "SPOJ:Prime Generator": [
+  "Segmented Sieve"
+ ],
+ "SPOJ:Printing some primes": [
+  "Sieve, Prime Factorization and Divisors",
+  "Linear Sieve"
+ ],
+ "UVA:10071 - Back to High School Physics": [
+  "I/O + Sequences Only"
+ ],
+ "UVA:10179 - Irreducable Basic Fractions": [
+  "Prime Factors Functions"
+ ],
+ "UVA:10305 - Ordering Tasks": [
+  "Topological Sorting"
+ ],
+ "UVA:10541 - Stripe": [
+  "Binomial Coefficients"
+ ],
+ "UVA:10684 - The jackpot": [
+  "1D Range Sum"
+ ],
+ "UVA:11340 - Newspaper": [
+  "DAT, ASCII"
+ ],
+ "UVA:11462 - Age Sort": [
+  "Special Sorting"
+ ],
+ "UVA:11631 - Dark roads": [
+  "MST, Standard"
+ ],
+ "UVA:11991 - Easy Problem from Rujia Liu?": [
+  "Graph Data Structures"
+ ]
+}

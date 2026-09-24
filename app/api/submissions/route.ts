@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSubmissions } from "../../../lib/store";
 import { problemUrl } from "../../../lib/problem-url";
+import problemTags from "../../../data/problem-tags.json";
+import { tagCategories } from "../../../lib/tag-categories";
+
+const tagsByProblem = problemTags as Record<string, string[]>;
 
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
@@ -22,6 +26,7 @@ export async function GET(request: NextRequest) {
       time: new Date(s.epoch * 1000).toISOString(),
       problemName: s.problem,
       problemUrl: problemUrl(s),
+      tags: tagCategories(tagsByProblem[`${s.platform}:${s.problem}`] ?? []),
       verdict: s.verdict,
       language: s.language,
       runtimeMs: s.runtimeMs,

@@ -8,6 +8,7 @@ type Submission = {
   time: string;
   problemName: string;
   problemUrl: string | null;
+  tags: string[];
   verdict: string;
   language: string | null;
   runtimeMs: number | null;
@@ -175,7 +176,7 @@ export default function RecentFeed() {
       {visible.map((s, i) => (
         <li
           key={i}
-          className="grid min-w-0 gap-1 py-3 text-sm sm:grid-cols-[9rem_7rem_minmax(8rem,12rem)_minmax(0,1fr)_auto] sm:items-baseline sm:gap-x-5 sm:py-2"
+          className="grid min-w-0 gap-1 py-3 text-sm sm:grid-cols-[9rem_7rem_minmax(6rem,9rem)_minmax(0,1fr)_minmax(0,18rem)_auto] sm:items-baseline sm:gap-x-5 sm:py-2"
         >
           <span className="truncate tabular-nums text-xs text-neutral-500 sm:text-sm">
             {formatSubmissionTime(s.epoch)}
@@ -198,6 +199,16 @@ export default function RecentFeed() {
           ) : (
             <span className="min-w-0 flex-1 truncate text-neutral-200">{s.problemName}</span>
           )}
+          <span className="flex min-w-0 gap-1 overflow-hidden" title={s.tags.join(", ")}>
+            {s.tags.map((tag) => (
+              <span
+                key={tag}
+                className="shrink-0 whitespace-nowrap rounded-md bg-white/5 px-1.5 py-0.5 text-[11px] text-neutral-400 ring-1 ring-inset ring-white/10"
+              >
+                {tag}
+              </span>
+            ))}
+          </span>
           <span className={`font-medium sm:text-right ${verdictColor(s.verdict)}`}>
             {s.verdict}
           </span>

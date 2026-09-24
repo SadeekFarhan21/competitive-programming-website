@@ -56,11 +56,15 @@ jobs:
         run: corepack pnpm atcoder-topicwise:sync
       - name: Build AtCoder Topicwise list
         run: corepack pnpm atcoder-topicwise:build
+      - name: Build problem tags
+        # Tag sources are best-effort; a failed fetch keeps the previous tags.
+        continue-on-error: true
+        run: corepack pnpm tags:build
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/submissions.json data/halim-book.json data/halim-book.csv data/youkn0wwho.json data/atcoder-topicwise-source.json data/atcoder-topicwise.json data/kattis-titles.json
+          git add data/submissions.json data/halim-book.json data/halim-book.csv data/youkn0wwho.json data/atcoder-topicwise-source.json data/atcoder-topicwise.json data/kattis-titles.json data/problem-tags.json
           git diff --cached --quiet || git commit -m "chore: refresh submission data${{ inputs.platforms && format(' ({0})', inputs.platforms) || '' }}"
           git pull --rebase origin main
           git push

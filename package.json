@@ -9,6 +9,7 @@
     "youkn0wwho:build": "node scripts/build-youkn0wwho.mjs",
     "atcoder-topicwise:sync": "node scripts/sync-atcoder-topicwise.mjs",
     "atcoder-topicwise:build": "node scripts/build-atcoder-topicwise.mjs",
+    "tags:build": "node scripts/build-problem-tags.mjs",
     "fetch:kattis":"node scripts/fetch-kattis.mjs",
     "dev": "rm -rf node_modules .next && pnpm install && next dev",
     "dev:fast": "next dev",
