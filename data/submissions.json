@@ -24675,5 +24675,45 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1790227997,
+    "problem": "abc284_d",
+    "verdict": "WA",
+    "ac": false,
+    "language": "C++ IOI-Style(GNU++20) (GCC 14.2.0)",
+    "runtimeMs": 27,
+    "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1790228098,
+    "problem": "abc284_d",
+    "verdict": "WA",
+    "ac": false,
+    "language": "C++ IOI-Style(GNU++20) (GCC 14.2.0)",
+    "runtimeMs": 15,
+    "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1790228173,
+    "problem": "abc284_d",
+    "verdict": "WA",
+    "ac": false,
+    "language": "C++ IOI-Style(GNU++20) (GCC 14.2.0)",
+    "runtimeMs": 14,
+    "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1790228329,
+    "problem": "abc284_d",
+    "verdict": "AC",
+    "ac": true,
+    "language": "C++ IOI-Style(GNU++20) (GCC 14.2.0)",
+    "runtimeMs": 13,
+    "memoryBytes": null
   }
 ]
