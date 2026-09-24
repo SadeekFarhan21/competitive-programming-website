@@ -65,7 +65,7 @@ export function standardVerdict(verdict: string, platform: string): string {
     const earned = Number(score[1]);
     const possible = Number(score[2]);
     if (possible > 0 && earned === possible) return "Accepted";
-    if (possible > 0 && earned > 0 && earned < possible) return "Partially Accepted";
+    if (possible > 0 && earned > 0 && earned < possible) return "Partially Solved";
   }
 
   if (value === "wa" || value === "wrong answer") return "Wrong Answer";
@@ -81,7 +81,7 @@ export function standardVerdict(verdict: string, platform: string): string {
   if (value === "tle" || value.includes("time limit")) return "Time Limit Exceeded";
   if (value.includes("memory limit")) return "Memory Limit Exceeded";
   if (value.includes("presentation")) return "Presentation Error";
-  if (value.includes("partial")) return "Partially Accepted";
+  if (value.includes("partial")) return "Partially Solved";
   if (value.includes("queue")) return "In Queue";
   if (value.includes("reject")) return "Rejected";
   return verdict
@@ -104,7 +104,7 @@ export function verdictColor(verdict: string) {
   const value = verdict.toLowerCase();
   if (["ok", "ac", "accepted"].includes(value)) return "text-emerald-400";
   if (value.includes("presentation")) return "text-yellow-300";
-  if (value.includes("partial")) return "text-amber-400";
+  if (value.includes("partial")) return "text-[#00ff00]";
   return "text-red-400";
 }
 
