@@ -24849,5 +24849,15 @@
     "language": "C++",
     "runtimeMs": 10,
     "memoryBytes": null
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790281026,
+    "problem": "1097B - Petr and a Combination Lock",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
   }
 ]
