@@ -1,8 +1,9 @@
 const links = [
   { href: "/", label: "Activity" },
+  { href: "/unsolved", label: "Unsolved" },
   { href: "/halim-book", label: "Halim Book" },
   { href: "/youkn0wwho", label: "YouKn0wWho" },
-  { href: "/atcoder-topicwise", label: "AtCoder Topicwise" },
+  { href: "/atcoder-topicwise", label: "AtCoder" },
 ];
 
 export default function Nav({ current }: { current: string }) {

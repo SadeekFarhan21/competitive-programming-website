@@ -23,7 +23,7 @@ function formatSubmissionTime(epoch: number): string {
   }).format(new Date(epoch * 1000));
 }
 
-const PLATFORM_OPTIONS = [
+export const PLATFORM_OPTIONS = [
   "Codeforces",
   "AtCoder",
   "LeetCode",
@@ -34,7 +34,7 @@ const PLATFORM_OPTIONS = [
   "UVA",
 ];
 
-const PLATFORM_LABELS: Record<string, string> = {
+export const PLATFORM_LABELS: Record<string, string> = {
   SPOJ: "Sphere",
   UVA: "Online Judge",
 };
@@ -55,7 +55,7 @@ function standardLanguage(language: string | null): string | null {
   return language;
 }
 
-function standardVerdict(verdict: string, platform: string): string {
+export function standardVerdict(verdict: string, platform: string): string {
   const value = verdict.toLowerCase().replace(/[_-]+/g, " ");
 
   // Some judges report scored results (for example, "16/19 TLE") instead
@@ -91,7 +91,7 @@ function standardVerdict(verdict: string, platform: string): string {
     .join(" ");
 }
 
-const PLATFORM_COLORS: Record<string, string> = {
+export const PLATFORM_COLORS: Record<string, string> = {
   Codeforces: "text-red-400",
   AtCoder: "text-sky-400",
   LeetCode: "text-amber-400",
@@ -100,7 +100,7 @@ const PLATFORM_COLORS: Record<string, string> = {
   UVA: "text-blue-400",
 };
 
-function verdictColor(verdict: string) {
+export function verdictColor(verdict: string) {
   const value = verdict.toLowerCase();
   if (["ok", "ac", "accepted"].includes(value)) return "text-emerald-400";
   if (value.includes("presentation")) return "text-yellow-300";
