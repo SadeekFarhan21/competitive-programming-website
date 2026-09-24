@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type Platform =
   | "codeforces"
@@ -102,6 +102,12 @@ function filteredTotal(
   return PLATFORMS.reduce((sum, p) => (enabled.has(p.key) ? sum + source[p.key] : sum), 0);
 }
 
+function localToday(): string {
+  const now = new Date();
+  const pad = (n: number) => String(n).padStart(2, "0");
+  return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
+}
+
 function prettyDate(date: string): string {
   return new Date(date + "T00:00:00Z").toLocaleDateString(undefined, {
     weekday: "long",
@@ -120,6 +126,7 @@ export default function Heatmap() {
   const [selected, setSelected] = useState<Cell | null>(null);
   const [hovered, setHovered] = useState<{ cell: Cell; x: number; y: number } | null>(null);
   const [period, setPeriod] = useState("rolling");
+  const selectedToday = useRef(false);
 
   useEffect(() => {
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -128,7 +135,15 @@ export default function Heatmap() {
     else if (period !== "rolling") query.set("year", period);
     fetch(`/api/heatmap?${query}`)
       .then((r) => r.json())
-      .then(setData)
+      .then((d: HeatmapData) => {
+        setData(d);
+        // Open today's breakdown on first load; day keys are in the viewer's time zone
+        if (!selectedToday.current) {
+          selectedToday.current = true;
+          const today = localToday();
+          setSelected({ date: today, counts: d.days?.[today] ?? null });
+        }
+      })
       .catch((e) => setError(String(e)));
   }, [period]);
 
