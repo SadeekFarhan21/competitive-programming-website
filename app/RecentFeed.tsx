@@ -176,7 +176,7 @@ export default function RecentFeed() {
       {visible.map((s, i) => (
         <li
           key={i}
-          className="grid min-w-0 gap-1 py-3 text-sm sm:grid-cols-[9rem_7rem_minmax(6rem,9rem)_minmax(0,1fr)_minmax(0,18rem)_auto] sm:items-baseline sm:gap-x-5 sm:py-2"
+          className="grid min-w-0 gap-1 py-3 text-sm sm:grid-cols-[9rem_6.5rem_4.5rem_minmax(0,1fr)_13rem_11rem] sm:items-baseline sm:gap-x-5 sm:py-2"
         >
           <span className="truncate tabular-nums text-xs text-neutral-500 sm:text-sm">
             {formatSubmissionTime(s.epoch)}
