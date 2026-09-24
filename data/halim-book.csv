@@ -622,7 +622,7 @@ ticketpricing,ticketpricing,"3.5h, Non-Classical, 2D, E",LA 6867 - Rocky Mountai
 kutevi,kutevi,"3.5i, DP level 2",s: (360 integer degrees),170,2.6,false
 lc0714,to replace with LeetCode link soon...,"3.5i, DP level 2","s: (own, i); t: skip day i or sell if own/buy if not; leetcode-75",0,4.0,false
 tight,tight,"3.5i, DP level 2","s: (i, j); #tight words of length i that end in digit j divided by #words: (k+1)^n; also available at UVa 10081 - Tight ...",100,3.5,false
-walrusweights,walrusweights,"3.5i, DP level 2",backtracking with memoization,570,3.8,false
+walrusweights,walrusweights,"3.5i, DP level 2",backtracking with memoization,570,3.8,true
 11749,Fetching from uHunt,"4.2a, Finding CCs",find the largest CC with highest average PPA; also solvable with UFDS,,0.0,false
 11906,Fetching from uHunt,"4.2a, Finding CCs",DFS/BFS for reachability; several tricky cases; be careful when M = 0; N = 0; or M = N,,0.0,false
 lc0547,to replace with LeetCode link soon...,"4.2a, Finding CCs",count number of CCs; leetcode-75,0,4.0,false
