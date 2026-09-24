@@ -456,8 +456,20 @@ export default function Heatmap() {
         <div className="mt-4 rounded-lg border border-neutral-800 bg-neutral-900/50 p-4">
           <div className="flex items-start justify-between">
             <div>
-              <h3 className="text-sm font-semibold text-white">{prettyDate(selected.date)}</h3>
-              <p className="mt-0.5 text-sm text-neutral-400">
+              <h3 className="text-sm font-semibold text-white">{selected.date === today
+                  ? "Today"
+                  : selected.date === shiftDate(today, -1)
+                    ? "Yesterday"
+                    : prettyDate(selected.date)}</h3>
+              <p
+                className={`mt-0.5 text-sm font-semibold ${
+                  selectedSubmissionCount === 0
+                    ? "text-neutral-400"
+                    : selectedAcceptedCount / selectedSubmissionCount < 0.6
+                      ? "text-red-400"
+                      : "text-emerald-400"
+                }`}
+              >
                 {mode === "accepted"
                   ? `${selectedAcceptedCount} accepted (${selectedSubmissionCount} submissions)`
                   : `${selectedSubmissionCount} submissions (${selectedAcceptedCount} AC)`}
