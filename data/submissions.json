@@ -24829,6 +24829,28 @@
   },
   {
     "platform": "AtCoder",
+    "epoch": 1790273076,
+    "problem": "abc237_c",
+    "url": "https://atcoder.jp/contests/abc237/tasks/abc237_c",
+    "verdict": "WA",
+    "ac": false,
+    "language": "C++23 (GCC 15.2.0)",
+    "runtimeMs": 3,
+    "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1790273292,
+    "problem": "abc237_c",
+    "url": "https://atcoder.jp/contests/abc237/tasks/abc237_c",
+    "verdict": "AC",
+    "ac": true,
+    "language": "C++23 (GCC 15.2.0)",
+    "runtimeMs": 4,
+    "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
     "epoch": 1790276139,
     "problem": "abc240_c",
     "url": "https://atcoder.jp/contests/abc240/tasks/abc240_c",
@@ -24851,6 +24873,17 @@
     "memoryBytes": null
   },
   {
+    "platform": "AtCoder",
+    "epoch": 1790280543,
+    "problem": "abc204_d",
+    "url": "https://atcoder.jp/contests/abc204/tasks/abc204_d",
+    "verdict": "AC",
+    "ac": true,
+    "language": "C++23 (GCC 15.2.0)",
+    "runtimeMs": 7,
+    "memoryBytes": null
+  },
+  {
     "platform": "Codeforces",
     "epoch": 1790281026,
     "problem": "1097B - Petr and a Combination Lock",
@@ -24859,5 +24892,27 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 46,
     "memoryBytes": 0
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790295544,
+    "problem": "Ones and Zeroes",
+    "url": "https://leetcode.com/problems/ones-and-zeroes/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790296938,
+    "problem": "Last Stone Weight II",
+    "url": "https://leetcode.com/problems/last-stone-weight-ii/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
