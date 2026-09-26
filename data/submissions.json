@@ -24282,11 +24282,12 @@
     "platform": "LeetCode",
     "epoch": 1789595634,
     "problem": "Count Pairs That Form a Complete Day I",
+    "url": "https://leetcode.com/problems/count-pairs-that-form-a-complete-day-i/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": 0,
-    "memoryBytes": 25899827
+    "runtimeMs": null,
+    "memoryBytes": null
   },
   {
     "platform": "Kattis",
@@ -24329,11 +24330,12 @@
     "platform": "LeetCode",
     "epoch": 1789697877,
     "problem": "Number of Operations to Make Network Connected",
+    "url": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": 27,
-    "memoryBytes": 55155098
+    "runtimeMs": null,
+    "memoryBytes": null
   },
   {
     "platform": "Kattis",
@@ -24435,11 +24437,12 @@
     "platform": "LeetCode",
     "epoch": 1789757967,
     "problem": "Max Area of Island",
+    "url": "https://leetcode.com/problems/max-area-of-island/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": 10,
-    "memoryBytes": 29464986
+    "runtimeMs": null,
+    "memoryBytes": null
   },
   {
     "platform": "Kattis",
@@ -24525,9 +24528,11 @@
     "memoryBytes": null
   },
   {
+    "id": "2149182117",
     "platform": "LeetCode",
     "epoch": 1790038454,
     "problem": "Min Cost to Connect All Points",
+    "url": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
@@ -24571,9 +24576,11 @@
     "memoryBytes": null
   },
   {
+    "id": "2149969673",
     "platform": "LeetCode",
     "epoch": 1790094828,
     "problem": "01 Matrix",
+    "url": "https://leetcode.com/problems/01-matrix/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
@@ -24581,9 +24588,11 @@
     "memoryBytes": null
   },
   {
+    "id": "2149980633",
     "platform": "LeetCode",
     "epoch": 1790095327,
     "problem": "Map of Highest Peak",
+    "url": "https://leetcode.com/problems/map-of-highest-peak/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
@@ -24715,9 +24724,11 @@
     "memoryBytes": null
   },
   {
+    "id": "2151382997",
     "platform": "LeetCode",
     "epoch": 1790199958,
     "problem": "Valid Parentheses",
+    "url": "https://leetcode.com/problems/valid-parentheses/",
     "verdict": "RUNTIME ERROR",
     "ac": false,
     "language": "cpp",
@@ -24725,9 +24736,11 @@
     "memoryBytes": null
   },
   {
+    "id": "2151383437",
     "platform": "LeetCode",
     "epoch": 1790200037,
     "problem": "Valid Parentheses",
+    "url": "https://leetcode.com/problems/valid-parentheses/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
@@ -24735,9 +24748,11 @@
     "memoryBytes": null
   },
   {
+    "id": "2151388725",
     "platform": "LeetCode",
     "epoch": 1790201023,
     "problem": "Min Stack",
+    "url": "https://leetcode.com/problems/min-stack/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
@@ -24806,9 +24821,11 @@
     "memoryBytes": null
   },
   {
+    "id": "2152114206",
     "platform": "LeetCode",
     "epoch": 1790262632,
     "problem": "Path With Minimum Effort",
+    "url": "https://leetcode.com/problems/path-with-minimum-effort/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
@@ -24894,6 +24911,7 @@
     "memoryBytes": 0
   },
   {
+    "id": "2152494191",
     "platform": "LeetCode",
     "epoch": 1790295544,
     "problem": "Ones and Zeroes",
@@ -24905,10 +24923,107 @@
     "memoryBytes": null
   },
   {
+    "id": "2152500268",
     "platform": "LeetCode",
     "epoch": 1790296938,
     "problem": "Last Stone Weight II",
     "url": "https://leetcode.com/problems/last-stone-weight-ii/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2153422164",
+    "platform": "LeetCode",
+    "epoch": 1790382831,
+    "problem": "Search Insert Position",
+    "url": "https://leetcode.com/problems/search-insert-position/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2153468040",
+    "platform": "LeetCode",
+    "epoch": 1790392780,
+    "problem": "Find the Smallest Divisor Given a Threshold",
+    "url": "https://leetcode.com/problems/find-the-smallest-divisor-given-a-threshold/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2153487698",
+    "platform": "LeetCode",
+    "epoch": 1790395295,
+    "problem": "Merge Strings Alternately",
+    "url": "https://leetcode.com/problems/merge-strings-alternately/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2153489679",
+    "platform": "LeetCode",
+    "epoch": 1790395500,
+    "problem": "Kids With the Greatest Number of Candies",
+    "url": "https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2153494586",
+    "platform": "LeetCode",
+    "epoch": 1790395988,
+    "problem": "Shuffle the Array",
+    "url": "https://leetcode.com/problems/shuffle-the-array/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2153494958",
+    "platform": "LeetCode",
+    "epoch": 1790396024,
+    "problem": "Shuffle the Array",
+    "url": "https://leetcode.com/problems/shuffle-the-array/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2153495672",
+    "platform": "LeetCode",
+    "epoch": 1790396096,
+    "problem": "Check If Two String Arrays are Equivalent",
+    "url": "https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2153496252",
+    "platform": "LeetCode",
+    "epoch": 1790396154,
+    "problem": "Concatenation of Array",
+    "url": "https://leetcode.com/problems/concatenation-of-array/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",

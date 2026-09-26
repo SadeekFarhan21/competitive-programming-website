@@ -35,7 +35,7 @@ helpaphd,helpaphd,"1.4f, Multiple TC + Selection",2 cases,2044,1.6,false
 leftbeehind,leftbeehind,"1.4f, Multiple TC + Selection",4 cases,2014,1.6,false
 oddities,oddities,"1.4f, Multiple TC + Selection",2 cases,11523,1.3,false
 12279,Fetching from uHunt,"1.4g, Control Flow, Level 1",simple linear scan,,0.0,false
-lc1431,to replace with LeetCode link soon...,"1.4g, Control Flow, Level 1",simple one pass check; leetcode-75,0,2.0,false
+lc1431,to replace with LeetCode link soon...,"1.4g, Control Flow, Level 1",simple one pass check; leetcode-75,0,2.0,true
 licensetolaunch,licensetolaunch,"1.4g, Control Flow, Level 1",easy linear pass,1969,1.4,true
 11799,Fetching from uHunt,"1.4h, Control Flow, Level 2",one linear scan; find max value,,0.0,false
 13130,Fetching from uHunt,"1.4h, Control Flow, Level 2",simple,,0.0,false
