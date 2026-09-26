@@ -25029,5 +25029,74 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790397132,
+    "problem": "String Compression",
+    "url": "https://leetcode.com/problems/string-compression/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790400922,
+    "problem": "Min Stack",
+    "url": "https://leetcode.com/problems/min-stack/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20521828",
+    "epoch": 1790401622,
+    "problem": "Air Conditioned Minions",
+    "url": "https://open.kattis.com/problems/airconditioned",
+    "verdict": "Wrong Answer",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": 0,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20521830",
+    "epoch": 1790401710,
+    "problem": "Air Conditioned Minions",
+    "url": "https://open.kattis.com/problems/airconditioned",
+    "verdict": "Wrong Answer",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": 0,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790408061,
+    "problem": "Interval List Intersections",
+    "url": "https://leetcode.com/problems/interval-list-intersections/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20522134",
+    "epoch": 1790408777,
+    "problem": "Continuous Median",
+    "url": "https://open.kattis.com/problems/continuousmedian",
+    "verdict": "Accepted (100)",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 60,
+    "memoryBytes": null
   }
 ]

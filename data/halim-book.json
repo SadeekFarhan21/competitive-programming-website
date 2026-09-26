@@ -4911,7 +4911,7 @@
     "dacu": 140,
     "points": 3.9,
     "cp5": false,
-    "solved": false
+    "solved": true
   },
   {
     "judge": "Kattis",
