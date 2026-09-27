@@ -25334,5 +25334,60 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790541496,
+    "problem": "Find First and Last Position of Element in Sorted Array",
+    "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790542998,
+    "problem": "Koko Eating Bananas",
+    "url": "https://leetcode.com/problems/koko-eating-bananas/",
+    "verdict": "RUNTIME ERROR",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790543028,
+    "problem": "Koko Eating Bananas",
+    "url": "https://leetcode.com/problems/koko-eating-bananas/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790543297,
+    "problem": "Target Sum",
+    "url": "https://leetcode.com/problems/target-sum/",
+    "verdict": "MEMORY LIMIT EXCEEDED",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790543332,
+    "problem": "Target Sum",
+    "url": "https://leetcode.com/problems/target-sum/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
