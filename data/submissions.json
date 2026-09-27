@@ -25268,5 +25268,38 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790536675,
+    "problem": "Task Scheduler",
+    "url": "https://leetcode.com/problems/task-scheduler/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790537692,
+    "problem": "Non-overlapping Intervals",
+    "url": "https://leetcode.com/problems/non-overlapping-intervals/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790538063,
+    "problem": "Trapping Rain Water",
+    "url": "https://leetcode.com/problems/trapping-rain-water/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
