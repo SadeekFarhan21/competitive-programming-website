@@ -25186,5 +25186,87 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20525456",
+    "epoch": 1790460190,
+    "problem": "Selling Spatulas",
+    "url": "https://open.kattis.com/problems/sellingspatulas",
+    "verdict": "Run-Time Error",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": 0,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20525472",
+    "epoch": 1790460274,
+    "problem": "Selling Spatulas",
+    "url": "https://open.kattis.com/problems/sellingspatulas",
+    "verdict": "Wrong Answer",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": 20,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20525483",
+    "epoch": 1790460380,
+    "problem": "Selling Spatulas",
+    "url": "https://open.kattis.com/problems/sellingspatulas",
+    "verdict": "Wrong Answer",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": 20,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20525491",
+    "epoch": 1790460426,
+    "problem": "Selling Spatulas",
+    "url": "https://open.kattis.com/problems/sellingspatulas",
+    "verdict": "Wrong Answer",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": 20,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20525511",
+    "epoch": 1790460628,
+    "problem": "Selling Spatulas",
+    "url": "https://open.kattis.com/problems/sellingspatulas",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 20,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790462086,
+    "problem": "Range Sum Query - Immutable",
+    "url": "https://leetcode.com/problems/range-sum-query-immutable/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790462129,
+    "problem": "Range Sum Query - Immutable",
+    "url": "https://leetcode.com/problems/range-sum-query-immutable/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
