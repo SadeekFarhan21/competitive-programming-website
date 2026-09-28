@@ -25389,5 +25389,85 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790560862,
+    "problem": "869B - The Eternal Immortality",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 15,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790561008,
+    "problem": "869B - The Eternal Immortality",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 31,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790561266,
+    "problem": "869B - The Eternal Immortality",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790561341,
+    "problem": "869B - The Eternal Immortality",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "CodeChef",
+    "epoch": 1790568736,
+    "problem": "KOL15A",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790569535,
+    "problem": "492A - Vanya and Cubes",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790569766,
+    "problem": "379A - New Year Candles",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 31,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790570881,
+    "problem": "379A - New Year Candles",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
   }
 ]
