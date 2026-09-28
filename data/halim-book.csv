@@ -642,7 +642,7 @@ lc0733,Flood Fill,"4.2b, Flood Fill, Easier",basic flood fill problem,0,2.0,true
 11585,Fetching from uHunt,"4.2c, Flood Fill, Harder",polynomial-time verifier for an NP-complete puzzle Nurikabe; this verifier requires clever usage of flood fill algorithm,,0.0,false,https://onlinejudge.org/external/115/11585.pdf
 coast,coast,"4.2c, Flood Fill, Harder",intelligent flood fill; just run once to avoid TLE as there are many queries,1339,3.2,false,https://open.kattis.com/problems/coast
 islands3,islands3,"4.2c, Flood Fill, Harder",optimistic flood fill; assume all Cs are Ls,936,2.1,true,https://open.kattis.com/problems/islands3
-lc1254,Number of Closed Islands,"4.2c, Flood Fill, Harder",flood fill; avoiding borders,0,4.0,false,https://leetcode.com/problems/number-of-closed-islands/
+lc1254,Number of Closed Islands,"4.2c, Flood Fill, Harder",flood fill; avoiding borders,0,4.0,true,https://leetcode.com/problems/number-of-closed-islands/
 00872,Fetching from uHunt,"4.2d, Topological Sort",similar to UVa 00124; use backtracking,,0.0,false,https://onlinejudge.org/external/8/872.pdf
 11060,Fetching from uHunt,"4.2d, Topological Sort",Kahn's algorithm---modified BFS toposort,,0.0,false,https://onlinejudge.org/external/110/11060.pdf
 brexit,brexit,"4.2d, Topological Sort",toposort; chain reaction; modified Kahn's algorithm,826,3.6,false,https://open.kattis.com/problems/brexit

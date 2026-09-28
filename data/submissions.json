@@ -25560,5 +25560,15 @@
     "language": "cpp",
     "runtimeMs": 4,
     "memoryBytes": 15204352
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790575869,
+    "problem": "1804A - Lame King",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 31,
+    "memoryBytes": 0
   }
 ]
