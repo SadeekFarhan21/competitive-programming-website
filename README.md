@@ -41,6 +41,27 @@ handle and identity variables on your Vercel project.
 
 ## Refresh data
 
+To update submissions and rebuild all dependent local datasets in one command:
+
+```bash
+pnpm refresh:local
+```
+
+Refresh options are forwarded to the submission fetcher, so targeted refreshes and
+full-history backfills work too:
+
+```bash
+pnpm refresh:local -- --only=leetcode
+pnpm refresh:local -- --full
+```
+
+This updates submissions, Halim solved marks, YouKn0wWho, and AtCoder Topicwise.
+The AtCoder category sync is best-effort; if its upstream is unavailable, the command
+rebuilds from the last cached category data. CSES keeps its existing quota protection;
+set `REFRESH_CSES=true` when you intentionally want to include it.
+
+To fetch submissions without rebuilding the dependent lists, use:
+
 ```bash
 pnpm refresh
 ```

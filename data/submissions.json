@@ -24282,12 +24282,11 @@
     "platform": "LeetCode",
     "epoch": 1789595634,
     "problem": "Count Pairs That Form a Complete Day I",
-    "url": "https://leetcode.com/problems/count-pairs-that-form-a-complete-day-i/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 25899827
   },
   {
     "platform": "Kattis",
@@ -24330,12 +24329,11 @@
     "platform": "LeetCode",
     "epoch": 1789697877,
     "problem": "Number of Operations to Make Network Connected",
-    "url": "https://leetcode.com/problems/number-of-operations-to-make-network-connected/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 27,
+    "memoryBytes": 55155098
   },
   {
     "platform": "Kattis",
@@ -24437,12 +24435,11 @@
     "platform": "LeetCode",
     "epoch": 1789757967,
     "problem": "Max Area of Island",
-    "url": "https://leetcode.com/problems/max-area-of-island/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 10,
+    "memoryBytes": 29464986
   },
   {
     "platform": "Kattis",
@@ -24528,11 +24525,9 @@
     "memoryBytes": null
   },
   {
-    "id": "2149182117",
     "platform": "LeetCode",
     "epoch": 1790038454,
     "problem": "Min Cost to Connect All Points",
-    "url": "https://leetcode.com/problems/min-cost-to-connect-all-points/",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
@@ -24584,8 +24579,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 12,
+    "memoryBytes": 36175872
   },
   {
     "id": "2149980633",
@@ -24596,8 +24591,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 66,
+    "memoryBytes": 118279373
   },
   {
     "platform": "Kattis",
@@ -24744,8 +24739,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 9437184
   },
   {
     "id": "2151388725",
@@ -24756,8 +24751,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 40,
+    "memoryBytes": 158544691
   },
   {
     "platform": "AtCoder",
@@ -24829,8 +24824,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 127,
+    "memoryBytes": 58091110
   },
   {
     "platform": "Kattis",
@@ -24919,8 +24914,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 51,
+    "memoryBytes": 14470349
   },
   {
     "id": "2152500268",
@@ -24931,8 +24926,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 3,
+    "memoryBytes": 14260634
   },
   {
     "id": "2153422164",
@@ -24955,8 +24950,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 27472691
   },
   {
     "id": "2153487698",
@@ -24967,8 +24962,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 9017754
   },
   {
     "id": "2153489679",
@@ -24979,8 +24974,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 13212058
   },
   {
     "id": "2153494586",
@@ -25003,8 +24998,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 4,
+    "memoryBytes": 14050918
   },
   {
     "id": "2153495672",
@@ -25015,8 +25010,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 15623782
   },
   {
     "id": "2153496252",
@@ -25027,10 +25022,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 17825792
   },
   {
+    "id": "2153506571",
     "platform": "LeetCode",
     "epoch": 1790397132,
     "problem": "String Compression",
@@ -25038,10 +25034,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 14470349
   },
   {
+    "id": "2153550551",
     "platform": "LeetCode",
     "epoch": 1790400922,
     "problem": "Min Stack",
@@ -25049,8 +25046,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 60,
+    "memoryBytes": 158649549
   },
   {
     "platform": "Kattis",
@@ -25077,6 +25074,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2153644483",
     "platform": "LeetCode",
     "epoch": 1790408061,
     "problem": "Interval List Intersections",
@@ -25084,8 +25082,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 7,
+    "memoryBytes": 26214400
   },
   {
     "platform": "Kattis",
@@ -25100,6 +25098,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2154338654",
     "platform": "LeetCode",
     "epoch": 1790453155,
     "problem": "Remove Element",
@@ -25107,10 +25106,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 12058624
   },
   {
+    "id": "2154346255",
     "platform": "LeetCode",
     "epoch": 1790454000,
     "problem": "Move Zeroes",
@@ -25118,10 +25118,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 25060966
   },
   {
+    "id": "2154351950",
     "platform": "LeetCode",
     "epoch": 1790454683,
     "problem": "Remove Duplicates from Sorted Array",
@@ -25129,10 +25130,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 23592960
   },
   {
+    "id": "2154361440",
     "platform": "LeetCode",
     "epoch": 1790455922,
     "problem": "Remove Duplicates from Sorted Array II",
@@ -25144,6 +25146,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2154361876",
     "platform": "LeetCode",
     "epoch": 1790455982,
     "problem": "Remove Duplicates from Sorted Array II",
@@ -25151,10 +25154,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 10,
+    "memoryBytes": 20552090
   },
   {
+    "id": "2154373522",
     "platform": "LeetCode",
     "epoch": 1790457713,
     "problem": "Duplicate Zeros",
@@ -25162,10 +25166,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 14784922
   },
   {
+    "id": "2154375030",
     "platform": "LeetCode",
     "epoch": 1790457942,
     "problem": "Backspace String Compare",
@@ -25177,6 +25182,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2154375912",
     "platform": "LeetCode",
     "epoch": 1790458084,
     "problem": "Backspace String Compare",
@@ -25184,8 +25190,8 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 8912896
   },
   {
     "platform": "Kattis",
@@ -25248,6 +25254,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2154398134",
     "platform": "LeetCode",
     "epoch": 1790462086,
     "problem": "Range Sum Query - Immutable",
@@ -25259,6 +25266,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2154398332",
     "platform": "LeetCode",
     "epoch": 1790462129,
     "problem": "Range Sum Query - Immutable",
@@ -25266,10 +25274,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 23,
+    "memoryBytes": 25060966
   },
   {
+    "id": "2155314749",
     "platform": "LeetCode",
     "epoch": 1790536675,
     "problem": "Task Scheduler",
@@ -25277,10 +25286,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 4,
+    "memoryBytes": 40055603
   },
   {
+    "id": "2155325268",
     "platform": "LeetCode",
     "epoch": 1790537692,
     "problem": "Non-overlapping Intervals",
@@ -25288,10 +25298,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 35,
+    "memoryBytes": 98356429
   },
   {
+    "id": "2155329041",
     "platform": "LeetCode",
     "epoch": 1790538063,
     "problem": "Trapping Rain Water",
@@ -25299,10 +25310,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 27053261
   },
   {
+    "id": "2155334371",
     "platform": "LeetCode",
     "epoch": 1790538616,
     "problem": "Binary Tree Inorder Traversal",
@@ -25310,10 +25322,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 11534336
   },
   {
+    "id": "2155338792",
     "platform": "LeetCode",
     "epoch": 1790539095,
     "problem": "Binary Tree Maximum Path Sum",
@@ -25321,10 +25334,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 29255270
   },
   {
+    "id": "2155346730",
     "platform": "LeetCode",
     "epoch": 1790540057,
     "problem": "Search Insert Position",
@@ -25332,10 +25346,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 14365491
   },
   {
+    "id": "2155358307",
     "platform": "LeetCode",
     "epoch": 1790541496,
     "problem": "Find First and Last Position of Element in Sorted Array",
@@ -25343,10 +25358,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 18350080
   },
   {
+    "id": "2155369270",
     "platform": "LeetCode",
     "epoch": 1790542998,
     "problem": "Koko Eating Bananas",
@@ -25358,6 +25374,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2155369453",
     "platform": "LeetCode",
     "epoch": 1790543028,
     "problem": "Koko Eating Bananas",
@@ -25365,10 +25382,11 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
-    "runtimeMs": null,
-    "memoryBytes": null
+    "runtimeMs": 0,
+    "memoryBytes": 24117248
   },
   {
+    "id": "2155371233",
     "platform": "LeetCode",
     "epoch": 1790543297,
     "problem": "Target Sum",
@@ -25380,6 +25398,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2155371438",
     "platform": "LeetCode",
     "epoch": 1790543332,
     "problem": "Target Sum",
@@ -25387,7 +25406,97 @@
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "cpp",
+    "runtimeMs": 952,
+    "memoryBytes": 12163482
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790560862,
+    "problem": "869B - The Eternal Immortality",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 15,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790561008,
+    "problem": "869B - The Eternal Immortality",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 31,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790561266,
+    "problem": "869B - The Eternal Immortality",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790561341,
+    "problem": "869B - The Eternal Immortality",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "CodeChef",
+    "epoch": 1790568760,
+    "problem": "KOL15A",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790569535,
+    "problem": "492A - Vanya and Cubes",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790569766,
+    "problem": "379A - New Year Candles",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 31,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790570881,
+    "problem": "379A - New Year Candles",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790573187,
+    "problem": "687C - The Values You Can Make",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 234,
+    "memoryBytes": 0
   }
 ]

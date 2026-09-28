@@ -11,6 +11,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { isCodeforcesGym } from "./youkn0wwho-judge.mjs";
 
 const DATA = path.join(import.meta.dirname, "..", "data");
 const read = (file) => JSON.parse(fs.readFileSync(path.join(DATA, file), "utf8"));
@@ -65,13 +66,14 @@ const vjudgeJudge = { Gym: "CF Gym", CodeForces: "Codeforces", LightOJ: "LightOJ
 function judgeOf(id, url) {
   let host = "";
   try { host = new URL(url).hostname.replace(/^www\./, ""); } catch {}
-  if (host === "codeforces.com" && /\/gym\//.test(url)) return "CF Gym";
+  // Check Gym before the generic codeforces.com host. Some Gym problems use
+  // group or problemset/gymProblem URLs rather than the usual /gym/ path.
+  if (isCodeforcesGym(id, url)) return "CF Gym";
   if (host === "vjudge.net") {
     const oj = url.match(/\/problem\/([A-Za-z]+)-/)?.[1];
     if (oj && vjudgeJudge[oj]) return vjudgeJudge[oj];
   }
   if (judgeByHost[host]) return judgeByHost[host];
-  if (id.startsWith("cf_gym_") || id.startsWith("gym_")) return "CF Gym";
   const prefix = id.split("_")[0];
   if (judgeByPrefix[prefix]) return judgeByPrefix[prefix];
   if (/^(ioi|ceoi|boi|coi|coci|joi|apio|izho|noi|rmi|lmio|eio|egoi)\d*$/.test(prefix)) return "Olympiad";

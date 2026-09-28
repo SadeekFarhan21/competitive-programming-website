@@ -2,6 +2,13 @@ import { getSubmissions } from "./store";
 import { problemUrl } from "./problem-url";
 import type { UnsolvedProblem } from "../app/UnsolvedList";
 
+// Partial credit (CodeChef subtasks) or a scored "16/19"-style result
+function isPartial(verdict: string): boolean {
+  const score = verdict.match(/(\d+(?:\.\d+)?)\s*\/\s*(\d+(?:\.\d+)?)/);
+  if (score && Number(score[1]) > 0 && Number(score[1]) < Number(score[2])) return true;
+  return /partial/i.test(verdict);
+}
+
 // Problems with at least one submission and no accepted verdict, most recently attempted first
 export function getUnsolvedProblems(): UnsolvedProblem[] {
   const byProblem = new Map<string, UnsolvedProblem & { solved: boolean }>();
@@ -16,12 +23,14 @@ export function getUnsolvedProblems(): UnsolvedProblem[] {
         attempts: 1,
         lastEpoch: sub.epoch,
         lastVerdict: sub.verdict,
+        partial: isPartial(sub.verdict),
         solved: sub.ac === true,
       });
       continue;
     }
     entry.attempts++;
     entry.solved ||= sub.ac === true;
+    entry.partial ||= isPartial(sub.verdict);
     if (sub.url) entry.url = sub.url;
     if (sub.epoch > entry.lastEpoch) {
       entry.lastEpoch = sub.epoch;

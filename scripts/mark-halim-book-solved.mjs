@@ -3,12 +3,13 @@
 //
 // Matching per judge:
 //   UVa      starred id "01124"  ↔ submission "1124 - Title"
-//   LeetCode starred id "lc2469" ↔ submission title (via LeetCode's problem list)
+//   LeetCode starred id "lc0001" ↔ catalog id 1 ↔ submission title
 //   Kattis   starred id "hello"  ↔ submission title "Hello World!" (titles cached
 //            in data/kattis-titles.json so each slug is only fetched once)
 
 import fs from "node:fs";
 import path from "node:path";
+import { canonicalLeetCodeId, leetcodeTitleMap } from "./halim-book-matching.mjs";
 
 const DATA = path.join(import.meta.dirname, "..", "data");
 const read = (file) => JSON.parse(fs.readFileSync(path.join(DATA, file), "utf8"));
@@ -30,9 +31,7 @@ try {
   const res = await fetch("https://leetcode.com/api/problems/all/", { headers: { "User-Agent": "Mozilla/5.0" } });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const payload = await res.json();
-  leetcodeTitleById = new Map(
-    payload.stat_status_pairs.map((p) => [String(p.stat.frontend_question_id), p.stat.question__title])
-  );
+  leetcodeTitleById = leetcodeTitleMap(payload);
 } catch (error) {
   console.warn(`LeetCode problem list unavailable (${error.message}) — keeping previous LeetCode flags`);
 }
@@ -67,7 +66,8 @@ for (const problem of starred) {
   if (problem.judge === "UVa") {
     solved = uvaSolved.has(Number(problem.id));
   } else if (problem.judge === "LeetCode" && leetcodeTitleById) {
-    const title = leetcodeTitleById.get(problem.id.replace(/^lc/, ""));
+    // CPBook zero-pads ids (lc0001), while LeetCode returns numeric ids (1).
+    const title = leetcodeTitleById.get(canonicalLeetCodeId(problem.id));
     solved = title != null && leetcodeSolvedTitles.has(norm(title));
   } else if (problem.judge === "Kattis") {
     const title = kattisTitles[problem.id];

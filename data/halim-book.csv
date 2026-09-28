@@ -82,7 +82,7 @@ basicprogramming1,basicprogramming1,"1.4o, Medium",a nice summative problem for 
 battlesimulation,battlesimulation,"1.4o, Medium",one pass; special check on 3! = 6 possible combinations of 3 combo moves,900,2.8,false
 bitsequalizer,bitsequalizer,"1.4o, Medium",analyzing patterns; also available at UVa 12545 - Bits Equalizer,174,4.5,false
 lc3522,to replace with LeetCode link soon...,"1.4o, Medium",also see Kattis - basicprogramming1,0,4.0,false
-lc0058,to replace with LeetCode link soon...,"1.5a, 1D Character Array",split and report as asked; programming-skills; top-interview-150,0,2.0,false
+lc0058,to replace with LeetCode link soon...,"1.5a, 1D Character Array",split and report as asked; programming-skills; top-interview-150,0,2.0,true
 11278,Fetching from uHunt,"1.5b, Cipher, Easier",map QWERTY keys to DVORAK,,0.0,false
 12896,Fetching from uHunt,"1.5b, Cipher, Easier",simple cipher; use mapper,,0.0,false
 13145,Fetching from uHunt,"1.5b, Cipher, Easier",shift alphabet values by +6 characters to read the problem statement; simple Caesar Cipher problem,,0.0,false
@@ -93,7 +93,7 @@ t9spelling,t9spelling,"1.5b, Cipher, Easier",similar to (the reverse of) UVa 128
 00245,Fetching from uHunt,"1.5c, Cipher, Medium",LA 5184 - WorldFinals Nashville95,,0.0,false
 11787,Fetching from uHunt,"1.5c, Cipher, Medium",follow the description,,0.0,false
 anewalphabet,anewalphabet,"1.5c, Cipher, Medium",simple cipher; 26 characters,4154,1.8,false
-lc0443,to replace with LeetCode link soon...,"1.5c, Cipher, Medium",Run-Length Encoding; leetcode-75,0,4.0,false
+lc0443,to replace with LeetCode link soon...,"1.5c, Cipher, Medium",Run-Length Encoding; leetcode-75,0,4.0,true
 piglatin,piglatin,"1.5c, Cipher, Medium",simple; check the vowels that include 'y' and process it,916,2.1,false
 secretmessage,secretmessage,"1.5c, Cipher, Medium",just do as asked; use 2D grid,2866,1.7,false
 tajna,tajna,"1.5c, Cipher, Medium",simple 2D grid cipher,471,2.1,false
@@ -189,7 +189,7 @@ timezones,timezones,"1.6i, Time, Harder","follow the description, tedious; also 
 00344,Fetching from uHunt,"1.6j, Roman Numerals",count Roman chars used in [1..N],,0.0,false
 00759,Fetching from uHunt,"1.6j, Roman Numerals",validation problem,,0.0,false
 12397,Fetching from uHunt,"1.6j, Roman Numerals",each Roman digit has a value,,0.0,false
-lc0013,to replace with LeetCode link soon...,"1.6j, Roman Numerals",classic; programming-skills; top-interview-150,0,2.0,false
+lc0013,to replace with LeetCode link soon...,"1.6j, Roman Numerals",classic; programming-skills; top-interview-150,0,2.0,true
 rimski,rimski,"1.6j, Roman Numerals",to Roman/to Decimal conversion problem; use next permutation to be sure,118,4.5,false
 romanholidays,romanholidays,"1.6j, Roman Numerals",generate and sort the first 1K Roman strings; ''M'' is at index 945; append prefix 'M' for numbers larger than 1K,92,3.6,false
 11638,Fetching from uHunt,"1.6k, Time Waster, Easier",simulation; needs to use bitmask for parameter C,,0.0,false
@@ -218,7 +218,7 @@ lc0605,to replace with LeetCode link soon...,"2.2a, 1D Array, Medium",tricky 1D 
 12662,Fetching from uHunt,"2.2c, 1D Array, Harder",1D array manipulation; brute force,,0.0,false
 13048,Fetching from uHunt,"2.2c, 1D Array, Harder",use 1D Boolean array; simulate,,0.0,false
 divideby100,divideby100,"2.2c, 1D Array, Harder",big 1D character array processing; be careful,557,4.2,false
-lc0238,to replace with LeetCode link soon...,"2.2c, 1D Array, Harder",use prefix and suffix products; leetcode-75; top-100-liked; top-interview-150,0,4.0,false
+lc0238,to replace with LeetCode link soon...,"2.2c, 1D Array, Harder",use prefix and suffix products; leetcode-75; top-100-liked; top-interview-150,0,4.0,true
 lc1869,to replace with LeetCode link soon...,"2.2c, 1D Array, Harder",split s using 0 as delimiter; take token with the max length; do the same but using 1 as delimiter; compare,0,2.0,false
 mastermind,mastermind,"2.2c, 1D Array, Harder",1D array manipulation to count r and s,446,2.4,false
 pivot,pivot,"2.2c, 1D Array, Harder",static range min/max query problem; special condition allows this problem to be solvable in O(n) using help of 1D arrays,1723,3.2,false
@@ -227,7 +227,7 @@ pivot,pivot,"2.2c, 1D Array, Harder",static range min/max query problem; special
 epigdanceoff,epigdanceoff,"2.2d, 2D Array, Medium",count number of CCs on 2D grid; simpler solution exists: count the number of blank columns plus one,505,1.9,false
 flowshop,flowshop,"2.2d, 2D Array, Medium",interesting 2D array manipulation,392,2.5,false
 imageprocessing,imageprocessing,"2.2d, 2D Array, Medium",interesting 2D array manipulation,344,2.1,false
-lc0027,to replace with LeetCode link soon...,"2.2d, 2D Array, Medium",use Partition algorithm (two pointers) for in-place solution; top-interview-150,0,2.0,false
+lc0027,to replace with LeetCode link soon...,"2.2d, 2D Array, Medium",use Partition algorithm (two pointers) for in-place solution; top-interview-150,0,2.0,true
 lc1351,to replace with LeetCode link soon...,"2.2d, 2D Array, Medium","go row by row; right to left, O(m+n)",0,2.0,true
 nineknights,nineknights,"2.2d, 2D Array, Medium",2D array checks; 8 directions,881,1.9,false
 00466,Fetching from uHunt,"2.2e, 2D Array, Harder",core functions: rotate and reflect,,0.0,false
@@ -241,7 +241,7 @@ rings2,rings2,"2.2e, 2D Array, Harder",more challenging 2D array manipulation; s
 12709,Fetching from uHunt,"2.2f, Sorting, Easier",LA 6650 - Dhaka13; although the problem has a complicated story; it has a very easy solution with sort routine,,0.0,false
 basicprogramming2,basicprogramming2,"2.2f, Sorting, Easier",a nice problem about basic sorting applications,189,3.4,false
 height,height,"2.2f, Sorting, Easier",insertion sort simulation,899,2.0,false
-lc0217,to replace with LeetCode link soon...,"2.2f, Sorting, Easier",sort; check adjacent integers,0,2.0,false
+lc0217,to replace with LeetCode link soon...,"2.2f, Sorting, Easier",sort; check adjacent integers,0,2.0,true
 lc1657,to replace with LeetCode link soon...,"2.2f, Sorting, Easier",check if set of chars and its sorted frequency signatures are the same; leetcode-75,0,4.0,true
 mjehuric,mjehuric,"2.2f, Sorting, Easier",a direct simulation of a bubble sort algorithm,1349,1.6,false
 sidewayssorting,sidewayssorting,"2.2f, Sorting, Easier",stable_sort or sort multi-fields of columns of a 2D array; ignore case,857,2.0,false
@@ -256,7 +256,7 @@ lc2500,to replace with LeetCode link soon...,"2.2g, Sorting, Simple Greedy",sort
 11321,Fetching from uHunt,"2.2h, Sorting, Harder",be careful with negative mod!,,0.0,false
 classy,classy,"2.2h, Sorting, Harder",sort using modified comparison function; a bit of string parsing/tokenization,1633,4.5,false
 dyslectionary,dyslectionary,"2.2h, Sorting, Harder",sort the reverse of original string; output formatting,775,3.4,false
-lc0001,to replace with LeetCode link soon...,"2.2h, Sorting, Harder",classic; O(n log n) solution: sort + two pointers; or hashing; top-100-liked; top-interview-150,0,2.0,false
+lc0001,to replace with LeetCode link soon...,"2.2h, Sorting, Harder",classic; O(n log n) solution: sort + two pointers; or hashing; top-100-liked; top-interview-150,0,2.0,true
 musicyourway,musicyourway,"2.2h, Sorting, Harder",stable_sort; custom comparison function,404,2.4,false
 sortofsorting,sortofsorting,"2.2h, Sorting, Harder",stable_sort or sort multi-fields,2667,2.2,false
 11462,Fetching from uHunt,"2.2i, Special Sorting",standard Counting Sort problem,,0.0,false
@@ -298,24 +298,24 @@ lc0901,to replace with LeetCode link soon...,"2.2n, Stack-based Problems","proce
 12108,Fetching from uHunt,"2.2o, List/Queue/Deque",simulation with N queues,,0.0,false
 integerlists,integerlists,"2.2o, List/Queue/Deque",use deque for fast deletion from front (normal) & back (reversed list); use stack to reverse the final list if it is...,882,4.8,false
 joinstrings,joinstrings,"2.2o, List/Queue/Deque",all '+' operations must be O(1),959,4.1,false
-lc0232,to replace with LeetCode link soon...,"2.2o, List/Queue/Deque",the interesting implementation of queue with two stacks: in-stack and out-stack,0,2.0,false
+lc0232,to replace with LeetCode link soon...,"2.2o, List/Queue/Deque",the interesting implementation of queue with two stacks: in-stack and out-stack,0,2.0,true
 sim,sim,"2.2o, List/Queue/Deque",use list and its iterator,99,2.0,false
 teque,teque,"2.2o, List/Queue/Deque",all operations must be O(1),766,3.3,false
-lc0011,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers","two pointers, l=0, r=n-1; we can always move the shorter pointer inside; leetcode-75; top-100-liked; top-interview-150",0,4.0,false
-lc0167,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers",two pointers: leftmost and rightmost; top-interview-150,0,4.0,false
-lc0283,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers",two pointers: leftmost zero and cur; programming-skills; leetcode-75; top-100-liked,0,2.0,false
-lc0392,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers",variant of merge of Merge sort; leetcode-75; top-interview-150,0,2.0,false
+lc0011,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers","two pointers, l=0, r=n-1; we can always move the shorter pointer inside; leetcode-75; top-100-liked; top-interview-150",0,4.0,true
+lc0167,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers",two pointers: leftmost and rightmost; top-interview-150,0,4.0,true
+lc0283,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers",two pointers: leftmost zero and cur; programming-skills; leetcode-75; top-100-liked,0,2.0,true
+lc0392,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers",variant of merge of Merge sort; leetcode-75; top-interview-150,0,2.0,true
 lc1768,to replace with LeetCode link soon...,"2.2p, 1D Array, Two Pointers",variant of merge of Merge sort; programming-skills; leetcode-75,0,2.0,true
 00261,Fetching from uHunt,"2.2q, Sliding Window",sliding window variant,,0.0,false
 01121,Fetching from uHunt,"2.2q, Sliding Window",LA 2678 - SouthEasternEurope06; sliding window variant,,0.0,false
 11536,Fetching from uHunt,"2.2q, Sliding Window",sliding window variant,,0.0,false
-lc0003,to replace with LeetCode link soon...,"2.2q, Sliding Window",increase char freq when extending; reduce window size if duplicate is seen; top-100-liked; top-interview-150,0,4.0,false
-lc0643,to replace with LeetCode link soon...,"2.2q, Sliding Window",slide the window of size k; keep the max; divide by k; leetcode-75,0,2.0,false
+lc0003,to replace with LeetCode link soon...,"2.2q, Sliding Window",increase char freq when extending; reduce window size if duplicate is seen; top-100-liked; top-interview-150,0,4.0,true
+lc0643,to replace with LeetCode link soon...,"2.2q, Sliding Window",slide the window of size k; keep the max; divide by k; leetcode-75,0,2.0,true
 sound,sound,"2.2q, Sliding Window",sliding window variant 4; max and min; similar to Kattis - treeshopping,104,5.3,false
 subseqhard,subseqhard,"2.2q, Sliding Window",interesting sliding window variant,1119,3.9,false
 lc0002,to replace with LeetCode link soon...,"2.2r, Linked List Exercises",simple problem but in reverse SLL mode; programming-skills; top-100-liked; top-interview-150,0,4.0,false
 lc0021,to replace with LeetCode link soon...,"2.2r, Linked List Exercises",merge of merge sort in linked list way; programming-skills; top-100-liked; top-interview-150,0,2.0,false
-lc0206,to replace with LeetCode link soon...,"2.2r, Linked List Exercises",classic SLL reversal task; programming-skills; leetcode-75; top-100-liked,0,2.0,false
+lc0206,to replace with LeetCode link soon...,"2.2r, Linked List Exercises",classic SLL reversal task; programming-skills; leetcode-75; top-100-liked,0,2.0,true
 lc0445,to replace with LeetCode link soon...,"2.2r, Linked List Exercises",like LC0002; but need to use two stacks; programming-skills,0,4.0,false
 lc2095,to replace with LeetCode link soon...,"2.2r, Linked List Exercises",first pass to count n; second pass to go to the middle vertex and to skip it; leetcode-75,0,4.0,false
 lc2130,to replace with LeetCode link soon...,"2.2r, Linked List Exercises","use recursion; as it unwinds, sum the values of leftmost and rightmost pointers; leetcode-75",0,4.0,false
@@ -338,7 +338,7 @@ soundex,soundex,"2.3b, DAT, ASCII",DAT for soundex A-Z code mapping; also availa
 bookingaroom,bookingaroom,"2.3c, DAT, Others",only 100 rooms; use 1D Boolean array,2849,1.7,false
 busnumbers,busnumbers,"2.3c, DAT, Others",only 1000 bus numbers; use 1D Boolean array,2776,2.4,false
 freefood,freefood,"2.3c, DAT, Others",only 365 days in a year,1965,1.5,false
-lc0645,to replace with LeetCode link soon...,"2.3c, DAT, Others",DAT [1..10000]; find key with freq 2 (repeated) and 0 (missing),0,2.0,false
+lc0645,to replace with LeetCode link soon...,"2.3c, DAT, Others",DAT [1..10000]; find key with freq 2 (repeated) and 0 (missing),0,2.0,true
 princesspeach,princesspeach,"2.3c, DAT, Others",DAT; linear pass,839,2.1,true
 12049,Fetching from uHunt,"2.3d, Hash Table (set), E",unordered_multiset manipulation,,0.0,false
 13148,Fetching from uHunt,"2.3d, Hash Table (set), E",we can store all precomputed answers - which are given - into unordered_set,,0.0,false
@@ -354,7 +354,7 @@ conformity,conformity,"2.3f, Hash Table (map), E",use unordered_map to count fre
 grandpabernie,grandpabernie,"2.3f, Hash Table (map), E",use unordered_map plus (sorted) vector,1065,3.2,false
 lc1679,to replace with LeetCode link soon...,"2.3f, Hash Table (map), E",frequency Counter; pairings; leetcode-75,0,4.0,false
 recount,recount,"2.3f, Hash Table (map), E",use map; frequency counting,1163,2.0,true
-lc0347,to replace with LeetCode link soon...,"2.3g, Hash Table (Counter)",use Counter to count frequency; sort by frequencies; top k; top-100-liked,0,4.0,false
+lc0347,to replace with LeetCode link soon...,"2.3g, Hash Table (Counter)",use Counter to count frequency; sort by frequencies; top k; top-100-liked,0,4.0,true
 10145,Fetching from uHunt,"2.3h, Hash Table (map), H",use map and set,,0.0,false
 11860,Fetching from uHunt,"2.3h, Hash Table (map), H",use set and map; linear scan,,0.0,false
 addingwords,addingwords,"2.3h, Hash Table (map), H",use unordered_map,1880,3.9,false
@@ -366,7 +366,7 @@ basicinterpreter,basicinterpreter,"2.3h, Hash Table (map), H",the harder version
 bst,bst,"2.3i, Balanced BST (set)",simulate special BST [1..N] insertions using set,449,7.3,false
 candydivision,candydivision,"2.3i, Balanced BST (set)",complete search from 1 to sqrt(N); insert all divisors into set for automatic sorting and elimination of duplicates,702,3.4,false
 compoundwords,compoundwords,"2.3i, Balanced BST (set)",use set extensively; iterator,1807,1.7,false
-lc0056,to replace with LeetCode link soon...,"2.3i, Balanced BST (set)",maintain set of intervals using bBST (set); do quick merging of intervals; top-100-liked; top-interview-150,0,4.0,false
+lc0056,to replace with LeetCode link soon...,"2.3i, Balanced BST (set)",maintain set of intervals using bBST (set); do quick merging of intervals; top-100-liked; top-interview-150,0,4.0,true
 10138,Fetching from uHunt,"2.3j, Balanced BST (map)",map plates to bills; entrance time; and position,,0.0,false
 11308,Fetching from uHunt,"2.3j, Balanced BST (map)",use map and set,,0.0,false
 12504,Fetching from uHunt,"2.3j, Balanced BST (map)",use map; string to string,,0.0,false
@@ -379,20 +379,20 @@ babynames,babynames,"2.3k, Order Statistics Tree",dynamic rank problem; use two 
 continuousmedian,continuousmedian,"2.3k, Order Statistics Tree",dynamic selection problem; specifically the median values; pb_ds helps,140,3.9,true
 cookieselection,cookieselection,"2.3k, Order Statistics Tree",map large integers to up to 600K integers; use pb_ds or Fenwick Tree and the select(median) operation of Fenwick Tree,923,4.3,false
 gcpc,gcpc,"2.3k, Order Statistics Tree",dynamic rank problem; pb_ds helps,876,5.3,false
-lc0100,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",recursive check; top-interview-150,0,2.0,false
-lc0104,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",recursive height check; leetcode-75; top-100-liked; top-interview-150,0,2.0,false
+lc0100,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",recursive check; top-interview-150,0,2.0,true
+lc0104,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",recursive height check; leetcode-75; top-100-liked; top-interview-150,0,2.0,true
 lc0236,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",find the first vertex using postorder where both p and q are seen; leetcode-75; top-100-liked; top-interview-150,0,4.0,false
 lc0437,to replace with LeetCode link soon...,"2.3l, BT Exercises, E","for each vertex, run preorder traversal; check if the path sum equals to target; leetcode-75; top-100-liked",0,4.0,false
 lc0872,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",run inorder traversals on both trees; picking only the leaves; compare them; leetcode-75,0,2.0,false
 lc1372,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",modified preorder traversal; reset counter if same direction; add counter if zig-zag-ing; leetcode-75,0,4.0,false
 lc1448,to replace with LeetCode link soon...,"2.3l, BT Exercises, E",modified preorder traversal; keep the largest along the way; leetcode-75,0,4.0,false
 lc0098,to replace with LeetCode link soon...,"2.3n, BST Exercises",recursive BST property validator; top-100-liked; top-interview-150,0,4.0,false
-lc0230,to replace with LeetCode link soon...,"2.3n, BST Exercises",inorder traversal; report the k-th element; top-100-liked; top-interview-150,0,4.0,false
+lc0230,to replace with LeetCode link soon...,"2.3n, BST Exercises",inorder traversal; report the k-th element; top-100-liked; top-interview-150,0,4.0,true
 lc0450,to replace with LeetCode link soon...,"2.3n, BST Exercises",code BST deletion sub-cases; leetcode-75,0,4.0,false
-lc0530,to replace with LeetCode link soon...,"2.3n, BST Exercises",the min gap is between successive elements during inorder traversal; same as LC 0783; top-interview-150,0,2.0,false
-lc0700,to replace with LeetCode link soon...,"2.3n, BST Exercises",the classic BST search process; leetcode-75,0,2.0,false
+lc0530,to replace with LeetCode link soon...,"2.3n, BST Exercises",the min gap is between successive elements during inorder traversal; same as LC 0783; top-interview-150,0,2.0,true
+lc0700,to replace with LeetCode link soon...,"2.3n, BST Exercises",the classic BST search process; leetcode-75,0,2.0,true
 lc0897,to replace with LeetCode link soon...,"2.3n, BST Exercises",create new skewed BST using inorder traversal of original BST,0,2.0,false
-lc0938,to replace with LeetCode link soon...,"2.3n, BST Exercises",customize inorder traversal of BST,0,2.0,false
+lc0938,to replace with LeetCode link soon...,"2.3n, BST Exercises",customize inorder traversal of BST,0,2.0,true
 00599,Fetching from uHunt,"2.4a, Graph Data Structures",V-E = number of CCs; use a bitset of size 26 to count the number of vertices that have some edge,,0.0,false
 11550,Fetching from uHunt,"2.4a, Graph Data Structures",graph representation; incidence matrix,,0.0,false
 11991,Fetching from uHunt,"2.4a, Graph Data Structures",Adjacency List,,0.0,true
@@ -446,7 +446,7 @@ tautology,tautology,"3.2e, Three+ Nested Loops, H",try all 2^5 = 32 values with 
 11742,Fetching from uHunt,"3.2f, Iterative (Permutation)",try all permutations,,0.0,false
 dancerecital,dancerecital,"3.2f, Iterative (Permutation)",try all R! permutations; compare adjacent routines,274,4.2,false
 dreamer,dreamer,"3.2f, Iterative (Permutation)",try all 8! permutations of digits; check if the date is valid; output earliest valid date,406,2.0,false
-lc0046,to replace with LeetCode link soon...,"3.2f, Iterative (Permutation)",C++ next_permutation from sorted to reverse-sorted permutations; top-100-liked; top-interview-150,0,4.0,false
+lc0046,to replace with LeetCode link soon...,"3.2f, Iterative (Permutation)",C++ next_permutation from sorted to reverse-sorted permutations; top-100-liked; top-interview-150,0,4.0,true
 veci,veci,"3.2f, Iterative (Permutation)",try all permutations; get the one that is larger than X,1193,1.8,false
 00639,Fetching from uHunt,"3.2g, Iterative (Combination)",generate 2^(4x4) = 2^16 combinations and prune,,0.0,false
 01047,Fetching from uHunt,"3.2g, Iterative (Combination)",LA 3278 - WorldFinals Shanghai05; try all 2^n subsets of towers to be taken; use inclusion-exclusion principle,,0.0,false
@@ -488,7 +488,7 @@ toys,toys,"3.2l, Josephus Problem",use general case Josephus recurrence,142,4.5,
 10576,Fetching from uHunt,"3.2m, Backtracking, Easier",generate all; prune; take max,,0.0,false
 12840,Fetching from uHunt,"3.2m, Backtracking, Easier",simple backtracking,,0.0,false
 goodmorning,goodmorning,"3.2m, Backtracking, Easier",we can use backtracking to generate all possible (small) numbers that can be pressed according to the constraints,347,2.7,false
-lc0017,to replace with LeetCode link soon...,"3.2m, Backtracking, Easier",classic backtracking; leetcode-75; top-100-liked; top-interview-150,0,4.0,false
+lc0017,to replace with LeetCode link soon...,"3.2m, Backtracking, Easier",classic backtracking; leetcode-75; top-100-liked; top-interview-150,0,4.0,true
 natjecanje,natjecanje,"3.2m, Backtracking, Easier","4 options for each team with kayak: do nothing, pass to left (if damaged), keep to self (if damaged), pass to right (if ...",701,2.5,false
 paintings,paintings,"3.2m, Backtracking, Easier",try all possible paintings based on Catherine's preference; skip hideous color pairs,162,3.6,false
 00208,Fetching from uHunt,"3.2n, Backtracking, Harder",LA 5147 - WorldFinals SanAntonio91; backtracking with some pruning,,0.0,false
@@ -502,14 +502,14 @@ pagelayout,pagelayout,"3.2n, Backtracking, Harder",a bit of geometry; O(2^n 	ime
 11621,Fetching from uHunt,"3.3a, Binary Search",generate numbers with factor 2 and/or 3; sort; upper_bound,,0.0,false
 12965,Fetching from uHunt,"3.3a, Binary Search",sort producer/consumer prices; the answer is one of the prices mentioned; use binary searches to count the answer,,0.0,false
 firefly,firefly,"3.3a, Binary Search",sort stalactites vs stalagmites separately; brute force height; binary search the obstacles hit,323,4.0,false
-lc0162,to replace with LeetCode link soon...,"3.3a, Binary Search",interesting binary-search modification; leetcode-75; top-interview-150,0,4.0,false
+lc0162,to replace with LeetCode link soon...,"3.3a, Binary Search",interesting binary-search modification; leetcode-75; top-interview-150,0,4.0,true
 outofsorts,outofsorts,"3.3a, Binary Search",do O(log n) binary searches on unsorted array n times,107,3.7,false
 roompainting,roompainting,"3.3a, Binary Search",sort the cans at shop (can be used more than once); use lower_bound for what Joe needs at shop,416,3.8,false
 12190,Fetching from uHunt,"3.3b, Bisection and BSTA, E",BSTA + algebra,,0.0,false
 13142,Fetching from uHunt,"3.3b, Bisection and BSTA, E",BSTA + Physics simulation,,0.0,false
 carefulascent,carefulascent,"3.3b, Bisection and BSTA, E",BSTA + Physics simulation,558,1.8,false
 freeweights,freeweights,"3.3b, Bisection and BSTA, E",BSTA + simulation; Mathematical observation,356,4.5,false
-lc0875,to replace with LeetCode link soon...,"3.3b, Bisection and BSTA, E",BSTA + simulation check; leetcode-75,0,4.0,false
+lc0875,to replace with LeetCode link soon...,"3.3b, Bisection and BSTA, E",BSTA + simulation check; leetcode-75,0,4.0,true
 monk,monk,"3.3b, Bisection and BSTA, E",BSTA + simulation; cool,86,3.3,false
 suspensionbridges,suspensionbridges,"3.3b, Bisection and BSTA, E",BSTA + Maths; be careful of precision error,409,4.6,false
 00183,Fetching from uHunt,"3.3c, Ternary Search & Others",simple exercise of DnC,,0.0,false
@@ -533,7 +533,7 @@ icpcteamselection,icpcteamselection,"3.4b, Involving Sorting, E",greedy; sorting
 lc1913,to replace with LeetCode link soon...,"3.4b, Involving Sorting, E",sort; use the last and first two,0,2.0,false
 minimumscalar,minimumscalar,"3.4b, Involving Sorting, E",one sort increasing; one sort decreasing,1202,2.3,false
 shopaholic,shopaholic,"3.4b, Involving Sorting, E","sort prices in descending order, pick every third item",959,2.4,false
-lc0435,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M",sort by non-decreasing endpoints; greedy; leetcode-75,0,4.0,false
+lc0435,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M",sort by non-decreasing endpoints; greedy; leetcode-75,0,4.0,true
 lc0452,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M",sort by non-decreasing endpoints; greedy; leetcode-75; top-interview-150,0,4.0,false
 lc0881,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M",sort people by non-dec weights; two pointers: lightest+heaviest; greedy,0,4.0,false
 lc1090,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M",sort by non-increasing values,0,4.0,false
@@ -546,7 +546,7 @@ lc3301,to replace with LeetCode link soon...,"3.4c, Involving Sorting, M",sort b
 airconditioned,airconditioned,"3.4d, Involving Sorting, H",greedy; sorting,1116,3.9,false
 birds,birds,"3.4d, Involving Sorting, H",greedy; sorting,566,3.5,false
 delivery,delivery,"3.4d, Involving Sorting, H","sort, process positive and negative delivery separately; go to rightmost, come back and fill as many from the right",253,3.3,false
-lc0055,to replace with LeetCode link soon...,"3.4d, Involving Sorting, H","for each reachable i, greedily extend the furthest jump, if we can; top-100-liked; top-interview-150",0,4.0,false
+lc0055,to replace with LeetCode link soon...,"3.4d, Involving Sorting, H","for each reachable i, greedily extend the furthest jump, if we can; top-100-liked; top-interview-150",0,4.0,true
 01153,Fetching from uHunt,"3.4e, Involving PQ",greedy; priority queue,,0.0,false
 13177,Fetching from uHunt,"3.4e, Involving PQ",greedy; priority queue,,0.0,false
 ballotboxes,ballotboxes,"3.4e, Involving PQ",greedy; priority queue,776,4.4,false
@@ -571,7 +571,7 @@ stockbroker,stockbroker,"3.4g, Non-Classical, Harder",greedy,578,3.4,false
 virus,virus,"3.4g, Non-Classical, Harder",greedy,753,3.6,false
 10684,Fetching from uHunt,"3.5a, 1D Range Sum",standard; Kadane's algorithm,,0.0,true
 commercials,commercials,"3.5a, 1D Range Sum",transform each input by -P; Kadane's algorithm,1570,2.0,true
-lc0053,to replace with LeetCode link soon...,"3.5a, 1D Range Sum",Kadane's; special case for all negatives; top-100-liked; top-interview-150,0,4.0,false
+lc0053,to replace with LeetCode link soon...,"3.5a, 1D Range Sum",Kadane's; special case for all negatives; top-100-liked; top-interview-150,0,4.0,true
 sellingspatulas,sellingspatulas,"3.5a, 1D Range Sum",-8 per time slot initially; read sale data; 1D range sum; complete search,109,8.0,true
 shortsell,shortsell,"3.5a, 1D Range Sum",similar to Kadane's algorithm; linear pass; prefix sum,104,4.1,true
 01105,Fetching from uHunt,"3.5b, 2D Range Sum",LA 5132 - WorldFinals Orlando11; more advanced 2D Range Sum Queries,,0.0,false
@@ -589,7 +589,7 @@ trainsorting,trainsorting,"3.5c, LIS","max(LIS(i)+LDS(i)-1), ∀i ∈ [0...n-1];
 10130,Fetching from uHunt,"3.5d, 0-1 KNAPSACK/SS",basic 0-1 Knapsack problem,,0.0,false
 11832,Fetching from uHunt,"3.5d, 0-1 KNAPSACK/SS",interesting DP; s: (id; val); use offset to handle negative numbers; t: plus or minus; print solution,,0.0,false
 knapsack,knapsack,"3.5d, 0-1 KNAPSACK/SS",basic DP KNAPSACK; print the solution,687,4.8,true
-lc0474,to replace with LeetCode link soon...,"3.5d, 0-1 KNAPSACK/SS",Knapsack; skip or take a string,0,4.0,false
+lc0474,to replace with LeetCode link soon...,"3.5d, 0-1 KNAPSACK/SS",Knapsack; skip or take a string,0,4.0,true
 orders,orders,"3.5d, 0-1 KNAPSACK/SS",interesting KNAPSACK variant; print the solution,713,4.5,false
 presidentialelections,presidentialelections,"3.5d, 0-1 KNAPSACK/SS",pre-process the input to discard non winnable states; be careful of negative total voters; then standard DP KNAPSACK,116,5.7,false
 00242,Fetching from uHunt,"3.5e, COIN-CHANGE",LA 5181 - WorldFinals Nashville95; Complete Search + DP Coin-Change,,0.0,false
@@ -598,7 +598,7 @@ presidentialelections,presidentialelections,"3.5d, 0-1 KNAPSACK/SS",pre-process 
 bagoftiles,bagoftiles,"3.5e, COIN-CHANGE",count number of ways to do COIN-CHANGE; meet in the middle; DP combinatorics (n choose k) to find the answer for a+b,102,6.5,false
 canonical,canonical,"3.5e, COIN-CHANGE",complete search possible range of counter examples; do both greedy COIN-CHANGE and DP COIN-CHANGE,502,5.7,false
 exactchange2,exactchange2,"3.5e, COIN-CHANGE",a variation to the Coin-Change problem; also available at UVa 11517 - Exact Change,708,5.4,false
-lc0322,to replace with LeetCode link soon...,"3.5e, COIN-CHANGE",COIN-CHANGE; top-100-liked; top-interview-150,0,4.0,false
+lc0322,to replace with LeetCode link soon...,"3.5e, COIN-CHANGE",COIN-CHANGE; top-100-liked; top-interview-150,0,4.0,true
 00216,Fetching from uHunt,"3.5f, TSP",LA 5155 - WorldFinals KansasCity92; DP TSP problem; but still solvable with backtracking,,0.0,false
 11795,Fetching from uHunt,"3.5f, TSP",DP TSP variant; counting paths on DAG; DP+bitmask; let Mega Buster owned by a dummy 'Robot 0',,0.0,false
 12841,Fetching from uHunt,"3.5f, TSP",simply find and print the lexicographically smallest Hamiltonian path; use DP-TSP technique,,0.0,false
@@ -609,7 +609,7 @@ errands,errands,"3.5f, TSP",map location names to integer indices; DP TSP,51,7.0
 01261,Fetching from uHunt,"3.5g, Non-Classical, 1D, E",LA 4844 - Daejeon10; backtracking possible; but we use a set<string> to prevent recomputation,,0.0,false
 11420,Fetching from uHunt,"3.5g, Non-Classical, 1D, E",s: (prev; id; numlck); lock/unlock this chest,,0.0,false
 12654,Fetching from uHunt,"3.5g, Non-Classical, 1D, E",s: (hole); t: use patch T1 or patch T2,,0.0,false
-lc0746,to replace with LeetCode link soon...,"3.5g, Non-Classical, 1D, E",s: (i); t: to (i+1) or (i+2); Fibonacci variant; leetcode-75,0,2.0,false
+lc0746,to replace with LeetCode link soon...,"3.5g, Non-Classical, 1D, E",s: (i); t: to (i+1) or (i+2); Fibonacci variant; leetcode-75,0,2.0,true
 10003,Fetching from uHunt,"3.5h, Non-Classical, 2D, E",discussed in this section,,0.0,false
 11450,Fetching from uHunt,"3.5h, Non-Classical, 2D, E",discussed in this section,,0.0,false
 13141,Fetching from uHunt,"3.5h, Non-Classical, 2D, E","s: (level, branch_previously); t: not branching if branch_previously or branching (one side) otherwise",,0.0,false
@@ -625,7 +625,7 @@ tight,tight,"3.5i, DP level 2","s: (i, j); #tight words of length i that end in 
 walrusweights,walrusweights,"3.5i, DP level 2",backtracking with memoization,570,3.8,true
 11749,Fetching from uHunt,"4.2a, Finding CCs",find the largest CC with highest average PPA; also solvable with UFDS,,0.0,false
 11906,Fetching from uHunt,"4.2a, Finding CCs",DFS/BFS for reachability; several tricky cases; be careful when M = 0; N = 0; or M = N,,0.0,false
-lc0547,to replace with LeetCode link soon...,"4.2a, Finding CCs",count number of CCs; leetcode-75,0,4.0,false
+lc0547,to replace with LeetCode link soon...,"4.2a, Finding CCs",count number of CCs; leetcode-75,0,4.0,true
 reachableroads,reachableroads,"4.2a, Finding CCs",report number of CC-1,892,2.1,true
 securitybadge,securitybadge,"4.2a, Finding CCs",reachability test; clever idea to compress ids,129,7.6,false
 terraces,terraces,"4.2a, Finding CCs","group cells with similar height together; if it cannot flow to any other component with lower height, add the size of th...",339,3.6,false
@@ -636,7 +636,7 @@ amoebas,amoebas,"4.2b, Flood Fill, Easier",easy floodfill,1079,1.8,true
 countingstars,countingstars,"4.2b, Flood Fill, Easier",basic flood fill problem; count CCs,1494,2.7,true
 fontan,fontan,"4.2b, Flood Fill, Easier",modified multi-sources BFS/floodfill,866,2.0,false
 gold,gold,"4.2b, Flood Fill, Easier",flood fill with extra blocking constraint; also available at UVa 11561 - Getting Gold,735,2.2,false
-lc0733,to replace with LeetCode link soon...,"4.2b, Flood Fill, Easier",basic flood fill problem,0,2.0,false
+lc0733,to replace with LeetCode link soon...,"4.2b, Flood Fill, Easier",basic flood fill problem,0,2.0,true
 01103,Fetching from uHunt,"4.2c, Flood Fill, Harder",LA 5130 - WorldFinals Orlando11; major hint: each hieroglyph has unique number of white CCs,,0.0,false
 10kindsofpeople,10kindsofpeople,"4.2c, Flood Fill, Harder",intelligent flood fill; just run once to avoid TLE as there are many queries,2380,3.9,true
 11585,Fetching from uHunt,"4.2c, Flood Fill, Harder",polynomial-time verifier for an NP-complete puzzle Nurikabe; this verifier requires clever usage of flood fill algorithm,,0.0,false
@@ -648,12 +648,12 @@ lc1254,to replace with LeetCode link soon...,"4.2c, Flood Fill, Harder",flood fi
 brexit,brexit,"4.2d, Topological Sort",toposort; chain reaction; modified Kahn's algorithm,826,3.6,false
 builddeps,builddeps,"4.2d, Topological Sort",the graph is acyclic; toposort with DFS from the changed file,626,4.7,true
 conservation,conservation,"4.2d, Topological Sort",modified Kahn's algorithm; greedily process all steps in a certain lab before alternating to the other lab,133,4.2,false
-lc0210,to replace with LeetCode link soon...,"4.2d, Topological Sort",cycle check; compute toposort if acyclic; top-interview-150,0,4.0,false
+lc0210,to replace with LeetCode link soon...,"4.2d, Topological Sort",cycle check; compute toposort if acyclic; top-interview-150,0,4.0,true
 pickupsticks,pickupsticks,"4.2d, Topological Sort",cycle check + toposort if DAG; also available at item UVa 11686 - Pick up sticks,373,4.7,true
 10116,Fetching from uHunt,"4.2e, Graph Properties Check",traversal on implicit graph; cycle check,,0.0,false
 10505,Fetching from uHunt,"4.2e, Graph Properties Check",bipartite; take max(left; right),,0.0,false
 hoppers,hoppers,"4.2e, Graph Properties Check",the answer is number of CC-1 if there is at least one non-bipartite component in the graph; or number of CC otherwise,234,3.9,false
-lc0207,to replace with LeetCode link soon...,"4.2e, Graph Properties Check",is the directed graph acyclic?; top-100-liked; top-interview-150,0,4.0,false
+lc0207,to replace with LeetCode link soon...,"4.2e, Graph Properties Check",is the directed graph acyclic?; top-100-liked; top-interview-150,0,4.0,true
 molekule,molekule,"4.2e, Graph Properties Check",undirected tree is also Bipartite/bi-colorable; bi-color it with 0 and 1; direct all edges from 0 to 1 (or vice versa),175,3.5,false
 runningmom,runningmom,"4.2e, Graph Properties Check",find a cycle in a directed graph,591,3.8,false
 torn2pieces,torn2pieces,"4.2e, Graph Properties Check",construct graph from strings; traversal from source to target; reachability check; print path,1115,3.6,false
@@ -744,13 +744,13 @@ secretchamber,secretchamber,"4.5b, APSP, Variants",LA 8047 - WorldFinals RapidCi
 00452,Fetching from uHunt,"4.7a, S/Longest Paths on DAG",LONGEST-PATH on DAG,,0.0,false
 10350,Fetching from uHunt,"4.7a, S/Longest Paths on DAG",shortest paths; implicit DAG; DP,,0.0,false
 fibtour,fibtour,"4.7a, S/Longest Paths on DAG",only ~90 Fibonacci numbers not more than 10^18; LONGEST-PATH on DAG problem; special case for first two Fibonacci number...,105,6.4,false
-lc0064,to replace with LeetCode link soon...,"4.7a, S/Longest Paths on DAG",basic SSSP on DAG; top-100-liked; top-interview-150,0,4.0,false
+lc0064,to replace with LeetCode link soon...,"4.7a, S/Longest Paths on DAG",basic SSSP on DAG; top-100-liked; top-interview-150,0,4.0,true
 mravi,mravi,"4.7a, S/Longest Paths on DAG",reverse edge directions to change the input tree into a DAG; find longest path from leaf that contains ant to root,197,2.7,false
 safepassage,safepassage,"4.7a, S/Longest Paths on DAG","SSSP; implicit DAG; s: (cloak_pos, bitmask); try all ways to go back and forth between gate and dorm; report minimum",387,4.9,false
 10544,Fetching from uHunt,"4.7b, Counting Paths, Easier",counting paths in implicit DAG,,0.0,false
 11569,Fetching from uHunt,"4.7b, Counting Paths, Easier",determine the length of one of the longest paths and then count the number of such longest paths in DAG,,0.0,false
 compositions,compositions,"4.7b, Counting Paths, Easier","LA 7365 - Greater NY15; s: (N_left); t: try all values, skip some numbers",160,2.3,false
-lc0062,to replace with LeetCode link soon...,"4.7b, Counting Paths, Easier",counting paths; DAG; leetcode-75; top-100-liked,0,4.0,false
+lc0062,to replace with LeetCode link soon...,"4.7b, Counting Paths, Easier",counting paths; DAG; leetcode-75; top-100-liked,0,4.0,true
 robotsonagrid,robotsonagrid,"4.7b, Counting Paths, Easier",counting paths in implicit DAG,147,4.3,false
 runningsteps,runningsteps,"4.7b, Counting Paths, Easier","LA 7360 - Greater NY15; s: (leg, l2, r2, l1, r1); t: left/right leg 1/2 steps; use unordered_map as memo table; use prun...",168,2.6,false
 scenes,scenes,"4.7b, Counting Paths, Easier","s: (pos, ribbon_left); t: try all possible heights; ignore the flat scenes first and subtract those cases at the end",407,3.6,false
@@ -782,8 +782,8 @@ flippingcards,flippingcards,"4.7e, Bipartite Graph",left set: n card numbers; ri
 catenyms,catenyms,"4.7f, Eulerian Graph",Euler graph property check; 26 vertices; directed non simple graph; printing the Euler tour in lexicographic order,67,7.1,false
 eulerianpath,eulerianpath,"4.7f, Eulerian Graph",Euler graph property check; directed graph; printing the Euler tour,219,5.6,false
 railroad2,railroad2,"4.7f, Eulerian Graph",x-shaped level junctions have even degrees - ignore X; y-shaped switches have degree 3 - Y has to be even,2188,1.4,false
-lc0102,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS; expand frontier; top-100-liked; top-interview-150,0,4.0,false
-lc0111,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS until there is a leaf,0,2.0,false
+lc0102,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS; expand frontier; top-100-liked; top-interview-150,0,4.0,true
+lc0111,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS until there is a leaf,0,2.0,true
 lc0199,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS; last item per level; leetcode-75; top-100-liked; top-interview-150,0,4.0,false
 lc0429,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS on n-ary tree,0,4.0,false
 lc1161,to replace with LeetCode link soon...,"4.7g, BT Exercises, H",BFS; max level sum; leetcode-75,0,4.0,true
@@ -828,7 +828,7 @@ rationalsequence,rationalsequence,"5.2e, Number Systems/Seqs",pattern finding; t
 11847,Fetching from uHunt,"5.2f, Log, Exp, Pow",O(1) math formula exists: floor(log2(n)),,0.0,false
 cokolada,cokolada,"5.2f, Log, Exp, Pow",the answers involve powers of two and a simulation,605,2.2,false
 factstone,factstone,"5.2f, Log, Exp, Pow",use logarithm; power; also available at UVa 10916 - Factstone Benchmark,200,3.6,false
-lc0231,to replace with LeetCode link soon...,"5.2f, Log, Exp, Pow",n ≤ 0 is False; log2 and exp test,0,2.0,false
+lc0231,to replace with LeetCode link soon...,"5.2f, Log, Exp, Pow",n ≤ 0 is False; log2 and exp test,0,2.0,true
 lemonadetrade,lemonadetrade,"5.2f, Log, Exp, Pow",use log transformation technique; linear pass,82,5.3,false
 thebackslashproblem,thebackslashproblem,"5.2f, Log, Exp, Pow",actually power of two,349,2.2,false
 00264,Fetching from uHunt,"5.2g, Grid",grid; pattern,,0.0,false
@@ -939,7 +939,7 @@ thinkingofanumber,thinkingofanumber,"5.3k, Divisibility Test",simple range; use 
 10689,Fetching from uHunt,"5.4a, Fibonacci Numbers",easy; Pisano period,,0.0,false
 anti11,anti11,"5.4a, Fibonacci Numbers",this problem degenerates into a modified Fibonacci numbers,518,2.7,false
 batmanacci,batmanacci,"5.4a, Fibonacci Numbers",Fibonacci; observation on N; Divide and Conquer,331,3.8,false
-lc0070,to replace with LeetCode link soon...,"5.4a, Fibonacci Numbers",basically compute Fib(n+1); DP; top-100-liked; top-interview-150,0,2.0,false
+lc0070,to replace with LeetCode link soon...,"5.4a, Fibonacci Numbers",basically compute Fib(n+1); DP; top-100-liked; top-interview-150,0,2.0,true
 lc1137,to replace with LeetCode link soon...,"5.4a, Fibonacci Numbers",basic Tribonacci; DP; leetcode-75,0,2.0,true
 rijeci,rijeci,"5.4a, Fibonacci Numbers",simple simulation with a single loop; Fibonacci,2478,1.5,false
 00369,Fetching from uHunt,"5.4b, Binomial Coefficients",be careful with overflow issue,,0.0,false
@@ -947,7 +947,7 @@ rijeci,rijeci,"5.4a, Fibonacci Numbers",simple simulation with a single loop; Fi
 11955,Fetching from uHunt,"5.4b, Binomial Coefficients",pure application; DP,,0.0,false
 12712,Fetching from uHunt,"5.4b, Binomial Coefficients",the answer is sum i=M to N of C(L*L;i)*i!; but simplify the computation of this formula instead of running it directly,,0.0,false
 election,election,"5.4b, Binomial Coefficients",compute the answers with help of binomial coefficients,213,6.2,false
-lc0118,to replace with LeetCode link soon...,"5.4b, Binomial Coefficients",basic bottom-up DP to generate Pascal's triangle; top-100-liked,0,2.0,false
+lc0118,to replace with LeetCode link soon...,"5.4b, Binomial Coefficients",basic bottom-up DP to generate Pascal's triangle; top-100-liked,0,2.0,true
 lockedtreasure,lockedtreasure,"5.4b, Binomial Coefficients",the answer is nCm-1,321,2.8,false
 oddbinom,oddbinom,"5.4b, Binomial Coefficients",OEIS A006046,245,3.5,false
 10007,Fetching from uHunt,"5.4c, Catalan Numbers",answer is Cat(n) * n!; BigInteger,,0.0,false
@@ -990,7 +990,7 @@ lostinthewoods,lostinthewoods,"5.5b, Probability, Harder",simulate random walks 
 11036,Fetching from uHunt,"5.6a, Cycle Finding",cycle-finding; evaluate Reverse Polish f with a stack,,0.0,false
 11053,Fetching from uHunt,"5.6a, Cycle Finding",cycle-finding; the answer is N-lambda,,0.0,false
 fibonaccicycles,fibonaccicycles,"5.6a, Cycle Finding",detect cycle of fib(n)%k using fast data structure,118,3.2,false
-lc0287,to replace with LeetCode link soon...,"5.6a, Cycle Finding","find μ, start of the cycle; Floyd's cycle-finding algorithm; popularized by Joma Tech YouTube video; top-100-liked",0,4.0,false
+lc0287,to replace with LeetCode link soon...,"5.6a, Cycle Finding","find μ, start of the cycle; Floyd's cycle-finding algorithm; popularized by Joma Tech YouTube video; top-100-liked",0,4.0,true
 rats,rats,"5.6a, Cycle Finding",string processing plus cycle-finding; unordered_set,92,6.3,false
 10111,Fetching from uHunt,"5.7a, Game Theory (Basic)",Tic-Tac-Toe; minimax; backtracking,,0.0,false
 10536,Fetching from uHunt,"5.7a, Game Theory (Basic)",model the 4*4 board and 48 possible pins as bitmask; then this is a simple two player game,,0.0,false
@@ -1003,7 +1003,7 @@ linije,linije,"5.7a, Game Theory (Basic)",game theory; check conditions on how M
 10655,Fetching from uHunt,"5.8a, Matrix Power",derive the square matrix,,0.0,false
 12796,Fetching from uHunt,"5.8a, Matrix Power",count the number of paths of length L in an undirected graph where L can be up to 2^30,,0.0,false
 checkingforcorrectness,checkingforcorrectness,"5.8a, Matrix Power",Java Big Integer; one subtask uses modPow,244,4.1,false
-lc0050,to replace with LeetCode link soon...,"5.8a, Matrix Power",D&C exponentiation; programming-skills; top-interview-150,0,4.0,false
+lc0050,to replace with LeetCode link soon...,"5.8a, Matrix Power",D&C exponentiation; programming-skills; top-interview-150,0,4.0,true
 porpoises,porpoises,"5.8a, Matrix Power",Fibonacci; matrix power; modulo,268,2.9,false
 squawk,squawk,"5.8a, Matrix Power",count the number of paths of length L in an undirected graph after t steps that are reachable from source s,409,3.5,false
 00213,Fetching from uHunt,"6.2a, Cipher, Harder",LA 5152 - WorldFinals SanAntonio91,,0.0,false
@@ -1035,7 +1035,7 @@ nizovi,nizovi,"6.2d, Output Formatting, H",formatting with indentation; not that
 11048,Fetching from uHunt,"6.2e, String Comparison",flexible string comparison with respect to a dictionary,,0.0,false
 11056,Fetching from uHunt,"6.2e, String Comparison",sorting; case-insensitive string comparison,,0.0,false
 11734,Fetching from uHunt,"6.2e, String Comparison",custom comparison,,0.0,false
-lc0014,to replace with LeetCode link soon...,"6.2e, String Comparison",complete search; try each prefix; see if it all strings start with it; top-interview-150,0,2.0,false
+lc0014,to replace with LeetCode link soon...,"6.2e, String Comparison",complete search; try each prefix; see if it all strings start with it; top-interview-150,0,2.0,true
 phonelist,phonelist,"6.2e, String Comparison",sort the numbers; see if num i is a prefix of num i+1,1955,4.3,false
 rhyming,rhyming,"6.2e, String Comparison",compare suffix of a common word with the list of other given words,296,2.5,false
 smartphone,smartphone,"6.2e, String Comparison",compare prefix so far with the target string and the 3 suggestions; output 1 of 4 options with shortest number of keypre...,354,2.6,false
@@ -1064,7 +1064,7 @@ stringfactoring,stringfactoring,"6.3b, DP String, Non Classic",s: the min weight
 01449,Fetching from uHunt,"6.4a, String Matching",LA 4670 - Hefei09; just use strstr; Suffix Array will get TLE as there are too many long strings to be processed,,0.0,false
 11837,Fetching from uHunt,"6.4a, String Matching",transform the input of X notes into X-1 distances; then apply KMP,,0.0,false
 geneticsearch,geneticsearch,"6.4a, String Matching",multiple string matchings,346,2.1,false
-lc0028,to replace with LeetCode link soon...,"6.4a, String Matching",simple string matching; programming-skills; top-interview-150,0,2.0,false
+lc0028,to replace with LeetCode link soon...,"6.4a, String Matching",simple string matching; programming-skills; top-interview-150,0,2.0,true
 powerstrings,powerstrings,"6.4a, String Matching",find s in s+s; similar with UVa 00455; also available at UVa 10298 - Power Strings,451,5.2,false
 quiteaproblem,quiteaproblem,"6.4a, String Matching",trivial string matching per line,1212,2.1,false
 scrollingsign,scrollingsign,"6.4a, String Matching",modified string matching; complete search; also available at UVa 11576 - Scrolling Sign,238,3.1,false
@@ -1096,20 +1096,20 @@ stringmatching,stringmatching,"6.6a, String Hashing",try Rabin-Karp or KMP,719,4
 00195,Fetching from uHunt,"6.7a, Anagram",use algorithm::next_permutation,,0.0,false
 12641,Fetching from uHunt,"6.7a, Anagram",anagram problem variation,,0.0,false
 12770,Fetching from uHunt,"6.7a, Anagram",count frequencies; print odd frequency characters with except the last one -- put it in the middle of a palindrome,,0.0,false
-lc0242,to replace with LeetCode link soon...,"6.7a, Anagram",sort s and t; compare; programming-skills; top-interview-150,0,2.0,false
+lc0242,to replace with LeetCode link soon...,"6.7a, Anagram",sort s and t; compare; programming-skills; top-interview-150,0,2.0,true
 multigram,multigram,"6.7a, Anagram",brute force lengths that is divisor of the original length of the string; test,221,2.8,false
 00401,Fetching from uHunt,"6.7b, Palindrome (Checking)",simple palindrome check,,0.0,false
 10848,Fetching from uHunt,"6.7b, Palindrome (Checking)","related to UVa 10453; palindrome check, character frequency check, and a few others",,0.0,false
 11888,Fetching from uHunt,"6.7b, Palindrome (Checking)","let ss = s+s; find reverse(s) in ss, but it cannot match the first n chars or the last n chars of ss",,0.0,false
 kaleidoscopicpalindromes,kaleidoscopicpalindromes,"6.7b, Palindrome (Checking)","test all; when you try enlarging k, the answers are actually 'small'",233,3.2,false
-lc0647,to replace with LeetCode link soon...,"6.7b, Palindrome (Checking)","complete search all substrings plus DP isPalindrome(l, r) speedup",0,4.0,false
+lc0647,to replace with LeetCode link soon...,"6.7b, Palindrome (Checking)","complete search all substrings plus DP isPalindrome(l, r) speedup",0,4.0,true
 palindromesubstring,palindromesubstring,"6.7b, Palindrome (Checking)",try all pairs of O(n^2) substrings with at least 2 characters; keep the ones that are palindrome (use DP) in a sorted se...,298,4.2,false
 peragrams,peragrams,"6.7b, Palindrome (Checking)",only one odd frequency character can be in the center of palindrome once; the rest need to have even frequency,1692,1.7,false
 01239,Fetching from uHunt,"6.7c, Palindrome (Generating)",LA 4144 - Jakarta08; as S <= 1000; brute-force is enough; consider odd and even length palindromes,,0.0,false
 10018,Fetching from uHunt,"6.7c, Palindrome (Generating)",generating palindrome with specific math simulation; very easy,,0.0,false
 12718,Fetching from uHunt,"6.7c, Palindrome (Generating)",LA 6659 - Dhaka13; try all substrings; count character frequencies in them and analyze,,0.0,false
 evilstraw,evilstraw,"6.7c, Palindrome (Generating)","greedily match leftmost char s[0]/rightmost char s[n-1] with rightmost/leftmost matching s[i], respectively",137,3.8,false
-lc0409,to replace with LeetCode link soon...,"6.7c, Palindrome (Generating)",count character frequencies; even cases are easy; odd cases need a small observation,0,2.0,false
+lc0409,to replace with LeetCode link soon...,"6.7c, Palindrome (Generating)",count character frequencies; even cases are easy; odd cases need a small observation,0,2.0,true
 names,names,"6.7c, Palindrome (Generating)",add a letter or change a letter; complete search,368,4.0,false
 01595,Fetching from uHunt,"7.2a, Points",use set to record the positions of all sorted points; check half of the points if the symmetries are in the set too?,,0.0,false
 11894,Fetching from uHunt,"7.2a, Points",about rotating and translating points,,0.0,false
@@ -1255,14 +1255,14 @@ socialadvertising,socialadvertising,"8.6a, NP-hard/C, small, E",MIN-DOMINATING-S
 12911,Fetching from uHunt,"8.6b, NP-hard/C, small, H",SUBSET-SUM; we cannot use DP as 1 ≤ N ≤ 40 and -10^9 ≤ T ≤ 10^9; use meet in the middle,,0.0,false
 beanbag,beanbag,"8.6b, NP-hard/C, small, H",SET-COVER problem; T farmers can collude to give Jack the hardest possible subset of beans to be given freely to Jack,119,4.9,false
 busplanning,busplanning,"8.6b, NP-hard/C, small, H",MIN-CLIQUE-COVER; DP bitmask over sets,91,5.4,false
-lc0015,to replace with LeetCode link soon...,"8.6b, NP-hard/C, small, H",one possible way is to hash all numbers and try all-pairs; avoid duplicates; top-100-liked; top-interview-150,0,4.0,false
+lc0015,to replace with LeetCode link soon...,"8.6b, NP-hard/C, small, H",one possible way is to hash all numbers and try all-pairs; avoid duplicates; top-100-liked; top-interview-150,0,4.0,true
 programmingteamselection,programmingteamselection,"8.6b, NP-hard/C, small, H",PARTITION-INTO-TRIANGLES; prune if #students % 3 != 0; generate up to m/3 teams; backtracking with memo,64,7.2,false
 01347,Fetching from uHunt,"8.6c, NP-hard/C, special, E",LA 3305 - SoutheasternEurope05; this is the pure version of Bitonic TSP problem; you may want to start from here,,0.0,false
 10859,Fetching from uHunt,"8.6c, NP-hard/C, special, E",Min-Vertex-Cover; on several trees; maximize number of edges with its two endpoints covered,,0.0,false
 11159,Fetching from uHunt,"8.6c, NP-hard/C, special, E",MAX-INDEPENDENT-SET; on Bipartite Graph; ans equals to its MCBM,,0.0,false
 bilateral,bilateral,"8.6c, NP-hard/C, special, E",MIN-VERTEX-COVER on Bipartite Graph; MCBM; Konig's theorem that can handle the 1009 case correctly,43,6.5,false
 europeantrip,europeantrip,"8.6c, NP-hard/C, special, E",STEINER-TREE with 3 terminal vertices and up to 1 Steiner point; we can use two ternary searches,297,3.3,false
-lc0198,to replace with LeetCode link soon...,"8.6c, NP-hard/C, special, E",MWIS; on line graph; simple DP; leetcode-75; top-100-liked; top-interview-150,0,4.0,false
+lc0198,to replace with LeetCode link soon...,"8.6c, NP-hard/C, special, E",MWIS; on line graph; simple DP; leetcode-75; top-100-liked; top-interview-150,0,4.0,true
 reactivity,reactivity,"8.6c, NP-hard/C, special, E",verify if a HAMILTONIAN-PATH exists in the DAG; find one topological sort of the DAG; verify if it is the only one in li...,280,4.0,false
 01086,Fetching from uHunt,"8.6d, NP-hard/C, special, H",LA 4452 - WorldFinals Stockholm09; can be modeled as a 2-SAT problem,,0.0,false
 01096,Fetching from uHunt,"8.6d, NP-hard/C, special, H",LA 4791 - WorldFinals Harbin10; Bitonic TSP variant; print the actual path,,0.0,false
@@ -1308,7 +1308,7 @@ lc0149,to replace with LeetCode link soon...,"8.7e, Geometry+CS",identical with 
 12322,Fetching from uHunt,"8.7f, Geometry+Other",first; use atan2 to convert angles to 1D intervals; then sort it and use a greedy scan to get the answer,,0.0,false
 findinglines,findinglines,"8.7f, Geometry+Other",randomly pick two points; there is a good chance that 20% or more points are on that line defined by those two points,209,6.3,false
 humancannonball,humancannonball,"8.7f, Geometry+Other",build the travel time graph with Euclidean distance computations; use Floyd-Warshall,757,2.2,false
-lc0976,to replace with LeetCode link soon...,"8.7f, Geometry+Other",sort nums in non-increasing order; do triangle inequality checks; programming-skills,0,2.0,false
+lc0976,to replace with LeetCode link soon...,"8.7f, Geometry+Other",sort nums in non-increasing order; do triangle inequality checks; programming-skills,0,2.0,true
 walkway,walkway,"8.7f, Geometry+Other",we can build the graph and compute area of trapezoid using simple geometry; SSSP on weighted graph; Dijkstra's,190,3.4,false
 00393,Fetching from uHunt,"8.7g, Graph+Other",build the small visibility graph with line segment intersection checks; run Floyd-Warshall routine to get the answer,,0.0,false
 01092,Fetching from uHunt,"8.7g, Graph+Other",LA 4787 - WorldFinals Harbin10; compress graph; traversal from exit with S/W direction; inclusion-exclusion,,0.0,false
@@ -1420,7 +1420,7 @@ ragingriver,ragingriver,"9.minc, Min Cost (Max) Flow",MCMF; unit capacity and un
 00120,Fetching from uHunt,"9.panc, Pancake Sorting",greedy pancake sorting,,0.0,false
 lc0969,to replace with LeetCode link soon...,"9.panc, Pancake Sorting","the easier form of Pancake Sorting; flip largest to top (index 1), then to target; at most 2*n flips",0,4.0,false
 11476,Fetching from uHunt,"9.poll, Pollard's rho",basic integer factorization problem that requires Pollard's rho algorithm,,0.0,false
-lc0169,to replace with LeetCode link soon...,"9.rand, Randomized Algo","try a random number and see if it is the majority element, repeat; top-100-liked; top-interview-150",0,2.0,false
+lc0169,to replace with LeetCode link soon...,"9.rand, Randomized Algo","try a random number and see if it is the majority element, repeat; top-100-liked; top-interview-150",0,2.0,true
 lc0398,to replace with LeetCode link soon...,"9.rand, Randomized Algo",separate chaining; record indices of each value; randomly return a valid index,0,4.0,false
 lc0519,to replace with LeetCode link soon...,"9.rand, Randomized Algo","randomly pick (r, c) inside the grid; repeat if it has been taken",0,4.0,false
 cardboardcontainer,cardboardcontainer,"9.sqrt, Square Root Decomp","two out of L, W, and H  must be ≤ sqrt(V); brute force L and W in sqrt(V)*sqrt(V) and test if V is divisible by (L*W)",141,2.5,false
