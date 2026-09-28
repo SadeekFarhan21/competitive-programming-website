@@ -189,7 +189,7 @@ export default function HalimBookTable({ problems }: { problems: HalimBookProble
   const [visible, setVisible] = useState(PAGE_SIZE);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const [ready, setReady] = useState(false);
-  const [hideHints, setHideHints] = usePreference("halim-book:blurHints", true);
+  const [hideHints, setHideHints] = usePreference("halim-book:hideHints", true);
   const [hideSections, setHideSections] = usePreference("halim-book:hideSections", false);
   const [showDacu, setShowDacu] = usePreference("halim-book:showDacu", false);
   const searchRef = useRef<HTMLInputElement>(null);
@@ -569,9 +569,9 @@ export default function HalimBookTable({ problems }: { problems: HalimBookProble
             <table className="w-full table-fixed text-left text-sm">
               <colgroup>
                 <col className="w-28" />
-                <col className="w-[24%]" />
-                {!hideSections && <col className="w-[24%]" />}
                 <col />
+                {!hideSections && <col className="w-[24%]" />}
+                <col className="w-44" />
                 {showDacu && <col className="w-20" />}
                 <col className="w-16" />
                 <col className="w-20" />

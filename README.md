@@ -139,6 +139,7 @@ accepts a `full` input for a one-time backfill of the whole history.
 - `lib/config.ts` — handles and identity read from environment variables
 - `lib/leetcode.ts` — authenticated/public LeetCode GraphQL client
 - `scripts/refresh-data.mjs` — platform data refresh script
+- `data/leetcode-problems.csv` — local LeetCode number, canonical title, and URL catalog used by the Halim and YouKn0wWho generators
 - `data/submissions.json` — bundled submission history
 - `data/halim-book.json`, `data/halim-book.csv` — Halim book problem list
 - `data/youkn0wwho-problems.js`, `data/youkn0wwho-topics.js` — topic list sources from [the-ultimate-topic-list](https://github.com/ShahjalalShohag/the-ultimate-topic-list); `data/youkn0wwho.json` is generated from them

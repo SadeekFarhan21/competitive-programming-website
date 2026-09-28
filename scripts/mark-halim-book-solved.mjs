@@ -9,7 +9,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import { canonicalLeetCodeId, leetcodeTitleMap } from "./halim-book-matching.mjs";
+import { loadLeetCodeCatalog } from "./leetcode-catalog.mjs";
 
 const DATA = path.join(import.meta.dirname, "..", "data");
 const read = (file) => JSON.parse(fs.readFileSync(path.join(DATA, file), "utf8"));
@@ -18,6 +18,7 @@ const norm = (value) => String(value).normalize("NFKC").trim().toLowerCase();
 
 const submissions = read("submissions.json");
 const starred = read("halim-book.json");
+const leetcodeCatalog = loadLeetCodeCatalog();
 
 const accepted = (platform) => submissions.filter((s) => s.platform === platform && s.ac);
 
@@ -26,15 +27,6 @@ const uvaSolved = new Set(
 );
 
 const leetcodeSolvedTitles = new Set(accepted("LeetCode").map((s) => norm(s.problem)));
-let leetcodeTitleById = null;
-try {
-  const res = await fetch("https://leetcode.com/api/problems/all/", { headers: { "User-Agent": "Mozilla/5.0" } });
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const payload = await res.json();
-  leetcodeTitleById = leetcodeTitleMap(payload);
-} catch (error) {
-  console.warn(`LeetCode problem list unavailable (${error.message}) — keeping previous LeetCode flags`);
-}
 
 const KATTIS_CACHE = path.join(DATA, "kattis-titles.json");
 const kattisTitles = fs.existsSync(KATTIS_CACHE) ? read("kattis-titles.json") : {};
@@ -65,10 +57,12 @@ for (const problem of starred) {
   let solved = problem.solved ?? false;
   if (problem.judge === "UVa") {
     solved = uvaSolved.has(Number(problem.id));
-  } else if (problem.judge === "LeetCode" && leetcodeTitleById) {
-    // CPBook zero-pads ids (lc0001), while LeetCode returns numeric ids (1).
-    const title = leetcodeTitleById.get(canonicalLeetCodeId(problem.id));
-    solved = title != null && leetcodeSolvedTitles.has(norm(title));
+  } else if (problem.judge === "LeetCode") {
+    const catalogProblem = leetcodeCatalog.resolve(problem);
+    if (!catalogProblem) throw new Error(`LeetCode catalog is missing Halim problem ${problem.id}`);
+    problem.title = catalogProblem.title;
+    problem.url = catalogProblem.url;
+    solved = leetcodeSolvedTitles.has(norm(catalogProblem.title));
   } else if (problem.judge === "Kattis") {
     const title = kattisTitles[problem.id];
     solved = kattisSolvedTitles.has(norm(problem.id)) || (title != null && kattisSolvedTitles.has(norm(title)));
@@ -77,8 +71,8 @@ for (const problem of starred) {
 }
 fs.writeFileSync(path.join(DATA, "halim-book.json"), JSON.stringify(starred, null, 2) + "\n");
 
-// halim-book.csv keeps its original layout (one row per halim-book.json entry, same
-// order); only a trailing Solved column is added or updated.
+// halim-book.csv keeps one row per halim-book.json entry in the same order. Keep
+// its display title, URL, and solved status synchronized with the JSON data.
 function parseCsv(textValue) {
   const rows = [];
   let row = [], field = "", quoted = false;
@@ -103,9 +97,14 @@ const [header, ...body] = parseCsv(fs.readFileSync(csvPath, "utf8"));
 if (body.length !== starred.length) throw new Error(`halim-book.csv has ${body.length} rows, halim-book.json has ${starred.length}`);
 let solvedIndex = header.indexOf("Solved");
 if (solvedIndex < 0) solvedIndex = header.push("Solved") - 1;
+const titleIndex = header.indexOf("Problem Title");
+let urlIndex = header.indexOf("URL");
+if (urlIndex < 0) urlIndex = header.push("URL") - 1;
 body.forEach((row, i) => {
   if (row[0] !== starred[i].id) throw new Error(`halim-book.csv row ${i + 2} (${row[0]}) does not match halim-book.json (${starred[i].id})`);
+  if (starred[i].judge === "LeetCode" && titleIndex >= 0) row[titleIndex] = starred[i].title ?? row[titleIndex];
   row[solvedIndex] = String(starred[i].solved);
+  row[urlIndex] = starred[i].url ?? "";
 });
 fs.writeFileSync(csvPath, [header, ...body].map((row) => row.map(escapeCsv).join(",")).join("\n") + "\n");
 

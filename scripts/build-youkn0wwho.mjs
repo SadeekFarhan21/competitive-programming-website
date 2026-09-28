@@ -11,6 +11,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import { loadLeetCodeCatalog } from "./leetcode-catalog.mjs";
 import { isCodeforcesGym } from "./youkn0wwho-judge.mjs";
 
 const DATA = path.join(import.meta.dirname, "..", "data");
@@ -21,6 +22,7 @@ const { topicListProblems, topicInfo } = await import("../data/youkn0wwho-proble
 const { topicList } = await import("../data/youkn0wwho-topics.js");
 const submissions = read("submissions.json");
 const kattisTitles = fs.existsSync(path.join(DATA, "kattis-titles.json")) ? read("kattis-titles.json") : {};
+const leetcodeCatalog = loadLeetCodeCatalog();
 
 // ---------- topics, in the order the list presents them ----------
 const topics = {};
@@ -118,18 +120,27 @@ const problems = Object.values(topicListProblems)
   .filter((p) => p.problem_id && p.problem_url && !/^(dfdf|dsf|dsfdsf|sdff|sdfsdf|sdsd|sdsdsds|wer|wewew|k|asas|msk)_/.test(p.problem_id))
   .map((p) => {
     const judge = judgeOf(p.problem_id, p.problem_url);
+    const catalogProblem = judge === "LeetCode"
+      ? leetcodeCatalog.resolve({ id: p.problem_id, title: p.problem_title, url: p.problem_url })
+      : null;
+    if (judge === "LeetCode" && !catalogProblem) {
+      throw new Error(`LeetCode catalog is missing YouKn0wWho problem ${p.problem_id}`);
+    }
+    const mappedProblem = catalogProblem
+      ? { ...p, problem_title: catalogProblem.title, problem_url: catalogProblem.url }
+      : p;
     const known = (p.topics ?? []).filter((t) => topics[t]);
     const primary = known.length ? known.reduce((a, b) => (topics[a].order <= topics[b].order ? a : b)) : "uncategorized";
     return {
       id: p.problem_id,
       judge,
-      title: (p.problem_title ?? p.problem_id).trim(),
-      url: p.problem_url,
+      title: (mappedProblem.problem_title ?? p.problem_id).trim(),
+      url: mappedProblem.problem_url,
       difficulty: difficultyOf(p.difficulty),
       starred: p.is_starred === true,
       topic: primary,
       topics: known.length ? known : ["uncategorized"],
-      solved: isSolved(p, judge),
+      solved: isSolved(mappedProblem, judge),
     };
   });
 
