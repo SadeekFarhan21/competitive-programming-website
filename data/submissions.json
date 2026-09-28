@@ -25538,7 +25538,6 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 46,
     "memoryBytes": 0
-<<<<<<< HEAD
   },
   {
     "platform": "Codeforces",
@@ -25549,7 +25548,5 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 234,
     "memoryBytes": 0
-=======
->>>>>>> 8354548631c57dbd234f1615ab7db306cf5dff4d
   }
 ]
