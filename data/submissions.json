@@ -4051,6 +4051,17 @@
     "memoryBytes": null
   },
   {
+    "platform": "CSES",
+    "problemId": "1621",
+    "epoch": 1663110863,
+    "problem": "Distinct Numbers",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
     "platform": "CodeChef",
     "epoch": 1663146720,
     "problem": "SMPAIR",
@@ -4198,7 +4209,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1640"
   },
   {
     "platform": "Codeforces",
@@ -4787,7 +4799,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1640"
   },
   {
     "platform": "Codeforces",
@@ -4953,7 +4966,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1094"
   },
   {
     "platform": "CSES",
@@ -4963,7 +4977,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1094"
   },
   {
     "platform": "CSES",
@@ -4973,7 +4988,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1094"
   },
   {
     "platform": "Codeforces",
@@ -6423,6 +6439,17 @@
     "language": "cpp",
     "runtimeMs": 35,
     "memoryBytes": 27367834
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1646",
+    "epoch": 1672712404,
+    "problem": "Static Range Sum Queries",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   },
   {
     "platform": "Codeforces",
@@ -8428,7 +8455,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1640"
   },
   {
     "platform": "CSES",
@@ -8438,7 +8466,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1640"
   },
   {
     "platform": "CSES",
@@ -8448,7 +8477,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1640"
   },
   {
     "id": "1085591308",
@@ -9293,6 +9323,17 @@
     "memoryBytes": 10905190
   },
   {
+    "platform": "CSES",
+    "problemId": "1650",
+    "epoch": 1699391914,
+    "problem": "Range Xor Queries",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
     "id": "1093932300",
     "platform": "LeetCode",
     "epoch": 1699392280,
@@ -9333,7 +9374,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1661"
   },
   {
     "platform": "CSES",
@@ -9343,7 +9385,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1660"
   },
   {
     "id": "1093984066",
@@ -9949,7 +9992,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1068"
   },
   {
     "platform": "CSES",
@@ -9959,7 +10003,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1068"
   },
   {
     "platform": "CSES",
@@ -9969,7 +10014,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1068"
   },
   {
     "platform": "CSES",
@@ -9979,7 +10025,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1068"
   },
   {
     "platform": "CSES",
@@ -9989,7 +10036,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1068"
   },
   {
     "platform": "CSES",
@@ -9999,7 +10047,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1083"
   },
   {
     "platform": "CSES",
@@ -10009,7 +10058,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1069"
   },
   {
     "platform": "CSES",
@@ -10019,7 +10069,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1069"
   },
   {
     "platform": "CSES",
@@ -10029,7 +10080,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1070"
   },
   {
     "platform": "CSES",
@@ -10039,7 +10091,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1070"
   },
   {
     "platform": "CSES",
@@ -10049,7 +10102,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1084"
   },
   {
     "id": "1099093748",
@@ -10534,6 +10588,28 @@
     "language": "cpp",
     "runtimeMs": 8,
     "memoryBytes": 13526630
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1722",
+    "epoch": 1700708113,
+    "problem": "Fibonacci Numbers",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1722",
+    "epoch": 1700708295,
+    "problem": "Fibonacci Numbers",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   },
   {
     "platform": "Codeforces",
@@ -12115,7 +12191,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1094"
   },
   {
     "platform": "Codeforces",
@@ -12313,7 +12390,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1091"
   },
   {
     "platform": "CSES",
@@ -12323,7 +12401,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1091"
   },
   {
     "platform": "CSES",
@@ -12333,7 +12412,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1091"
   },
   {
     "platform": "CSES",
@@ -12343,7 +12423,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1091"
   },
   {
     "platform": "Codeforces",
@@ -12443,7 +12524,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1640"
   },
   {
     "platform": "CSES",
@@ -12453,7 +12535,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1640"
   },
   {
     "platform": "CSES",
@@ -12463,7 +12546,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1640"
   },
   {
     "platform": "CSES",
@@ -12473,7 +12557,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1640"
   },
   {
     "platform": "CSES",
@@ -12483,7 +12568,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1640"
   },
   {
     "platform": "CSES",
@@ -12493,7 +12579,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1640"
   },
   {
     "platform": "CSES",
@@ -12503,7 +12590,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1643"
   },
   {
     "platform": "CSES",
@@ -12513,7 +12601,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1643"
   },
   {
     "platform": "CSES",
@@ -12523,7 +12612,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1643"
   },
   {
     "platform": "CSES",
@@ -12533,7 +12623,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1643"
   },
   {
     "platform": "CSES",
@@ -12543,7 +12634,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1643"
   },
   {
     "id": "1122184131",
@@ -12879,6 +12971,17 @@
     "memoryBytes": null
   },
   {
+    "platform": "CSES",
+    "problemId": "1622",
+    "epoch": 1703190979,
+    "problem": "Creating Strings",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
     "platform": "Codeforces",
     "epoch": 1703191301,
     "problem": "279B - Books",
@@ -12906,7 +13009,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1071"
   },
   {
     "platform": "CSES",
@@ -12916,12 +13020,36 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1071"
   },
   {
     "platform": "CSES",
     "epoch": 1703277606,
     "problem": "Counting Divisors",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null,
+    "problemId": "1713"
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1082",
+    "epoch": 1703278614,
+    "problem": "Sum of Divisors",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1082",
+    "epoch": 1703278741,
+    "problem": "Sum of Divisors",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
@@ -13038,7 +13166,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "2182"
   },
   {
     "platform": "CSES",
@@ -13048,7 +13177,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1631"
   },
   {
     "id": "1138695574",
@@ -13895,7 +14025,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1643"
   },
   {
     "platform": "CSES",
@@ -13905,7 +14036,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1643"
   },
   {
     "platform": "CSES",
@@ -13915,7 +14047,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1652"
   },
   {
     "platform": "CSES",
@@ -13925,7 +14058,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1652"
   },
   {
     "id": "1167794112",
@@ -14094,7 +14228,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1643"
   },
   {
     "platform": "CSES",
@@ -14104,7 +14239,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1643"
   },
   {
     "platform": "CSES",
@@ -14114,7 +14250,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1074"
   },
   {
     "id": "1172776424",
@@ -14511,7 +14648,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1072"
   },
   {
     "platform": "CSES",
@@ -14521,7 +14659,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1072"
   },
   {
     "platform": "Codeforces",
@@ -14680,6 +14819,17 @@
     "memoryBytes": 2457600
   },
   {
+    "platform": "CSES",
+    "problemId": "1674",
+    "epoch": 1711855640,
+    "problem": "Subordinates",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
     "id": "1219168652",
     "platform": "LeetCode",
     "epoch": 1711887950,
@@ -14731,7 +14881,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1092"
   },
   {
     "platform": "CSES",
@@ -14741,7 +14892,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1092"
   },
   {
     "platform": "CSES",
@@ -14751,7 +14903,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1092"
   },
   {
     "platform": "CSES",
@@ -14761,7 +14914,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1617"
   },
   {
     "platform": "CSES",
@@ -14771,7 +14925,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1618"
   },
   {
     "platform": "CSES",
@@ -14781,7 +14936,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1754"
   },
   {
     "platform": "CSES",
@@ -14791,7 +14947,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1755"
   },
   {
     "platform": "CSES",
@@ -14801,7 +14958,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1755"
   },
   {
     "platform": "CSES",
@@ -14811,12 +14969,25 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1755"
   },
   {
     "platform": "CSES",
     "epoch": 1711897699,
     "problem": "Palindrome Reorder",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null,
+    "problemId": "1755"
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1095",
+    "epoch": 1711898331,
+    "problem": "Exponentiation",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
@@ -14831,7 +15002,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1712"
   },
   {
     "platform": "AtCoder",
@@ -14911,6 +15083,28 @@
     "ac": true,
     "language": "C++ 20 (gcc 12.2)",
     "runtimeMs": 1,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1621",
+    "epoch": 1712019624,
+    "problem": "Distinct Numbers",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1621",
+    "epoch": 1712019738,
+    "problem": "Distinct Numbers",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
     "memoryBytes": null
   },
   {
@@ -15142,13 +15336,36 @@
   },
   {
     "platform": "CSES",
+    "problemId": "1633",
+    "epoch": 1715099337,
+    "problem": "Dice Combinations",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1633",
+    "epoch": 1715099384,
+    "problem": "Dice Combinations",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
     "epoch": 1715100182,
     "problem": "Minimizing Coins",
     "verdict": "REJECTED",
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1634"
   },
   {
     "platform": "CSES",
@@ -15158,7 +15375,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1634"
   },
   {
     "platform": "CSES",
@@ -15168,7 +15386,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1635"
   },
   {
     "id": "1280047226",
@@ -15360,6 +15579,28 @@
     "memoryBytes": 0
   },
   {
+    "platform": "CSES",
+    "problemId": "1646",
+    "epoch": 1717950500,
+    "problem": "Static Range Sum Queries",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1646",
+    "epoch": 1717950536,
+    "problem": "Static Range Sum Queries",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
     "id": "1283243191",
     "platform": "LeetCode",
     "epoch": 1717972029,
@@ -15411,7 +15652,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1682"
   },
   {
     "platform": "CSES",
@@ -15421,7 +15663,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1682"
   },
   {
     "platform": "CSES",
@@ -15431,7 +15674,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1630"
   },
   {
     "platform": "CSES",
@@ -15441,7 +15685,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1630"
   },
   {
     "platform": "SPOJ",
@@ -15926,7 +16171,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1091"
   },
   {
     "platform": "CSES",
@@ -15936,7 +16182,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1163"
   },
   {
     "platform": "Codeforces",
@@ -16047,6 +16294,17 @@
     "language": "C++20 (GCC 13-64)",
     "runtimeMs": 31,
     "memoryBytes": 0
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1621",
+    "epoch": 1728776884,
+    "problem": "Distinct Numbers",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   },
   {
     "platform": "Codeforces",
@@ -16205,6 +16463,39 @@
     "problem": "CHAPD",
     "verdict": "WRONG ANSWER",
     "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1666",
+    "epoch": 1732462150,
+    "problem": "Building Roads",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1192",
+    "epoch": 1732462694,
+    "problem": "Counting Rooms",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1192",
+    "epoch": 1732462930,
+    "problem": "Counting Rooms",
+    "verdict": "ACCEPTED",
+    "ac": true,
     "language": "C++",
     "runtimeMs": null,
     "memoryBytes": null
@@ -16400,7 +16691,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1671"
   },
   {
     "platform": "CSES",
@@ -16410,7 +16702,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1671"
   },
   {
     "platform": "CSES",
@@ -16420,7 +16713,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1671"
   },
   {
     "platform": "Codeforces",
@@ -16564,6 +16858,39 @@
     "memoryBytes": 0
   },
   {
+    "platform": "CSES",
+    "problemId": "1666",
+    "epoch": 1732909559,
+    "problem": "Building Roads",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1666",
+    "epoch": 1732909598,
+    "problem": "Building Roads",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1192",
+    "epoch": 1732911448,
+    "problem": "Counting Rooms",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
     "platform": "CodeChef",
     "epoch": 1732918800,
     "problem": "DISTELE",
@@ -16581,7 +16908,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1672"
   },
   {
     "platform": "CSES",
@@ -16591,7 +16919,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1672"
   },
   {
     "platform": "CSES",
@@ -16601,7 +16930,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1672"
   },
   {
     "platform": "CSES",
@@ -16611,7 +16941,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1672"
   },
   {
     "platform": "CSES",
@@ -16621,7 +16952,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1672"
   },
   {
     "platform": "CSES",
@@ -16631,7 +16963,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1672"
   },
   {
     "platform": "CSES",
@@ -16641,7 +16974,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1672"
   },
   {
     "platform": "Codeforces",
@@ -16705,13 +17039,47 @@
   },
   {
     "platform": "CSES",
+    "problemId": "1675",
+    "epoch": 1732995904,
+    "problem": "Road Reparation",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1675",
+    "epoch": 1732995927,
+    "problem": "Road Reparation",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1675",
+    "epoch": 1732996023,
+    "problem": "Road Reparation",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
     "epoch": 1733065589,
     "problem": "Coin Combinations II",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1636"
   },
   {
     "platform": "CSES",
@@ -16721,7 +17089,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1637"
   },
   {
     "platform": "CSES",
@@ -16731,12 +17100,25 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "2205"
   },
   {
     "platform": "CSES",
     "epoch": 1734393813,
     "problem": "Apple Division",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null,
+    "problemId": "1623"
+  },
+  {
+    "platform": "CSES",
+    "problemId": "2431",
+    "epoch": 1734394016,
+    "problem": "Digit Queries",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
@@ -17083,13 +17465,25 @@
   },
   {
     "platform": "CSES",
+    "problemId": "1666",
+    "epoch": 1739855970,
+    "problem": "Building Roads",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
     "epoch": 1739856514,
     "problem": "Subarray Sums I",
     "verdict": "REJECTED",
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1660"
   },
   {
     "platform": "CSES",
@@ -17099,7 +17493,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1660"
   },
   {
     "platform": "AtCoder",
@@ -17508,7 +17903,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1661"
   },
   {
     "platform": "Codeforces",
@@ -17560,7 +17956,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1652"
   },
   {
     "platform": "Codeforces",
@@ -18662,6 +19059,28 @@
     "memoryBytes": 0
   },
   {
+    "platform": "CSES",
+    "problemId": "1727",
+    "epoch": 1764450759,
+    "problem": "Candy Lottery",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1727",
+    "epoch": 1764451156,
+    "problem": "Candy Lottery",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
     "id": "1848039424",
     "platform": "LeetCode",
     "epoch": 1764994495,
@@ -19320,7 +19739,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1638"
   },
   {
     "platform": "CSES",
@@ -19330,7 +19750,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1638"
   },
   {
     "platform": "CSES",
@@ -19340,7 +19761,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1638"
   },
   {
     "platform": "CSES",
@@ -19350,7 +19772,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1638"
   },
   {
     "platform": "CSES",
@@ -19360,7 +19783,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1158"
   },
   {
     "platform": "CSES",
@@ -19370,7 +19794,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1158"
   },
   {
     "platform": "CSES",
@@ -19380,7 +19805,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "3403"
   },
   {
     "platform": "AtCoder",
@@ -19400,7 +19826,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1639"
   },
   {
     "platform": "CSES",
@@ -19410,7 +19837,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1634"
   },
   {
     "platform": "CodeChef",
@@ -20771,7 +21199,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1676"
   },
   {
     "platform": "CSES",
@@ -20781,7 +21210,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1676"
   },
   {
     "id": "1865186991",
@@ -20886,7 +21316,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1667"
   },
   {
     "platform": "CSES",
@@ -20896,7 +21327,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1679"
   },
   {
     "platform": "CSES",
@@ -20906,7 +21338,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1679"
   },
   {
     "platform": "CSES",
@@ -20916,7 +21349,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1679"
   },
   {
     "platform": "CSES",
@@ -20926,7 +21360,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1668"
   },
   {
     "platform": "CSES",
@@ -20936,7 +21371,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1668"
   },
   {
     "platform": "CSES",
@@ -20946,7 +21382,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1145"
   },
   {
     "platform": "Codeforces",
@@ -22067,6 +22504,17 @@
     "memoryBytes": 30924800
   },
   {
+    "platform": "CSES",
+    "problemId": "3359",
+    "epoch": 1783715150,
+    "problem": "Minimal Grid Path",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
     "platform": "AtCoder",
     "epoch": 1783751239,
     "problem": "dp_h",
@@ -22166,7 +22614,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1634"
   },
   {
     "platform": "CSES",
@@ -22176,7 +22625,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1634"
   },
   {
     "platform": "CSES",
@@ -22186,7 +22636,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1634"
   },
   {
     "platform": "CSES",
@@ -22196,7 +22647,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1634"
   },
   {
     "platform": "AtCoder",
@@ -22216,7 +22668,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1145"
   },
   {
     "platform": "CSES",
@@ -22226,7 +22679,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1145"
   },
   {
     "id": "2070333556",
@@ -22311,13 +22765,25 @@
   },
   {
     "platform": "CSES",
+    "problemId": "1633",
+    "epoch": 1784645306,
+    "problem": "Dice Combinations",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
     "epoch": 1784647290,
     "problem": "Towers",
     "verdict": "REJECTED",
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1073"
   },
   {
     "id": "2076557468",
@@ -22332,13 +22798,58 @@
   },
   {
     "platform": "CSES",
+    "problemId": "1192",
+    "epoch": 1784715634,
+    "problem": "Counting Rooms",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1666",
+    "epoch": 1784717165,
+    "problem": "Building Roads",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1666",
+    "epoch": 1784749945,
+    "problem": "Building Roads",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1681",
+    "epoch": 1784781125,
+    "problem": "Game Routes",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
     "epoch": 1784784343,
     "problem": "Monsters",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1194"
   },
   {
     "platform": "CSES",
@@ -22348,7 +22859,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1671"
   },
   {
     "platform": "CSES",
@@ -22358,7 +22870,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1671"
   },
   {
     "platform": "CSES",
@@ -22368,7 +22881,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1671"
   },
   {
     "platform": "CSES",
@@ -22378,7 +22892,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1671"
   },
   {
     "platform": "CSES",
@@ -22388,7 +22903,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1671"
   },
   {
     "platform": "CSES",
@@ -22398,7 +22914,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1672"
   },
   {
     "platform": "CSES",
@@ -22408,7 +22925,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1672"
   },
   {
     "platform": "CSES",
@@ -22418,7 +22936,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1672"
   },
   {
     "platform": "CSES",
@@ -22428,7 +22947,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1669"
   },
   {
     "platform": "CSES",
@@ -22438,12 +22958,25 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1669"
   },
   {
     "platform": "CSES",
     "epoch": 1784837138,
     "problem": "Round Trip",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null,
+    "problemId": "1669"
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1757",
+    "epoch": 1784873286,
+    "problem": "Course Schedule II",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
@@ -22458,7 +22991,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1195"
   },
   {
     "platform": "CSES",
@@ -22468,7 +23002,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1673"
   },
   {
     "platform": "CSES",
@@ -22478,12 +23013,36 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1197"
   },
   {
     "platform": "CSES",
     "epoch": 1784920437,
     "problem": "Cycle Finding",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null,
+    "problemId": "1197"
+  },
+  {
+    "platform": "CSES",
+    "problemId": "3220",
+    "epoch": 1785301813,
+    "problem": "Sliding Window Sum",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "3220",
+    "epoch": 1785301858,
+    "problem": "Sliding Window Sum",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
@@ -22498,12 +23057,25 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "3221"
   },
   {
     "platform": "CSES",
     "epoch": 1785306216,
     "problem": "Sliding Window Xor",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null,
+    "problemId": "3426"
+  },
+  {
+    "platform": "CSES",
+    "problemId": "3222",
+    "epoch": 1785382052,
+    "problem": "Sliding Window Distinct Values",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
@@ -22518,7 +23090,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "3224"
   },
   {
     "platform": "CSES",
@@ -22528,7 +23101,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "3224"
   },
   {
     "platform": "CSES",
@@ -22538,7 +23112,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "3219"
   },
   {
     "platform": "CSES",
@@ -22548,7 +23123,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1076"
   },
   {
     "platform": "CSES",
@@ -22558,7 +23134,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1076"
   },
   {
     "platform": "CSES",
@@ -22568,7 +23145,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1076"
   },
   {
     "platform": "CSES",
@@ -22578,7 +23156,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1076"
   },
   {
     "id": "2087064896",
@@ -22623,6 +23202,17 @@
     "memoryBytes": 226911846
   },
   {
+    "platform": "CSES",
+    "problemId": "1141",
+    "epoch": 1785396454,
+    "problem": "Playlist",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
     "id": "2087148864",
     "platform": "LeetCode",
     "epoch": 1785396719,
@@ -22641,7 +23231,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1619"
   },
   {
     "platform": "CSES",
@@ -22651,7 +23242,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1629"
   },
   {
     "platform": "CSES",
@@ -22661,7 +23253,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "2216"
   },
   {
     "platform": "CSES",
@@ -22671,7 +23264,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1090"
   },
   {
     "platform": "CSES",
@@ -22681,7 +23275,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "2183"
   },
   {
     "platform": "CSES",
@@ -22691,7 +23286,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "2216"
   },
   {
     "platform": "CSES",
@@ -22701,7 +23297,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1073"
   },
   {
     "platform": "CSES",
@@ -22711,7 +23308,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "3421"
   },
   {
     "platform": "CSES",
@@ -22721,7 +23319,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1163"
   },
   {
     "platform": "CSES",
@@ -22731,7 +23330,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1163"
   },
   {
     "platform": "AtCoder",
@@ -22771,7 +23371,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1678"
   },
   {
     "platform": "CSES",
@@ -22781,12 +23382,25 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1196"
   },
   {
     "platform": "CSES",
     "epoch": 1785597337,
     "problem": "Distinct Values Subarrays",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null,
+    "problemId": "3420"
+  },
+  {
+    "platform": "CSES",
+    "problemId": "3413",
+    "epoch": 1785709616,
+    "problem": "Filled Subgrid Count I",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
@@ -22801,12 +23415,25 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "2162"
   },
   {
     "platform": "CSES",
     "epoch": 1785710395,
     "problem": "Josephus Problem II",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null,
+    "problemId": "2163"
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1164",
+    "epoch": 1785769906,
+    "problem": "Room Allocation",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
@@ -22821,7 +23448,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1620"
   },
   {
     "platform": "CSES",
@@ -22831,7 +23459,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1620"
   },
   {
     "platform": "CSES",
@@ -22841,7 +23470,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1620"
   },
   {
     "platform": "CSES",
@@ -22851,7 +23481,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1641"
   },
   {
     "platform": "CSES",
@@ -22861,7 +23492,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1642"
   },
   {
     "platform": "CSES",
@@ -22871,7 +23503,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1642"
   },
   {
     "platform": "CSES",
@@ -22881,7 +23514,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1642"
   },
   {
     "platform": "CSES",
@@ -22891,7 +23525,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1631"
   },
   {
     "platform": "CSES",
@@ -22901,7 +23536,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1631"
   },
   {
     "platform": "CSES",
@@ -22911,7 +23547,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1745"
   },
   {
     "platform": "CSES",
@@ -22921,7 +23558,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1645"
   },
   {
     "platform": "CSES",
@@ -22931,7 +23569,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1662"
   },
   {
     "platform": "CSES",
@@ -22941,7 +23580,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1140"
   },
   {
     "platform": "SPOJ",
@@ -22961,7 +23601,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1647"
   },
   {
     "platform": "SPOJ",
@@ -22981,7 +23622,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1648"
   },
   {
     "platform": "CSES",
@@ -22991,7 +23633,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1651"
   },
   {
     "platform": "UVA",
@@ -23034,7 +23677,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1746"
   },
   {
     "platform": "CSES",
@@ -23044,7 +23688,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1683"
   },
   {
     "platform": "CSES",
@@ -23054,7 +23699,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1097"
   },
   {
     "platform": "CSES",
@@ -23064,7 +23710,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1093"
   },
   {
     "platform": "CSES",
@@ -23074,7 +23721,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1097"
   },
   {
     "platform": "CSES",
@@ -23084,7 +23732,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "3314"
   },
   {
     "platform": "CSES",
@@ -23094,7 +23743,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "3314"
   },
   {
     "platform": "CSES",
@@ -23104,7 +23754,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "3314"
   },
   {
     "platform": "CSES",
@@ -23114,7 +23765,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "2413"
   },
   {
     "platform": "CSES",
@@ -23124,7 +23776,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1131"
   },
   {
     "platform": "CSES",
@@ -23134,7 +23787,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1132"
   },
   {
     "platform": "CSES",
@@ -23144,7 +23798,8 @@
     "ac": false,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1130"
   },
   {
     "platform": "CSES",
@@ -23154,7 +23809,8 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": null,
-    "memoryBytes": null
+    "memoryBytes": null,
+    "problemId": "1130"
   },
   {
     "id": "codechef:1331847323",
