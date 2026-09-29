@@ -25570,5 +25570,26 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 31,
     "memoryBytes": 0
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790626723,
+    "problem": "Perfect Squares",
+    "url": "https://leetcode.com/problems/perfect-squares/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790628135,
+    "problem": "837D - Round Subset",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 343,
+    "memoryBytes": 4812800
   }
 ]
