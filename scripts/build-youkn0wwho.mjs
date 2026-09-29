@@ -3,7 +3,8 @@
 // which problems are solved using data/submissions.json. Run after `pnpm refresh`.
 //
 // Solved matching per judge (everything else stays unsolved):
-//   Codeforces  codeforces_1063b ↔ submission "1063B - Title"
+//   Codeforces  codeforces_1063b ↔ submission "1063B - Title" (or the same title in the
+//               paired Div. 1/Div. 2 contest, e.g. 688E ↔ 687C)
 //   AtCoder     atcoder_abc176_d ↔ submission "abc176_d"
 //   CodeChef    codechef_abroads ↔ submission "ABROADS"
 //   UVa         uva_11573        ↔ submission "11573 - Title"
@@ -83,9 +84,44 @@ function judgeOf(id, url) {
   return host ? host.split(".").slice(-2, -1)[0].replace(/^./, (c) => c.toUpperCase()) : "Other";
 }
 
+// ---------- Codeforces id fixes ----------
+// A few topic-list entries point at problems that don't exist: contest 802 uses split
+// indices (J1, M2, …) and some ids carry a "?locale=en" suffix. Verified against the
+// Codeforces problemset API by contest and title.
+const codeforcesIndexFixes = {
+  codeforces_802c: "802A3", // Heidi and Library (hard)
+  codeforces_802i: "802G3", // Fake News (hard)
+  codeforces_802j: "802J1", // Send the Fool Further! (easy)
+  codeforces_802n: "802M2", // April Fools' Problem (medium)
+  codeforces_802o: "802M3", // April Fools' Problem (hard)
+};
+
+function fixCodeforces(p) {
+  const cleanId = p.problem_id.replace(/\?.*$/, "");
+  const fixed = codeforcesIndexFixes[cleanId];
+  if (fixed) {
+    const [, contest, index] = fixed.match(/^(\d+)([A-Z]\d?)$/);
+    return {
+      ...p,
+      problem_id: `codeforces_${fixed.toLowerCase()}`,
+      problem_url: `https://codeforces.com/problemset/problem/${contest}/${index}`,
+    };
+  }
+  if (cleanId === p.problem_id) return p;
+  return { ...p, problem_id: cleanId, problem_url: p.problem_url.replace(/\?.*$/, "") };
+}
+
 // ---------- solved lookups from submissions.json ----------
 const accepted = (platform) => submissions.filter((s) => s.platform === platform && s.ac).map((s) => s.problem);
 const cfSolved = new Set(accepted("Codeforces").map((p) => norm(p.split(" - ")[0]).replace(/\s+/g, "")));
+// "contest|title" for Div. 1/Div. 2 mirrors, which share a title across consecutive contest ids.
+const cfSolvedByContestTitle = new Set(
+  accepted("Codeforces").flatMap((p) => {
+    const [key, ...rest] = p.split(" - ");
+    const contest = key.match(/^(\d+)/)?.[1];
+    return contest ? [`${contest}|${norm(rest.join(" - "))}`] : [];
+  })
+);
 const atcoderSolved = new Set(accepted("AtCoder").map(norm));
 const codechefSolved = new Set(accepted("CodeChef").map((p) => norm(p)));
 const uvaSolved = new Set(accepted("UVA").map((p) => Number(p.split(" - ")[0])).filter(Number.isFinite));
@@ -103,8 +139,10 @@ function isSolved(problem, judge) {
   const id = problem.problem_id;
   const title = norm(problem.problem_title);
   if (judge === "Codeforces") {
-    const key = id.match(/^(?:codeforces|cf|acmsguru)_(\d+[a-z]\d?)$/)?.[1];
-    return key != null && cfSolved.has(key);
+    const [, contest, index] = id.match(/^(?:codeforces|cf|acmsguru)_(\d+)([a-z]\d?)$/) ?? [];
+    if (contest == null) return false;
+    if (cfSolved.has(contest + index)) return true;
+    return [-1, 1].some((d) => cfSolvedByContestTitle.has(`${Number(contest) + d}|${title}`));
   }
   if (judge === "AtCoder") return atcoderSolved.has(id.replace(/^atcoder_/, ""));
   if (judge === "CodeChef") return codechefSolved.has(id.replace(/^codechef_/, ""));
@@ -136,11 +174,14 @@ const problems = Object.values(topicListProblems)
     }
     const mappedProblem = catalogProblem
       ? { ...p, problem_title: catalogProblem.title, problem_url: catalogProblem.url }
-      : p;
+      : judge === "Codeforces"
+        ? fixCodeforces(p)
+        : p;
     const known = (p.topics ?? []).filter((t) => topics[t]);
     const primary = known.length ? known.reduce((a, b) => (topics[a].order <= topics[b].order ? a : b)) : "uncategorized";
     return {
-      id: p.problem_id,
+      id: mappedProblem.problem_id,
+      sourceId: p.problem_id,
       judge,
       title: (mappedProblem.problem_title ?? p.problem_id).trim(),
       url: mappedProblem.problem_url,
@@ -154,7 +195,7 @@ const problems = Object.values(topicListProblems)
 
 // Sort by primary topic, then by the order the topic page lists its problems.
 const rankInTopic = (p) => {
-  const index = topicInfo[p.topic]?.problem_order?.indexOf(p.id) ?? -1;
+  const index = topicInfo[p.topic]?.problem_order?.indexOf(p.sourceId) ?? -1;
   return index < 0 ? Number.MAX_SAFE_INTEGER : index;
 };
 problems.sort(
@@ -169,7 +210,7 @@ const output = {
   source: "https://youkn0wwho.academy/topic-list",
   repository: "https://github.com/ShahjalalShohag/the-ultimate-topic-list",
   topics,
-  problems,
+  problems: problems.map(({ sourceId, ...problem }) => problem),
 };
 // One problem per line keeps the file small and the git diffs readable.
 const text =
@@ -177,7 +218,7 @@ const text =
   `  "source": ${JSON.stringify(output.source)},\n` +
   `  "repository": ${JSON.stringify(output.repository)},\n` +
   `  "topics": ${JSON.stringify(output.topics, null, 2).replace(/\n/g, "\n  ")},\n` +
-  `  "problems": [\n${problems.map((p) => "    " + JSON.stringify(p)).join(",\n")}\n  ]\n` +
+  `  "problems": [\n${output.problems.map((p) => "    " + JSON.stringify(p)).join(",\n")}\n  ]\n` +
   "}\n";
 fs.writeFileSync(path.join(DATA, "youkn0wwho.json"), text);
 
