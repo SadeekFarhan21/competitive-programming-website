@@ -7,12 +7,13 @@
 //   AtCoder     atcoder_abc176_d ↔ submission "abc176_d"
 //   CodeChef    codechef_abroads ↔ submission "ABROADS"
 //   UVa         uva_11573        ↔ submission "11573 - Title"
-//   CSES / SPOJ / Kattis / LeetCode  ↔ submission title (Kattis also by slug)
+//   CSES        cses_1633        ↔ submission problemId "1633" (title for older rows)
+//   SPOJ / Kattis / LeetCode  ↔ submission title (Kattis also by slug)
 
 import fs from "node:fs";
 import path from "node:path";
 import { loadLeetCodeCatalog } from "./leetcode-catalog.mjs";
-import { isCodeforcesGym } from "./youkn0wwho-judge.mjs";
+import { csesTaskId, isCodeforcesGym } from "./youkn0wwho-judge.mjs";
 
 const DATA = path.join(import.meta.dirname, "..", "data");
 const read = (file) => JSON.parse(fs.readFileSync(path.join(DATA, file), "utf8"));
@@ -88,6 +89,9 @@ const cfSolved = new Set(accepted("Codeforces").map((p) => norm(p.split(" - ")[0
 const atcoderSolved = new Set(accepted("AtCoder").map(norm));
 const codechefSolved = new Set(accepted("CodeChef").map((p) => norm(p)));
 const uvaSolved = new Set(accepted("UVA").map((p) => Number(p.split(" - ")[0])).filter(Number.isFinite));
+const csesIdSolved = new Set(
+  submissions.filter((s) => s.platform === "CSES" && s.ac && s.problemId).map((s) => String(s.problemId))
+);
 const titleSolved = {
   CSES: new Set(accepted("CSES").map(norm)),
   SPOJ: new Set(accepted("SPOJ").map(norm)),
@@ -105,6 +109,10 @@ function isSolved(problem, judge) {
   if (judge === "AtCoder") return atcoderSolved.has(id.replace(/^atcoder_/, ""));
   if (judge === "CodeChef") return codechefSolved.has(id.replace(/^codechef_/, ""));
   if (judge === "UVa") return uvaSolved.has(Number(id.replace(/^uva_/, "")));
+  if (judge === "CSES") {
+    const taskId = csesTaskId(id, problem.problem_url);
+    return (taskId != null && csesIdSolved.has(taskId)) || titleSolved.CSES.has(title);
+  }
   if (judge === "Kattis") {
     const slug = id.replace(/^kattis_/, "");
     const cached = kattisTitles[slug];

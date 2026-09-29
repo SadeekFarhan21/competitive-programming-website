@@ -374,9 +374,16 @@ async function fetchCSES() {
     console.warn("CSES session expired — skipping CSES");
     return [];
   }
-  const taskIds = [...grid.matchAll(
-    /<li class="task"><a href="\/problemset\/task\/(\d+)">([^<]*)<\/a>[\s\S]*?task-score icon (full|zero)/g
-  )].map((m) => [m[1], m[2]]);
+  // Parse each <li> on its own: unattempted tasks have no score icon, and a
+  // regex spanning list items would pair them with the next task's icon and
+  // silently skip that (attempted) task.
+  const taskIds = grid
+    .split('<li class="task">')
+    .slice(1)
+    .filter((item) => /task-score icon (full|zero)/.test(item.split("</li>")[0]))
+    .map((item) => item.match(/<a href="\/problemset\/task\/(\d+)">([^<]*)<\/a>/))
+    .filter(Boolean)
+    .map((m) => [m[1], m[2]]);
 
   const subs = [];
   for (const [id, name] of taskIds) {
@@ -390,6 +397,7 @@ async function fetchCSES() {
     )) {
       subs.push({
         platform: "CSES",
+        problemId: id,
         epoch: localDateTimeToEpoch(`${ts[1]}T${ts[2]}`, "Europe/Helsinki"),
         problem: name,
         verdict: ts[3] === "full" ? "ACCEPTED" : "REJECTED",
@@ -571,6 +579,10 @@ for (const s of fresh) {
   if (keys.some((key) => seen.has(key))) {
     const existingIndex = merged.findIndex((row) => submissionKeys(row).some((key) => keys.includes(key)));
     if (existingIndex >= 0 && s.id) merged[existingIndex] = s;
+    // Backfill CSES task ids onto rows fetched before problemId was recorded.
+    else if (existingIndex >= 0 && s.problemId && !merged[existingIndex].problemId) {
+      merged[existingIndex] = { ...merged[existingIndex], problemId: s.problemId };
+    }
     continue;
   }
   keys.forEach((key) => seen.add(key));
