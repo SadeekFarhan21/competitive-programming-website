@@ -198,7 +198,7 @@ export default function RecentFeed() {
           ) : (
             <span className="min-w-0 flex-1 truncate text-neutral-200">{s.problemName}</span>
           )}
-          <span className={`font-medium sm:text-right ${verdictColor(s.verdict)}`}>
+          <span className={`font-medium sm:pr-6 sm:text-right ${verdictColor(s.verdict)}`}>
             {s.verdict}
           </span>
         </li>
