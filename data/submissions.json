@@ -26251,7 +26251,7 @@
   {
     "id": "codechef:1366038314",
     "platform": "CodeChef",
-    "epoch": 1790732802,
+    "epoch": 1790733406,
     "problem": "ROOTTREE",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -26262,11 +26262,22 @@
   {
     "id": "codechef:1366053515",
     "platform": "CodeChef",
-    "epoch": 1790736402,
+    "epoch": 1790733406,
     "problem": "ROOTTREE",
     "verdict": "ACCEPTED",
     "ac": true,
     "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1790744177,
+    "problem": "Decode Ways",
+    "url": "https://leetcode.com/problems/decode-ways/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
   }
