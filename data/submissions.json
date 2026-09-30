@@ -26247,5 +26247,27 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 343,
     "memoryBytes": 4812800
+  },
+  {
+    "id": "codechef:1366038314",
+    "platform": "CodeChef",
+    "epoch": 1790732802,
+    "problem": "ROOTTREE",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "codechef:1366053515",
+    "platform": "CodeChef",
+    "epoch": 1790736402,
+    "problem": "ROOTTREE",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
