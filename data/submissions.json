@@ -26252,7 +26252,7 @@
   {
     "id": "codechef:1366038314",
     "platform": "CodeChef",
-    "epoch": 1790731924,
+    "epoch": 1790731440,
     "problem": "ROOTTREE",
     "verdict": "WRONG ANSWER",
     "ac": false,
@@ -26263,7 +26263,7 @@
   {
     "id": "codechef:1366053515",
     "platform": "CodeChef",
-    "epoch": 1790735524,
+    "epoch": 1790732820,
     "problem": "ROOTTREE",
     "verdict": "ACCEPTED",
     "ac": true,
@@ -26281,6 +26281,29 @@
     "ac": true,
     "language": "cpp",
     "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1790800643,
+    "problem": "abc396_d",
+    "url": "https://atcoder.jp/contests/abc396/tasks/abc396_d",
+    "verdict": "AC",
+    "ac": true,
+    "language": "C++23 (GCC 15.2.0)",
+    "runtimeMs": 3,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20551132",
+    "epoch": 1790802752,
+    "problem": "Union-Find",
+    "url": "https://open.kattis.com/problems/unionfind",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 240,
     "memoryBytes": null
   }
 ]

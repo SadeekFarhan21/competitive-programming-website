@@ -406,7 +406,7 @@ traveltheskies,traveltheskies,"2.4a, Graph Data Structures",(graph) DS manipulat
 almostunionfind,almostunionfind,"2.4b, Union-Find",new operation: move; idea: do not destroy the parent array structure; also available at UVa 11987 - Almost Union-Find,618,7.0,false,https://open.kattis.com/problems/almostunionfind
 control,control,"2.4b, Union-Find",LA 7480 - Singapore15; simulation of UFDS; size of set; number of disjoint sets,424,4.6,false,https://open.kattis.com/problems/control
 ladice,ladice,"2.4b, Union-Find",size of set; decrement one per usage,615,2.8,false,https://open.kattis.com/problems/ladice
-unionfind,unionfind,"2.4b, Union-Find",basic UFDS; similar to UVa 00793,1086,4.8,false,https://open.kattis.com/problems/unionfind
+unionfind,unionfind,"2.4b, Union-Find",basic UFDS; similar to UVa 00793,1086,4.8,true,https://open.kattis.com/problems/unionfind
 11402,Fetching from uHunt,"2.4c, Tree-related DS",Segment Tree with lazy updates,,0.0,false,https://onlinejudge.org/external/114/11402.pdf
 11423,Fetching from uHunt,"2.4c, Tree-related DS",clever usage of Fenwick Tree and large array; important hint: look at the constraints carefully,,0.0,false,https://onlinejudge.org/external/114/11423.pdf
 12299,Fetching from uHunt,"2.4c, Tree-related DS",Segment Tree with a few point (not range) updates; RMQs,,0.0,false,https://onlinejudge.org/external/122/12299.pdf
