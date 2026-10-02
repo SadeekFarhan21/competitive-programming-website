@@ -26305,5 +26305,25 @@
     "language": "C++",
     "runtimeMs": 240,
     "memoryBytes": null
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790908478,
+    "problem": "48D - Permutations",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 15,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1790908697,
+    "problem": "48D - Permutations",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 93,
+    "memoryBytes": 0
   }
 ]
