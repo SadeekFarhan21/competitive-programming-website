@@ -26325,5 +26325,50 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 93,
     "memoryBytes": 0
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1791086434,
+    "problem": "Reverse Bits",
+    "url": "https://leetcode.com/problems/reverse-bits/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1791088594,
+    "problem": "First Missing Positive",
+    "url": "https://leetcode.com/problems/first-missing-positive/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1791088713,
+    "problem": "First Missing Positive",
+    "url": "https://leetcode.com/problems/first-missing-positive/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Kattis",
+    "id": "20602928",
+    "epoch": 1791089655,
+    "problem": "Veci",
+    "url": "https://open.kattis.com/problems/veci",
+    "verdict": "Accepted",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": 0,
+    "memoryBytes": null
   }
 ]

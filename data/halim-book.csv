@@ -447,7 +447,7 @@ tautology,tautology,"3.2e, Three+ Nested Loops, H",try all 2^5 = 32 values with 
 dancerecital,dancerecital,"3.2f, Iterative (Permutation)",try all R! permutations; compare adjacent routines,274,4.2,false,https://open.kattis.com/problems/dancerecital
 dreamer,dreamer,"3.2f, Iterative (Permutation)",try all 8! permutations of digits; check if the date is valid; output earliest valid date,406,2.0,false,https://open.kattis.com/problems/dreamer
 lc0046,Permutations,"3.2f, Iterative (Permutation)",C++ next_permutation from sorted to reverse-sorted permutations; top-100-liked; top-interview-150,0,4.0,true,https://leetcode.com/problems/permutations/
-veci,veci,"3.2f, Iterative (Permutation)",try all permutations; get the one that is larger than X,1193,1.8,false,https://open.kattis.com/problems/veci
+veci,veci,"3.2f, Iterative (Permutation)",try all permutations; get the one that is larger than X,1193,1.8,true,https://open.kattis.com/problems/veci
 00639,Fetching from uHunt,"3.2g, Iterative (Combination)",generate 2^(4x4) = 2^16 combinations and prune,,0.0,false,https://onlinejudge.org/external/6/639.pdf
 01047,Fetching from uHunt,"3.2g, Iterative (Combination)",LA 3278 - WorldFinals Shanghai05; try all 2^n subsets of towers to be taken; use inclusion-exclusion principle,,0.0,false,https://onlinejudge.org/external/10/1047.pdf
 12694,Fetching from uHunt,"3.2g, Iterative (Combination)",LA 6606 - Phuket13; it is safest to just brute force all 2^20 possibilities; greedy solution should be possible too,,0.0,false,https://onlinejudge.org/external/126/12694.pdf
