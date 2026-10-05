@@ -26327,6 +26327,7 @@
     "memoryBytes": 0
   },
   {
+    "id": "2161699807",
     "platform": "LeetCode",
     "epoch": 1791086434,
     "problem": "Reverse Bits",
@@ -26338,6 +26339,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2161723236",
     "platform": "LeetCode",
     "epoch": 1791088594,
     "problem": "First Missing Positive",
@@ -26349,6 +26351,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2161724507",
     "platform": "LeetCode",
     "epoch": 1791088713,
     "problem": "First Missing Positive",
@@ -26369,6 +26372,18 @@
     "ac": true,
     "language": "C++",
     "runtimeMs": 0,
+    "memoryBytes": null
+  },
+  {
+    "id": "2162588126",
+    "platform": "LeetCode",
+    "epoch": 1791159552,
+    "problem": "Capital Gain/Loss",
+    "url": "https://leetcode.com/problems/capital-gainloss/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "mysql",
+    "runtimeMs": null,
     "memoryBytes": null
   }
 ]
