@@ -675,7 +675,7 @@ reversingroads,reversingroads,"4.2g, Finding SCCs","if #SCC = 1, print 'valid'; 
 12442,Fetching from uHunt,"4.2h, Really Ad Hoc",modified DFS; special graph,,0.0,false,https://onlinejudge.org/external/124/12442.pdf
 dominoes2,dominoes2,"4.2h, Really Ad Hoc","unlike UVa 11504, we treat SCCs as CCs; also available at UVa 11518 - Dominos 2",599,3.3,false,https://open.kattis.com/problems/dominoes2
 faultyrobot,faultyrobot,"4.2h, Really Ad Hoc",interesting graph traversal variant; add one more state to each vertex: bug_used,556,3.6,false,https://open.kattis.com/problems/faultyrobot
-lc0841,Keys and Rooms,"4.2h, Really Ad Hoc",DFS/BFS from 0; see if all rooms are visited; leetcode-75,0,4.0,false,https://leetcode.com/problems/keys-and-rooms/
+lc0841,Keys and Rooms,"4.2h, Really Ad Hoc",DFS/BFS from 0; see if all rooms are visited; leetcode-75,0,4.0,true,https://leetcode.com/problems/keys-and-rooms/
 promotions,promotions,"4.2h, Really Ad Hoc",modified DFS; special graph; DAG; also available at UVa 13015 - Promotions,129,5.5,false,https://open.kattis.com/problems/promotions
 succession,succession,"4.2h, Really Ad Hoc",(upwards) traversal of family DAG; use unordered_maps; make the founder has very large starting blood to avoid fraction,165,3.1,false,https://open.kattis.com/problems/succession
 11631,Fetching from uHunt,"4.3a, MST, Standard",weight of (all graph edges - all MST edges),,0.0,true,https://onlinejudge.org/external/116/11631.pdf

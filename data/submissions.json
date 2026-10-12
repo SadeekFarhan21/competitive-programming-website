@@ -26385,5 +26385,49 @@
     "language": "mysql",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1791738117,
+    "problem": "Detonate the Maximum Bombs",
+    "url": "https://leetcode.com/problems/detonate-the-maximum-bombs/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1791738153,
+    "problem": "Detonate the Maximum Bombs",
+    "url": "https://leetcode.com/problems/detonate-the-maximum-bombs/",
+    "verdict": "RUNTIME ERROR",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1791738281,
+    "problem": "Detonate the Maximum Bombs",
+    "url": "https://leetcode.com/problems/detonate-the-maximum-bombs/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1791738693,
+    "problem": "Keys and Rooms",
+    "url": "https://leetcode.com/problems/keys-and-rooms/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
