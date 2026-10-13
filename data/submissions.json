@@ -26647,5 +26647,27 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1791919230,
+    "problem": "Insert into a Binary Search Tree",
+    "url": "https://leetcode.com/problems/insert-into-a-binary-search-tree/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1791919441,
+    "problem": "Validate Binary Search Tree",
+    "url": "https://leetcode.com/problems/validate-binary-search-tree/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]

@@ -386,7 +386,7 @@ lc0437,Path Sum III,"2.3l, BT Exercises, E","for each vertex, run preorder trave
 lc0872,Leaf-Similar Trees,"2.3l, BT Exercises, E",run inorder traversals on both trees; picking only the leaves; compare them; leetcode-75,0,2.0,false,https://leetcode.com/problems/leaf-similar-trees/
 lc1372,Longest ZigZag Path in a Binary Tree,"2.3l, BT Exercises, E",modified preorder traversal; reset counter if same direction; add counter if zig-zag-ing; leetcode-75,0,4.0,false,https://leetcode.com/problems/longest-zigzag-path-in-a-binary-tree/
 lc1448,Count Good Nodes in Binary Tree,"2.3l, BT Exercises, E",modified preorder traversal; keep the largest along the way; leetcode-75,0,4.0,false,https://leetcode.com/problems/count-good-nodes-in-binary-tree/
-lc0098,Validate Binary Search Tree,"2.3n, BST Exercises",recursive BST property validator; top-100-liked; top-interview-150,0,4.0,false,https://leetcode.com/problems/validate-binary-search-tree/
+lc0098,Validate Binary Search Tree,"2.3n, BST Exercises",recursive BST property validator; top-100-liked; top-interview-150,0,4.0,true,https://leetcode.com/problems/validate-binary-search-tree/
 lc0230,Kth Smallest Element in a BST,"2.3n, BST Exercises",inorder traversal; report the k-th element; top-100-liked; top-interview-150,0,4.0,true,https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 lc0450,Delete Node in a BST,"2.3n, BST Exercises",code BST deletion sub-cases; leetcode-75,0,4.0,false,https://leetcode.com/problems/delete-node-in-a-bst/
 lc0530,Minimum Absolute Difference in BST,"2.3n, BST Exercises",the min gap is between successive elements during inorder traversal; same as LC 0783; top-interview-150,0,2.0,true,https://leetcode.com/problems/minimum-absolute-difference-in-bst/
