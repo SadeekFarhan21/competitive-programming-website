@@ -524,7 +524,7 @@ lc2293,Min Max Game,"3.3c, Ternary Search & Others",simulate the game; n halves 
 11264,Fetching from uHunt,"3.4a, Greedy (Classical)",coin change variant,,0.0,false,https://onlinejudge.org/external/112/11264.pdf
 classrooms,classrooms,"3.4a, Greedy (Classical)",variant of interval covering; multiple rooms,229,5.9,false,https://open.kattis.com/problems/classrooms
 froshweek2,froshweek2,"3.4a, Greedy (Classical)",greedy; sort first; similar to Dragon of Loowater; greedy matching,489,2.3,true,https://open.kattis.com/problems/froshweek2
-lc0455,Assign Cookies,"3.4a, Greedy (Classical)",sort; greedy bipartite matching,0,2.0,false,https://leetcode.com/problems/assign-cookies/
+lc0455,Assign Cookies,"3.4a, Greedy (Classical)",sort; greedy bipartite matching,0,2.0,true,https://leetcode.com/problems/assign-cookies/
 squarepegs,squarepegs,"3.4a, Greedy (Classical)",convert square to circular; sort; greedy matching,265,3.1,true,https://open.kattis.com/problems/squarepegs
 11369,Fetching from uHunt,"3.4b, Involving Sorting, E",greedy; sorting,,0.0,false,https://onlinejudge.org/external/113/11369.pdf
 11900,Fetching from uHunt,"3.4b, Involving Sorting, E",greedy; sorting,,0.0,false,https://onlinejudge.org/external/119/11900.pdf
