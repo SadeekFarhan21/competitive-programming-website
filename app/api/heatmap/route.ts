@@ -15,6 +15,8 @@ type DayCounts = Record<Platform, number> & {
   total: number;
   accepted: number;
   acc: Record<Platform, number>;
+  // Submissions to problems not yet accepted at that point (excludes re-submits)
+  fresh: Record<Platform, number>;
 };
 
 const DAY_MS = 86_400_000;
@@ -72,6 +74,7 @@ export async function GET(request: NextRequest) {
     if (s.ac === true) acceptedProblems.add(key);
     return true;
   });
+  const isFreshSubmission = new Set(accuracySubmissions);
 
   // Accepted counts shown in the calendar are still one per problem, while
   // the platform accuracy stats use the deduplicated submission set above.
@@ -122,8 +125,19 @@ export async function GET(request: NextRequest) {
         kattis: 0,
         uva: 0,
       },
+      fresh: {
+        codeforces: 0,
+        atcoder: 0,
+        leetcode: 0,
+        codechef: 0,
+        spoj: 0,
+        cses: 0,
+        kattis: 0,
+        uva: 0,
+      },
     };
     calendar[day][platform]++;
+    if (isFreshSubmission.has(s)) calendar[day].fresh[platform]++;
     calendar[day].total++;
     if (newAc) {
       calendar[day].accepted++;

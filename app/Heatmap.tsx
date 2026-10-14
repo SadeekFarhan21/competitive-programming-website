@@ -16,6 +16,7 @@ type DayCounts = Record<Platform, number> & {
   total: number;
   accepted: number;
   acc: Record<Platform, number>;
+  fresh?: Record<Platform, number>;
 };
 
 type Mode = "all" | "accepted";
@@ -95,10 +96,11 @@ function buildWeeks(days: Record<string, DayCounts>, year?: number): Cell[][] {
 function filteredTotal(
   counts: DayCounts | null,
   enabled: Set<Platform>,
-  mode: Mode = "all"
+  mode: Mode | "fresh" = "all"
 ): number {
   if (!counts) return 0;
-  const source = mode === "accepted" ? counts.acc : counts;
+  const source =
+    mode === "accepted" ? counts.acc : mode === "fresh" ? (counts.fresh ?? counts) : counts;
   return PLATFORMS.reduce((sum, p) => (enabled.has(p.key) ? sum + source[p.key] : sum), 0);
 }
 
@@ -272,7 +274,11 @@ export default function Heatmap() {
     },
   ];
 
-  const selectedSubmissionCount = selected ? filteredTotal(selected.counts, enabled) : 0;
+  // In accepted mode, only count submissions to problems not already solved,
+  // so re-submits to old problems don't drag down the day's ratio.
+  const selectedSubmissionCount = selected
+    ? filteredTotal(selected.counts, enabled, mode === "accepted" ? "fresh" : "all")
+    : 0;
   const selectedAcceptedCount = selected
     ? filteredTotal(selected.counts, enabled, "accepted")
     : 0;
@@ -484,7 +490,10 @@ export default function Heatmap() {
           </div>
           <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2 lg:flex-nowrap lg:justify-between">
             {PLATFORMS.filter((p) => enabled.has(p.key)).map((p) => {
-              const count = selected.counts?.[p.key] ?? 0;
+              const count =
+                (mode === "accepted" ? selected.counts?.fresh?.[p.key] : undefined) ??
+                selected.counts?.[p.key] ??
+                0;
               const ac = selected.counts?.acc[p.key] ?? 0;
               return (
                 <div key={p.key} className="flex items-center gap-1.5 whitespace-nowrap text-sm">
