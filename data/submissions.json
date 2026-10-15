@@ -26669,5 +26669,82 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792000360,
+    "problem": "Longest Increasing Path in a Matrix",
+    "url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792000533,
+    "problem": "Longest Increasing Path in a Matrix",
+    "url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792007866,
+    "problem": "Number of Longest Increasing Subsequence",
+    "url": "https://leetcode.com/problems/number-of-longest-increasing-subsequence/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792011990,
+    "problem": "Longest Common Subsequence",
+    "url": "https://leetcode.com/problems/longest-common-subsequence/",
+    "verdict": "RUNTIME ERROR",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792012205,
+    "problem": "Binary Tree Preorder Traversal",
+    "url": "https://leetcode.com/problems/binary-tree-preorder-traversal/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792012461,
+    "problem": "Maximum Depth of Binary Tree",
+    "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792012645,
+    "problem": "Binary Tree Postorder Traversal",
+    "url": "https://leetcode.com/problems/binary-tree-postorder-traversal/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
