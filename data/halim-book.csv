@@ -212,7 +212,7 @@ downtime,downtime,"2.2a, 1D Array, Medium",1D array; use Fenwick Tree-like opera
 fluortanten,fluortanten,"2.2a, 1D Array, Medium",remove Bjorn first; then do O(n) pass to check where is Bjorn's optimal position,181,3.1,false,https://open.kattis.com/problems/fluortanten
 greedilyincreasing,greedilyincreasing,"2.2a, 1D Array, Medium",just 1D array manipulation; this is not the DP-LIS problem,1151,1.9,false,https://open.kattis.com/problems/greedilyincreasing
 jollyjumpers,jollyjumpers,"2.2a, 1D Array, Medium",1D Boolean flags to check [1..n-1]; also available at UVa 10038 - Jolly Jumpers,413,3.4,false,https://open.kattis.com/problems/jollyjumpers
-lc0088,Merge Sorted Array,"2.2a, 1D Array, Medium",do merge of Merge sort; top-interview-150,0,2.0,false,https://leetcode.com/problems/merge-sorted-array/
+lc0088,Merge Sorted Array,"2.2a, 1D Array, Medium",do merge of Merge sort; top-interview-150,0,2.0,true,https://leetcode.com/problems/merge-sorted-array/
 lc0605,Can Place Flowers,"2.2a, 1D Array, Medium",tricky 1D array processing; leetcode-75,0,2.0,false,https://leetcode.com/problems/can-place-flowers/
 10978,Fetching from uHunt,"2.2c, 1D Array, Harder",1D string array,,0.0,false,https://onlinejudge.org/external/109/10978.pdf
 12662,Fetching from uHunt,"2.2c, 1D Array, Harder",1D array manipulation; brute force,,0.0,false,https://onlinejudge.org/external/126/12662.pdf
@@ -313,7 +313,7 @@ lc0003,Longest Substring Without Repeating Characters,"2.2q, Sliding Window",inc
 lc0643,Maximum Average Subarray I,"2.2q, Sliding Window",slide the window of size k; keep the max; divide by k; leetcode-75,0,2.0,true,https://leetcode.com/problems/maximum-average-subarray-i/
 sound,sound,"2.2q, Sliding Window",sliding window variant 4; max and min; similar to Kattis - treeshopping,104,5.3,false,https://open.kattis.com/problems/sound
 subseqhard,subseqhard,"2.2q, Sliding Window",interesting sliding window variant,1119,3.9,false,https://open.kattis.com/problems/subseqhard
-lc0002,Add Two Numbers,"2.2r, Linked List Exercises",simple problem but in reverse SLL mode; programming-skills; top-100-liked; top-interview-150,0,4.0,false,https://leetcode.com/problems/add-two-numbers/
+lc0002,Add Two Numbers,"2.2r, Linked List Exercises",simple problem but in reverse SLL mode; programming-skills; top-100-liked; top-interview-150,0,4.0,true,https://leetcode.com/problems/add-two-numbers/
 lc0021,Merge Two Sorted Lists,"2.2r, Linked List Exercises",merge of merge sort in linked list way; programming-skills; top-100-liked; top-interview-150,0,2.0,false,https://leetcode.com/problems/merge-two-sorted-lists/
 lc0206,Reverse Linked List,"2.2r, Linked List Exercises",classic SLL reversal task; programming-skills; leetcode-75; top-100-liked,0,2.0,true,https://leetcode.com/problems/reverse-linked-list/
 lc0445,Add Two Numbers II,"2.2r, Linked List Exercises",like LC0002; but need to use two stacks; programming-skills,0,4.0,false,https://leetcode.com/problems/add-two-numbers-ii/
