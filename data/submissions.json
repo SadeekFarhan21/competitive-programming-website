@@ -26898,5 +26898,104 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1633",
+    "epoch": 1792204358,
+    "problem": "Dice Combinations",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1635",
+    "epoch": 1792206448,
+    "problem": "Coin Combinations I",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1635",
+    "epoch": 1792206498,
+    "problem": "Coin Combinations I",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1635",
+    "epoch": 1792206547,
+    "problem": "Coin Combinations I",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1635",
+    "epoch": 1792206622,
+    "problem": "Coin Combinations I",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1635",
+    "epoch": 1792206778,
+    "problem": "Coin Combinations I",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1636",
+    "epoch": 1792206860,
+    "problem": "Coin Combinations II",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1639",
+    "epoch": 1792208787,
+    "problem": "Edit Distance",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1639",
+    "epoch": 1792208827,
+    "problem": "Edit Distance",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
