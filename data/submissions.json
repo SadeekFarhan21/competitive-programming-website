@@ -27045,5 +27045,71 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1638",
+    "epoch": 1792283734,
+    "problem": "Grid Paths I",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1638",
+    "epoch": 1792283789,
+    "problem": "Grid Paths I",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1158",
+    "epoch": 1792284694,
+    "problem": "Book Shop",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1745",
+    "epoch": 1792286387,
+    "problem": "Money Sums",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1679",
+    "epoch": 1792287876,
+    "problem": "Course Schedule",
+    "verdict": "REJECTED",
+    "ac": false,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1679",
+    "epoch": 1792287956,
+    "problem": "Course Schedule",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
