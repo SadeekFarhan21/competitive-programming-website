@@ -27111,5 +27111,16 @@
     "language": "C++",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1192",
+    "epoch": 1792291638,
+    "problem": "Counting Rooms",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
