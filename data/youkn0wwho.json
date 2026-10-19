@@ -5321,7 +5321,7 @@
     {"id":"codeforces_25d","judge":"Codeforces","title":"Roads not only in Berland","url":"https://codeforces.com/contest/25/problem/D","difficulty":1,"starred":false,"topic":"dsu","topics":["dsu"],"solved":false},
     {"id":"cf_edu_289390c","judge":"Codeforces","title":"Experience","url":"https://codeforces.com/edu/course/2/lesson/7/1/practice/contest/289390/problem/C","difficulty":1,"starred":true,"topic":"dsu","topics":["dsu"],"solved":false},
     {"id":"codeforces_150b","judge":"Codeforces","title":"Quantity of Strings","url":"https://codeforces.com/contest/150/problem/B","difficulty":1,"starred":true,"topic":"dsu","topics":["dsu"],"solved":false},
-    {"id":"codeforces_1559d1","judge":"Codeforces","title":"Mocha and Diana (Easy Version)","url":"https://codeforces.com/contest/1559/problem/D1","difficulty":1,"starred":false,"topic":"dsu","topics":["dsu"],"solved":false},
+    {"id":"codeforces_1559d1","judge":"Codeforces","title":"Mocha and Diana (Easy Version)","url":"https://codeforces.com/contest/1559/problem/D1","difficulty":1,"starred":false,"topic":"dsu","topics":["dsu"],"solved":true},
     {"id":"toph_unbelievable_array","judge":"Toph","title":"Unbelievable Array","url":"https://toph.co/p/unbelievable-array","difficulty":2,"starred":true,"topic":"dsu","topics":["dsu"],"solved":false},
     {"id":"cf_edu_289391i","judge":"Codeforces","title":"Bipartite Graph","url":"https://codeforces.com/edu/course/2/lesson/7/2/practice/contest/289391/problem/I","difficulty":2,"starred":true,"topic":"dsu","topics":["dsu"],"solved":false},
     {"id":"codeforces_468b","judge":"Codeforces","title":"Two Sets","url":"https://codeforces.com/contest/468/problem/B","difficulty":2,"starred":false,"topic":"dsu","topics":["dsu"],"solved":false},

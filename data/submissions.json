@@ -27122,5 +27122,46 @@
     "language": "C++",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1792441825,
+    "problem": "1194C - From S To T",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1792445598,
+    "problem": "1559D1 - Mocha and Diana (Easy Version)",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 0,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1792445615,
+    "problem": "1559D1 - Mocha and Diana (Easy Version)",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "CSES",
+    "problemId": "1676",
+    "epoch": 1792446310,
+    "problem": "Road Construction",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "C++",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
