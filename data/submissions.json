@@ -27194,5 +27194,16 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792642045,
+    "problem": "Multiply Strings",
+    "url": "https://leetcode.com/problems/multiply-strings/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
