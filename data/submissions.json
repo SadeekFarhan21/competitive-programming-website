@@ -27185,6 +27185,7 @@
     "memoryBytes": 0
   },
   {
+    "id": "2178425481",
     "platform": "LeetCode",
     "epoch": 1792634136,
     "problem": "Maximum Product of Splitted Binary Tree",
@@ -27196,6 +27197,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2178480767",
     "platform": "LeetCode",
     "epoch": 1792642045,
     "problem": "Multiply Strings",
@@ -27205,5 +27207,15 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1792687450,
+    "problem": "1384A - Common Prefixes",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
   }
 ]
