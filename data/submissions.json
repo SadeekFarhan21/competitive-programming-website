@@ -27217,5 +27217,49 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 46,
     "memoryBytes": 0
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792729658,
+    "problem": "Merge Two Sorted Lists",
+    "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792729974,
+    "problem": "Merge Two Sorted Lists",
+    "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+    "verdict": "COMPILE ERROR",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792729980,
+    "problem": "Merge Two Sorted Lists",
+    "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792730004,
+    "problem": "Merge Two Sorted Lists",
+    "url": "https://leetcode.com/problems/merge-two-sorted-lists/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]

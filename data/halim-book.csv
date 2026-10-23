@@ -314,7 +314,7 @@ lc0643,Maximum Average Subarray I,"2.2q, Sliding Window",slide the window of siz
 sound,sound,"2.2q, Sliding Window",sliding window variant 4; max and min; similar to Kattis - treeshopping,104,5.3,false,https://open.kattis.com/problems/sound
 subseqhard,subseqhard,"2.2q, Sliding Window",interesting sliding window variant,1119,3.9,false,https://open.kattis.com/problems/subseqhard
 lc0002,Add Two Numbers,"2.2r, Linked List Exercises",simple problem but in reverse SLL mode; programming-skills; top-100-liked; top-interview-150,0,4.0,true,https://leetcode.com/problems/add-two-numbers/
-lc0021,Merge Two Sorted Lists,"2.2r, Linked List Exercises",merge of merge sort in linked list way; programming-skills; top-100-liked; top-interview-150,0,2.0,false,https://leetcode.com/problems/merge-two-sorted-lists/
+lc0021,Merge Two Sorted Lists,"2.2r, Linked List Exercises",merge of merge sort in linked list way; programming-skills; top-100-liked; top-interview-150,0,2.0,true,https://leetcode.com/problems/merge-two-sorted-lists/
 lc0206,Reverse Linked List,"2.2r, Linked List Exercises",classic SLL reversal task; programming-skills; leetcode-75; top-100-liked,0,2.0,true,https://leetcode.com/problems/reverse-linked-list/
 lc0445,Add Two Numbers II,"2.2r, Linked List Exercises",like LC0002; but need to use two stacks; programming-skills,0,4.0,false,https://leetcode.com/problems/add-two-numbers-ii/
 lc2095,Delete the Middle Node of a Linked List,"2.2r, Linked List Exercises",first pass to count n; second pass to go to the middle vertex and to skip it; leetcode-75,0,4.0,false,https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/

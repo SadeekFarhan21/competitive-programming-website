@@ -4105,7 +4105,7 @@
     "dacu": 0,
     "points": 2,
     "cp5": true,
-    "solved": false
+    "solved": true
   },
   {
     "judge": "LeetCode",
