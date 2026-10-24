@@ -27474,5 +27474,38 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792875227,
+    "problem": "Moving Average from Data Stream",
+    "url": "https://leetcode.com/problems/moving-average-from-data-stream/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792875558,
+    "problem": "Meeting Rooms II",
+    "url": "https://leetcode.com/problems/meeting-rooms-ii/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792876357,
+    "problem": "Car Pooling",
+    "url": "https://leetcode.com/problems/car-pooling/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
