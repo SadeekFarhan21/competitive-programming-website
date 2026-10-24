@@ -27361,5 +27361,41 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 62,
     "memoryBytes": 0
+  },
+  {
+    "id": "2180847428",
+    "platform": "LeetCode",
+    "epoch": 1792873444,
+    "problem": "Graph Valid Tree",
+    "url": "https://leetcode.com/problems/graph-valid-tree/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2180850375",
+    "platform": "LeetCode",
+    "epoch": 1792873848,
+    "problem": "Number of Connected Components in an Undirected Graph",
+    "url": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2180851175",
+    "platform": "LeetCode",
+    "epoch": 1792873963,
+    "problem": "Number of Connected Components in an Undirected Graph",
+    "url": "https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
