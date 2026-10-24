@@ -27261,5 +27261,48 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792821648,
+    "problem": "Meeting Rooms",
+    "url": "https://leetcode.com/problems/meeting-rooms/",
+    "verdict": "RUNTIME ERROR",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792821677,
+    "problem": "Meeting Rooms",
+    "url": "https://leetcode.com/problems/meeting-rooms/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792821691,
+    "problem": "Meeting Rooms",
+    "url": "https://leetcode.com/problems/meeting-rooms/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1792825229,
+    "problem": "1692D - The Clock",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 46,
+    "memoryBytes": 0
   }
 ]
