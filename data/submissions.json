@@ -27219,6 +27219,7 @@
     "memoryBytes": 0
   },
   {
+    "id": "2179334131",
     "platform": "LeetCode",
     "epoch": 1792729658,
     "problem": "Merge Two Sorted Lists",
@@ -27230,6 +27231,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2179337431",
     "platform": "LeetCode",
     "epoch": 1792729974,
     "problem": "Merge Two Sorted Lists",
@@ -27241,6 +27243,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2179337486",
     "platform": "LeetCode",
     "epoch": 1792729980,
     "problem": "Merge Two Sorted Lists",
@@ -27252,6 +27255,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2179337721",
     "platform": "LeetCode",
     "epoch": 1792730004,
     "problem": "Merge Two Sorted Lists",
@@ -27263,6 +27267,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2180183612",
     "platform": "LeetCode",
     "epoch": 1792821648,
     "problem": "Meeting Rooms",
@@ -27274,6 +27279,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2180183949",
     "platform": "LeetCode",
     "epoch": 1792821677,
     "problem": "Meeting Rooms",
@@ -27285,6 +27291,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2180184131",
     "platform": "LeetCode",
     "epoch": 1792821691,
     "problem": "Meeting Rooms",
@@ -27303,6 +27310,56 @@
     "ac": true,
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 46,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1792826562,
+    "problem": "771A - Bear and Friendship Condition",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 31,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1792826585,
+    "problem": "771A - Bear and Friendship Condition",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 31,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1792827780,
+    "problem": "771A - Bear and Friendship Condition",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 203,
+    "memoryBytes": 28979200
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1792829934,
+    "problem": "377A - Maze",
+    "verdict": "WRONG_ANSWER",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 31,
+    "memoryBytes": 0
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1792830068,
+    "problem": "377A - Maze",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 62,
     "memoryBytes": 0
   }
 ]
