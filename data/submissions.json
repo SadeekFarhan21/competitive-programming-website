@@ -27267,6 +27267,17 @@
     "memoryBytes": null
   },
   {
+    "platform": "AtCoder",
+    "epoch": 1792814906,
+    "problem": "abc480_a",
+    "url": "https://atcoder.jp/contests/abc480/tasks/abc480_a",
+    "verdict": "AC",
+    "ac": true,
+    "language": "C++23 (Clang 21.1.0)",
+    "runtimeMs": 2,
+    "memoryBytes": null
+  },
+  {
     "id": "2180183612",
     "platform": "LeetCode",
     "epoch": 1792821648,
@@ -27361,6 +27372,72 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 62,
     "memoryBytes": 0
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1792867723,
+    "problem": "abc481_a",
+    "url": "https://atcoder.jp/contests/abc481/tasks/abc481_a",
+    "verdict": "AC",
+    "ac": true,
+    "language": "C++23 (Clang 21.1.0)",
+    "runtimeMs": 2,
+    "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1792868342,
+    "problem": "abc481_b",
+    "url": "https://atcoder.jp/contests/abc481/tasks/abc481_b",
+    "verdict": "WA",
+    "ac": false,
+    "language": "C++23 (Clang 21.1.0)",
+    "runtimeMs": 1,
+    "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1792868610,
+    "problem": "abc481_c",
+    "url": "https://atcoder.jp/contests/abc481/tasks/abc481_c",
+    "verdict": "AC",
+    "ac": true,
+    "language": "C++23 (Clang 21.1.0)",
+    "runtimeMs": 210,
+    "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1792869824,
+    "problem": "abc481_d",
+    "url": "https://atcoder.jp/contests/abc481/tasks/abc481_d",
+    "verdict": "WA",
+    "ac": false,
+    "language": "C++23 (Clang 21.1.0)",
+    "runtimeMs": 163,
+    "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1792870399,
+    "problem": "abc481_d",
+    "url": "https://atcoder.jp/contests/abc481/tasks/abc481_d",
+    "verdict": "AC",
+    "ac": true,
+    "language": "C++23 (Clang 21.1.0)",
+    "runtimeMs": 137,
+    "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1792870616,
+    "problem": "abc481_b",
+    "url": "https://atcoder.jp/contests/abc481/tasks/abc481_b",
+    "verdict": "WA",
+    "ac": false,
+    "language": "C++23 (Clang 21.1.0)",
+    "runtimeMs": 1,
+    "memoryBytes": null
   },
   {
     "id": "2180847428",

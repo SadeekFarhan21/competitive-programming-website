@@ -1873,7 +1873,7 @@
     {"id":"abc398_a","contest":"abc398","type":"ABC","index":"A","title":"Doors in the Center","url":"https://atcoder.jp/contests/abc398/tasks/abc398_a","difficulty":0,"topic":"graph","topics":["graph"],"solved":false},
     {"id":"abc447_a","contest":"abc447","type":"ABC","index":"A","title":"Seats 2","url":"https://atcoder.jp/contests/abc447/tasks/abc447_a","difficulty":0,"topic":"graph","topics":["graph"],"solved":false},
     {"id":"abc452_b","contest":"abc452","type":"ABC","index":"B","title":"Draw Frame","url":"https://atcoder.jp/contests/abc452/tasks/abc452_b","difficulty":0,"topic":"graph","topics":["graph"],"solved":false},
-    {"id":"abc480_a","contest":"abc480","type":"ABC","index":"A","title":"ADjacent","url":"https://atcoder.jp/contests/abc480/tasks/abc480_a","difficulty":0,"topic":"graph","topics":["graph"],"solved":false},
+    {"id":"abc480_a","contest":"abc480","type":"ABC","index":"A","title":"ADjacent","url":"https://atcoder.jp/contests/abc480/tasks/abc480_a","difficulty":0,"topic":"graph","topics":["graph"],"solved":true},
     {"id":"arc131_b","contest":"arc131","type":"ARC","index":"B","title":"Grid Repainting 4","url":"https://atcoder.jp/contests/arc131/tasks/arc131_b","difficulty":0,"topic":"graph","topics":["graph"],"solved":false},
     {"id":"arc153_a","contest":"arc153","type":"ARC","index":"A","title":"AABCDDEFE","url":"https://atcoder.jp/contests/arc153/tasks/arc153_a","difficulty":0,"topic":"graph","topics":["graph"],"solved":false},
     {"id":"abc285_c","contest":"abc285","type":"ABC","index":"C","title":"abc285_brutmhyhiizp","url":"https://atcoder.jp/contests/abc285/tasks/abc285_c","difficulty":25,"topic":"graph","topics":["graph","counting"],"solved":false},
