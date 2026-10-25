@@ -27517,5 +27517,38 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 46,
     "memoryBytes": 0
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792894982,
+    "problem": "Number of Closed Islands",
+    "url": "https://leetcode.com/problems/number-of-closed-islands/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792904240,
+    "problem": "Binary Digit Score",
+    "url": "https://leetcode.com/problems/binary-digit-score/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "LeetCode",
+    "epoch": 1792904918,
+    "problem": "Maximize Sum After At Most K Digit Rearrangements",
+    "url": "https://leetcode.com/problems/maximize-sum-after-at-most-k-digit-rearrangements/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
