@@ -1,7 +1,8 @@
-// Mirrors data/submissions.json (+ spoj-manual.json) into the Supabase
-// `submissions` table. The site reads only the most recent rows from it and
-// merges them over the bundled JSON (lib/store.ts). Rows that disappeared from
-// the JSON (e.g. after a handle rename) are deleted. Run after `pnpm refresh`.
+// Mirrors the real-time judges' rows from data/submissions.json into the
+// Supabase `submissions` table. The site reads only the most recent rows from it
+// and merges them over the bundled JSON (lib/store.ts), which covers every other
+// judge through the nightly snapshot. Rows that disappeared from the JSON (e.g.
+// after a handle rename) are deleted. Run after `pnpm refresh`.
 // Skips quietly when SUPABASE_URL / SUPABASE_SERVICE_ROLE_KEY are not set.
 
 import fs from "node:fs";
@@ -28,8 +29,11 @@ if (!url || !serviceRoleKey) {
   process.exit(0);
 }
 
+// Refreshed on demand (refresh-data.yml); everything else waits for the nightly run
+const REALTIME_PLATFORMS = new Set(["Codeforces", "LeetCode", "AtCoder"]);
+
 const read = (file) => JSON.parse(fs.readFileSync(path.join(DATA, file), "utf8"));
-const submissions = [...read("submissions.json"), ...read("spoj-manual.json")];
+const submissions = read("submissions.json").filter((s) => REALTIME_PLATFORMS.has(s.platform));
 
 // First row wins on duplicate keys, matching getBundledSubmissions() in lib/store.ts
 const rows = new Map();

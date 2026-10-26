@@ -1,4 +1,4 @@
--- Full submission history, mirrored from data/*.json by scripts/sync-supabase.mjs
+-- Codeforces, LeetCode and AtCoder history, mirrored from data/submissions.json by scripts/sync-supabase.mjs
 -- after every refresh. lib/store.ts reads the 200 newest rows and merges them
 -- over the bundled JSON.
 create table if not exists public.submissions (

@@ -79,8 +79,9 @@ async function fetchRecentSubmissions(): Promise<StoredSub[]> {
 
 let cached: { at: number; subs: Promise<StoredSub[]> } | null = null;
 
-// Supabase holds the full history (scripts/sync-supabase.mjs), but only its
-// RECENT_LIMIT newest rows are fetched and merged over the bundled JSON. Rows in
+// Supabase holds the full history of the real-time judges (Codeforces, LeetCode,
+// AtCoder; see scripts/sync-supabase.mjs), but only its RECENT_LIMIT newest rows
+// are fetched and merged over the bundled JSON, which covers every judge. Rows in
 // both appear once, with the Supabase copy winning. Falls back to the JSON alone when Supabase is unset or down.
 export function getSubmissions(): Promise<StoredSub[]> {
   if (!supabase) return Promise.resolve(getBundledSubmissions());

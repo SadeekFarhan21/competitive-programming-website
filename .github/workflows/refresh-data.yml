@@ -1,6 +1,6 @@
-# Refreshes every judge once a day and backs the site's "Refresh now"
-# button. The per-judge workflows (refresh-codeforces.yml, …) are manual-only
-# for targeted re-runs and backfills.
+# Refreshes every judge once a day, and Codeforces, LeetCode and AtCoder on
+# demand for the site's "Refresh now" button. The per-judge workflows
+# (refresh-codeforces.yml, …) are manual-only for targeted re-runs and backfills.
 name: Refresh submission data
 
 on:
@@ -24,6 +24,8 @@ jobs:
   refresh:
     uses: ./.github/workflows/refresh-platform.yml
     with:
-      platforms: ""
+      # The nightly run (and full backfills) refresh every judge; on-demand runs
+      # ("Refresh now") only the real-time ones that sync-supabase.mjs mirrors.
+      platforms: ${{ github.event_name != 'schedule' && !inputs.full && 'codeforces,leetcode,atcoder' || '' }}
       full: ${{ inputs.full == true }}
     secrets: inherit

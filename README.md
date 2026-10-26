@@ -2,7 +2,7 @@
 
 A fast Next.js dashboard for tracking submission activity across Codeforces, AtCoder, LeetCode, CodeChef, CSES, Kattis, and UVa Online Judge.
 
-The full submission history lives in the bundled `data/submissions.json` and is mirrored into a Supabase `submissions` table. The site fetches only the 200 most recent rows from Supabase and merges them over the JSON (a submission in both appears once), caching the result for a minute per server instance. Every refresh workflow run syncs to Supabase (`pnpm supabase:sync`), so new submissions show up within a minute. Only the nightly scheduled run (and full backfills) commits the JSON, so the site redeploys with a fresh snapshot once a night. When Supabase is not configured or a read fails, the site uses the JSON alone.
+The full submission history lives in the bundled `data/submissions.json`. Codeforces, LeetCode, and AtCoder, the judges the **Refresh now** button updates on demand, are also mirrored into a Supabase `submissions` table; the other judges update only in the nightly run. The site fetches only the 200 most recent rows from Supabase and merges them over the JSON (a submission in both appears once), caching the result for a minute per server instance. Every refresh workflow run syncs to Supabase (`pnpm supabase:sync`), so new submissions show up within a minute. Only the nightly scheduled run (and full backfills) commits the JSON, so the site redeploys with a fresh snapshot once a night. When Supabase is not configured or a read fails, the site uses the JSON alone.
 
 ## Development
 
