@@ -6,9 +6,10 @@ export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
   const limit = Math.min(Number(params.get("limit")) || 15, 5000);
   const platform = params.get("platform");
+  const fresh = params.has("fresh");
 
   const errors: string[] = [];
-  let subs = await getSubmissions();
+  let subs = await getSubmissions({ fresh });
   if (platform) {
     subs = subs.filter((s) => s.platform.toLowerCase() === platform.toLowerCase());
   }
@@ -33,7 +34,7 @@ export async function GET(request: NextRequest) {
     {
       headers: {
         // CDN caches for a minute, matching the Supabase read cache in lib/store.ts
-        "Cache-Control": "public, s-maxage=60, stale-while-revalidate=60",
+        "Cache-Control": fresh ? "no-store" : "public, s-maxage=60, stale-while-revalidate=60",
       },
     }
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { SUBMISSIONS_REFRESHED } from "./RefreshButton";
 
 type Platform =
   | "codeforces"
@@ -198,25 +199,37 @@ export default function Heatmap() {
   const [hovered, setHovered] = useState<{ cell: Cell; x: number; y: number } | null>(null);
   const [period, setPeriod] = useState("rolling");
   const selectedToday = useRef(false);
+  const [refreshedAt, setRefreshedAt] = useState(0);
+
+  useEffect(() => {
+    const onRefreshed = () => setRefreshedAt(Date.now());
+    window.addEventListener(SUBMISSIONS_REFRESHED, onRefreshed);
+    return () => window.removeEventListener(SUBMISSIONS_REFRESHED, onRefreshed);
+  }, []);
 
   useEffect(() => {
     const timeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
     const query = new URLSearchParams({ tz: timeZone });
     if (period === "all") query.set("range", "all");
     else if (period !== "rolling") query.set("year", period);
+    // A unique value skips the CDN and server caches after a refresh
+    if (refreshedAt) query.set("fresh", String(refreshedAt));
     fetch(`/api/heatmap?${query}`)
       .then((r) => r.json())
       .then((d: HeatmapData) => {
         setData(d);
-        // Open today's breakdown on first load; day keys are in the viewer's time zone
+        // Open today's breakdown on first load and keep it current after a
+        // refresh; day keys are in the viewer's time zone
+        const today = localToday();
         if (!selectedToday.current) {
           selectedToday.current = true;
-          const today = localToday();
           setSelected({ date: today, counts: d.days?.[today] ?? null });
+        } else if (refreshedAt) {
+          setSelected((cell) => (cell ? { date: cell.date, counts: d.days?.[cell.date] ?? null } : cell));
         }
       })
       .catch((e) => setError(String(e)));
-  }, [period]);
+  }, [period, refreshedAt]);
 
   const weeks = useMemo(() => (data ? buildWeeks(data.days, data.year ?? undefined) : []), [data]);
 

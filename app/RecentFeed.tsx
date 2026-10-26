@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { SUBMISSIONS_REFRESHED } from "./RefreshButton";
 
 type Submission = {
   platform: string;
@@ -113,9 +114,17 @@ export default function RecentFeed() {
   const [error, setError] = useState<string | null>(null);
   const [platform, setPlatform] = useState("all");
   const [verdict, setVerdict] = useState("all");
+  const [refreshedAt, setRefreshedAt] = useState(0);
 
   useEffect(() => {
-    fetch("/api/submissions?limit=5000")
+    const onRefreshed = () => setRefreshedAt(Date.now());
+    window.addEventListener(SUBMISSIONS_REFRESHED, onRefreshed);
+    return () => window.removeEventListener(SUBMISSIONS_REFRESHED, onRefreshed);
+  }, []);
+
+  useEffect(() => {
+    // A unique value skips the CDN and server caches after a refresh
+    fetch(`/api/submissions?limit=5000${refreshedAt ? `&fresh=${refreshedAt}` : ""}`)
       .then((r) => r.json())
       .then((d) =>
         setSubs(
@@ -127,7 +136,7 @@ export default function RecentFeed() {
         )
       )
       .catch((e) => setError(String(e)));
-  }, []);
+  }, [refreshedAt]);
 
   if (error) return <p className="text-sm text-red-400">Failed to load: {error}</p>;
   if (!subs) return <p className="text-sm text-neutral-400">Loading submissions…</p>;

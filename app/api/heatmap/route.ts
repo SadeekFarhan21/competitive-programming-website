@@ -47,11 +47,12 @@ export async function GET(request: NextRequest) {
   // range=all: totals and platform stats cover the whole history. The client
   // still draws the last 365 days of the calendar it gets back.
   const allTime = request.nextUrl.searchParams.get("range") === "all";
+  const fresh = request.nextUrl.searchParams.has("fresh");
   const days = Math.min(Number(request.nextUrl.searchParams.get("days")) || 365, 730);
 
   // The heatmap is backed by the bundled dataset so it renders immediately.
   // scripts/refresh-data.mjs updates this file through the scheduled workflow.
-  const all = (await getSubmissions()).slice().sort((a, b) => a.epoch - b.epoch);
+  const all = (await getSubmissions({ fresh })).slice().sort((a, b) => a.epoch - b.epoch);
   const sinceEpoch = allTime
     ? (all[0]?.epoch ?? 0)
     : selectedYear != null
@@ -178,8 +179,8 @@ export async function GET(request: NextRequest) {
     },
     {
       headers: {
-        // CDN caches for 5 minutes — upstream APIs are hit at most once per window
-        "Cache-Control": "public, s-maxage=60, stale-while-revalidate=60",
+        // CDN caches for a minute, matching the Supabase read cache in lib/store.ts
+        "Cache-Control": fresh ? "no-store" : "public, s-maxage=60, stale-while-revalidate=60",
       },
     }
   );

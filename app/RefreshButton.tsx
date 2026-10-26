@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 
 type RefreshState = "idle" | "running" | "success" | "failure";
 
+// Fired when a refresh run finishes; Heatmap and RecentFeed re-fetch fresh data
+export const SUBMISSIONS_REFRESHED = "submissions-refreshed";
+
 export default function RefreshButton() {
   const [state, setState] = useState<RefreshState>("success");
   const [startedAt, setStartedAt] = useState<number | null>(null);
@@ -27,6 +30,7 @@ export default function RefreshButton() {
           setState("success");
           setMessage(null);
           setStartedAt(null);
+          window.dispatchEvent(new Event(SUBMISSIONS_REFRESHED));
           return;
         }
         if (result.status === "failure") {
@@ -66,7 +70,7 @@ export default function RefreshButton() {
   }
 
   const running = state === "running";
-  const label = state === "failure" ? "Refresh failed" : "Refreshed";
+  const label = state === "failure" ? (message ?? "Refresh failed") : "Refreshed";
 
   return (
     <div className="flex items-center gap-2">

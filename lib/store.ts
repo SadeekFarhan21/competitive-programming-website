@@ -83,9 +83,10 @@ let cached: { at: number; subs: Promise<StoredSub[]> } | null = null;
 // AtCoder; see scripts/sync-supabase.mjs), but only its RECENT_LIMIT newest rows
 // are fetched and merged over the bundled JSON, which covers every judge. Rows in
 // both appear once, with the Supabase copy winning. Falls back to the JSON alone when Supabase is unset or down.
-export function getSubmissions(): Promise<StoredSub[]> {
+// fresh: skip the cache, e.g. right after the "Refresh now" button's run finishes
+export function getSubmissions({ fresh = false } = {}): Promise<StoredSub[]> {
   if (!supabase) return Promise.resolve(getBundledSubmissions());
-  if (cached && Date.now() - cached.at < CACHE_MS) return cached.subs;
+  if (!fresh && cached && Date.now() - cached.at < CACHE_MS) return cached.subs;
   const subs = fetchRecentSubmissions()
     .then((recent) => dedupe([...recent, ...getBundledSubmissions()]).sort((a, b) => a.epoch - b.epoch))
     .catch((error) => {
