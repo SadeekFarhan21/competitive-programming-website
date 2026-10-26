@@ -24,15 +24,19 @@ export type StoredSub = {
   problemId?: string;
 };
 
-const submissionKey = (s: StoredSub) => `${s.platform}:${s.id ?? s.epoch}`;
-
-// Keeps the first row for each key, so callers list the preferred source first
+// Keeps the first copy of each submission, so callers list the preferred source
+// first. Rows with ids match by id; a row without one (e.g. from a public feed
+// that drops ids) matches any earlier row from the same judge and second, so it
+// still collapses into the id'd copy once a later fetch fills the id in.
 function dedupe(subs: StoredSub[]): StoredSub[] {
-  const seen = new Set<string>();
+  const seenIds = new Set<string>();
+  const seenEpochs = new Set<string>();
   return subs.filter((submission) => {
-    const key = submissionKey(submission);
-    if (seen.has(key)) return false;
-    seen.add(key);
+    const idKey = submission.id != null ? `${submission.platform}:${submission.id}` : null;
+    const epochKey = `${submission.platform}:${submission.epoch}`;
+    if (idKey ? seenIds.has(idKey) : seenEpochs.has(epochKey)) return false;
+    if (idKey) seenIds.add(idKey);
+    seenEpochs.add(epochKey);
     return true;
   });
 }
