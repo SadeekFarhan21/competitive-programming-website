@@ -27560,5 +27560,25 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 250,
     "memoryBytes": 2150400
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1793025170,
+    "problem": "1095F - Make It Connected",
+    "verdict": "RUNTIME_ERROR",
+    "ac": false,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 203,
+    "memoryBytes": 10649600
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1793025248,
+    "problem": "1095F - Make It Connected",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 203,
+    "memoryBytes": 10649600
   }
 ]
