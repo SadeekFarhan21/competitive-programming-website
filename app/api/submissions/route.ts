@@ -32,8 +32,8 @@ export async function GET(request: NextRequest) {
     { submissions, errors },
     {
       headers: {
-        // CDN caches for 5 minutes — upstream APIs are hit at most once per window
-        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=60",
+        // CDN caches for a minute, matching the Supabase read cache in lib/store.ts
+        "Cache-Control": "public, s-maxage=60, stale-while-revalidate=60",
       },
     }
   );

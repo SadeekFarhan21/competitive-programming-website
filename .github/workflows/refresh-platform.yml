@@ -63,6 +63,11 @@ jobs:
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
         run: corepack pnpm supabase:sync
       - name: Commit if changed
+        # Supabase serves new submissions in real time. The bundled JSON is the
+        # nightly snapshot: only the scheduled run commits it (which redeploys
+        # the site), plus full backfills, whose history the nightly incremental
+        # fetch would never re-fetch and the Supabase sync would then delete.
+        if: github.event_name == 'schedule' || inputs.full
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

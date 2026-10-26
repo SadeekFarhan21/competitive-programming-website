@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   description: "Problems attempted on any judge that never got an accepted verdict.",
 };
 
-// Regenerate from Supabase at most every 5 minutes
-export const revalidate = 300;
+// Regenerate from Supabase at most once a minute
+export const revalidate = 60;
 
 export default async function UnsolvedPage() {
   const problems = await getUnsolvedProblems();

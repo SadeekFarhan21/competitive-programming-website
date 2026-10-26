@@ -179,7 +179,7 @@ export async function GET(request: NextRequest) {
     {
       headers: {
         // CDN caches for 5 minutes — upstream APIs are hit at most once per window
-        "Cache-Control": "public, s-maxage=300, stale-while-revalidate=60",
+        "Cache-Control": "public, s-maxage=60, stale-while-revalidate=60",
       },
     }
   );
