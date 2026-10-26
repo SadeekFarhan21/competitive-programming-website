@@ -27550,5 +27550,15 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "platform": "Codeforces",
+    "epoch": 1793022122,
+    "problem": "1167C - News Distribution",
+    "verdict": "OK",
+    "ac": true,
+    "language": "C++23 (GCC 14-64, msys2)",
+    "runtimeMs": 250,
+    "memoryBytes": 2150400
   }
 ]
