@@ -6,12 +6,13 @@
   "scripts": {
     "refresh": "node scripts/refresh-data.mjs",
     "refresh:local": "node scripts/refresh-local.mjs",
+    "supabase:sync": "node scripts/sync-supabase.mjs",
     "halim:solved": "node scripts/mark-halim-book-solved.mjs",
     "test": "node --test scripts/*.test.mjs",
     "youkn0wwho:build": "node scripts/build-youkn0wwho.mjs",
     "atcoder-topicwise:sync": "node scripts/sync-atcoder-topicwise.mjs",
     "atcoder-topicwise:build": "node scripts/build-atcoder-topicwise.mjs",
-    "fetch:kattis":"node scripts/fetch-kattis.mjs",
+    "fetch:kattis": "node scripts/fetch-kattis.mjs",
     "dev": "rm -rf node_modules .next && pnpm install && next dev",
     "dev:fast": "next dev",
     "build": "next build",
@@ -19,6 +20,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.118.0",
     "@vercel/analytics": "^2.0.1",
     "next": "^15.1.6",
     "react": "^19.0.0",

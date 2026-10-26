@@ -10,9 +10,9 @@ function isPartial(verdict: string): boolean {
 }
 
 // Problems with at least one submission and no accepted verdict, most recently attempted first
-export function getUnsolvedProblems(): UnsolvedProblem[] {
+export async function getUnsolvedProblems(): Promise<UnsolvedProblem[]> {
   const byProblem = new Map<string, UnsolvedProblem & { solved: boolean }>();
-  for (const sub of getSubmissions()) {
+  for (const sub of await getSubmissions()) {
     const key = `${sub.platform}:${sub.problem}`;
     const entry = byProblem.get(key);
     if (!entry) {

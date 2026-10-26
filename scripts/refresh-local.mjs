@@ -26,6 +26,7 @@ const steps = [
   // rebuild solved flags, matching the behavior of the GitHub workflow.
   { label: "Sync AtCoder topic categories", script: "sync-atcoder-topicwise.mjs", optional: true },
   { label: "Rebuild AtCoder topic list", script: "build-atcoder-topicwise.mjs" },
+  { label: "Sync submissions to Supabase", script: "sync-supabase.mjs" },
 ];
 
 for (const step of steps) {

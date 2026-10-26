@@ -2,7 +2,7 @@
 
 A fast Next.js dashboard for tracking submission activity across Codeforces, AtCoder, LeetCode, CodeChef, CSES, Kattis, and UVa Online Judge.
 
-The heatmap and recent-submission feed read from the bundled `data/submissions.json` file, so page requests do not wait on external services. The refresh workflow updates that dataset before deployment.
+The full submission history lives in the bundled `data/submissions.json` and is mirrored into a Supabase `submissions` table. The site fetches only the 200 most recent rows from Supabase and merges them over the JSON (a submission in both appears once), caching the result for a minute per server instance. The refresh workflow updates the JSON and then syncs it to Supabase (`pnpm supabase:sync`). When Supabase is not configured or a read fails, the site uses the JSON alone.
 
 ## Development
 
@@ -31,6 +31,8 @@ platforms without a handle are skipped.
 | `CSES_SESSION` | Cookie required for CSES |
 | `KATTIS_COOKIE` | `KattisSiteCookie` value, only if your submission history is private |
 | `LEETCODE_API_URL`, `CODECHEF_API_URL` | Optional alternate feed and CodeChef fallback proxy |
+| `SUPABASE_URL`, `SUPABASE_PUBLISHABLE_KEY` | Live submissions source the site reads from (read-only key) |
+| `SUPABASE_SERVICE_ROLE_KEY` | Write key used by `pnpm supabase:sync`; GitHub secret only, never on Vercel |
 | `GITHUB_REFRESH_TOKEN`, `GITHUB_REPO`, `GITHUB_REFRESH_WORKFLOW`, `GITHUB_REFRESH_BRANCH` | Power the **Refresh now** button (see below) |
 
 Never commit cookies or tokens. `.env*` files are git-ignored.
@@ -55,7 +57,8 @@ pnpm refresh:local -- --only=leetcode
 pnpm refresh:local -- --full
 ```
 
-This updates submissions, Halim solved marks, YouKn0wWho, and AtCoder Topicwise.
+This updates submissions, Halim solved marks, YouKn0wWho, and AtCoder Topicwise,
+then syncs submissions to Supabase. The table schema lives in `supabase/migrations/`.
 The AtCoder category sync is best-effort; if its upstream is unavailable, the command
 rebuilds from the last cached category data. CSES keeps its existing quota protection;
 set `REFRESH_CSES=true` when you intentionally want to include it.

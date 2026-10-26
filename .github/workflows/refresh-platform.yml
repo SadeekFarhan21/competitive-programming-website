@@ -56,6 +56,12 @@ jobs:
         run: corepack pnpm atcoder-topicwise:sync
       - name: Build AtCoder Topicwise list
         run: corepack pnpm atcoder-topicwise:build
+      - name: Sync submissions to Supabase
+        # Daily writes also keep the free-tier project from auto-pausing.
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
+        run: corepack pnpm supabase:sync
       - name: Commit if changed
         run: |
           git config user.name "github-actions[bot]"

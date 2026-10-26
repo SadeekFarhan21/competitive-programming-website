@@ -8,8 +8,11 @@ export const metadata: Metadata = {
   description: "Problems attempted on any judge that never got an accepted verdict.",
 };
 
-export default function UnsolvedPage() {
-  const problems = getUnsolvedProblems();
+// Regenerate from Supabase at most every 5 minutes
+export const revalidate = 300;
+
+export default async function UnsolvedPage() {
+  const problems = await getUnsolvedProblems();
   return (
     <main className="mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6">
       <Nav current="/unsolved" />
