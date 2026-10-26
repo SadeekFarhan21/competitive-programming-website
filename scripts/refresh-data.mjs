@@ -130,10 +130,10 @@ async function fetchAtCoder(knownEpochs) {
   }));
 }
 
-// LeetCode's public "recent submissions" feed is capped at the latest 20 rows,
-// which the hourly refresh comfortably covers. alfa-leetcode-api wraps that feed
-// (all verdicts, not just accepted); LeetCode's own GraphQL is the fallback.
-// An optional LEETCODE_SESSION unlocks the full paginated history.
+// LeetCode's public "recent submissions" GraphQL feed (all verdicts, not just
+// accepted) is capped at the latest 20 rows; alfa-leetcode-api wraps the same
+// feed and is the fallback. An optional LEETCODE_SESSION unlocks the full
+// paginated history.
 const LEETCODE_PUBLIC_FEED_URL =
   process.env.LEETCODE_API_URL ??
   `https://alfa-leetcode-api.onrender.com/${HANDLES.leetcode}/submission?limit=10000`;
@@ -201,8 +201,9 @@ async function fetchLeetCodeSession(session, knownEpochs) {
   return all;
 }
 
-// Latest 20 submissions with verdicts, via alfa-leetcode-api. The free Render
-// instance cold-starts, so allow a generous timeout.
+// Same 20-row feed through alfa-leetcode-api, used when leetcode.com is
+// unreachable. It drops submission ids, and the free Render instance
+// cold-starts, so allow a generous timeout.
 async function fetchLeetCodePublicFeed() {
   const res = await fetch(LEETCODE_PUBLIC_FEED_URL, {
     headers: { Accept: "application/json", "User-Agent": "Mozilla/5.0" },
@@ -215,7 +216,7 @@ async function fetchLeetCodePublicFeed() {
   return rows;
 }
 
-// Same 20-row feed straight from LeetCode, used when the wrapper is down.
+// Latest 20 submissions with verdicts and ids, straight from LeetCode's public GraphQL.
 async function fetchLeetCodePublicGraphql() {
   const query = `query recentSubmissionList($username: String!, $limit: Int!) { recentSubmissionList(username: $username, limit: $limit) { id title titleSlug timestamp statusDisplay lang } }`;
   const data = await leetcodeGraphql(query, { username: HANDLES.leetcode, limit: 20 });
@@ -231,16 +232,16 @@ async function fetchLeetCode(knownEpochs) {
     try {
       return (await fetchLeetCodeSession(session, knownEpochs)).flatMap(normalizeLeetCodeRow);
     } catch (error) {
-      console.warn(`LeetCode: session fetch failed (${error.message}) — falling back to public feed`);
+      console.warn(`LeetCode: session fetch failed (${error.message}) — falling back to public GraphQL`);
     }
   }
 
   let rows;
   try {
-    rows = await fetchLeetCodePublicFeed();
-  } catch (error) {
-    console.warn(`LeetCode: public feed failed (${error.message}) — trying leetcode.com directly`);
     rows = await fetchLeetCodePublicGraphql();
+  } catch (error) {
+    console.warn(`LeetCode: public GraphQL failed (${error.message}) — trying alfa-leetcode-api`);
+    rows = await fetchLeetCodePublicFeed();
   }
   return rows.flatMap(normalizeLeetCodeRow);
 }
