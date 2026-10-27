@@ -27476,6 +27476,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2180859727",
     "platform": "LeetCode",
     "epoch": 1792875227,
     "problem": "Moving Average from Data Stream",
@@ -27487,6 +27488,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2180861782",
     "platform": "LeetCode",
     "epoch": 1792875558,
     "problem": "Meeting Rooms II",
@@ -27498,6 +27500,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2180866452",
     "platform": "LeetCode",
     "epoch": 1792876357,
     "problem": "Car Pooling",
@@ -27519,6 +27522,7 @@
     "memoryBytes": 0
   },
   {
+    "id": "2180947295",
     "platform": "LeetCode",
     "epoch": 1792894982,
     "problem": "Number of Closed Islands",
@@ -27530,6 +27534,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2181093414",
     "platform": "LeetCode",
     "epoch": 1792904240,
     "problem": "Binary Digit Score",
@@ -27541,6 +27546,7 @@
     "memoryBytes": null
   },
   {
+    "id": "2181099949",
     "platform": "LeetCode",
     "epoch": 1792904918,
     "problem": "Maximize Sum After At Most K Digit Rearrangements",
@@ -27549,6 +27555,17 @@
     "ac": true,
     "language": "cpp",
     "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "platform": "AtCoder",
+    "epoch": 1793020713,
+    "problem": "abc481_b",
+    "url": "https://atcoder.jp/contests/abc481/tasks/abc481_b",
+    "verdict": "AC",
+    "ac": true,
+    "language": "C++23 (Clang 21.1.0)",
+    "runtimeMs": 1,
     "memoryBytes": null
   },
   {
@@ -27580,5 +27597,101 @@
     "language": "C++23 (GCC 14-64, msys2)",
     "runtimeMs": 203,
     "memoryBytes": 10649600
+  },
+  {
+    "id": "2182498623",
+    "platform": "LeetCode",
+    "epoch": 1793037996,
+    "problem": "Count Islands With Total Value Divisible by K",
+    "url": "https://leetcode.com/problems/count-islands-with-total-value-divisible-by-k/",
+    "verdict": "RUNTIME ERROR",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2182500604",
+    "platform": "LeetCode",
+    "epoch": 1793038112,
+    "problem": "Count Islands With Total Value Divisible by K",
+    "url": "https://leetcode.com/problems/count-islands-with-total-value-divisible-by-k/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2182516582",
+    "platform": "LeetCode",
+    "epoch": 1793039074,
+    "problem": "Minimum Size Subarray Sum",
+    "url": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2182519242",
+    "platform": "LeetCode",
+    "epoch": 1793039243,
+    "problem": "Minimum Size Subarray Sum",
+    "url": "https://leetcode.com/problems/minimum-size-subarray-sum/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2182571012",
+    "platform": "LeetCode",
+    "epoch": 1793043752,
+    "problem": "N-ary Tree Preorder Traversal",
+    "url": "https://leetcode.com/problems/n-ary-tree-preorder-traversal/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2182600364",
+    "platform": "LeetCode",
+    "epoch": 1793047475,
+    "problem": "Validate Binary Search Tree",
+    "url": "https://leetcode.com/problems/validate-binary-search-tree/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "java",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2182600581",
+    "platform": "LeetCode",
+    "epoch": 1793047506,
+    "problem": "Validate Binary Search Tree",
+    "url": "https://leetcode.com/problems/validate-binary-search-tree/",
+    "verdict": "COMPILE ERROR",
+    "ac": false,
+    "language": "java",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2182781955",
+    "platform": "LeetCode",
+    "epoch": 1793076870,
+    "problem": "Create Grid With Exactly One Path",
+    "url": "https://leetcode.com/problems/create-grid-with-exactly-one-path/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
