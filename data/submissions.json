@@ -27693,5 +27693,17 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "id": "2183608471",
+    "platform": "LeetCode",
+    "epoch": 1793162924,
+    "problem": "Minimum XOR Path in a Grid",
+    "url": "https://leetcode.com/problems/minimum-xor-path-in-a-grid/",
+    "verdict": "WRONG ANSWER",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
