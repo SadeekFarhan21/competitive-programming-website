@@ -27705,5 +27705,41 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "id": "2184259224",
+    "platform": "LeetCode",
+    "epoch": 1793218924,
+    "problem": "Minimum XOR Path in a Grid",
+    "url": "https://leetcode.com/problems/minimum-xor-path-in-a-grid/",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2184259789",
+    "platform": "LeetCode",
+    "epoch": 1793218999,
+    "problem": "Minimum XOR Path in a Grid",
+    "url": "https://leetcode.com/problems/minimum-xor-path-in-a-grid/",
+    "verdict": "TIME LIMIT EXCEEDED",
+    "ac": false,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2184261610",
+    "platform": "LeetCode",
+    "epoch": 1793219251,
+    "problem": "Minimum XOR Path in a Grid",
+    "url": "https://leetcode.com/problems/minimum-xor-path-in-a-grid/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
