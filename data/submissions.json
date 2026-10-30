@@ -27741,5 +27741,29 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "id": "2184921303",
+    "platform": "LeetCode",
+    "epoch": 1793294198,
+    "problem": "Palindromic Path Queries in a Tree",
+    "url": "https://leetcode.com/problems/palindromic-path-queries-in-a-tree/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
+  },
+  {
+    "id": "2185096919",
+    "platform": "LeetCode",
+    "epoch": 1793313408,
+    "problem": "Evaluate Division",
+    "url": "https://leetcode.com/problems/evaluate-division/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
