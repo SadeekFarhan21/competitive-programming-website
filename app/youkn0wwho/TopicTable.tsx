@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from "react";
 import LoadMore from "../LoadMore";
 import type { TopicMeta, TopicProblem } from "../../lib/youkn0wwho";
 
@@ -145,6 +145,8 @@ export default function TopicTable({
   topics: Record<string, TopicMeta>;
 }) {
   const [query, setQuery] = useState("");
+  // Filtering 3,900 rows per keystroke is slow on phones; the input stays urgent, the table follows.
+  const deferredQuery = useDeferredValue(query);
   const [activeJudges, setActiveJudges] = useState<string[]>([...judges]);
   const [category, setCategory] = useState("");
   const [topic, setTopic] = useState("");
@@ -184,7 +186,7 @@ export default function TopicTable({
   useEffect(() => {
     if (!ready) return;
     const params = new URLSearchParams();
-    if (query) params.set("q", query);
+    if (deferredQuery) params.set("q", deferredQuery);
     if (activeJudges.length !== judges.length) params.set("judge", activeJudges.join(","));
     if (category) params.set("category", category);
     if (topic) params.set("topic", topic);
@@ -196,7 +198,7 @@ export default function TopicTable({
     const search = params.toString();
     window.history.replaceState(null, "", search ? `?${search}` : window.location.pathname);
     setVisible(PAGE_SIZE);
-  }, [ready, query, activeJudges, category, topic, starredOnly, hideSolved, minDifficulty, maxDifficulty, sortKey, sortAsc]);
+  }, [ready, deferredQuery, activeJudges, category, topic, starredOnly, hideSolved, minDifficulty, maxDifficulty, sortKey, sortAsc]);
 
   // Press "/" anywhere to jump to search.
   useEffect(() => {
@@ -252,25 +254,34 @@ export default function TopicTable({
     setMaxDifficulty(value >= difficultyBounds.max ? "" : String(value));
   }
 
+  // Lowercased once per row; newlines keep a match from spanning two fields.
+  const searchText = useMemo(
+    () =>
+      problems.map((p) => {
+        const meta = topics[p.topic];
+        return [p.id, p.title, p.judge, meta?.title, meta?.subCategory, meta?.category]
+          .filter(Boolean)
+          .join("\n")
+          .toLowerCase();
+      }),
+    [problems, topics]
+  );
+
   const filtered = useMemo(() => {
-    const needle = query.trim().toLowerCase();
+    const needle = deferredQuery.trim().toLowerCase();
     const min = minDifficulty === "" ? -Infinity : Number(minDifficulty);
     const max = maxDifficulty === "" ? Infinity : Number(maxDifficulty);
 
     const rows = problems
       .map((problem, order) => ({ problem, order }))
-      .filter(({ problem: p }) => {
+      .filter(({ problem: p, order }) => {
         if (!activeJudges.includes(groupOf(p.judge))) return false;
         if (category && topics[p.topic]?.category !== category) return false;
         if (topic && !p.topics.includes(topic)) return false;
         if (starredOnly && !p.starred) return false;
         if (hideSolved && p.solved) return false;
         if (p.difficulty != null && (p.difficulty < min || p.difficulty > max)) return false;
-        if (!needle) return true;
-        const meta = topics[p.topic];
-        return [p.id, p.title, p.judge, meta?.title, meta?.subCategory, meta?.category].some((field) =>
-          field?.toLowerCase().includes(needle)
-        );
+        return !needle || searchText[order].includes(needle);
       });
 
     const direction = sortAsc ? 1 : -1;
@@ -288,7 +299,7 @@ export default function TopicTable({
     });
 
     return rows.map(({ problem }) => problem);
-  }, [problems, topics, query, activeJudges, category, topic, starredOnly, hideSolved, minDifficulty, maxDifficulty, sortKey, sortAsc]);
+  }, [problems, topics, searchText, deferredQuery, activeJudges, category, topic, starredOnly, hideSolved, minDifficulty, maxDifficulty, sortKey, sortAsc]);
 
   const shown = filtered.slice(0, visible);
   const advancedCount =
