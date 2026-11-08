@@ -27777,5 +27777,17 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "id": "2191440515",
+    "platform": "LeetCode",
+    "epoch": 1794069407,
+    "problem": "Gas Station",
+    "url": "https://leetcode.com/problems/gas-station/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "cpp",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
