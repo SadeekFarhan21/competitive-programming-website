@@ -25177,7 +25177,7 @@
     "verdict": "Accepted",
     "ac": true,
     "language": "C++",
-    "runtimeMs": 560,
+    "runtimeMs": 270,
     "memoryBytes": null
   },
   {
