@@ -269,7 +269,7 @@ mali,mali,"2.2i, Special Sorting",Counting Sort two arrays; greedy matching larg
 12720,Fetching from uHunt,"2.2j, Bit Manipulation",observe the pattern in this binary to decimal conversion variant; involves modulo arithmetic,,0.0,false,https://onlinejudge.org/external/127/12720.pdf
 bitbybit,bitbybit,"2.2j, Bit Manipulation",be very careful with and + or corner cases,955,2.9,false,https://open.kattis.com/problems/bitbybit
 deathstar,deathstar,"2.2j, Bit Manipulation",can be solved with bit manipulation,415,2.0,false,https://open.kattis.com/problems/deathstar
-lc0338,Counting Bits,"2.2j, Bit Manipulation",bit_count; trivial; leetcode-75,0,2.0,false,https://leetcode.com/problems/counting-bits/
+lc0338,Counting Bits,"2.2j, Bit Manipulation",bit_count; trivial; leetcode-75,0,2.0,true,https://leetcode.com/problems/counting-bits/
 lc1318,Minimum Flips to Make a OR b Equal to c,"2.2j, Bit Manipulation",check all 31 bits; a few sub-cases per bit; leetcode-75,0,4.0,false,https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/
 snapperhard,snapperhard,"2.2j, Bit Manipulation",bit manipulation; find the pattern; the easier version is also available at Kattis - snappereasy,501,2.3,false,https://open.kattis.com/problems/snapperhard
 10523,Fetching from uHunt,"2.2k, Big Integer, Easier",BigInteger addition; multiplication; and power,,0.0,false,https://onlinejudge.org/external/105/10523.pdf

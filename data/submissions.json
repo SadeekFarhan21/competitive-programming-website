@@ -27789,5 +27789,17 @@
     "language": "cpp",
     "runtimeMs": null,
     "memoryBytes": null
+  },
+  {
+    "id": "2193567094",
+    "platform": "LeetCode",
+    "epoch": 1794367104,
+    "problem": "Counting Bits",
+    "url": "https://leetcode.com/problems/counting-bits/",
+    "verdict": "ACCEPTED",
+    "ac": true,
+    "language": "python3",
+    "runtimeMs": null,
+    "memoryBytes": null
   }
 ]
